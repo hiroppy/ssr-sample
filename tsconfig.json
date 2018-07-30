@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "declaration": false,
+    "jsx": "react",
+    "lib": ["es2017", "dom"],
+    "target": "es2015",
+    "module": "commonjs",
+    "allowJs": false,
+    "sourceMap": true,
+    "removeComments": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": false,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "strict": true
+  },
+  "exclude": ["node_modules", "src/server/**/*.test.ts", "src/client/**/*.stories.ts"],
+  "include": ["src/**/*"]
+}
