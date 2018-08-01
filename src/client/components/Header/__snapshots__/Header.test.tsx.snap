@@ -23,7 +23,10 @@ exports[`should render self and sub-components 1`] = `
 <MemoryRouter
   initialEntries={
     Array [
-      "/",
+      Object {
+        "key": "testKey",
+        "pathname": "/",
+      },
     ]
   }
 >
@@ -37,10 +40,9 @@ exports[`should render self and sub-components 1`] = `
         "entries": Array [
           Object {
             "hash": "",
-            "key": "pw879l",
+            "key": "testKey",
             "pathname": "/",
             "search": "",
-            "state": undefined,
           },
         ],
         "go": [Function],
@@ -51,10 +53,9 @@ exports[`should render self and sub-components 1`] = `
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "pw879l",
+          "key": "testKey",
           "pathname": "/",
           "search": "",
-          "state": undefined,
         },
         "push": [Function],
         "replace": [Function],

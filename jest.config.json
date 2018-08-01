@@ -1,6 +1,7 @@
 {
   "testURL": "http://localhost/",
   "collectCoverage": true,
+  "collectCoverageFrom": ["src/**/*.(ts|tsx)", "!src/client/**/*.stories.tsx", "!src/**/*.d.ts"],
   "moduleFileExtensions": ["ts", "tsx", "js"],
   "transform": {
     "^.+\\.(ts|tsx)$": "ts-jest"
@@ -11,5 +12,5 @@
     }
   },
   "testMatch": ["**/src/**/*.test.(ts|tsx)?(x)"],
-  "setupTestFrameworkScriptFile": "<rootDir>setUpTest.ts"
+  "setupTestFrameworkScriptFile": "<rootDir>/setupTest.ts"
 }

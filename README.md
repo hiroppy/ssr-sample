@@ -1,5 +1,7 @@
 # Server Side Rendering
 
+[![Travis (.org)](https://img.shields.io/travis/USER/REPO.svg?style=flat-square)](https://travis-ci.org/hiroppy/ssr-sample)
+
 ## Libraries
 
 - TypeScript

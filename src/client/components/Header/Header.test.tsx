@@ -6,7 +6,7 @@ import { Header } from '.';
 
 test('should render self and sub-components', () => {
   const tree = mount(
-    <MemoryRouter initialEntries={['/']}>
+    <MemoryRouter initialEntries={[{ pathname: '/', key: 'testKey' }]}>
       <Header userName="foo" orgName="org!" />
     </MemoryRouter>
   );
