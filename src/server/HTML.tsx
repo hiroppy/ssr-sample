@@ -1,22 +1,31 @@
-import * as React from 'react';
-import { Helmet } from 'react-helmet';
-
-interface Props {
-  children: React.ReactNode;
-  initialData: string;
+interface Params {
+  meta: string;
+  body: string;
+  style: string;
+  preloadedState: string;
 }
 
-// TODO: helmet
-export const HTML = ({ children, initialData }: Props) => (
-  <html>
-    <head>
-      <title>Hello World</title>
-      <link rel="canonical" href="https://www.tacobell.com/" />
-    </head>
-    <body>
-      <div id="root">{children}</div>
-      <script id="initial-data" type="text/plain" data-json={initialData} />
-      <script src={`${process.env.CLIENT_JS_URL}`} />
-    </body>
-  </html>
-);
+const escape = (str: string) => {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+};
+
+export const renderFullPage = ({ meta, body, style, preloadedState }: Params) => {
+  return `
+    <html>
+      <head>
+        ${meta}
+        ${style}
+      </head>
+      <body>
+        ${body}
+        <script id="initial-data" type="text/plain" data-json="${escape(preloadedState)}"></script>
+        <script src="${process.env.CLIENT_JS_URL}"></script>
+      </body>
+    </html>
+  `.trim();
+};

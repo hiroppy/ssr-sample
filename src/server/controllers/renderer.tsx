@@ -1,22 +1,29 @@
+// renderToNodeStream
+// https://gist.github.com/hiroppy/1c89d73a12073bad0c187aaab4ca92c2
+
 import { Request, Response } from 'express';
 import * as React from 'react';
 import { Provider } from 'react-redux';
-import { renderToNodeStream, renderToStaticMarkup } from 'react-dom/server';
+import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
+import Helmet from 'react-helmet';
 import { ServerStyleSheet } from 'styled-components';
-import { HTML } from '../HTML';
+import { renderFullPage } from '../HTML';
 import { Router } from '../../client/Router';
 import { configureStore } from '../../client/store/configureStore';
 import { rootSaga } from '../../client/sagas';
 
 export function get(req: Request, res: Response) {
   const store = configureStore();
-  const context = {};
+  const sheet = new ServerStyleSheet();
 
-  const comp = (
+  const jsx = (
     <Provider store={store}>
-      <StaticRouter location={req.url} context={context}>
-        <Router />
+      <StaticRouter location={req.url} context={{}}>
+        {/* add `div` because of `hydrate` */}
+        <div id="root">
+          <Router />
+        </div>
       </StaticRouter>
     </Provider>
   );
@@ -24,25 +31,25 @@ export function get(req: Request, res: Response) {
   store
     .runSaga(rootSaga)
     .done.then(() => {
-      const preloadedState = store.getState();
-      const sheet = new ServerStyleSheet();
-      const jsx = <HTML initialData={JSON.stringify(preloadedState)}>{comp}</HTML>;
+      const preloadedState = JSON.stringify(store.getState());
+      const style = sheet.getStyleTags();
+      const body = renderToString(jsx);
 
-      const jsxWithStyles = sheet.collectStyles(jsx);
-      const stream = sheet.interleaveWithNodeStream(renderToNodeStream(jsxWithStyles));
+      // react-helmet
+      const helmetContent = Helmet.renderStatic();
+      const meta = `
+        ${helmetContent.title.toString()}
+        ${helmetContent.meta.toString()}
+      `.trim();
 
-      stream.pipe(
-        res,
-        { end: false }
-      );
-      stream.on('end', () => res.send());
+      res.send(renderFullPage({ meta, body, style, preloadedState }));
     })
     .catch((e: Error) => {
       res.status(500).send(e.message);
     });
 
   // kick redux-saga
-  renderToStaticMarkup(comp);
+  renderToStaticMarkup(sheet.collectStyles(jsx));
 
   // close redux-saga(because using `fork`)
   store.close();

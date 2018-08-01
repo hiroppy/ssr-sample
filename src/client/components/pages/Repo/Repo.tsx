@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import styled from 'styled-components';
+import { Head } from '../../Head';
 import { State } from '../../../reducers/repos'; // TODO...
 import { TextLink } from '../../atoms/TextLink';
 
@@ -42,16 +43,19 @@ export class Repo extends React.PureComponent<Props> {
     } = this.props.repo;
 
     return (
-      <Container>
-        <h1>{fullName}</h1>
-        <p>{language}</p>
-        <p>{homepage}</p>
-        <TextLink link={url}>🏠</TextLink>
-        <span>🍴: {forksCount}</span>
-        <span>📝: {issuesCount}</span>
-        <span>🌟: {stargazersCount}</span>
-        <span>👀: {watchersCount}</span>
-      </Container>
+      <React.Fragment>
+        <Head title={fullName} />
+        <Container>
+          <h1>{fullName}</h1>
+          <p>{language}</p>
+          <p>{homepage}</p>
+          <TextLink link={url}>🏠</TextLink>
+          <span>🍴: {forksCount}</span>
+          <span>📝: {issuesCount}</span>
+          <span>🌟: {stargazersCount}</span>
+          <span>👀: {watchersCount}</span>
+        </Container>
+      </React.Fragment>
     );
   }
 }

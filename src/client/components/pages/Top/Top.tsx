@@ -1,6 +1,7 @@
 import * as React from 'react';
+import { Head } from '../../Head';
 
-interface Props {}
+export interface Props {}
 
 export class Top extends React.Component<Props> {
   constructor(props: Props) {
@@ -8,6 +9,11 @@ export class Top extends React.Component<Props> {
   }
 
   render() {
-    return <div />;
+    return (
+      <React.Fragment>
+        <Head title="top" />
+        <div />
+      </React.Fragment>
+    );
   }
 }

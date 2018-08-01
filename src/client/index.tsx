@@ -5,10 +5,10 @@ import { BrowserRouter } from 'react-router-dom';
 import { Router } from './Router';
 import { configureStore } from './store/configureStore';
 
-const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate;
+const renderMethod = ReactDOM.hydrate;
+// const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate;
 
 const initialData = JSON.parse(document.getElementById('initial-data')!.getAttribute('data-json')!);
-
 const store = configureStore(initialData);
 
 if (module.hot) {
