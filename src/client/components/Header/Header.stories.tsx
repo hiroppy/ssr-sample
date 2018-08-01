@@ -3,10 +3,10 @@ import { storiesOf } from '@storybook/react';
 import { MemoryRouter } from 'react-router-dom';
 import { Header } from '.';
 
-const stories = storiesOf('components/organisms/Header', module);
+const stories = storiesOf('components/Header', module);
 
 stories.add('default', () => (
   <MemoryRouter initialEntries={['/']}>
-    <Header name="header" />
+    <Header userName="user" orgName="org" />
   </MemoryRouter>
 ));

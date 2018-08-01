@@ -7,7 +7,7 @@ import { Header } from '.';
 test('should render self and sub-components', () => {
   const tree = mount(
     <MemoryRouter initialEntries={['/']}>
-      <Header name="foo" />
+      <Header userName="foo" orgName="org!" />
     </MemoryRouter>
   );
 
