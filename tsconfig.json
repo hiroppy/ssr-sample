@@ -5,10 +5,12 @@
     "jsx": "react",
     "lib": ["es2017", "dom"],
     "target": "es2015",
-    "module": "commonjs",
+    // "module": "esnext", // for dynamic import
+    "module": "commonjs", // for dynamic import
+    "moduleResolution": "node", // for module:esnext
     "allowJs": false,
     "sourceMap": true,
-    "removeComments": true,
+    "removeComments": false, // to leave webpack's comment
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "suppressImplicitAnyIndexErrors": true,

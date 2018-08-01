@@ -1,11 +1,11 @@
 import { all, fork } from 'redux-saga/effects';
-import { reposProcess } from './repos';
+import { orgsProcess } from './orgs';
 import { errorsProcess } from './errors';
 
 /**
  * Root for saga
  */
 export function* rootSaga() {
-  yield all([fork(reposProcess)]);
+  yield all([fork(orgsProcess)]);
   yield all([fork(errorsProcess)]);
 }

@@ -9,7 +9,7 @@ export interface SetUserName extends Action {
   };
 }
 
-export const setUserName = (name: string): SetUserName => ({
+export const setUserName = (name: SetUserName['payload']['name']): SetUserName => ({
   type: 'SET_USER_NAME',
   payload: {
     name

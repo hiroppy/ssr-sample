@@ -12,6 +12,7 @@ const config = {
   },
   plugins: [new webpack.optimize.AggressiveMergingPlugin()],
   optimization: {
+    runtimeChunk: 'single',
     minimizer: [
       new UglifyJsPlugin({
         parallel: true
@@ -26,8 +27,7 @@ const config = {
           enforce: true
         }
       }
-    },
-    runtimeChunk: 'single'
+    }
   }
 };
 
