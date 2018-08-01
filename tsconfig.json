@@ -17,6 +17,6 @@
     "experimentalDecorators": true,
     "strict": true
   },
-  "exclude": ["node_modules", "src/server/**/*.test.ts", "src/client/**/*.stories.ts"],
+  "exclude": ["node_modules", "src/**/*.test.ts", "src/client/**/*.stories.ts"],
   "include": ["src/**/*"]
 }
