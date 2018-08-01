@@ -4,12 +4,14 @@ const { resolve } = require('path');
 const webpack = require('webpack');
 const { smart } = require('webpack-merge');
 const DotenvPlugin = require('webpack-dotenv-plugin');
-// const common = require('./webpack.common.config');
 
-const config = {
+const config =
+  process.env.NODE_ENV !== 'production'
+    ? require('./webpack.dev.config')
+    : require('./webpack.prod.config');
+
+const common = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
-  target: 'web',
-  entry: ['webpack-hot-middleware/client', resolve('src', 'client', 'index.tsx')],
   output: {
     filename: '[name].bundle.js',
     path: resolve('dist'),
@@ -22,8 +24,6 @@ const config = {
     rules: [
       {
         test: /\.ts|.tsx$/,
-
-        // HMR: https://github.com/gaearon/react-hot-loader#typescript (only client)
         use: 'awesome-typescript-loader'
       }
     ]
@@ -36,10 +36,8 @@ const config = {
     // }),
     new webpack.DefinePlugin({
       'process.env.BROWSER': JSON.stringify(true)
-    }),
-    new webpack.HotModuleReplacementPlugin()
+    })
   ]
 };
 
-module.exports = config;
-// module.exports = smart(common, config);
+module.exports = smart(common, config);
