@@ -8,7 +8,7 @@ import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import { ServerStyleSheet } from 'styled-components';
-import { renderFullPage } from '../HTML';
+import { renderFullPage } from '../renderFullPage';
 import { Router } from '../../client/Router';
 import { configureStore } from '../../client/store/configureStore';
 import { rootSaga } from '../../client/sagas';
