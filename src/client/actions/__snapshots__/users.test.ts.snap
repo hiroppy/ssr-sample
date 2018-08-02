@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should create an action to set username 1`] = `
+Object {
+  "payload": Object {
+    "name": "foo",
+  },
+  "type": "SET_USER_NAME",
+}
+`;

@@ -22,17 +22,13 @@ function* fetchRepos(action: FetchRepos) {
       watchersCount: r.watchers_count
     }));
 
-    if (res.status === 200) {
-      yield put({
-        type: 'FETCH_REPOS_SUCCESS',
-        payload: {
-          name: org,
-          repos
-        }
-      });
-    } else {
-      throw new Error();
-    }
+    yield put({
+      type: 'FETCH_REPOS_SUCCESS',
+      payload: {
+        name: org,
+        repos
+      }
+    });
   } catch (e) {
     yield put({
       type: 'ERROR',

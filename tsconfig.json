@@ -5,8 +5,7 @@
     "jsx": "react",
     "lib": ["es2017", "dom"],
     "target": "es2015",
-    // "module": "esnext", // for dynamic import
-    "module": "commonjs", // for dynamic import
+    "module": "commonjs",
     "moduleResolution": "node", // for module:esnext
     "allowJs": false,
     "sourceMap": true,

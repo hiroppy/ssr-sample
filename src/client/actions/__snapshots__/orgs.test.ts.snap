@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should create a successful action to fetch repositories 1`] = `
+Object {
+  "payload": Object {
+    "name": "foo",
+    "repos": Array [],
+  },
+  "type": "FETCH_REPOS_SUCCESS",
+}
+`;
+
+exports[`should create an action to fetch repositories 1`] = `
+Object {
+  "payload": Object {
+    "org": "foo",
+  },
+  "type": "FETCH_REPOS",
+}
+`;
+
+exports[`should create an action to reset state 1`] = `
+Object {
+  "type": "RESET_ORGS",
+}
+`;

@@ -22,6 +22,7 @@ const Card = styled.a`
   background: #f5f5f5;
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   height: 350px;
+  padding: 0 15px;
   text-align: center;
   text-decoration: none;
 

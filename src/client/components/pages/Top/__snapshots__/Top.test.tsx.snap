@@ -1,0 +1,180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render self and sub-components 1`] = `
+.c0 {
+  box-shadow: 0px 0px 5px silver;
+  margin: auto;
+  padding: 0.5em 0.5em 0.5em 2em;
+  width: 600px;
+}
+
+.c1 {
+  line-height: 1.5;
+  padding: 0.5em 0;
+}
+
+<MemoryRouter
+  initialEntries={
+    Array [
+      Object {
+        "key": "testKey",
+        "pathname": "/",
+      },
+    ]
+  }
+>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "testKey",
+            "pathname": "/",
+            "search": "",
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "testKey",
+          "pathname": "/",
+          "search": "",
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Component>
+      <Component
+        title="top"
+      >
+        <HelmetWrapper
+          defer={true}
+          encodeSpecialCharacters={true}
+        >
+          <SideEffect(NullComponent)
+            defer={true}
+            encodeSpecialCharacters={true}
+            meta={
+              Array [
+                Object {
+                  "charset": "UTF-8",
+                },
+              ]
+            }
+            title="top"
+            titleAttributes={Object {}}
+          >
+            <NullComponent
+              defer={true}
+              encodeSpecialCharacters={true}
+              meta={
+                Array [
+                  Object {
+                    "charset": "UTF-8",
+                  },
+                ]
+              }
+              title="top"
+              titleAttributes={Object {}}
+            />
+          </SideEffect(NullComponent)>
+        </HelmetWrapper>
+      </Component>
+      <styled.ul>
+        <ul
+          className="c0"
+        >
+          <styled.li
+            key="nodejs"
+          >
+            <li
+              className="c1"
+            >
+              <Link
+                replace={false}
+                to="/orgs/nodejs"
+              >
+                <a
+                  href="/orgs/nodejs"
+                  onClick={[Function]}
+                >
+                  nodejs
+                </a>
+              </Link>
+            </li>
+          </styled.li>
+          <styled.li
+            key="facebook"
+          >
+            <li
+              className="c1"
+            >
+              <Link
+                replace={false}
+                to="/orgs/facebook"
+              >
+                <a
+                  href="/orgs/facebook"
+                  onClick={[Function]}
+                >
+                  facebook
+                </a>
+              </Link>
+            </li>
+          </styled.li>
+          <styled.li
+            key="google"
+          >
+            <li
+              className="c1"
+            >
+              <Link
+                replace={false}
+                to="/orgs/google"
+              >
+                <a
+                  href="/orgs/google"
+                  onClick={[Function]}
+                >
+                  google
+                </a>
+              </Link>
+            </li>
+          </styled.li>
+          <styled.li
+            key="microsoft"
+          >
+            <li
+              className="c1"
+            >
+              <Link
+                replace={false}
+                to="/orgs/microsoft"
+              >
+                <a
+                  href="/orgs/microsoft"
+                  onClick={[Function]}
+                >
+                  microsoft
+                </a>
+              </Link>
+            </li>
+          </styled.li>
+        </ul>
+      </styled.ul>
+    </Component>
+  </Router>
+</MemoryRouter>
+`;

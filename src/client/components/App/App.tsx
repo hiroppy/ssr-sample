@@ -11,7 +11,7 @@ injectGlobal`
   }
 `;
 
-interface Props {
+export interface Props {
   name: string;
   children: React.ReactNode;
   setUserName: () => void;

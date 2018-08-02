@@ -1,6 +1,13 @@
 import { put, takeLatest } from 'redux-saga/effects';
 
-function* errorsRouter(action: any) {
+interface Action {
+  type: 'ERROR' | 'ERROR_API_LIMIT';
+  payload: {
+    message: string;
+  };
+}
+
+function* errorsRouter(action: Action) {
   // currently, only exist API_LIMIT_ERROT
   yield put({
     type: 'ERROR_API_LIMIT',
@@ -8,7 +15,7 @@ function* errorsRouter(action: any) {
   });
 }
 
-function* apiLimit(action: any) {
+function* apiLimit(action: Action) {
   yield alert(action.payload.message);
 }
 

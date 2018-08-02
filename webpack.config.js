@@ -24,7 +24,12 @@ const common = {
     rules: [
       {
         test: /\.ts|.tsx$/,
-        use: 'awesome-typescript-loader'
+        use: {
+          loader: 'awesome-typescript-loader',
+          options: {
+            configFileName: 'tsconfig.client.json'
+          }
+        }
       }
     ]
   },

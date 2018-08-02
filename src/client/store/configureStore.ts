@@ -8,7 +8,9 @@ const sagaMiddleware = createSagaMiddleware();
 const createEnhancer = () => {
   const appliedMiddlewares = applyMiddleware(sagaMiddleware);
   const composeEnhancers =
-    process.env.NODE_ENV !== 'production' && (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+    process.env.NODE_ENV !== 'production' &&
+    typeof window === 'object' &&
+    (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
       ? (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
       : compose;
 
@@ -29,6 +31,7 @@ export const configureStore = (preloadedState: Object = {}) => {
     store.dispatch(END);
   };
 
+  /* istanbul ignore next */
   if (module.hot) {
     module.hot.accept('../reducers', () => {
       const { rootReducer: nextReducer } = require('../reducers');

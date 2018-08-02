@@ -3,7 +3,7 @@ import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { Chance } from 'chance';
 import { State } from '../../reducers';
-import { App as AppComponent } from '../../components/App';
+import { Props, App as AppComponent } from '../../components/App';
 import { setUserName } from '../../actions/users';
 
 const chance = new Chance();
@@ -13,12 +13,12 @@ const mapStateToProps = (state: State) => ({
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-  setUserName: () => {
-    dispatch(setUserName(chance.name()));
+  setUserName: (name?: string) => {
+    dispatch(setUserName(name || chance.name()));
   }
 });
 
 export const App = connect(
   mapStateToProps,
   mapDispatchToProps
-)(AppComponent);
+)<Props & { store?: unknown }>(AppComponent);

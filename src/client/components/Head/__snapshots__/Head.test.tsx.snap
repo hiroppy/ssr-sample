@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render self and sub-components 1`] = `
+<HelmetWrapper
+  defer={true}
+  encodeSpecialCharacters={true}
+>
+  <meta
+    charSet="UTF-8"
+  />
+  <title>
+    foo
+  </title>
+</HelmetWrapper>
+`;
