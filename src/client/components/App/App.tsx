@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { injectGlobal } from 'styled-components';
-import { Main } from './templates/Main';
+import { Main } from '../templates/Main';
 
 injectGlobal`
   body {
