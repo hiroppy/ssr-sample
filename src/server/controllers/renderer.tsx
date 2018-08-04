@@ -13,10 +13,21 @@ import { Router } from '../../client/Router';
 import { configureStore } from '../../client/store/configureStore';
 import { rootSaga } from '../../client/sagas';
 
+// You need to reboot this server if you change client javascript files.
+// You need to read the manifest in `get` method if you do not want to restart.
+const assets = (process.env.NODE_ENV === 'production'
+  ? (() => {
+      const manifest = require('../../../dist/manifest.json');
+      return [manifest['vendor.js'], manifest['main.js']];
+    })()
+  : ['/public/main.bundle.js']
+)
+  .map((f) => `<script src="${f}"></script>`)
+  .join('\n');
+
 export function get(req: Request, res: Response) {
   const store = configureStore();
   const sheet = new ServerStyleSheet();
-
   const jsx = (
     <Provider store={store}>
       <StaticRouter location={req.url} context={{}}>
@@ -32,23 +43,21 @@ export function get(req: Request, res: Response) {
     .runSaga(rootSaga)
     .done.then(() => {
       const preloadedState = JSON.stringify(store.getState());
-      const style = sheet.getStyleTags();
-      const body = renderToString(jsx);
-
-      // react-helmet
       const helmetContent = Helmet.renderStatic();
       const meta = `
         ${helmetContent.title.toString()}
         ${helmetContent.meta.toString()}
       `.trim();
+      const style = sheet.getStyleTags();
+      const body = renderToString(jsx);
 
-      res.send(renderFullPage({ meta, body, style, preloadedState }));
+      res.send(renderFullPage({ meta, assets, body, style, preloadedState }));
     })
     .catch((e: Error) => {
       res.status(500).send(e.message);
     });
 
-  // kick redux-saga
+  // kick redux-saga and styled-components
   renderToStaticMarkup(sheet.collectStyles(jsx));
 
   // close redux-saga(because using `fork`)

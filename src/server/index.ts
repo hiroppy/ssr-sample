@@ -8,6 +8,7 @@ if (process.env.NODE_ENV === 'production') {
   if (cluster.isMaster) {
     [...new Array(numCPUs)].forEach(() => cluster.fork());
 
+    // cluster manager
     cluster.on('exit', (worker, code, signal) => {
       console.log(`Restarting ${worker.process.pid}. ${code || signal}`);
       cluster.fork();

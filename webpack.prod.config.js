@@ -4,6 +4,7 @@ const { resolve } = require('path');
 const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
+const { GenerateSW } = require('workbox-webpack-plugin');
 
 const config = {
   entry: resolve('src', 'client', 'index.tsx'),
@@ -13,10 +14,13 @@ const config = {
   },
   plugins: [
     // new webpack.optimize.AggressiveMergingPlugin(),
-    new ManifestPlugin()
+    new ManifestPlugin(),
+    new GenerateSW()
   ],
   optimization: {
-    runtimeChunk: 'single',
+    // runtimeChunk: {
+    //   name: "manifest",
+    // },
     minimizer: [
       new UglifyJsPlugin({
         parallel: true

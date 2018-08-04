@@ -71,7 +71,8 @@
     "webpack-dotenv-plugin": "^2.1.0",
     "webpack-hot-middleware": "^2.22.3",
     "webpack-manifest-plugin": "^2.0.3",
-    "webpack-merge": "^4.1.3"
+    "webpack-merge": "^4.1.3",
+    "workbox-webpack-plugin": "^3.4.1"
   },
   "dependencies": {
     "@octokit/rest": "^15.9.4",

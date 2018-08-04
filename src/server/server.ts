@@ -1,20 +1,18 @@
 import { createServer } from 'http';
-import * as bodyParser from 'body-parser';
 import * as express from 'express';
+import * as bodyParser from 'body-parser';
+import * as Loadable from 'react-loadable';
 import { router } from './router';
 
 export function runServer() {
-  const port = process.env.PORT || 3000;
-
   const app = express();
+  const port = process.env.PORT || 3000;
 
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(bodyParser.json());
 
+  // HMR
   if (process.env.NODE_ENV !== 'production') {
-    // TODO: delete
-    process.env.CLIENT_JS_URL = '/public/main.bundle.js';
-
     const webpack = require('webpack');
     const webpackHotMiddleware = require('webpack-hot-middleware');
     const webpackDevMiddleware = require('webpack-dev-middleware');
@@ -28,10 +26,15 @@ export function runServer() {
       })
     );
   }
+
   // register routes
   router(app);
 
-  const server = createServer(app).listen(port);
+  const server = createServer(app);
+
+  Loadable.preloadAll().then(() => {
+    server.listen(port);
+  });
 
   server.on('listening', () => {
     const addr = server.address();

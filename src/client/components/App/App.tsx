@@ -7,7 +7,7 @@ injectGlobal`
 
   body {
     font-family: 'Muli', sans-serif;
-    margin: 0
+    margin: 0;
   }
 `;
 

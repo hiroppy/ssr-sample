@@ -1,6 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render self and sub-components 1`] = `
+.c1 {
+  color: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c0 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -8,16 +14,18 @@ exports[`should render self and sub-components 1`] = `
   align-items: center;
   background: #333;
   color: #f5f5f5;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   font-size: 1.3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,200px);
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 15px 30px;
+}
+
+.c0 > * {
+  text-align: center;
 }
 
 <MemoryRouter
@@ -70,17 +78,23 @@ exports[`should render self and sub-components 1`] = `
         <header
           className="c0"
         >
-          <Link
-            replace={false}
+          <Styled(Link)
             to="/"
           >
-            <a
-              href="/"
-              onClick={[Function]}
+            <Link
+              className="c1"
+              replace={false}
+              to="/"
             >
-              🏠
-            </a>
-          </Link>
+              <a
+                className="c1"
+                href="/"
+                onClick={[Function]}
+              >
+                &lt;
+              </a>
+            </Link>
+          </Styled(Link)>
           <span>
             org!
           </span>

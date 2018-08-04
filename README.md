@@ -13,6 +13,13 @@
 - Express
 - Styled-Components
 
+## Production Build
+
+```sh
+$ npm run build # client
+$ npm run start:prod # server
+```
+
 ## Note
 
-This repository shows how to write and so does not introduce atomic design.
+This repository shows how to write and so does not introduce Atomic Design.

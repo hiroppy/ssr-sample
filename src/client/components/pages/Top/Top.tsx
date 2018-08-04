@@ -8,8 +8,9 @@ const orgs = ['nodejs', 'facebook', 'google', 'microsoft'];
 const Ul = styled.ul`
   box-shadow: 0px 0px 5px silver;
   margin: auto;
+  max-width: 600px;
   padding: 0.5em 0.5em 0.5em 2em;
-  width: 600px;
+  width: 90%;
 `;
 
 const Li = styled.li`

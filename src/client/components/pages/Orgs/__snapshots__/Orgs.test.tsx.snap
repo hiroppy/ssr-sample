@@ -85,6 +85,10 @@ exports[`should render self and sub-components 1`] = `
             Object {
               "charset": "UTF-8",
             },
+            Object {
+              "content": "width=device-width, initial-scale=1.0",
+              "name": "viewport",
+            },
           ]
         }
         title="org"
@@ -97,6 +101,10 @@ exports[`should render self and sub-components 1`] = `
             Array [
               Object {
                 "charset": "UTF-8",
+              },
+              Object {
+                "content": "width=device-width, initial-scale=1.0",
+                "name": "viewport",
               },
             ]
           }

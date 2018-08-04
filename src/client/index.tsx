@@ -3,6 +3,13 @@ import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import { configureStore } from './store/configureStore';
+import * as Loadable from 'react-loadable';
+
+if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/public/service-worker.js');
+  });
+}
 
 const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate;
 const initialData = JSON.parse(document.getElementById('initial-data')!.getAttribute('data-json')!);
@@ -21,10 +28,12 @@ const render = () => {
   );
 };
 
-if (module.hot) {
-  module.hot.accept('./Router', () => {
-    render();
-  });
-}
+Loadable.preloadReady().then(() => {
+  if (module.hot) {
+    module.hot.accept('./Router', () => {
+      render();
+    });
+  }
 
-render();
+  render();
+});
