@@ -10,7 +10,7 @@ os:
 before_script:
   - npm i -g npm
   - npm ci
-  # - npm run build # smoke test
+  - npm run build # smoke test
   - ls
   - npm i codecov
   - npm run test:ci

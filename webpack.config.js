@@ -3,16 +3,14 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
 const { smart } = require('webpack-merge');
-const DotenvPlugin = require('webpack-dotenv-plugin');
 const { ReactLoadablePlugin } = require('react-loadable/webpack');
+const Dotenv = require('dotenv-webpack');
 
-const config =
-  process.env.NODE_ENV !== 'production'
-    ? require('./webpack.dev.config')
-    : require('./webpack.prod.config');
+const isProd = process.env.NODE_ENV === 'production';
+const config = isProd ? require('./webpack.prod.config') : require('./webpack.dev.config');
 
 const common = {
-  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+  mode: isProd ? 'production' : 'development',
   output: {
     filename: '[name].bundle.js',
     path: resolve('dist'),
@@ -35,14 +33,14 @@ const common = {
     ]
   },
   plugins: [
+    new Dotenv({
+      path: isProd ? '.env.prod' : '.env.dev',
+      safe: false
+    }),
     new ReactLoadablePlugin({
       filename: './dist/react-loadable.json'
     }),
     new webpack.NamedModulesPlugin(),
-    // new DotenvPlugin({
-    //   sample: './.env',
-    //   path: '.env'
-    // }),
     new webpack.DefinePlugin({
       'process.env.BROWSER': JSON.stringify(true)
     })

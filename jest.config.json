@@ -1,7 +1,12 @@
 {
   "testURL": "http://localhost/",
   "collectCoverage": true,
-  "collectCoverageFrom": ["src/**/*.(ts|tsx)", "!src/client/**/*.stories.tsx", "!src/**/*.d.ts"],
+  "collectCoverageFrom": [
+    "src/**/*.(ts|tsx)",
+    "!src/client/**/*.stories.tsx",
+    "!src/**/*.d.ts",
+    "!src/client/index.tsx"
+  ],
   "moduleFileExtensions": ["ts", "tsx", "js"],
   "transform": {
     "^.+\\.(ts|tsx)$": "ts-jest"

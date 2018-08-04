@@ -1,8 +1,15 @@
+import { join } from 'path';
 import * as cluster from 'cluster';
 import { cpus } from 'os';
+import { config } from 'dotenv';
 import { runServer } from './server';
 
-if (process.env.NODE_ENV === 'production') {
+const isProd = process.env.NODE_ENV === 'production';
+
+// If you compile server code with webpack, this is unnecessary.
+config({ path: join(__dirname, '..', '..', `.env.${isProd ? 'prod' : 'dev'}`) });
+
+if (isProd) {
   const numCPUs = cpus().length;
 
   if (cluster.isMaster) {
