@@ -5,9 +5,11 @@
     "src/**/*.(ts|tsx)",
     "!src/client/**/*.stories.tsx",
     "!src/**/*.d.ts",
-    "!src/client/index.tsx"
+    "!src/client/index.tsx",
+    "!src/server/index.ts",
+    "!src/server/server.ts"
   ],
-  "moduleFileExtensions": ["ts", "tsx", "js"],
+  "moduleFileExtensions": ["ts", "tsx", "js", "json"],
   "transform": {
     "^.+\\.(ts|tsx)$": "ts-jest"
   },

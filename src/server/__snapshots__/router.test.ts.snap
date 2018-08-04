@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should register url paths 1`] = `
+Array [
+  Object {
+    "name": "query",
+    "path": /\\^\\\\/\\?\\(\\?=\\\\/\\|\\$\\)/i,
+  },
+  Object {
+    "name": "expressInit",
+    "path": /\\^\\\\/\\?\\(\\?=\\\\/\\|\\$\\)/i,
+  },
+  Object {
+    "name": "serveStatic",
+    "path": /\\^\\\\/public\\\\/\\?\\(\\?=\\\\/\\|\\$\\)/i,
+  },
+  Object {
+    "name": "get",
+    "path": /\\^\\\\/api\\\\/heath\\\\/\\?\\(\\?=\\\\/\\|\\$\\)/i,
+  },
+  Object {
+    "name": "get",
+    "path": /\\^\\\\/\\?\\(\\?=\\\\/\\|\\$\\)/i,
+  },
+]
+`;

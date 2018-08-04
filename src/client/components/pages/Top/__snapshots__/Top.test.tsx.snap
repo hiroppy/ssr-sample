@@ -183,6 +183,20 @@ exports[`should render self and sub-components 1`] = `
           </styled.li>
         </ul>
       </styled.ul>
+      <div>
+        <p>
+          DOTENV_TYPE: 
+        </p>
+        <p>
+          Repository:
+          <a
+            href="https://github.com/hiroppy/ssr-sample"
+            target="_blank"
+          >
+            https://github.com/hiroppy/ssr-sample
+          </a>
+        </p>
+      </div>
     </Component>
   </Router>
 </MemoryRouter>

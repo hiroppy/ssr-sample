@@ -1,3 +1,5 @@
+// Configuration file for client
+
 'use strict';
 
 const { resolve } = require('path');

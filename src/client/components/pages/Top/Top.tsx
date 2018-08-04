@@ -28,5 +28,14 @@ export const Top = () => (
         </Li>
       ))}
     </Ul>
+    <div>
+      <p>DOTENV_TYPE: {process.env.DOTENV_TYPE}</p>
+      <p>
+        Repository:
+        <a href="https://github.com/hiroppy/ssr-sample" target="_blank">
+          https://github.com/hiroppy/ssr-sample
+        </a>
+      </p>
+    </div>
   </React.Fragment>
 );

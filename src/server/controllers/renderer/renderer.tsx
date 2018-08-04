@@ -8,16 +8,16 @@ import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import { ServerStyleSheet } from 'styled-components';
-import { renderFullPage } from '../renderFullPage';
-import { Router } from '../../client/Router';
-import { configureStore } from '../../client/store/configureStore';
-import { rootSaga } from '../../client/sagas';
+import { renderFullPage } from '../../renderFullPage';
+import { Router } from '../../../client/Router';
+import { configureStore } from '../../../client/store/configureStore';
+import { rootSaga } from '../../../client/sagas';
 
 // You need to reboot this server if you change client javascript files.
 // You need to read the manifest in `get` method if you do not want to restart.
 const assets = (process.env.NODE_ENV === 'production'
   ? (() => {
-      const manifest = require('../../../dist/manifest.json');
+      const manifest = require('../../../dist/manifest');
       return [manifest['vendor.js'], manifest['main.js']];
     })()
   : ['/public/main.bundle.js']
