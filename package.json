@@ -11,7 +11,11 @@
     "build": "npm run rm:dist && NODE_ENV=production webpack",
     "build:storybook": "build-storybook",
     "deploy:storybook": "npm run build:storybook && storybook-to-ghpages",
+    "benchmark": "autocannon http://localhost:3000 -c100",
+    "benckmark:docker": "clinic docker -- npm run start:prod",
+    "benchmark:bubbleprof": "clinic bubbleprof -- npm run start:prod",
     "rm:dist": "rimraf dist",
+    "rm:benchmark": "clinic clean",
     "precommit": "pretty-quick --staged"
   },
   "repository": {
@@ -48,7 +52,9 @@
     "@types/storybook__react": "^3.0.8",
     "@types/webpack": "^4.4.8",
     "@types/webpack-env": "^1.13.6",
+    "autocannon": "^2.4.1",
     "awesome-typescript-loader": "^5.2.0",
+    "clinic": "^1.0.2",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.4",

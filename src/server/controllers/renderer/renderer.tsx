@@ -17,7 +17,7 @@ import { rootSaga } from '../../../client/sagas';
 // You need to read the manifest in `get` method if you do not want to restart.
 const assets = (process.env.NODE_ENV === 'production'
   ? (() => {
-      const manifest = require('../../../dist/manifest');
+      const manifest = require('../../../../dist/manifest');
       return [manifest['vendor.js'], manifest['main.js']];
     })()
   : ['/public/main.bundle.js']

@@ -27,6 +27,8 @@ This repository shows you how to write SSR and SPA code using TypeScript.
   - dotenv
   - manifest
   - load distribution
+- how to measure performance
+  - autocannon, clinic
 
 ## Libraries
 

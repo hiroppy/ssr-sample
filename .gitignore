@@ -2,5 +2,8 @@ node_modules
 .env
 dist
 coverage
+*.clinic-doctor*
+node_trace*
+
 # .env.dev
 # .env.prod
