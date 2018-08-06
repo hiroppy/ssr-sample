@@ -18,6 +18,7 @@ const config = {
     new GenerateSW()
   ],
   optimization: {
+    runtimeChunk: 'single',
     // runtimeChunk: {
     //   name: "manifest",
     // },

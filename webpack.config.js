@@ -2,7 +2,7 @@
 
 'use strict';
 
-const { resolve } = require('path');
+const { join, resolve } = require('path');
 const webpack = require('webpack');
 const { smart } = require('webpack-merge');
 const { ReactLoadablePlugin } = require('react-loadable/webpack');
@@ -40,7 +40,7 @@ const common = {
       safe: false
     }),
     new ReactLoadablePlugin({
-      filename: './dist/react-loadable.json'
+      filename: join('.', 'dist', 'react-loadable.json')
     }),
     new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin({
