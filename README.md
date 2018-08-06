@@ -65,7 +65,9 @@ $ npm start
 
 ```sh
 $ npm start # use 3000
+$ open http://localhost3000
 $ npm run start:storybook # use 6006
+$ open http://localhost6006
 ```
 
 ## Test
@@ -79,6 +81,7 @@ $ npm test
 ```sh
 $ npm run build # for client codes
 $ npm run start:prod # run server and use 3000
+$ open http://localhost8080
 ```
 
 ## Deploy
