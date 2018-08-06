@@ -36,9 +36,25 @@ const Name = styled.h1`
   word-wrap: break-word;
 `;
 
-const Info = styled.span`
-  font-size: 1.5rem;
+const InfoBox = styled.div`
+  display: flex;
+  font-size: 1.3rem;
+  margin: 15px;
+  justify-content: space-around;
 `;
+
+const InfoItem = styled.div`
+  flex-direction: column;
+  display: flex;
+  flex: 1;
+`;
+
+const Info = ({ icon, num }: { icon: string; num: number }) => (
+  <InfoItem>
+    <span>{icon}</span>
+    <span>{num}</span>
+  </InfoItem>
+);
 
 export class Orgs extends React.PureComponent<Props> {
   constructor(props: Props) {
@@ -60,14 +76,14 @@ export class Orgs extends React.PureComponent<Props> {
             <Card key={repo.name} href={repo.url} target="_blank" rel="noopener noreferrer">
               <Name>{repo.name}</Name>
               <p>{repo.language}</p>
-              <div>
-                <Info>🌟: {repo.stargazersCount}</Info>
-                <Info>👀: {repo.watchersCount}</Info>
-              </div>
-              <div>
-                <Info>🍴: {repo.forksCount}</Info>
-                <Info>📝: {repo.issuesCount}</Info>
-              </div>
+              <InfoBox>
+                <Info icon="🌟" num={repo.stargazersCount} />
+                <Info icon="👀" num={repo.watchersCount} />
+              </InfoBox>
+              <InfoBox>
+                <Info icon="🍴" num={repo.forksCount} />
+                <Info icon="📝" num={repo.issuesCount} />
+              </InfoBox>
             </Card>
           ))}
         </Container>

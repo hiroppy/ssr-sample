@@ -28,7 +28,29 @@ exports[`should render self and sub-components 1`] = `
 }
 
 .c3 {
-  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.3rem;
+  margin: 15px;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.c4 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 <Orgs
@@ -140,42 +162,86 @@ exports[`should render self and sub-components 1`] = `
           <p>
             lang
           </p>
-          <div>
-            <styled.span>
-              <span
-                className="c3"
+          <styled.div>
+            <div
+              className="c3"
+            >
+              <Info
+                icon="🌟"
+                num={300}
               >
-                🌟: 
-                300
-              </span>
-            </styled.span>
-            <styled.span>
-              <span
-                className="c3"
+                <styled.div>
+                  <div
+                    className="c4"
+                  >
+                    <span>
+                      🌟
+                    </span>
+                    <span>
+                      300
+                    </span>
+                  </div>
+                </styled.div>
+              </Info>
+              <Info
+                icon="👀"
+                num={400}
               >
-                👀: 
-                400
-              </span>
-            </styled.span>
-          </div>
-          <div>
-            <styled.span>
-              <span
-                className="c3"
+                <styled.div>
+                  <div
+                    className="c4"
+                  >
+                    <span>
+                      👀
+                    </span>
+                    <span>
+                      400
+                    </span>
+                  </div>
+                </styled.div>
+              </Info>
+            </div>
+          </styled.div>
+          <styled.div>
+            <div
+              className="c3"
+            >
+              <Info
+                icon="🍴"
+                num={100}
               >
-                🍴: 
-                100
-              </span>
-            </styled.span>
-            <styled.span>
-              <span
-                className="c3"
+                <styled.div>
+                  <div
+                    className="c4"
+                  >
+                    <span>
+                      🍴
+                    </span>
+                    <span>
+                      100
+                    </span>
+                  </div>
+                </styled.div>
+              </Info>
+              <Info
+                icon="📝"
+                num={200}
               >
-                📝: 
-                200
-              </span>
-            </styled.span>
-          </div>
+                <styled.div>
+                  <div
+                    className="c4"
+                  >
+                    <span>
+                      📝
+                    </span>
+                    <span>
+                      200
+                    </span>
+                  </div>
+                </styled.div>
+              </Info>
+            </div>
+          </styled.div>
         </a>
       </styled.a>
       <styled.a
@@ -200,42 +266,86 @@ exports[`should render self and sub-components 1`] = `
           <p>
             lang
           </p>
-          <div>
-            <styled.span>
-              <span
-                className="c3"
+          <styled.div>
+            <div
+              className="c3"
+            >
+              <Info
+                icon="🌟"
+                num={3000}
               >
-                🌟: 
-                3000
-              </span>
-            </styled.span>
-            <styled.span>
-              <span
-                className="c3"
+                <styled.div>
+                  <div
+                    className="c4"
+                  >
+                    <span>
+                      🌟
+                    </span>
+                    <span>
+                      3000
+                    </span>
+                  </div>
+                </styled.div>
+              </Info>
+              <Info
+                icon="👀"
+                num={4000}
               >
-                👀: 
-                4000
-              </span>
-            </styled.span>
-          </div>
-          <div>
-            <styled.span>
-              <span
-                className="c3"
+                <styled.div>
+                  <div
+                    className="c4"
+                  >
+                    <span>
+                      👀
+                    </span>
+                    <span>
+                      4000
+                    </span>
+                  </div>
+                </styled.div>
+              </Info>
+            </div>
+          </styled.div>
+          <styled.div>
+            <div
+              className="c3"
+            >
+              <Info
+                icon="🍴"
+                num={1000}
               >
-                🍴: 
-                1000
-              </span>
-            </styled.span>
-            <styled.span>
-              <span
-                className="c3"
+                <styled.div>
+                  <div
+                    className="c4"
+                  >
+                    <span>
+                      🍴
+                    </span>
+                    <span>
+                      1000
+                    </span>
+                  </div>
+                </styled.div>
+              </Info>
+              <Info
+                icon="📝"
+                num={2000}
               >
-                📝: 
-                2000
-              </span>
-            </styled.span>
-          </div>
+                <styled.div>
+                  <div
+                    className="c4"
+                  >
+                    <span>
+                      📝
+                    </span>
+                    <span>
+                      2000
+                    </span>
+                  </div>
+                </styled.div>
+              </Info>
+            </div>
+          </styled.div>
         </a>
       </styled.a>
     </div>
