@@ -5,11 +5,11 @@ import * as Loadable from 'react-loadable';
 export const LoadableOrgs = Loadable({
   loader: () =>
     import(/* webpackChunkName: "Orgs" */ '../containers/Orgs').then(({ Orgs }) => Orgs),
-  loading: () => <div>loading ...</div>
+  loading: () => <div />
 } as Loadable.OptionsWithoutRender<unknown>);
 
 export const LoadableTop = Loadable({
   loader: () =>
     import(/* webpackChunkName: "Top" */ '../components/pages/Top').then(({ Top }) => Top),
-  loading: () => <div>loading ...</div>
+  loading: () => <div />
 } as Loadable.OptionsWithoutRender<unknown>);
