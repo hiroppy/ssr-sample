@@ -15,5 +15,9 @@ exports[`should render self and sub-components 1`] = `
   <title>
     foo
   </title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Muli"
+    rel="stylesheet"
+  />
 </HelmetWrapper>
 `;

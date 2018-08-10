@@ -67,6 +67,14 @@ exports[`should render self and sub-components 1`] = `
           <SideEffect(NullComponent)
             defer={true}
             encodeSpecialCharacters={true}
+            link={
+              Array [
+                Object {
+                  "href": "https://fonts.googleapis.com/css?family=Muli",
+                  "rel": "stylesheet",
+                },
+              ]
+            }
             meta={
               Array [
                 Object {
@@ -84,6 +92,14 @@ exports[`should render self and sub-components 1`] = `
             <NullComponent
               defer={true}
               encodeSpecialCharacters={true}
+              link={
+                Array [
+                  Object {
+                    "href": "https://fonts.googleapis.com/css?family=Muli",
+                    "rel": "stylesheet",
+                  },
+                ]
+              }
               meta={
                 Array [
                   Object {
