@@ -3,8 +3,6 @@ import { injectGlobal } from 'styled-components';
 import { Main } from '../templates/Main';
 
 injectGlobal`
-  @import url('https://fonts.googleapis.com/css?family=Muli');
-
   body {
     font-family: 'Muli', sans-serif;
     margin: 0;

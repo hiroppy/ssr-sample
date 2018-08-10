@@ -45,8 +45,9 @@ export function get(req: Request, res: Response) {
       const preloadedState = JSON.stringify(store.getState());
       const helmetContent = Helmet.renderStatic();
       const meta = `
-        ${helmetContent.title.toString()}
         ${helmetContent.meta.toString()}
+        ${helmetContent.title.toString()}
+        ${helmetContent.link.toString()}
       `.trim();
       const style = sheet.getStyleTags();
       const body = renderToString(jsx);
