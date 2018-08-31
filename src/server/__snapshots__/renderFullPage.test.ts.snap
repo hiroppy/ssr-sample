@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should create safe html 1`] = `
-"<html>
+"<!DOCTYPE html>
+    <html>
       <head>
         <meta>meta</meta>
         <style>style</style>
