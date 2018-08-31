@@ -16,7 +16,7 @@ const escape = (str: string) => {
 };
 
 export const renderFullPage = ({ meta, assets, body, style, preloadedState }: Params) => {
-  return `
+  return `<!DOCTYPE html>
     <html>
       <head>
         ${meta}
