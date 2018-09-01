@@ -12,18 +12,25 @@ const customState = {
       stargazersCount: 300,
       watchersCount: 400
     }
-  ]
+  ],
+  isFetching: false
 };
 
 test('should return the initial state', () => {
   expect(reducer(undefined, { type: undefined })).toMatchSnapshot();
 });
 
+test('should handle FETCH_REPOS', () => {
+  expect(reducer(undefined, { type: 'FETCH_REPOS', payload: { org: 'foo' } })).toMatchSnapshot();
+});
+
 test('should handle FETCH_REPOS_SUCCESS', () => {
+  const { isFetching, ...rest } = customState;
+
   expect(
     reducer(undefined, {
       type: 'FETCH_REPOS_SUCCESS',
-      payload: { ...customState }
+      payload: { ...rest }
     })
   ).toMatchSnapshot();
 });

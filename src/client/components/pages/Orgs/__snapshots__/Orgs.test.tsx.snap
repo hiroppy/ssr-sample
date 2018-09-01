@@ -368,3 +368,24 @@ exports[`should render self and sub-components 1`] = `
   </styled.div>
 </Orgs>
 `;
+
+exports[`should show loader 1`] = `
+<React.Fragment>
+  <Component
+    title="org"
+  />
+  <styled.div>
+    <React.Fragment>
+      <styled.div>
+        <Loading
+          color="#333"
+          delay={0}
+          height={64}
+          type="cubes"
+          width={64}
+        />
+      </styled.div>
+    </React.Fragment>
+  </styled.div>
+</React.Fragment>
+`;

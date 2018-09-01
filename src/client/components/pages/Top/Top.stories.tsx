@@ -14,7 +14,7 @@ stories.add('default', () => (
     }}
   >
     <MemoryRouter initialEntries={['/']}>
-      <Top />
+      <Top load={() => {}} />
     </MemoryRouter>
   </div>
 ));

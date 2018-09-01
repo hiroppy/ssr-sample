@@ -10,7 +10,7 @@ import Helmet from 'react-helmet';
 import { ServerStyleSheet } from 'styled-components';
 import { renderFullPage } from '../../renderFullPage';
 import { Router } from '../../../client/Router';
-import { configureStore } from '../../../client/store/configureStore';
+import { configureStore, history } from '../../../client/store/configureStore';
 import { rootSaga } from '../../../client/sagas';
 
 // You need to reboot this server if you change client javascript files.
@@ -60,7 +60,4 @@ export function get(req: Request, res: Response) {
 
   // kick redux-saga and styled-components
   renderToStaticMarkup(sheet.collectStyles(jsx));
-
-  // close redux-saga(because using `fork`)
-  store.close();
 }

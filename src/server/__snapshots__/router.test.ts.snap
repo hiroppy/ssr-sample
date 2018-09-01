@@ -11,16 +11,20 @@ Array [
     "path": /\\^\\\\/\\?\\(\\?=\\\\/\\|\\$\\)/i,
   },
   Object {
+    "name": "<anonymous>",
+    "path": /\\^\\\\/favicon\\\\\\.ico\\\\/\\?\\(\\?=\\\\/\\|\\$\\)/i,
+  },
+  Object {
     "name": "serveStatic",
     "path": /\\^\\\\/public\\\\/\\?\\(\\?=\\\\/\\|\\$\\)/i,
   },
   Object {
-    "name": "get",
-    "path": /\\^\\\\/api\\\\/heath\\\\/\\?\\(\\?=\\\\/\\|\\$\\)/i,
+    "name": "bound dispatch",
+    "path": /\\^\\\\/api\\\\/health\\\\/\\?\\$/i,
   },
   Object {
-    "name": "get",
-    "path": /\\^\\\\/\\?\\(\\?=\\\\/\\|\\$\\)/i,
+    "name": "bound dispatch",
+    "path": /\\^\\(\\.\\*\\)\\\\/\\?\\$/i,
   },
 ]
 `;

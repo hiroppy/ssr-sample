@@ -44,7 +44,7 @@ const common = {
     }),
     new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin({
-      'process.env.BROWSER': JSON.stringify(true)
+      'process.env.IS_BROWSER': JSON.stringify(true)
     })
   ]
 };

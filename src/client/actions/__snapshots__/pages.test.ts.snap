@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should create a failure action to load Orgs page 1`] = `
+Object {
+  "type": "LOAD_ORGS_PAGE_FAILURE",
+}
+`;
+
+exports[`should create a failure action to load Top page 1`] = `
+Object {
+  "type": "LOAD_TOP_PAGE_FAILURE",
+}
+`;
+
+exports[`should create a success action to load Orgs page 1`] = `
+Object {
+  "type": "LOAD_ORGS_PAGE_SUCCESS",
+}
+`;
+
+exports[`should create a success action to load Top page 1`] = `
+Object {
+  "type": "LOAD_TOP_PAGE_SUCCESS",
+}
+`;
+
+exports[`should create an action to load Error page 1`] = `
+Object {
+  "type": "LOAD_ERROR_PAGE",
+}
+`;
+
+exports[`should create an action to load Orgs page 1`] = `
+Object {
+  "payload": Object {
+    "org": "foo",
+  },
+  "type": "LOAD_ORGS_PAGE",
+}
+`;
+
+exports[`should create an action to load Top page 1`] = `
+Object {
+  "type": "LOAD_TOP_PAGE",
+}
+`;
+
+exports[`should create an action to reset state 1`] = `
+Object {
+  "type": "RESET_PAGES_STATUS",
+}
+`;

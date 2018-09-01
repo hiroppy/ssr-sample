@@ -13,15 +13,4 @@ test('should set the root reducer, runSaga, and close', () => {
 
   expect(rootReducer).toHaveBeenCalled();
   expect(store).toHaveProperty('runSaga');
-  expect(store).toHaveProperty('close');
-});
-
-test('should call CHANNEL_END of redux-saga', () => {
-  const dispatch = sinon.spy();
-  const store = configureStore();
-  store.dispatch = dispatch;
-
-  store.close();
-
-  expect(dispatch.lastCall.lastArg).toEqual(END);
 });

@@ -56,7 +56,9 @@ exports[`should render self and sub-components 1`] = `
       }
     }
   >
-    <Component>
+    <Top
+      load={[Function]}
+    >
       <Component
         title="top"
       >
@@ -213,7 +215,7 @@ exports[`should render self and sub-components 1`] = `
           </a>
         </p>
       </div>
-    </Component>
+    </Top>
   </Router>
 </MemoryRouter>
 `;

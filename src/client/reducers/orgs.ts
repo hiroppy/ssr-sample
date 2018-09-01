@@ -11,17 +11,21 @@ export interface State {
     stargazersCount: number;
     watchersCount: number;
   }>;
+  isFetching: boolean;
 }
 
 export const initialState: State = {
   name: '',
-  repos: []
+  repos: [],
+  isFetching: false
 };
 
 export const reducer = (state: State = initialState, action: Actions): State => {
   switch (action.type) {
+    case 'FETCH_REPOS':
+      return { ...state, isFetching: true };
     case 'FETCH_REPOS_SUCCESS':
-      return { ...state, ...action.payload };
+      return { ...state, isFetching: false, ...action.payload };
     case 'RESET_ORGS':
       return initialState;
     default:
