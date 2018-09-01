@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should get orgs state 1`] = `
+Object {
+  "isFetching": false,
+  "name": "",
+  "repos": Array [],
+}
+`;

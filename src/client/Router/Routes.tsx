@@ -9,7 +9,6 @@ export const LoadableOrgs = Loadable({
 } as Loadable.OptionsWithoutRender<unknown>);
 
 export const LoadableTop = Loadable({
-  loader: () =>
-    import(/* webpackChunkName: "Top" */ '../components/pages/Top').then(({ Top }) => Top),
+  loader: () => import(/* webpackChunkName: "Top" */ '../containers/Top').then(({ Top }) => Top),
   loading: () => <div />
 } as Loadable.OptionsWithoutRender<unknown>);

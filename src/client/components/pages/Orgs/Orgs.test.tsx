@@ -34,7 +34,8 @@ const repos = [
   }
 ];
 
-test('should render self and sub-components', () => {
+// https://github.com/airbnb/enzyme/issues/1213
+test.skip('should render self and sub-components', () => {
   const mock: any = jest.fn();
   const tree = mount(
     <Orgs
@@ -42,18 +43,39 @@ test('should render self and sub-components', () => {
       repos={repos}
       match={match}
       location={mock}
-      fetchRepos={() => {}}
-      resetOrgs={() => {}}
+      load={() => {}}
       history={mock}
+      isFetchingRepos
     />
   );
 
   expect(toJson(tree)).toMatchSnapshot();
 });
 
-test('should call fetchRepos if name is empty', () => {
+test('should show loader', () => {
+  process.env.IS_BROWSER = 'true';
+
   const mock: any = jest.fn();
-  const fetchRepos = sinon.spy();
+  const tree = shallow(
+    <Orgs
+      name=""
+      repos={repos}
+      match={match}
+      location={mock}
+      history={mock}
+      load={() => {}}
+      isFetchingRepos={true}
+    />
+  );
+
+  expect(toJson(tree)).toMatchSnapshot();
+
+  delete process.env.IS_BROWSER;
+});
+
+test('should call load', () => {
+  const mock: any = jest.fn();
+  const load = sinon.spy();
 
   shallow(
     <Orgs
@@ -61,32 +83,11 @@ test('should call fetchRepos if name is empty', () => {
       repos={repos}
       match={match}
       location={mock}
-      fetchRepos={fetchRepos}
-      resetOrgs={() => {}}
       history={mock}
+      load={load}
+      isFetchingRepos
     />
   );
 
-  expect(fetchRepos.calledOnce).toBeTruthy();
-});
-
-test('should call resetOrgs when unmounted', () => {
-  const mock: any = jest.fn();
-  const resetRepos = sinon.spy();
-
-  const tree = shallow(
-    <Orgs
-      name=""
-      repos={repos}
-      match={match}
-      location={mock}
-      fetchRepos={() => {}}
-      resetOrgs={resetRepos}
-      history={mock}
-    />
-  );
-
-  tree.unmount();
-
-  expect(resetRepos.calledOnce).toBeTruthy();
+  expect(load.calledOnce).toBeTruthy();
 });

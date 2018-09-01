@@ -1,7 +1,7 @@
 import { Action } from 'redux';
 import { State } from '../reducers/orgs';
 
-export type Actions = FetchRepos | FetchReposSuccess | ResetOrgs;
+export type Actions = FetchRepos | FetchReposSuccess | FetchReposFailure | ResetOrgs;
 
 export interface FetchRepos extends Action {
   type: 'FETCH_REPOS';
@@ -33,6 +33,22 @@ export const fetchReposSuccess = ({
   payload: {
     name,
     repos
+  }
+});
+
+export interface FetchReposFailure {
+  type: 'FETCH_REPOS_FAILURE';
+  payload: {
+    code: number;
+  };
+}
+
+export const fetchReposFailure = (
+  code: FetchReposFailure['payload']['code']
+): FetchReposFailure => ({
+  type: 'FETCH_REPOS_FAILURE',
+  payload: {
+    code
   }
 });
 

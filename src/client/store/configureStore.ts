@@ -21,15 +21,11 @@ export const configureStore = (preloadedState: Object = {}) => {
   const enhancer = createEnhancer();
   const store: Store & {
     runSaga: SagaMiddleware<typeof rootSaga>['run'];
-    close: () => void;
   } = createStore(rootReducer, preloadedState, enhancer);
 
   sagaMiddleware.run(rootSaga);
 
   store.runSaga = sagaMiddleware.run;
-  store.close = () => {
-    store.dispatch(END);
-  };
 
   /* istanbul ignore next */
   if (module.hot) {

@@ -78,9 +78,9 @@ test('should take on the ERROR action when FETCH_REPOS fails', () => {
   return expectSaga(orgsProcess)
     .withState(initialState)
     .put({
-      type: 'ERROR',
+      type: 'FETCH_REPOS_FAILURE',
       payload: {
-        message: 'not found'
+        code: 404
       }
     })
     .dispatch({

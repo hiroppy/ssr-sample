@@ -1,5 +1,5 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { FetchRepos } from '../actions/orgs';
+import { FetchRepos, fetchReposSuccess, fetchReposFailure } from '../actions/orgs';
 import { State } from '../reducers/orgs';
 import * as octokit from '@octokit/rest';
 
@@ -22,20 +22,9 @@ function* fetchRepos(action: FetchRepos) {
       watchersCount: r.watchers_count
     }));
 
-    yield put({
-      type: 'FETCH_REPOS_SUCCESS',
-      payload: {
-        name: org,
-        repos
-      }
-    });
+    yield put(fetchReposSuccess({ name: org, repos }));
   } catch (e) {
-    yield put({
-      type: 'ERROR',
-      payload: {
-        message: JSON.parse(e.message).message
-      }
-    });
+    yield put(fetchReposFailure(e.code));
   }
 }
 

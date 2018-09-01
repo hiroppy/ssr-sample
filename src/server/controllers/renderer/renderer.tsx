@@ -60,7 +60,4 @@ export function get(req: Request, res: Response) {
 
   // kick redux-saga and styled-components
   renderToStaticMarkup(sheet.collectStyles(jsx));
-
-  // close redux-saga(because using `fork`)
-  store.close();
 }

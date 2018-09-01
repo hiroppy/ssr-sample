@@ -5,5 +5,6 @@ test('should register sagas', () => {
 
   expect(saga.next().value).toBeTruthy();
   expect(saga.next().value).toBeTruthy();
+  expect(saga.next().value).toBeTruthy();
   expect(saga.next().value).toBeFalsy();
 });

@@ -14,7 +14,8 @@ beforeEach(() => {
   store = mockStore({
     orgs: {
       name: 'foo',
-      repos: []
+      repos: [],
+      isFetching: false
     }
   });
   store.dispatch = jest.fn();
@@ -29,26 +30,19 @@ test('should map state and dispatch to props', () => {
   expect(wrapper.props()).toEqual(
     expect.objectContaining({
       name: 'foo',
-      repos: []
+      repos: [],
+      isFetchingRepos: false
     })
   );
 });
 
-test('should map fetchRepos to dispatch FETCH_REPOS action', () => {
-  wrapper.props().fetchRepos('foo');
+test('should map load to dispatch LOAD_ORGS_PAGE action', () => {
+  wrapper.props().load('foo');
 
   expect(store.dispatch).toHaveBeenCalledWith({
-    type: 'FETCH_REPOS',
+    type: 'LOAD_ORGS_PAGE',
     payload: {
       org: 'foo'
     }
-  });
-});
-
-test('should map resetOrgs to dispatch RESET_ORGS action', () => {
-  wrapper.props().resetOrgs();
-
-  expect(store.dispatch).toHaveBeenCalledWith({
-    type: 'RESET_ORGS'
   });
 });

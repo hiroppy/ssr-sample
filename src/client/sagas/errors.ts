@@ -16,7 +16,9 @@ function* errorsRouter(action: Action) {
 }
 
 function* apiLimit(action: Action) {
-  yield alert(action.payload.message);
+  if (process.env.IS_BROWSER) {
+    yield alert(action.payload.message);
+  }
 }
 
 export function* errorsProcess() {

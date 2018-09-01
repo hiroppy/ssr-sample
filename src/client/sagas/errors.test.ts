@@ -4,6 +4,8 @@ import { errorsProcess } from './errors';
 const storeState = {};
 
 test('should take on the ERROR action', () => {
+  process.env.IS_BROWSER = 'true';
+
   return expectSaga(errorsProcess)
     .withState(storeState)
     .put({

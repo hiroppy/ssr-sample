@@ -3,19 +3,17 @@ import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { State } from '../../reducers';
 import { Props, Orgs as OrgsComponent } from '../../components/pages/Orgs';
-import { fetchRepos, resetOrgs } from '../../actions/orgs';
+import { loadOrgsPage } from '../../actions/pages';
 
 const mapStateToProps = (state: State) => ({
   name: state.orgs.name,
-  repos: state.orgs.repos
+  repos: state.orgs.repos,
+  isFetchingRepos: state.orgs.isFetching
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-  fetchRepos: (org: string) => {
-    dispatch(fetchRepos(org));
-  },
-  resetOrgs: () => {
-    dispatch(resetOrgs());
+  load: (org: string) => {
+    dispatch(loadOrgsPage(org));
   }
 });
 

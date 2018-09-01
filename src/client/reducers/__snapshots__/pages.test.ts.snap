@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should handle LOAD_ORGS_PAGE 1`] = `
+Object {
+  "isLoadingCompletion": false,
+}
+`;
+
+exports[`should handle LOAD_ORGS_PAGE_FAILURE 1`] = `
+Object {
+  "isLoadingCompletion": false,
+}
+`;
+
+exports[`should handle LOAD_ORGS_PAGE_SUCCESS 1`] = `
+Object {
+  "isLoadingCompletion": true,
+}
+`;
+
+exports[`should handle LOAD_TOP_PAGE 1`] = `
+Object {
+  "isLoadingCompletion": false,
+}
+`;
+
+exports[`should handle LOAD_TOP_PAGE_FAILURE 1`] = `
+Object {
+  "isLoadingCompletion": false,
+}
+`;
+
+exports[`should handle LOAD_TOP_PAGE_SUCCESS 1`] = `
+Object {
+  "isLoadingCompletion": true,
+}
+`;
+
+exports[`should handle RESET_PAGES_STATUS 1`] = `
+Object {
+  "isLoadingCompletion": false,
+}
+`;
+
+exports[`should return the initial state 1`] = `
+Object {
+  "isLoadingCompletion": false,
+}
+`;

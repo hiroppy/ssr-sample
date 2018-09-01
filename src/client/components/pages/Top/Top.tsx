@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { Head } from '../../Head';
 import styled from 'styled-components';
 
+export interface Props {
+  load: () => void;
+}
+
 const orgs = ['nodejs', 'facebook', 'google', 'microsoft'];
 
 const Ul = styled.ul`
@@ -18,24 +22,34 @@ const Li = styled.li`
   padding: 0.5em 0;
 `;
 
-export const Top = () => (
-  <React.Fragment>
-    <Head title="top" />
-    <Ul>
-      {orgs.map((org) => (
-        <Li key={org}>
-          <Link to={`/orgs/${org}`}>{org}</Link>
-        </Li>
-      ))}
-    </Ul>
-    <div>
-      <p>DOTENV_TYPE: {process.env.DOTENV_TYPE}</p>
-      <p>
-        Repository:
-        <a href="https://github.com/hiroppy/ssr-sample" target="_blank">
-          https://github.com/hiroppy/ssr-sample
-        </a>
-      </p>
-    </div>
-  </React.Fragment>
-);
+export class Top extends React.PureComponent<Props> {
+  constructor(props: Props) {
+    super(props);
+
+    props.load();
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <Head title="top" />
+        <Ul>
+          {orgs.map((org) => (
+            <Li key={org}>
+              <Link to={`/orgs/${org}`}>{org}</Link>
+            </Li>
+          ))}
+        </Ul>
+        <div>
+          <p>DOTENV_TYPE: {process.env.DOTENV_TYPE}</p>
+          <p>
+            Repository:
+            <a href="https://github.com/hiroppy/ssr-sample" target="_blank">
+              https://github.com/hiroppy/ssr-sample
+            </a>
+          </p>
+        </div>
+      </React.Fragment>
+    );
+  }
+}
