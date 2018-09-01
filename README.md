@@ -40,6 +40,7 @@ This repository shows you how to write SSR and SPA code using TypeScript.
 - react-loadable@5
 - redux@4
 - redux-saga@0.16
+- connected-react-router@4
 - styled-components@3
 - express@4
 - dotenv@6
