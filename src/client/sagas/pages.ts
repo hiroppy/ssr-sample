@@ -8,8 +8,13 @@ import {
   loadOrgsPageFailure
 } from '../actions/pages';
 import { fetchRepos, resetOrgs } from '../actions/orgs';
+import { appError } from '../actions/errors';
 import { getOrgs } from './selectors';
 import { State } from '../reducers';
+
+function* loadErrorPage() {
+  if (!process.env.IS_BROWSER) yield put(END);
+}
 
 function* loadTopPage() {
   try {
@@ -36,21 +41,15 @@ function* loadOrgsPage(action: LoadOrgsPage) {
 
     yield put(loadOrgsPageSuccess());
   } catch (e) {
-    const code = e || e.message;
-
-    switch (code) {
-      case 404:
-        console.log('404');
-      case 403:
-        console.log('403');
-    }
     yield put(loadOrgsPageFailure());
+    yield put(appError(e));
   } finally {
     if (!process.env.IS_BROWSER) yield put(END);
   }
 }
 
 export function* pagesProcess() {
+  yield takeLatest('LOAD_ERROR_PAGE', loadErrorPage);
   yield takeLatest('LOAD_TOP_PAGE', loadTopPage);
   yield takeLatest('LOAD_ORGS_PAGE', loadOrgsPage);
 }

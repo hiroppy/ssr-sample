@@ -39,3 +39,15 @@ test('should render Orgs page', () => {
 
   expect(toJson(tree)).toMatchSnapshot();
 });
+
+test('should render 404 page', () => {
+  const tree = render(
+    <Provider store={store}>
+      <MemoryRouter initialEntries={[{ pathname: '/404', key: 'testKey' }]}>
+        <Router />
+      </MemoryRouter>
+    </Provider>
+  );
+
+  expect(toJson(tree)).toMatchSnapshot();
+});

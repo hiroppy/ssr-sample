@@ -67,6 +67,6 @@ stories.add('default', () => (
       background: '#f5f5f5'
     }}
   >
-    <Orgs name="org" repos={repos} load={() => {}} isFetchingRepos {...props} />
+    <Orgs name="org" repos={repos} load={() => {}} isFetchingRepos={false} {...props} />
   </div>
 ));

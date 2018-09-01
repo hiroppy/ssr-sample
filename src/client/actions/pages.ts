@@ -7,7 +7,8 @@ export type Actions =
   | LoadTopPageFailure
   | LoadOrgsPage
   | LoadOrgsPageSuccess
-  | LoadOrgsPageFailure;
+  | LoadOrgsPageFailure
+  | LoadErrorPage;
 
 export interface ResetPagesStatus extends Action {
   type: 'RESET_PAGES_STATUS';
@@ -69,4 +70,12 @@ export interface LoadOrgsPageFailure {
 
 export const loadOrgsPageFailure = (): LoadOrgsPageFailure => ({
   type: 'LOAD_ORGS_PAGE_FAILURE'
+});
+
+export interface LoadErrorPage {
+  type: 'LOAD_ERROR_PAGE';
+}
+
+export const loadErrorPage = () => ({
+  type: 'LOAD_ERROR_PAGE'
 });

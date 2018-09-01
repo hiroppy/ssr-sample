@@ -6,7 +6,8 @@ import {
   loadOrgsPageSuccess,
   loadOrgsPageFailure,
   loadTopPage,
-  loadTopPageSuccess
+  loadTopPageSuccess,
+  loadErrorPage
 } from '../actions/pages';
 import { resetOrgs, fetchRepos, fetchReposSuccess, fetchReposFailure } from '../actions/orgs';
 
@@ -20,6 +21,14 @@ const initialState = {
     name: 'foo'
   }
 };
+
+test('should take on the LOAD_ERROR_PAGE action when SSR', () => {
+  return expectSaga(pagesProcess)
+    .withState(initialState)
+    .put(END)
+    .dispatch(loadErrorPage())
+    .run();
+});
 
 test('should take on the LOAD_TOP_PAGE action when SSR', () => {
   return expectSaga(pagesProcess)

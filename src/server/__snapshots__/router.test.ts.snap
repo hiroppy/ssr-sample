@@ -11,6 +11,10 @@ Array [
     "path": /\\^\\\\/\\?\\(\\?=\\\\/\\|\\$\\)/i,
   },
   Object {
+    "name": "<anonymous>",
+    "path": /\\^\\\\/favicon\\\\\\.ico\\\\/\\?\\(\\?=\\\\/\\|\\$\\)/i,
+  },
+  Object {
     "name": "serveStatic",
     "path": /\\^\\\\/public\\\\/\\?\\(\\?=\\\\/\\|\\$\\)/i,
   },

@@ -5,5 +5,5 @@ import { rootReducer } from '../reducers';
 test('should get orgs state', () => {
   const storeState = createStore(rootReducer).getState();
 
-  expect(selectors.getOrgs(storeState)).toMatchSnapshot();
+  expect(selectors.getOrgs(storeState as any)).toMatchSnapshot();
 });

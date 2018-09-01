@@ -15,6 +15,7 @@ export const reducer = (state: State = initialState, action: Actions): State => 
     case 'LOAD_TOP_PAGE':
     case 'LOAD_ORGS_PAGE':
       return { ...state, isLoadingCompletion: false };
+    case 'LOAD_ERROR_PAGE':
     case 'LOAD_TOP_PAGE_SUCCESS':
     case 'LOAD_ORGS_PAGE_SUCCESS':
       return { ...state, isLoadingCompletion: true };

@@ -24,6 +24,12 @@ Object {
 }
 `;
 
+exports[`should create an action to load Error page 1`] = `
+Object {
+  "type": "LOAD_ERROR_PAGE",
+}
+`;
+
 exports[`should create an action to load Orgs page 1`] = `
 Object {
   "payload": Object {

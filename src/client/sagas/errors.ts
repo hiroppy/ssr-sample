@@ -1,27 +1,13 @@
 import { put, takeLatest } from 'redux-saga/effects';
+import { replace } from 'connected-react-router';
+import { AppError } from '../actions/errors';
 
-interface Action {
-  type: 'ERROR' | 'ERROR_API_LIMIT';
-  payload: {
-    message: string;
-  };
-}
+function* errorsRouter(action: AppError) {
+  const { message } = action.payload.err;
 
-function* errorsRouter(action: Action) {
-  // currently, only exist API_LIMIT_ERROT
-  yield put({
-    type: 'ERROR_API_LIMIT',
-    payload: action.payload
-  });
-}
-
-function* apiLimit(action: Action) {
-  if (process.env.IS_BROWSER) {
-    yield alert(action.payload.message);
-  }
+  if (message === '404') yield put(replace('/404'));
 }
 
 export function* errorsProcess() {
-  yield takeLatest('ERROR', errorsRouter);
-  yield takeLatest('ERROR_API_LIMIT', apiLimit);
+  yield takeLatest('APP_ERROR', errorsRouter);
 }
