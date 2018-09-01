@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import { Head } from '../../Head';
 import styled from 'styled-components';
+import { Head } from '../../Head';
 
 export interface Props {
   load: () => void;
