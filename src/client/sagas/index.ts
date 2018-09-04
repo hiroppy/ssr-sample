@@ -7,7 +7,5 @@ import { pagesProcess } from './pages';
  * Root for saga
  */
 export function* rootSaga() {
-  yield all([fork(orgsProcess)]);
-  yield all([fork(errorsProcess)]);
-  yield all([fork(pagesProcess)]);
+  yield all([fork(orgsProcess), fork(errorsProcess), fork(pagesProcess)]);
 }
