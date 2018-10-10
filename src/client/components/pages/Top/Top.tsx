@@ -22,7 +22,7 @@ const Li = styled.li`
   padding: 0.5em 0;
 `;
 
-export class Top extends React.PureComponent<Props> {
+export class Top extends React.Component<Props> {
   constructor(props: Props) {
     super(props);
 

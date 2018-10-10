@@ -16,7 +16,7 @@ export interface Props {
 }
 
 // like App-Shell of PWA
-export class App extends React.Component<Props> {
+export class App extends React.PureComponent<Props> {
   constructor(props: Props) {
     super(props);
 

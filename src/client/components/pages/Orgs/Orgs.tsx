@@ -63,7 +63,7 @@ const Info = ({ icon, num }: { icon: string; num: number }) => (
   </InfoItem>
 );
 
-export class Orgs extends React.PureComponent<Props> {
+export class Orgs extends React.Component<Props> {
   constructor(props: Props) {
     super(props);
 

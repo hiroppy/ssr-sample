@@ -5,6 +5,12 @@ import { ConnectedRouter } from 'connected-react-router';
 import * as Loadable from 'react-loadable';
 import { configureStore, history } from './store/configureStore';
 
+if (process.env.NODE_ENV !== 'production' && process.env.IS_BROWSER) {
+  const { whyDidYouUpdate } = require('why-did-you-update');
+
+  whyDidYouUpdate(React);
+}
+
 if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/public/service-worker.js');
