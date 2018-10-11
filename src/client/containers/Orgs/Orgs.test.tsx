@@ -16,6 +16,9 @@ beforeEach(() => {
       name: 'foo',
       repos: [],
       isFetching: false
+    },
+    pages: {
+      error: null
     }
   });
   store.dispatch = jest.fn();
@@ -31,7 +34,8 @@ test('should map state and dispatch to props', () => {
     expect.objectContaining({
       name: 'foo',
       repos: [],
-      isFetchingRepos: false
+      isFetchingRepos: false,
+      error: null
     })
   );
 });

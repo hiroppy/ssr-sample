@@ -8,6 +8,7 @@ import { loadOrgsPage } from '../../actions/pages';
 const mapStateToProps = (state: State) => ({
   name: state.orgs.name,
   repos: state.orgs.repos,
+  error: state.pages.error,
   isFetchingRepos: state.orgs.isFetching
 });
 

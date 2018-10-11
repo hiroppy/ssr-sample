@@ -39,6 +39,7 @@ test.skip('should render self and sub-components', () => {
   const mock: any = jest.fn();
   const tree = mount(
     <Orgs
+      error={null}
       name="foo"
       repos={repos}
       match={match}
@@ -58,6 +59,7 @@ test('should show loader', () => {
   const mock: any = jest.fn();
   const tree = shallow(
     <Orgs
+      error={null}
       name=""
       repos={repos}
       match={match}
@@ -77,8 +79,9 @@ test('should call load', () => {
   const mock: any = jest.fn();
   const load = sinon.spy();
 
-  shallow(
+  mount(
     <Orgs
+      error={null}
       name=""
       repos={repos}
       match={match}
