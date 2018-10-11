@@ -36,10 +36,16 @@ export const loadTopPageSuccess = (): LoadTopPageSuccess => ({
 
 export interface LoadTopPageFailure {
   type: 'LOAD_TOP_PAGE_FAILURE';
+  payload: {
+    err: Error;
+  };
 }
 
-export const loadTopPageFailure = (): LoadTopPageFailure => ({
-  type: 'LOAD_TOP_PAGE_FAILURE'
+export const loadTopPageFailure = (err: Error): LoadTopPageFailure => ({
+  type: 'LOAD_TOP_PAGE_FAILURE',
+  payload: {
+    err
+  }
 });
 
 export interface LoadOrgsPage {
@@ -66,10 +72,16 @@ export const loadOrgsPageSuccess = (): LoadOrgsPageSuccess => ({
 
 export interface LoadOrgsPageFailure {
   type: 'LOAD_ORGS_PAGE_FAILURE';
+  payload: {
+    err: Error;
+  };
 }
 
-export const loadOrgsPageFailure = (): LoadOrgsPageFailure => ({
-  type: 'LOAD_ORGS_PAGE_FAILURE'
+export const loadOrgsPageFailure = (err: Error): LoadOrgsPageFailure => ({
+  type: 'LOAD_ORGS_PAGE_FAILURE',
+  payload: {
+    err
+  }
 });
 
 export interface StopSaga {
