@@ -2,48 +2,56 @@
 
 exports[`should handle LOAD_ORGS_PAGE 1`] = `
 Object {
+  "error": null,
   "isLoadingCompletion": false,
 }
 `;
 
 exports[`should handle LOAD_ORGS_PAGE_FAILURE 1`] = `
 Object {
-  "isLoadingCompletion": false,
+  "error": [Error: 404],
+  "isLoadingCompletion": true,
 }
 `;
 
 exports[`should handle LOAD_ORGS_PAGE_SUCCESS 1`] = `
 Object {
+  "error": null,
   "isLoadingCompletion": true,
 }
 `;
 
 exports[`should handle LOAD_TOP_PAGE 1`] = `
 Object {
+  "error": null,
   "isLoadingCompletion": false,
 }
 `;
 
 exports[`should handle LOAD_TOP_PAGE_FAILURE 1`] = `
 Object {
-  "isLoadingCompletion": false,
+  "error": [Error: 404],
+  "isLoadingCompletion": true,
 }
 `;
 
 exports[`should handle LOAD_TOP_PAGE_SUCCESS 1`] = `
 Object {
+  "error": null,
   "isLoadingCompletion": true,
 }
 `;
 
 exports[`should handle RESET_PAGES_STATUS 1`] = `
 Object {
+  "error": null,
   "isLoadingCompletion": false,
 }
 `;
 
 exports[`should return the initial state 1`] = `
 Object {
+  "error": null,
   "isLoadingCompletion": false,
 }
 `;
