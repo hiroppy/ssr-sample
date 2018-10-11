@@ -56,166 +56,185 @@ exports[`should render self and sub-components 1`] = `
       }
     }
   >
-    <Top
+    <withProps(branch(branch(TopComponent)))
+      error={null}
       load={[Function]}
     >
-      <Component
-        title="top"
+      <branch(branch(TopComponent))
+        error={null}
+        load={[Function]}
+        statusCode={null}
       >
-        <HelmetWrapper
-          defer={true}
-          encodeSpecialCharacters={true}
+        <branch(TopComponent)
+          error={null}
+          load={[Function]}
+          statusCode={null}
         >
-          <SideEffect(NullComponent)
-            defer={true}
-            encodeSpecialCharacters={true}
-            link={
-              Array [
-                Object {
-                  "href": "https://fonts.googleapis.com/css?family=Muli",
-                  "rel": "stylesheet",
-                },
-              ]
-            }
-            meta={
-              Array [
-                Object {
-                  "charset": "UTF-8",
-                },
-                Object {
-                  "content": "width=device-width, initial-scale=1.0",
-                  "name": "viewport",
-                },
-              ]
-            }
-            title="top"
-            titleAttributes={Object {}}
+          <TopComponent
+            error={null}
+            load={[Function]}
+            statusCode={null}
           >
-            <NullComponent
-              defer={true}
-              encodeSpecialCharacters={true}
-              link={
-                Array [
-                  Object {
-                    "href": "https://fonts.googleapis.com/css?family=Muli",
-                    "rel": "stylesheet",
-                  },
-                ]
-              }
-              meta={
-                Array [
-                  Object {
-                    "charset": "UTF-8",
-                  },
-                  Object {
-                    "content": "width=device-width, initial-scale=1.0",
-                    "name": "viewport",
-                  },
-                ]
-              }
+            <Component
               title="top"
-              titleAttributes={Object {}}
-            />
-          </SideEffect(NullComponent)>
-        </HelmetWrapper>
-      </Component>
-      <styled.ul>
-        <ul
-          className="c0"
-        >
-          <styled.li
-            key="nodejs"
-          >
-            <li
-              className="c1"
             >
-              <Link
-                replace={false}
-                to="/orgs/nodejs"
+              <HelmetWrapper
+                defer={true}
+                encodeSpecialCharacters={true}
               >
-                <a
-                  href="/orgs/nodejs"
-                  onClick={[Function]}
+                <SideEffect(NullComponent)
+                  defer={true}
+                  encodeSpecialCharacters={true}
+                  link={
+                    Array [
+                      Object {
+                        "href": "https://fonts.googleapis.com/css?family=Muli",
+                        "rel": "stylesheet",
+                      },
+                    ]
+                  }
+                  meta={
+                    Array [
+                      Object {
+                        "charset": "UTF-8",
+                      },
+                      Object {
+                        "content": "width=device-width, initial-scale=1.0",
+                        "name": "viewport",
+                      },
+                    ]
+                  }
+                  title="top"
+                  titleAttributes={Object {}}
                 >
-                  nodejs
-                </a>
-              </Link>
-            </li>
-          </styled.li>
-          <styled.li
-            key="facebook"
-          >
-            <li
-              className="c1"
-            >
-              <Link
-                replace={false}
-                to="/orgs/facebook"
+                  <NullComponent
+                    defer={true}
+                    encodeSpecialCharacters={true}
+                    link={
+                      Array [
+                        Object {
+                          "href": "https://fonts.googleapis.com/css?family=Muli",
+                          "rel": "stylesheet",
+                        },
+                      ]
+                    }
+                    meta={
+                      Array [
+                        Object {
+                          "charset": "UTF-8",
+                        },
+                        Object {
+                          "content": "width=device-width, initial-scale=1.0",
+                          "name": "viewport",
+                        },
+                      ]
+                    }
+                    title="top"
+                    titleAttributes={Object {}}
+                  />
+                </SideEffect(NullComponent)>
+              </HelmetWrapper>
+            </Component>
+            <styled.ul>
+              <ul
+                className="c0"
               >
-                <a
-                  href="/orgs/facebook"
-                  onClick={[Function]}
+                <styled.li
+                  key="nodejs"
                 >
-                  facebook
-                </a>
-              </Link>
-            </li>
-          </styled.li>
-          <styled.li
-            key="google"
-          >
-            <li
-              className="c1"
-            >
-              <Link
-                replace={false}
-                to="/orgs/google"
-              >
-                <a
-                  href="/orgs/google"
-                  onClick={[Function]}
+                  <li
+                    className="c1"
+                  >
+                    <Link
+                      replace={false}
+                      to="/orgs/nodejs"
+                    >
+                      <a
+                        href="/orgs/nodejs"
+                        onClick={[Function]}
+                      >
+                        nodejs
+                      </a>
+                    </Link>
+                  </li>
+                </styled.li>
+                <styled.li
+                  key="facebook"
                 >
-                  google
-                </a>
-              </Link>
-            </li>
-          </styled.li>
-          <styled.li
-            key="microsoft"
-          >
-            <li
-              className="c1"
-            >
-              <Link
-                replace={false}
-                to="/orgs/microsoft"
-              >
-                <a
-                  href="/orgs/microsoft"
-                  onClick={[Function]}
+                  <li
+                    className="c1"
+                  >
+                    <Link
+                      replace={false}
+                      to="/orgs/facebook"
+                    >
+                      <a
+                        href="/orgs/facebook"
+                        onClick={[Function]}
+                      >
+                        facebook
+                      </a>
+                    </Link>
+                  </li>
+                </styled.li>
+                <styled.li
+                  key="google"
                 >
-                  microsoft
+                  <li
+                    className="c1"
+                  >
+                    <Link
+                      replace={false}
+                      to="/orgs/google"
+                    >
+                      <a
+                        href="/orgs/google"
+                        onClick={[Function]}
+                      >
+                        google
+                      </a>
+                    </Link>
+                  </li>
+                </styled.li>
+                <styled.li
+                  key="microsoft"
+                >
+                  <li
+                    className="c1"
+                  >
+                    <Link
+                      replace={false}
+                      to="/orgs/microsoft"
+                    >
+                      <a
+                        href="/orgs/microsoft"
+                        onClick={[Function]}
+                      >
+                        microsoft
+                      </a>
+                    </Link>
+                  </li>
+                </styled.li>
+              </ul>
+            </styled.ul>
+            <div>
+              <p>
+                DOTENV_TYPE: 
+              </p>
+              <p>
+                Repository:
+                <a
+                  href="https://github.com/hiroppy/ssr-sample"
+                  target="_blank"
+                >
+                  https://github.com/hiroppy/ssr-sample
                 </a>
-              </Link>
-            </li>
-          </styled.li>
-        </ul>
-      </styled.ul>
-      <div>
-        <p>
-          DOTENV_TYPE: 
-        </p>
-        <p>
-          Repository:
-          <a
-            href="https://github.com/hiroppy/ssr-sample"
-            target="_blank"
-          >
-            https://github.com/hiroppy/ssr-sample
-          </a>
-        </p>
-      </div>
-    </Top>
+              </p>
+            </div>
+          </TopComponent>
+        </branch(TopComponent)>
+      </branch(branch(TopComponent))>
+    </withProps(branch(branch(TopComponent)))>
   </Router>
 </MemoryRouter>
 `;

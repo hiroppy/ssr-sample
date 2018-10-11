@@ -8,7 +8,11 @@ let store: any;
 let wrapper: any;
 
 beforeEach(() => {
-  store = mockStore({});
+  store = mockStore({
+    pages: {
+      error: null
+    }
+  });
   store.dispatch = jest.fn();
   wrapper = shallow(<Top store={store}>bar</Top>);
 });
