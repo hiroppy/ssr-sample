@@ -6,8 +6,7 @@ import {
   loadOrgsPageSuccess,
   loadOrgsPageFailure,
   loadTopPage,
-  loadTopPageSuccess,
-  loadErrorPage
+  loadTopPageSuccess
 } from '../actions/pages';
 import { resetOrgs, fetchRepos, fetchReposSuccess, fetchReposFailure } from '../actions/orgs';
 
@@ -21,14 +20,6 @@ const initialState = {
     name: 'foo'
   }
 };
-
-test('should take on the LOAD_ERROR_PAGE action when SSR', () => {
-  return expectSaga(pagesProcess)
-    .withState(initialState)
-    .put(END)
-    .dispatch(loadErrorPage())
-    .run();
-});
 
 test('should take on the LOAD_TOP_PAGE action when SSR', () => {
   return expectSaga(pagesProcess)
@@ -92,7 +83,6 @@ test('should take on the LOAD_ORGS_PAGE action when getting 404 with CSR', () =>
     .withState(initialState)
     .put(resetOrgs())
     .put(fetchRepos('bar'))
-    .put(loadOrgsPageFailure())
     .dispatch(loadOrgsPage('bar'))
     .dispatch(fetchReposFailure(404))
     .run();
@@ -105,7 +95,6 @@ test('should take on the LOAD_ORGS_PAGE action when getting 403 with CSR', () =>
     .withState(initialState)
     .put(resetOrgs())
     .put(fetchRepos('bar'))
-    .put(loadOrgsPageFailure())
     .dispatch(loadOrgsPage('bar'))
     .dispatch(fetchReposFailure(403))
     .run();

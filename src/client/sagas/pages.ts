@@ -5,10 +5,10 @@ import {
   loadTopPageFailure,
   LoadOrgsPage,
   loadOrgsPageSuccess,
-  loadOrgsPageFailure
+  loadOrgsPageFailure,
+  resetPageStatus
 } from '../actions/pages';
 import { fetchRepos, resetOrgs } from '../actions/orgs';
-import { appError } from '../actions/errors';
 import { getOrgs } from './selectors';
 import { State } from '../reducers';
 
@@ -19,8 +19,8 @@ function* loadErrorPage() {
 function* loadTopPage() {
   try {
     yield put(loadTopPageSuccess());
-  } catch (e) {
-    // yield put(loadTopPageFailure());
+  } catch (err) {
+    yield put(loadTopPageFailure(err));
   } finally {
     if (!process.env.IS_BROWSER) yield put(END);
   }
@@ -40,16 +40,25 @@ function* loadOrgsPage(action: LoadOrgsPage) {
     }
 
     yield put(loadOrgsPageSuccess());
-  } catch (e) {
-    yield put(loadOrgsPageFailure());
-    yield put(appError(e));
+  } catch (err) {
+    yield put(loadOrgsPageFailure(err));
   } finally {
     if (!process.env.IS_BROWSER) yield put(END);
   }
+}
+
+function* stopSaga() {
+  yield put(END);
+}
+
+function* changeLocation() {
+  yield put(resetPageStatus());
 }
 
 export function* pagesProcess() {
   yield takeLatest('LOAD_ERROR_PAGE', loadErrorPage);
   yield takeLatest('LOAD_TOP_PAGE', loadTopPage);
   yield takeLatest('LOAD_ORGS_PAGE', loadOrgsPage);
+  yield takeLatest('STOP_SAGA', stopSaga);
+  yield takeLatest('@@router/LOCATION_CHANGE', changeLocation);
 }
