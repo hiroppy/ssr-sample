@@ -13,8 +13,8 @@ beforeEach(() => {
   wrapper = shallow(<NotFound store={store}>bar</NotFound>);
 });
 
-test('should map load to dispatch LOAD_TOP_PAGE action', () => {
-  wrapper.props().load();
+test('should map load to dispatch STOP_SAGA action', () => {
+  wrapper.props().stopSaga();
 
-  expect(store.dispatch).toHaveBeenCalledWith({ type: 'LOAD_ERROR_PAGE' });
+  expect(store.dispatch).toHaveBeenCalledWith({ type: 'STOP_SAGA' });
 });
