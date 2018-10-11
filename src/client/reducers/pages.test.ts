@@ -1,4 +1,5 @@
 import { reducer } from './pages';
+import { loadOrgsPageFailure, loadTopPageFailure } from '../actions/pages';
 
 const customState = {
   isLoadingCompletion: false
@@ -9,7 +10,9 @@ test('should return the initial state', () => {
 });
 
 test('should handle RESET_PAGES_STATUS', () => {
-  expect(reducer({ isLoadingCompletion: true }, { type: 'RESET_PAGES_STATUS' })).toMatchSnapshot();
+  expect(
+    reducer({ isLoadingCompletion: true, error: null }, { type: 'RESET_PAGES_STATUS' })
+  ).toMatchSnapshot();
 });
 
 test('should handle LOAD_TOP_PAGE', () => {
@@ -18,12 +21,12 @@ test('should handle LOAD_TOP_PAGE', () => {
 
 test('should handle LOAD_TOP_PAGE_SUCCESS', () => {
   expect(
-    reducer({ isLoadingCompletion: true }, { type: 'LOAD_TOP_PAGE_SUCCESS' })
+    reducer({ isLoadingCompletion: true, error: null }, { type: 'LOAD_TOP_PAGE_SUCCESS' })
   ).toMatchSnapshot();
 });
 
 test('should handle LOAD_TOP_PAGE_FAILURE', () => {
-  expect(reducer(undefined, { type: 'LOAD_TOP_PAGE_FAILURE' })).toMatchSnapshot();
+  expect(reducer(undefined, loadTopPageFailure(new Error('404')))).toMatchSnapshot();
 });
 
 test('should handle LOAD_ORGS_PAGE', () => {
@@ -32,10 +35,10 @@ test('should handle LOAD_ORGS_PAGE', () => {
 
 test('should handle LOAD_ORGS_PAGE_SUCCESS', () => {
   expect(
-    reducer({ isLoadingCompletion: true }, { type: 'LOAD_ORGS_PAGE_SUCCESS' })
+    reducer({ isLoadingCompletion: true, error: null }, { type: 'LOAD_ORGS_PAGE_SUCCESS' })
   ).toMatchSnapshot();
 });
 
 test('should handle LOAD_ORGS_PAGE_FAILURE', () => {
-  expect(reducer(undefined, { type: 'LOAD_ORGS_PAGE_FAILURE' })).toMatchSnapshot();
+  expect(reducer(undefined, loadOrgsPageFailure(new Error('404')))).toMatchSnapshot();
 });
