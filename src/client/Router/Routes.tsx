@@ -15,6 +15,6 @@ export const LoadableTop = Loadable({
 
 export const LoadableNotFound = Loadable({
   loader: () =>
-    import(/* webpackChunkName: "404" */ '../containers/404').then(({ NotFound }) => NotFound),
+    import(/* webpackChunkName: "404" */ '../containers/NotFound').then(({ NotFound }) => NotFound),
   loading: () => <div />
 } as Loadable.OptionsWithoutRender<unknown>);
