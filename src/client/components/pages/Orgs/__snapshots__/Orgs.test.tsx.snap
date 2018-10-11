@@ -370,22 +370,45 @@ exports[`should render self and sub-components 1`] = `
 `;
 
 exports[`should show loader 1`] = `
-<React.Fragment>
-  <Component
-    title="org"
-  />
-  <styled.div>
-    <React.Fragment>
-      <styled.div>
-        <Loading
-          color="#333"
-          delay={0}
-          height={64}
-          type="cubes"
-          width={64}
-        />
-      </styled.div>
-    </React.Fragment>
-  </styled.div>
-</React.Fragment>
+<branch(branch(OrgsComponent))
+  error={null}
+  history={[MockFunction]}
+  isFetchingRepos={true}
+  load={[Function]}
+  location={[MockFunction]}
+  match={
+    Object {
+      "isExact": true,
+      "params": Object {
+        "org": "org",
+      },
+      "path": "/",
+      "url": "",
+    }
+  }
+  name=""
+  repos={
+    Array [
+      Object {
+        "forksCount": 100,
+        "issuesCount": 200,
+        "language": "lang",
+        "name": "foo",
+        "stargazersCount": 300,
+        "url": "url",
+        "watchersCount": 400,
+      },
+      Object {
+        "forksCount": 1000,
+        "issuesCount": 2000,
+        "language": "lang",
+        "name": "bar",
+        "stargazersCount": 3000,
+        "url": "url",
+        "watchersCount": 4000,
+      },
+    ]
+  }
+  statusCode={null}
+/>
 `;

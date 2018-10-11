@@ -4,13 +4,15 @@ import styled from 'styled-components';
 import Loading from 'react-loading';
 import { Head } from '../../Head';
 import { State } from '../../../reducers/orgs';
+import { ErrorProps, PageComponentWithError } from '../../../hocs/PageComponentWithError';
 
-export interface Props extends RouteComponentProps<{ org: string }> {
+export type Props = {
   name: State['name'];
   repos: State['repos'];
   load: (org: string) => void;
   isFetchingRepos: boolean;
-}
+} & RouteComponentProps<{ org: string }> &
+  ErrorProps;
 
 const Container = styled.div`
   display: grid;
@@ -63,7 +65,7 @@ const Info = ({ icon, num }: { icon: string; num: number }) => (
   </InfoItem>
 );
 
-export class Orgs extends React.Component<Props> {
+class OrgsComponent extends React.Component<Props> {
   constructor(props: Props) {
     super(props);
 
@@ -108,3 +110,5 @@ export class Orgs extends React.Component<Props> {
     );
   }
 }
+
+export const Orgs = PageComponentWithError<Props>()(OrgsComponent);
