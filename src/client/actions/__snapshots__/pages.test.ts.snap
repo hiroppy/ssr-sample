@@ -24,12 +24,6 @@ Object {
 }
 `;
 
-exports[`should create an action to load Error page 1`] = `
-Object {
-  "type": "LOAD_ERROR_PAGE",
-}
-`;
-
 exports[`should create an action to load Orgs page 1`] = `
 Object {
   "payload": Object {
@@ -48,5 +42,11 @@ Object {
 exports[`should create an action to reset state 1`] = `
 Object {
   "type": "RESET_PAGES_STATUS",
+}
+`;
+
+exports[`should create an action to stop saga 1`] = `
+Object {
+  "type": "STOP_SAGA",
 }
 `;
