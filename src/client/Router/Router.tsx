@@ -8,7 +8,7 @@ export const Router = () => (
     <Switch>
       <Route exact path="/" component={LoadableTop} />
       <Route path="/orgs/:org" component={LoadableOrgs} />
-      <Route path="/404" component={LoadableNotFound} />
+      <Route component={LoadableNotFound} />
     </Switch>
   </App>
 );
