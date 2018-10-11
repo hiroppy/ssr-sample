@@ -8,7 +8,7 @@ export type Actions =
   | LoadOrgsPage
   | LoadOrgsPageSuccess
   | LoadOrgsPageFailure
-  | LoadErrorPage;
+  | StopSaga;
 
 export interface ResetPagesStatus extends Action {
   type: 'RESET_PAGES_STATUS';
@@ -72,10 +72,10 @@ export const loadOrgsPageFailure = (): LoadOrgsPageFailure => ({
   type: 'LOAD_ORGS_PAGE_FAILURE'
 });
 
-export interface LoadErrorPage {
-  type: 'LOAD_ERROR_PAGE';
+export interface StopSaga {
+  type: 'STOP_SAGA';
 }
 
-export const loadErrorPage = () => ({
-  type: 'LOAD_ERROR_PAGE'
+export const stopSaga = (): StopSaga => ({
+  type: 'STOP_SAGA'
 });

@@ -28,6 +28,6 @@ test('should create a failure action to load Orgs page', () => {
   expect(actions.loadOrgsPageFailure()).toMatchSnapshot();
 });
 
-test('should create an action to load Error page', () => {
-  expect(actions.loadErrorPage()).toMatchSnapshot();
+test('should create an action to stop saga', () => {
+  expect(actions.stopSaga()).toMatchSnapshot();
 });
