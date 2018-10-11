@@ -8,7 +8,7 @@ import { Top } from '.';
 test('should render self and sub-components', () => {
   const tree = mount(
     <MemoryRouter initialEntries={[{ pathname: '/', key: 'testKey' }]}>
-      <Top load={() => {}} />
+      <Top error={null} load={() => {}} />
     </MemoryRouter>
   );
 
@@ -18,7 +18,11 @@ test('should render self and sub-components', () => {
 test('should call load', () => {
   const load = sinon.spy();
 
-  shallow(<Top load={load} />);
+  mount(
+    <MemoryRouter initialEntries={[{ pathname: '/', key: 'testKey' }]}>
+      <Top error={null} load={load} />
+    </MemoryRouter>
+  );
 
   expect(load.calledOnce).toBeTruthy();
 });

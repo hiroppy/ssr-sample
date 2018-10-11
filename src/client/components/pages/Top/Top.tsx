@@ -2,8 +2,9 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Head } from '../../Head';
+import { ErrorProps, PageComponentWithError } from '../../../hocs/PageComponentWithError';
 
-export interface Props {
+export interface Props extends ErrorProps {
   load: () => void;
 }
 
@@ -22,7 +23,7 @@ const Li = styled.li`
   padding: 0.5em 0;
 `;
 
-export class Top extends React.Component<Props> {
+class TopComponent extends React.Component<Props> {
   constructor(props: Props) {
     super(props);
 
@@ -53,3 +54,5 @@ export class Top extends React.Component<Props> {
     );
   }
 }
+
+export const Top = PageComponentWithError<Props>()(TopComponent);

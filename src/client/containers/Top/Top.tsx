@@ -3,6 +3,11 @@ import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { Props, Top as TopComponent } from '../../components/pages/Top';
 import { loadTopPage } from '../../actions/pages';
+import { State } from '../../reducers';
+
+const mapStateToProps = (state: State) => ({
+  error: state.pages.error
+});
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
   load: () => {
@@ -11,6 +16,6 @@ const mapDispatchToProps = (dispatch: Dispatch) => ({
 });
 
 export const Top = connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )<Props & { store?: unknown }>(TopComponent);
