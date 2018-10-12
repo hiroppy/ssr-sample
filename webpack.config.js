@@ -5,7 +5,6 @@
 const { join, resolve } = require('path');
 const webpack = require('webpack');
 const { smart } = require('webpack-merge');
-const { ReactLoadablePlugin } = require('react-loadable/webpack');
 const Dotenv = require('dotenv-webpack');
 
 const isProd = process.env.NODE_ENV === 'production';
@@ -38,9 +37,6 @@ const common = {
     new Dotenv({
       path: isProd ? '.env.prod' : '.env.dev',
       safe: false
-    }),
-    new ReactLoadablePlugin({
-      filename: join('.', 'dist', 'react-loadable.json')
     }),
     new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin({

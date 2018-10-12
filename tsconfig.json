@@ -4,7 +4,7 @@
     "declaration": false,
     "jsx": "react",
     "lib": ["es2017", "dom"],
-    "target": "es2015",
+    "target": "es2017",
     "module": "commonjs",
     "moduleResolution": "node", // for module:esnext
     "allowJs": false,
