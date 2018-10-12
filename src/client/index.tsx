@@ -2,8 +2,9 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
-import * as Loadable from 'react-loadable';
+import { loadComponents } from 'loadable-components';
 import { configureStore, history } from './store/configureStore';
+import { Router } from './Router'; // this needs to be at the top level because it's used by loadable-components
 
 if (process.env.NODE_ENV !== 'production' && process.env.IS_BROWSER) {
   const { whyDidYouUpdate } = require('why-did-you-update');
@@ -21,9 +22,7 @@ const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate;
 const initialData = JSON.parse(document.getElementById('initial-data')!.getAttribute('data-json')!);
 const store = configureStore(initialData);
 
-const render = () => {
-  const { Router } = require('./Router');
-
+const render = (Router: any) => {
   renderMethod(
     <Provider store={store}>
       <ConnectedRouter history={history}>
@@ -34,12 +33,14 @@ const render = () => {
   );
 };
 
-Loadable.preloadReady().then(() => {
-  if (module.hot) {
-    module.hot.accept('./Router', () => {
-      render();
-    });
-  }
-
-  render();
+loadComponents().then(() => {
+  render(Router);
 });
+
+if (module.hot) {
+  module.hot.accept('./Router', () => {
+    const { Router } = require('./Router');
+
+    render(Router);
+  });
+}
