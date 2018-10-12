@@ -4,6 +4,7 @@ dist
 coverage
 *.clinic-doctor*
 node_trace*
+.awcache/
 
 # .env.dev
 # .env.prod
