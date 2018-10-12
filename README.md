@@ -15,7 +15,7 @@ This repository shows you how to write SSR and SPA code using TypeScript.
   - redux-saga (side effects)
   - styled-components (css)
   - react-helmet (head)
-  - react-loadable(probably replaced by loadable-components)
+  - loadable-components (dynamic import)
 - How to realize single page application
   - react-router
   - dynamic import
@@ -38,10 +38,11 @@ This repository shows you how to write SSR and SPA code using TypeScript.
 - react@16
 - react-router-dom@4
 - react-helmet@5
-- react-loadable@5
+- recompose@0.33
 - redux@4
 - redux-saga@0.16
 - connected-react-router@4
+- loadable-components@2
 - styled-components@3
 - express@4
 - dotenv@6
