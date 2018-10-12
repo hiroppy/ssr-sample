@@ -4,13 +4,15 @@
 import { Request, Response } from 'express';
 import * as React from 'react';
 import { Provider } from 'react-redux';
-import { renderToString, renderToStaticMarkup } from 'react-dom/server';
+import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import { ServerStyleSheet } from 'styled-components';
+//@ts-ignore
+import { getLoadableState } from 'loadable-components/server';
 import { renderFullPage } from '../../renderFullPage';
 import { Router } from '../../../client/Router';
-import { configureStore, history } from '../../../client/store/configureStore';
+import { configureStore } from '../../../client/store/configureStore';
 import { rootSaga } from '../../../client/sagas';
 
 // You need to reboot this server if you change client javascript files.
@@ -25,7 +27,7 @@ const assets = (process.env.NODE_ENV === 'production'
   .map((f) => `<script src="${f}"></script>`)
   .join('\n');
 
-export function get(req: Request, res: Response) {
+export async function get(req: Request, res: Response) {
   const store = configureStore();
   const sheet = new ServerStyleSheet();
   const jsx = (
@@ -39,25 +41,25 @@ export function get(req: Request, res: Response) {
     </Provider>
   );
 
-  store
-    .runSaga(rootSaga)
-    .done.then(() => {
-      const preloadedState = JSON.stringify(store.getState());
-      const helmetContent = Helmet.renderStatic();
-      const meta = `
+  try {
+    const [loadableState] = await Promise.all([
+      getLoadableState(jsx), // kick redux-saga and styled-components
+      store.runSaga(rootSaga).done
+    ]);
+
+    const preloadedState = JSON.stringify(store.getState());
+    const helmetContent = Helmet.renderStatic();
+    const meta = `
         ${helmetContent.meta.toString()}
         ${helmetContent.title.toString()}
         ${helmetContent.link.toString()}
       `.trim();
-      const style = sheet.getStyleTags();
-      const body = renderToString(jsx);
+    const style = sheet.getStyleTags();
+    const body = renderToString(jsx);
+    const scripts = loadableState.getScriptTag();
 
-      res.send(renderFullPage({ meta, assets, body, style, preloadedState }));
-    })
-    .catch((e: Error) => {
-      res.status(500).send(e.message);
-    });
-
-  // kick redux-saga and styled-components
-  renderToStaticMarkup(sheet.collectStyles(jsx));
+    res.send(renderFullPage({ meta, assets, body, style, preloadedState, scripts }));
+  } catch (e) {
+    res.status(500).send(e.message);
+  }
 }
