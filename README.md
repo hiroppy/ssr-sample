@@ -11,13 +11,13 @@ This repository shows you how to write SSR and SPA code using TypeScript.
 
 ## Feature
 
-- how to render at server side using Node.js [/src/server](/src/server)
+- how to render at server side using Node.js ([/src/server](/src/server))
   - express
   - redux-saga (side effects)
   - styled-components (css)
   - react-helmet (head)
   - loadable-components (dynamic import)
-- How to realize single page application [/src/client](/src/client)
+- how to realize single page application ([/src/client](/src/client))
   - react-router
   - recompose (error handling, etc...)
   - App Shell and Content (PWA)
