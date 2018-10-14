@@ -11,15 +11,16 @@ This repository shows you how to write SSR and SPA code using TypeScript.
 
 ## Feature
 
-- how to render at server side using Node.js
+- how to render at server side using Node.js [/src/server](/src/server)
+  - express
   - redux-saga (side effects)
   - styled-components (css)
   - react-helmet (head)
   - loadable-components (dynamic import)
-- How to realize single page application
+- How to realize single page application [/src/client](/src/client)
   - react-router
-  - dynamic import
-  - App Shell and Content
+  - recompose (error handling, etc...)
+  - App Shell and Content (PWA)
 - how to write test code and storybook
   - express, react, redux, redux-saga, react-router, etc...
 - how to develop in the development env and how to run the production env
@@ -27,9 +28,11 @@ This repository shows you how to write SSR and SPA code using TypeScript.
   - dotenv
   - manifest
   - load distribution
-- how to measure performance
+  - dynamic import
+- how to measure application performance
   - why-did-you-update
-  - autocannon, clinic
+  - autocannon
+  - clinic
 
 ## Libraries
 
