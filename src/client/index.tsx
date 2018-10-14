@@ -22,11 +22,11 @@ const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate;
 const initialData = JSON.parse(document.getElementById('initial-data')!.getAttribute('data-json')!);
 const store = configureStore(initialData);
 
-const render = (Router: any) => {
+const render = (RouterComponent: typeof Router) => {
   renderMethod(
     <Provider store={store}>
       <ConnectedRouter history={history}>
-        <Router />
+        <RouterComponent />
       </ConnectedRouter>
     </Provider>,
     document.getElementById('root')
@@ -39,8 +39,8 @@ loadComponents().then(() => {
 
 if (module.hot) {
   module.hot.accept('./Router', () => {
-    const { Router } = require('./Router');
+    const { Router: RouterComponent }: { Router: typeof Router } = require('./Router');
 
-    render(Router);
+    render(RouterComponent);
   });
 }
