@@ -13,6 +13,7 @@ test('should create safe html', () => {
     },
     str: 'テスト'
   });
+  const scripts = '<script>window</script>';
 
-  expect(renderFullPage({ meta, style, assets, body, preloadedState })).toMatchSnapshot();
+  expect(renderFullPage({ meta, style, assets, body, preloadedState, scripts })).toMatchSnapshot();
 });

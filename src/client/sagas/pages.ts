@@ -12,10 +12,6 @@ import { fetchRepos, resetOrgs } from '../actions/orgs';
 import { getOrgs } from './selectors';
 import { State } from '../reducers';
 
-function* loadErrorPage() {
-  if (!process.env.IS_BROWSER) yield put(END);
-}
-
 function* loadTopPage() {
   try {
     yield put(loadTopPageSuccess());
@@ -56,7 +52,6 @@ function* changeLocation() {
 }
 
 export function* pagesProcess() {
-  yield takeLatest('LOAD_ERROR_PAGE', loadErrorPage);
   yield takeLatest('LOAD_TOP_PAGE', loadTopPage);
   yield takeLatest('LOAD_ORGS_PAGE', loadOrgsPage);
   yield takeLatest('STOP_SAGA', stopSaga);

@@ -6,7 +6,9 @@ import {
   loadOrgsPageSuccess,
   loadOrgsPageFailure,
   loadTopPage,
-  loadTopPageSuccess
+  loadTopPageSuccess,
+  stopSaga,
+  resetPageStatus
 } from '../actions/pages';
 import { resetOrgs, fetchRepos, fetchReposSuccess, fetchReposFailure } from '../actions/orgs';
 
@@ -97,5 +99,19 @@ test('should take on the LOAD_ORGS_PAGE action when getting 403 with CSR', () =>
     .put(fetchRepos('bar'))
     .dispatch(loadOrgsPage('bar'))
     .dispatch(fetchReposFailure(403))
+    .run();
+});
+
+test('should take the STOP_SAGA action', () => {
+  return expectSaga(pagesProcess)
+    .put(END)
+    .dispatch(stopSaga())
+    .run();
+});
+
+test('should take the @@router/LOCATION_CHANGE action', () => {
+  return expectSaga(pagesProcess)
+    .put(resetPageStatus())
+    .dispatch({ type: '@@router/LOCATION_CHANGE' })
     .run();
 });

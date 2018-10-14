@@ -10,6 +10,7 @@ exports[`should create safe html 1`] = `
       <body>
         <body>body</body>
         <script id=\\"initial-data\\" type=\\"text/plain\\" data-json=\\"{&quot;arr&quot;:[&quot;foo&quot;,&quot;bar&quot;],&quot;obj&quot;:{&quot;foo&quot;:1,&quot;bar&quot;:1},&quot;str&quot;:&quot;テスト&quot;}\\"></script>
+        <script>window</script>
         <script>script</script>
       </body>
     </html>"

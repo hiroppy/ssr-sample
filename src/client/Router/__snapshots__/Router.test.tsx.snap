@@ -47,9 +47,7 @@ Array [
 
 <div
     class="c0"
-  >
-    <div />
-  </div>,
+  />,
 ]
 `;
 
@@ -100,9 +98,7 @@ Array [
 
 <div
     class="c0"
-  >
-    <div />
-  </div>,
+  />,
 ]
 `;
 
@@ -153,8 +149,6 @@ Array [
 
 <div
     class="c0"
-  >
-    <div />
-  </div>,
+  />,
 ]
 `;
