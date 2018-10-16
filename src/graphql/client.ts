@@ -1,10 +1,15 @@
-import { ApolloClient, InMemoryCache } from 'apollo-boost';
+import { ApolloClient, InMemoryCache, HttpLink } from 'apollo-boost';
 import { SchemaLink } from 'apollo-link-schema';
 import { schema } from './schema';
+import { endpoint } from './constants';
 
 export const client = new ApolloClient({
   ssrMode: !process.env.IS_BROWSER,
-  link: new SchemaLink({ schema }),
+  link: process.env.IS_BROWSER
+    ? new HttpLink({
+        uri: endpoint
+      })
+    : new SchemaLink({ schema }),
   cache: process.env.IS_BROWSER
     ? new InMemoryCache().restore((window as any).__APOLLO_STATE__)
     : new InMemoryCache()
