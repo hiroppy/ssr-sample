@@ -18,10 +18,16 @@ const common = {
     publicPath: '/public/'
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js']
+    extensions: ['.ts', '.tsx', '.js', '.mjs']
   },
   module: {
     rules: [
+      {
+        // for graphql
+        test: /\.mjs$/,
+        include: /node_modules/,
+        type: 'javascript/auto'
+      },
       {
         test: /\.ts|.tsx$/,
         use: {
