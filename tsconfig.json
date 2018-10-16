@@ -3,7 +3,7 @@
     "outDir": "./dist",
     "declaration": false,
     "jsx": "react",
-    "lib": ["es2017", "dom"],
+    "lib": ["es2017", "dom", "esnext.asynciterable"], // asynciterable is used by graphql
     "target": "es2017",
     "module": "commonjs",
     "moduleResolution": "node", // for module:esnext
