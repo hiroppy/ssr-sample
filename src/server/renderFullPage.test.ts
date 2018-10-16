@@ -14,6 +14,9 @@ test('should create safe html', () => {
     str: 'テスト'
   });
   const scripts = '<script>window</script>';
+  const graphql = 'graphql';
 
-  expect(renderFullPage({ meta, style, assets, body, preloadedState, scripts })).toMatchSnapshot();
+  expect(
+    renderFullPage({ meta, style, assets, body, preloadedState, scripts, graphql })
+  ).toMatchSnapshot();
 });

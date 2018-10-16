@@ -12,6 +12,26 @@ Array [
   },
   Object {
     "name": "<anonymous>",
+    "path": /\\^\\\\/\\\\\\.well-known\\\\/apollo\\\\/server-health\\\\/\\?\\(\\?=\\\\/\\|\\$\\)/i,
+  },
+  Object {
+    "name": "corsMiddleware",
+    "path": /\\^\\\\/graphql\\\\/\\?\\(\\?=\\\\/\\|\\$\\)/i,
+  },
+  Object {
+    "name": "jsonParser",
+    "path": /\\^\\\\/graphql\\\\/\\?\\(\\?=\\\\/\\|\\$\\)/i,
+  },
+  Object {
+    "name": "<anonymous>",
+    "path": /\\^\\\\/graphql\\\\/\\?\\(\\?=\\\\/\\|\\$\\)/i,
+  },
+  Object {
+    "name": "<anonymous>",
+    "path": /\\^\\\\/graphql\\\\/\\?\\(\\?=\\\\/\\|\\$\\)/i,
+  },
+  Object {
+    "name": "<anonymous>",
     "path": /\\^\\\\/favicon\\\\\\.ico\\\\/\\?\\(\\?=\\\\/\\|\\$\\)/i,
   },
   Object {
