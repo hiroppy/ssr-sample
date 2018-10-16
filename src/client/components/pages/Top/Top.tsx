@@ -1,14 +1,24 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { Query } from 'react-apollo';
+import { gql } from 'apollo-boost';
 import { Head } from '../../Head';
 import { ErrorProps, PageComponentWithError } from '../../../hocs/PageComponentWithError';
+import { organizations } from '../../../../graphql/schema';
 
 export interface Props extends ErrorProps {
   load: () => void;
 }
 
-const orgs = ['nodejs', 'facebook', 'google', 'microsoft'];
+const GET_ORGS = gql`
+  {
+    organizations {
+      name
+      uid
+    }
+  }
+`;
 
 const Ul = styled.ul`
   box-shadow: 0px 0px 5px silver;
@@ -34,13 +44,22 @@ class TopComponent extends React.Component<Props> {
     return (
       <React.Fragment>
         <Head title="top" />
-        <Ul>
-          {orgs.map((org) => (
-            <Li key={org}>
-              <Link to={`/orgs/${org}`}>{org}</Link>
-            </Li>
-          ))}
-        </Ul>
+        <Query query={GET_ORGS}>
+          {({ loading, error, data }) => {
+            if (loading) return 'Loading...';
+            if (error) return `Error! ${error.message}`;
+
+            return (
+              <Ul>
+                {(data.organizations as typeof organizations).map(({ name, uid }) => (
+                  <Li key={uid}>
+                    <Link to={`/orgs/${name}`}>{name}</Link>
+                  </Li>
+                ))}
+              </Ul>
+            );
+          }}
+        </Query>
         <div>
           <p>DOTENV_TYPE: {process.env.DOTENV_TYPE}</p>
           <p>
