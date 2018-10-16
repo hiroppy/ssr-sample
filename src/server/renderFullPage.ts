@@ -5,6 +5,7 @@ interface Params {
   style: string;
   preloadedState: string;
   scripts: string;
+  graphql: string;
 }
 
 const escape = (str: string) => {
@@ -16,7 +17,15 @@ const escape = (str: string) => {
     .replace(/>/g, '&gt;');
 };
 
-export const renderFullPage = ({ meta, assets, body, style, preloadedState, scripts }: Params) => {
+export const renderFullPage = ({
+  meta,
+  assets,
+  body,
+  style,
+  preloadedState,
+  scripts,
+  graphql
+}: Params) => {
   return `<!DOCTYPE html>
     <html>
       <head>
@@ -26,6 +35,7 @@ export const renderFullPage = ({ meta, assets, body, style, preloadedState, scri
       <body>
         ${body}
         <script id="initial-data" type="text/plain" data-json="${escape(preloadedState)}"></script>
+        <script>window.__APOLLO_STATE__=${graphql}</script>
         ${scripts}
         ${assets}
       </body>
