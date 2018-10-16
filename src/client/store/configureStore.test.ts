@@ -1,5 +1,3 @@
-import * as sinon from 'sinon';
-import { END } from 'redux-saga';
 import { configureStore } from './configureStore';
 
 afterEach(() => {
