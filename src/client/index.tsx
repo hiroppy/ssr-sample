@@ -3,6 +3,11 @@ import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import { loadComponents } from 'loadable-components';
+
+// graphql
+import { ApolloProvider } from 'react-apollo';
+import { client } from '../graphql/client';
+
 import { configureStore, history } from './store/configureStore';
 import { Router } from './Router'; // this needs to be at the top level because it's used by loadable-components
 
@@ -24,11 +29,13 @@ const store = configureStore(initialData);
 
 const render = (RouterComponent: typeof Router) => {
   renderMethod(
-    <Provider store={store}>
-      <ConnectedRouter history={history}>
-        <RouterComponent />
-      </ConnectedRouter>
-    </Provider>,
+    <ApolloProvider client={client}>
+      <Provider store={store}>
+        <ConnectedRouter history={history}>
+          <RouterComponent />
+        </ConnectedRouter>
+      </Provider>
+    </ApolloProvider>,
     document.getElementById('root')
   );
 };
