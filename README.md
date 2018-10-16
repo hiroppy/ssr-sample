@@ -21,6 +21,10 @@ This repository shows you how to write SSR and SPA code using TypeScript.
   - react-router
   - recompose (error handling, etc...)
   - App Shell and Content (PWA)
+- how to use Apollo(GraphQL) with SSR and SPA
+  - apollo-boost
+  - apollo-server-express
+  - react-apollo
 - how to write test code and storybook
   - express, react, redux, redux-saga, react-router, etc...
 - how to develop in the development env and how to run the production env
@@ -47,6 +51,7 @@ This repository shows you how to write SSR and SPA code using TypeScript.
 - connected-react-router@4
 - loadable-components@2
 - styled-components@3
+- apollo-boost@0.1
 - express@4
 - dotenv@6
 
@@ -71,9 +76,16 @@ $ npm start
 
 ```sh
 $ npm start # use 3000
-$ open http://localhost3000
+$ open http://localhost:3000
 $ npm run start:storybook # use 6006
-$ open http://localhost6006
+$ open http://localhost:6006
+```
+
+## GraphQL Playground
+
+```sh
+$ npm start
+$ open http://localhost:3000/graphql
 ```
 
 ## Test
