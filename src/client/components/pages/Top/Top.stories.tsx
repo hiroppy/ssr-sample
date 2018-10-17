@@ -7,11 +7,11 @@ import { Top } from '.';
 
 const stories = storiesOf('components/pages/Top', module);
 
-const query = gql`
+const GET_ORGS = gql`
   {
     organizations {
-      uid
       name
+      uid
     }
   }
 `;
@@ -22,12 +22,30 @@ const mockedData = {
       uid: 1,
       name: 'name',
       uri: 'uri',
-      __typename: 'organazations'
+      __typename: 'organizations'
+    },
+    {
+      uid: 2,
+      name: 'name2',
+      uri: 'uri',
+      __typename: 'organizations'
+    },
+    {
+      uid: 3,
+      name: 'name3',
+      uri: 'uri',
+      __typename: 'organizations'
+    },
+    {
+      uid: 4,
+      name: 'name4',
+      uri: 'uri',
+      __typename: 'organizations'
     }
   ]
 };
 
-const mocks = [{ request: { query }, result: { data: mockedData } }];
+const mocks = [{ request: { query: GET_ORGS }, result: { data: mockedData } }];
 
 stories.add('default', () => (
   <div
