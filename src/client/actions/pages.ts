@@ -10,32 +10,25 @@ export type Actions =
   | LoadOrgsPageFailure
   | StopSaga;
 
-export interface ResetPagesStatus extends Action {
-  type: 'RESET_PAGES_STATUS';
-}
+export interface ResetPagesStatus extends Action<'RESET_PAGES_STATUS'> {}
 
 export const resetPageStatus = (): ResetPagesStatus => ({
   type: 'RESET_PAGES_STATUS'
 });
 
-export interface LoadTopPage {
-  type: 'LOAD_TOP_PAGE';
-}
+export interface LoadTopPage extends Action<'LOAD_TOP_PAGE'> {}
 
 export const loadTopPage = (): LoadTopPage => ({
   type: 'LOAD_TOP_PAGE'
 });
 
-export interface LoadTopPageSuccess {
-  type: 'LOAD_TOP_PAGE_SUCCESS';
-}
+export interface LoadTopPageSuccess extends Action<'LOAD_TOP_PAGE_SUCCESS'> {}
 
 export const loadTopPageSuccess = (): LoadTopPageSuccess => ({
   type: 'LOAD_TOP_PAGE_SUCCESS'
 });
 
-export interface LoadTopPageFailure {
-  type: 'LOAD_TOP_PAGE_FAILURE';
+export interface LoadTopPageFailure extends Action<'LOAD_TOP_PAGE_FAILURE'> {
   payload: {
     err: Error;
   };
@@ -48,8 +41,7 @@ export const loadTopPageFailure = (err: Error): LoadTopPageFailure => ({
   }
 });
 
-export interface LoadOrgsPage {
-  type: 'LOAD_ORGS_PAGE';
+export interface LoadOrgsPage extends Action<'LOAD_ORGS_PAGE'> {
   payload: {
     org: string;
   };
@@ -62,16 +54,13 @@ export const loadOrgsPage = (org: LoadOrgsPage['payload']['org']): LoadOrgsPage 
   }
 });
 
-export interface LoadOrgsPageSuccess {
-  type: 'LOAD_ORGS_PAGE_SUCCESS';
-}
+export interface LoadOrgsPageSuccess extends Action<'LOAD_ORGS_PAGE_SUCCESS'> {}
 
 export const loadOrgsPageSuccess = (): LoadOrgsPageSuccess => ({
   type: 'LOAD_ORGS_PAGE_SUCCESS'
 });
 
-export interface LoadOrgsPageFailure {
-  type: 'LOAD_ORGS_PAGE_FAILURE';
+export interface LoadOrgsPageFailure extends Action<'LOAD_ORGS_PAGE_FAILURE'> {
   payload: {
     err: Error;
   };
@@ -84,9 +73,7 @@ export const loadOrgsPageFailure = (err: Error): LoadOrgsPageFailure => ({
   }
 });
 
-export interface StopSaga {
-  type: 'STOP_SAGA';
-}
+export interface StopSaga extends Action<'STOP_SAGA'> {}
 
 export const stopSaga = (): StopSaga => ({
   type: 'STOP_SAGA'

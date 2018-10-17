@@ -3,8 +3,7 @@ import { State } from '../reducers/orgs';
 
 export type Actions = FetchRepos | FetchReposSuccess | FetchReposFailure | ResetOrgs;
 
-export interface FetchRepos extends Action {
-  type: 'FETCH_REPOS';
+export interface FetchRepos extends Action<'FETCH_REPOS'> {
   payload: {
     org: string;
   };
@@ -17,8 +16,7 @@ export const fetchRepos = (org: FetchRepos['payload']['org']): FetchRepos => ({
   }
 });
 
-export interface FetchReposSuccess extends Action {
-  type: 'FETCH_REPOS_SUCCESS';
+export interface FetchReposSuccess extends Action<'FETCH_REPOS_SUCCESS'> {
   payload: {
     name: string;
     repos: State['repos'];
@@ -36,8 +34,7 @@ export const fetchReposSuccess = ({
   }
 });
 
-export interface FetchReposFailure {
-  type: 'FETCH_REPOS_FAILURE';
+export interface FetchReposFailure extends Action<'FETCH_REPOS_FAILURE'> {
   payload: {
     code: number;
   };
@@ -52,9 +49,7 @@ export const fetchReposFailure = (
   }
 });
 
-export interface ResetOrgs extends Action {
-  type: 'RESET_ORGS';
-}
+export interface ResetOrgs extends Action<'RESET_ORGS'> {}
 
 export const resetOrgs = () => ({
   type: 'RESET_ORGS'
