@@ -9,15 +9,14 @@ export const history = process.env.IS_BROWSER ? createBrowserHistory() : createM
 const sagaMiddleware = createSagaMiddleware();
 
 const createEnhancer = () => {
-  const appliedMiddlewares = applyMiddleware(sagaMiddleware, routerMiddleware(history));
   const composeEnhancers =
     process.env.NODE_ENV !== 'production' &&
     typeof window === 'object' &&
-    (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-      ? (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+      ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
       : compose;
 
-  return composeEnhancers(appliedMiddlewares);
+  return composeEnhancers(applyMiddleware(sagaMiddleware, routerMiddleware(history)));
 };
 
 export const configureStore = (preloadedState: Object = {}) => {
@@ -27,13 +26,14 @@ export const configureStore = (preloadedState: Object = {}) => {
   } = createStore(connectRouter(history)(rootReducer), preloadedState, enhancer);
 
   sagaMiddleware.run(rootSaga);
-
   store.runSaga = sagaMiddleware.run;
 
   /* istanbul ignore next */
   if (module.hot) {
     module.hot.accept('../reducers', () => {
-      const { rootReducer: nextReducer } = require('../reducers');
+      const {
+        rootReducer: nextReducer
+      }: { rootReducer: typeof rootReducer } = require('../reducers');
 
       store.replaceReducer(connectRouter(history)(nextReducer));
     });

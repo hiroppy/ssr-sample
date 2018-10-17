@@ -11,6 +11,6 @@ export const client = new ApolloClient({
       })
     : new SchemaLink({ schema }),
   cache: process.env.IS_BROWSER
-    ? new InMemoryCache().restore((window as any).__APOLLO_STATE__)
+    ? new InMemoryCache().restore(window.__APOLLO_STATE__)
     : new InMemoryCache()
 });
