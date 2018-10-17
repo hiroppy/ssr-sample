@@ -1,4 +1,4 @@
-# A sample of Server-Side-Rendering and Single Page Application
+# A sample of Server-Side-Rendering and Single-Page-Application
 
 [![Travis (.org)](https://img.shields.io/travis/hiroppy/ssr-sample.svg?style=flat-square)](https://travis-ci.org/hiroppy/ssr-sample)
 [![Codecov](https://img.shields.io/codecov/c/github/hiroppy/ssr-sample.svg?style=flat-square)](https://codecov.io/gh/hiroppy/ssr-sample)
@@ -52,6 +52,8 @@ This repository shows you how to write SSR and SPA code using TypeScript.
 - loadable-components@2
 - styled-components@3
 - apollo-boost@0.1
+- react-apollo@2
+- apollo-server-express@2
 - express@4
 - dotenv@6
 
