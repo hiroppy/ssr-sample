@@ -21,26 +21,22 @@ const mockedData = {
     {
       uid: 1,
       name: 'name',
-      uri: 'uri',
-      __typename: 'organizations'
+      uri: 'uri'
     },
     {
       uid: 2,
       name: 'name2',
-      uri: 'uri',
-      __typename: 'organizations'
+      uri: 'uri'
     },
     {
       uid: 3,
       name: 'name3',
-      uri: 'uri',
-      __typename: 'organizations'
+      uri: 'uri'
     },
     {
       uid: 4,
       name: 'name4',
-      uri: 'uri',
-      __typename: 'organizations'
+      uri: 'uri'
     }
   ]
 };
@@ -55,7 +51,7 @@ stories.add('default', () => (
       background: '#fff'
     }}
   >
-    <MockedProvider mocks={mocks}>
+    <MockedProvider mocks={mocks} addTypename={false}>
       <MemoryRouter initialEntries={['/']}>
         <Top error={null} load={() => {}} />
       </MemoryRouter>
