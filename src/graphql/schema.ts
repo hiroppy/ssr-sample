@@ -1,6 +1,12 @@
-import { makeExecutableSchema } from 'graphql-tools';
+import { makeExecutableSchema, IResolvers } from 'graphql-tools';
 
-export const organizations = [
+export type Organizations = Array<{
+  name: string;
+  uri: string;
+  uid: number;
+}>;
+
+const organizations: Organizations = [
   {
     name: 'nodejs',
     uri: 'https://github.com/nodejs',
@@ -31,13 +37,16 @@ export const typeDefs = `
   }
 
   type Query {
-    organization(name: String): Organization
     organizations: [Organization]
+    organization(name: String!): Organization
   }
 `;
 
-export const resolvers = {
-  Query: { organizations: () => organizations }
+export const resolvers: IResolvers = {
+  Query: {
+    organizations: () => organizations,
+    organization: (obj, { name }) => organizations.find((o) => o.name === name)
+  }
 };
 
 export const schema = makeExecutableSchema({

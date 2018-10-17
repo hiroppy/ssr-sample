@@ -5,7 +5,7 @@ import { Query } from 'react-apollo';
 import { gql } from 'apollo-boost';
 import { Head } from '../../Head';
 import { ErrorProps, PageComponentWithError } from '../../../hocs/PageComponentWithError';
-import { organizations } from '../../../../graphql/schema';
+import { Organizations } from '../../../../graphql/schema';
 
 export interface Props extends ErrorProps {
   load: () => void;
@@ -51,7 +51,7 @@ class TopComponent extends React.Component<Props> {
 
             return (
               <Ul>
-                {(data.organizations as typeof organizations).map(({ name, uid }) => (
+                {(data.organizations as Organizations).map(({ name, uid }) => (
                   <Li key={uid}>
                     <Link to={`/orgs/${name}`}>{name}</Link>
                   </Li>
