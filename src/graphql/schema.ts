@@ -24,8 +24,16 @@ export const organizations = [
 ];
 
 export const typeDefs = `
-  type Query { organizations: [Organization] }
-  type Organization { name: String, uri: String, uid: Int }
+  type Organization {
+    name: String!,
+    uri: String!,
+    uid: Int!
+  }
+
+  type Query {
+    organization(name: String): Organization
+    organizations: [Organization]
+  }
 `;
 
 export const resolvers = {
