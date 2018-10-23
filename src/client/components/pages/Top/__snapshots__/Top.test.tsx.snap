@@ -5,13 +5,13 @@ exports[`should render self and sub-components 1`] = `
   client={
     ApolloClient {
       "cache": InMemoryCache {
-        "addTypename": true,
+        "addTypename": false,
         "cacheKeyRoot": CacheKeyNode {
           "children": null,
           "key": null,
         },
         "config": Object {
-          "addTypename": true,
+          "addTypename": false,
           "dataIdFromObject": [Function],
           "fragmentMatcher": HeuristicFragmentMatcher {},
         },
@@ -55,13 +55,13 @@ exports[`should render self and sub-components 1`] = `
       "ssrMode": false,
       "store": DataStore {
         "cache": InMemoryCache {
-          "addTypename": true,
+          "addTypename": false,
           "cacheKeyRoot": CacheKeyNode {
             "children": null,
             "key": null,
           },
           "config": Object {
-            "addTypename": true,
+            "addTypename": false,
             "dataIdFromObject": [Function],
             "fragmentMatcher": HeuristicFragmentMatcher {},
           },
