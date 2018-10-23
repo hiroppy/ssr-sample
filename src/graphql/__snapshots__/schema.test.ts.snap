@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return organization resolver 1`] = `
+Object {
+  "data": Object {
+    "organization": Object {
+      "name": "nodejs",
+      "uid": 1,
+      "uri": "https://github.com/nodejs",
+    },
+  },
+}
+`;
+
+exports[`should return organizations resolver 1`] = `
+Object {
+  "data": Object {
+    "organizations": Array [
+      Object {
+        "name": "nodejs",
+        "uid": 1,
+      },
+      Object {
+        "name": "facebook",
+        "uid": 2,
+      },
+      Object {
+        "name": "google",
+        "uid": 3,
+      },
+      Object {
+        "name": "microsoft",
+        "uid": 4,
+      },
+    ],
+  },
+}
+`;

@@ -6,7 +6,7 @@ export type Organizations = Array<{
   uid: number;
 }>;
 
-const organizations: Organizations = [
+export const organizations: Organizations = [
   {
     name: 'nodejs',
     uri: 'https://github.com/nodejs',
