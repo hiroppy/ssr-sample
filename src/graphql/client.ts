@@ -5,11 +5,7 @@ import { endpoint } from './constants';
 
 export const client = new ApolloClient({
   ssrMode: !process.env.IS_BROWSER,
-  link: process.env.IS_BROWSER
-    ? new HttpLink({
-        uri: endpoint
-      })
-    : new SchemaLink({ schema }),
+  link: process.env.IS_BROWSER ? new HttpLink({ uri: endpoint }) : new SchemaLink({ schema }),
   cache: process.env.IS_BROWSER
     ? new InMemoryCache().restore(window.__APOLLO_STATE__)
     : new InMemoryCache()
