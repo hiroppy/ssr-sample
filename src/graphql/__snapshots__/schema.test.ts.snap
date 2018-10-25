@@ -1,5 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should return author resolver 1`] = `
+Object {
+  "data": Object {
+    "author": Object {
+      "avatar_url": "avatar",
+      "blog": "blog",
+      "html_url": "html",
+      "id": 1,
+      "name": "hiroppy",
+    },
+  },
+}
+`;
+
 exports[`should return organization resolver 1`] = `
 Object {
   "data": Object {
