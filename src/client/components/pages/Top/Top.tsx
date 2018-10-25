@@ -5,7 +5,7 @@ import { Query } from 'react-apollo';
 import { gql } from 'apollo-boost';
 import { Head } from '../../Head';
 import { ErrorProps, PageComponentWithError } from '../../../hocs/PageComponentWithError';
-import { Organizations } from '../../../../graphql/schema';
+import { Organizations, Author } from '../../../../graphql/schema';
 
 export interface Props extends ErrorProps {
   load: () => void;
@@ -16,6 +16,16 @@ const GET_ORGS = gql`
     organizations {
       name
       uid
+    }
+  }
+`;
+
+const GET_AUTHOR = gql`
+  {
+    author {
+      name
+      blog
+      avatar_url
     }
   }
 `;
@@ -31,6 +41,12 @@ const Ul = styled.ul`
 const Li = styled.li`
   line-height: 1.5;
   padding: 0.5em 0;
+`;
+
+const Icon = styled.img`
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
 `;
 
 class TopComponent extends React.Component<Props> {
@@ -69,6 +85,25 @@ class TopComponent extends React.Component<Props> {
             </a>
           </p>
         </div>
+        <Query query={GET_AUTHOR}>
+          {({ loading, error, data }) => {
+            if (loading) return 'Loading...';
+            if (error) return `Error! ${error.message}`;
+
+            const { author }: { author: Author } = data;
+
+            return (
+              <div>
+                <h3>Author</h3>
+                <p>{author.name}</p>
+                <a href={author.blog} target="_blank" rel="noopener noreferrer">
+                  {author.blog}
+                </a>
+                <Icon src={author.avatar_url} />
+              </div>
+            );
+          }}
+        </Query>
       </React.Fragment>
     );
   }
