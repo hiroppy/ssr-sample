@@ -31,6 +31,8 @@
   },
   "homepage": "https://github.com/hiroppy/ssr-sample#readme",
   "devDependencies": {
+    "@storybook/addon-knobs": "^3.4.11",
+    "@storybook/addon-viewport": "^3.4.11",
     "@storybook/cli": "^3.4.7",
     "@storybook/react": "^4.0.0-alpha.9",
     "@storybook/storybook-deployer": "^2.3.0",
