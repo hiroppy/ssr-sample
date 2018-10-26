@@ -5,17 +5,19 @@ const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const { GenerateSW } = require('workbox-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const config = {
   entry: resolve('src', 'client', 'index.tsx'),
   output: {
-    filename: '[name].[chunkhash].bundle.js',
-    chunkFilename: '[name].[chunkhash].[id].bundle.js'
+    filename: '[name].[contenthash].bundle.js',
+    chunkFilename: '[name].[contenthash].[id].bundle.js'
   },
   plugins: [
     // new webpack.optimize.AggressiveMergingPlugin(),
     new ManifestPlugin(),
-    new GenerateSW()
+    new GenerateSW(),
+    new BundleAnalyzerPlugin({ analyzerMode: 'static' })
   ],
   optimization: {
     // runtimeChunk: {
