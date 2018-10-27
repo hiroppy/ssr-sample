@@ -5,18 +5,18 @@ import * as renderer from './controllers/renderer';
 import { resolvers, schema } from '../graphql/schema';
 import { endpoint } from '../graphql/constants';
 
-export function router(app: express.Application) {
-  const apollo = new ApolloServer({
-    schema,
-    resolvers,
-    playground:
-      process.env.NODE_ENV !== 'production'
-        ? {
-            endpoint
-          }
-        : false
-  });
+const apollo = new ApolloServer({
+  schema,
+  resolvers,
+  playground:
+    process.env.NODE_ENV !== 'production'
+      ? {
+          endpoint
+        }
+      : false
+});
 
+export function router(app: express.Application) {
   apollo.applyMiddleware({ app, path: endpoint });
 
   app.use('/favicon.ico', (req, res) => res.status(200).send());
