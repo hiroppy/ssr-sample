@@ -106,6 +106,15 @@ $ open http://localhost8080
 $ npm run deploy:storybook
 ```
 
+## Update Document
+
+```sh
+$ cd docs
+$ npm i
+$ npm start
+$ open http://localhost:4000
+```
+
 ## Note
 
 This repository shows how to write and so does not introduce Atomic Design.
