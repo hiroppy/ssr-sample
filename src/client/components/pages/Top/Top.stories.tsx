@@ -16,7 +16,7 @@ const GET_ORGS = gql`
   }
 `;
 
-const mockedData = {
+const mockedOrgs = {
   organizations: [
     {
       uid: 1,
@@ -41,7 +41,28 @@ const mockedData = {
   ]
 };
 
-const mocks = [{ request: { query: GET_ORGS }, result: { data: mockedData } }];
+const GET_AUTHOR = gql`
+  {
+    author {
+      name
+      blog
+      avatar_url
+    }
+  }
+`;
+
+const mockedAuthor = {
+  author: {
+    name: 'hiroppy',
+    blog: 'https://hiroppy.me',
+    avatar_url: 'https://avatars0.githubusercontent.com/u/3367801?s=400&v=4'
+  }
+};
+
+const mocks = [
+  { request: { query: GET_ORGS }, result: { data: mockedOrgs } },
+  { request: { query: GET_AUTHOR }, result: { data: mockedAuthor } }
+];
 
 stories.add('default', () => (
   <div
