@@ -1,10 +1,7 @@
 import * as React from 'react';
-import { configure, addDecorator } from '@storybook/react';
-import viewport from '@storybook/addon-viewport';
+import { configure } from '@storybook/react';
 
 const req = require.context('../src/client', true, /.stories.tsx$/);
-
-addDecorator([viewport]);
 
 function loadStories() {
   req.keys().forEach((filename) => req(filename));
