@@ -5,6 +5,7 @@ coverage
 *.clinic-doctor*
 node_trace*
 .awcache/
+_book
 
 # .env.dev
 # .env.prod
