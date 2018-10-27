@@ -2,10 +2,6 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-interface Props {
-  children: React.ReactNode;
-}
-
 const Container = styled.div`
   align-items: center;
   display: flex;
@@ -17,7 +13,7 @@ const Container = styled.div`
   }
 `;
 
-export const Error = ({ children }: Props) => (
+export const Error: React.SFC = ({ children }) => (
   <React.Fragment>
     <Container>
       <p>{children}</p>

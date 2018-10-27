@@ -5,7 +5,7 @@ export interface Props {
   title: string;
 }
 
-export const Head = ({ title }: Props) => (
+export const Head: React.SFC<Props> = ({ title }) => (
   <Helmet>
     <meta charSet="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

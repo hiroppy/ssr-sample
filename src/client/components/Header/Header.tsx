@@ -7,7 +7,7 @@ export interface Props {
   orgName: string;
 }
 
-const L = styled(Link)`
+const A = styled(Link)`
   color: #fff;
   text-decoration: none;
 `;
@@ -27,9 +27,9 @@ const HeaderComponent = styled.header`
   }
 `;
 
-export const Header = ({ userName, orgName }: Props) => (
+export const Header: React.SFC<Props> = ({ userName, orgName }) => (
   <HeaderComponent>
-    <L to="/">{'<'}</L>
+    <A to="/">{'<'}</A>
     <span>{orgName}</span>
     <span>{userName}</span>
   </HeaderComponent>
