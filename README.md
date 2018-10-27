@@ -40,31 +40,27 @@ This repository shows you how to write SSR and SPA code using TypeScript.
 
 ## Libraries
 
-### dependencies
+| Purpose        | Name                | CSR | SSR |
+| -------------- | ------------------- | --- | --- |
+| view           | react               | yes | yes |
+| architecure    | redux               | yes | yes |
+| head tag       | react-helmet        | yes | yes |
+| HOC            | recompose           | yes | yes |
+| side effects   | redux-saga          | yes | yes |
+| css            | styled-components   | yes | yes |
+| dynamic import | loadable-components | yes | yes |
+| GraphQL        | apollo-boost        | yes | yes |
+| web server     | express             | N/A | yes |
 
-- react@16
-- react-router-dom@4
-- react-helmet@5
-- recompose@0.33
-- redux@4
-- redux-saga@0.16
-- connected-react-router@4
-- loadable-components@2
-- styled-components@3
-- apollo-boost@0.1
-- react-apollo@2
-- apollo-server-express@2
-- express@4
-- dotenv@6
-
-### devDependencies
-
-- typescript@3
-- storybook@4.0.0-alpha.9
-- jest@23
-- ts-node@
-- webpack@4
-- workbox@3
+| Purpose               | Name                |
+| --------------------- | ------------------- |
+| language              | typescript, ts-node |
+| bundler               | webpack             |
+| preview               | storybook           |
+| test runner           | jest                |
+| service worker        | workbox             |
+| benchmarking tool     | autocannon          |
+| performance profiling | clinic              |
 
 ## Setup
 
