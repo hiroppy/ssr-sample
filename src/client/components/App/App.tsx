@@ -11,8 +11,7 @@ injectGlobal`
 
 export interface Props {
   name: string;
-  children: React.ReactNode;
-  setUserName: () => void;
+  setUserName: (name: string) => void;
 }
 
 // like App-Shell of PWA
@@ -21,7 +20,7 @@ export class App extends React.PureComponent<Props> {
     super(props);
 
     // common processing only at initialization
-    if (this.props.name === '') this.props.setUserName();
+    if (this.props.name === '') this.props.setUserName('Hiroppy');
   }
 
   render() {

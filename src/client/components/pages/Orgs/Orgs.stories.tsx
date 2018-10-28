@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { UnregisterCallback, Href } from 'history';
+import { Href } from 'history';
 import { RouteComponentProps } from 'react-router-dom';
 import * as Chance from 'chance';
 import { Orgs } from '.';
