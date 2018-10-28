@@ -2,8 +2,8 @@
 
 - [Introduction](README.md)
 - [ja]()
-  - [Server Side](server/README.md)
-    - [test](docs/child.md)
   - [Client Side](server/README.md)
     - [test](docs/child.md)
+  - [Server Side](server/README.md)
+    - [Express](server/express_ja.md)
 - [en]()
