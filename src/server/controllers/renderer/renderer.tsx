@@ -13,7 +13,7 @@ import { getLoadableState } from 'loadable-components/server';
 
 // graphql
 import { ApolloProvider, getDataFromTree } from 'react-apollo';
-import { client } from '../../../graphql/client';
+import { createClient } from '../../../graphql/client';
 
 import { renderFullPage } from '../../renderFullPage';
 import { Router } from '../../../client/Router';
@@ -34,7 +34,9 @@ const assets = (process.env.NODE_ENV === 'production'
 
 export async function get(req: Request, res: Response) {
   const store = configureStore();
+  const client = createClient();
   const sheet = new ServerStyleSheet();
+
   const App = (
     <ApolloProvider client={client}>
       <Provider store={store}>
