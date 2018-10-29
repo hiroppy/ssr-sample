@@ -65,3 +65,29 @@ test('should return author resolver', async () => {
 
   expect(res).toMatchSnapshot();
 });
+
+test('should return addOrganization resolver', async () => {
+  const ADD_ORGANIZATION = `
+    mutation addOrganization($name: String!) {
+      addOrganization(name: $name) {
+        name
+        uri
+        uid
+      }
+    }
+  `;
+
+  const res = await graphql(
+    schema,
+    ADD_ORGANIZATION,
+    null,
+    {
+      organizations
+    },
+    {
+      name: 'test'
+    }
+  );
+
+  expect(res).toMatchSnapshot();
+});

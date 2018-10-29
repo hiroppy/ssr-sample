@@ -1,5 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should return addOrganization resolver 1`] = `
+Object {
+  "data": Object {
+    "addOrganization": Object {
+      "name": "test",
+      "uid": 5,
+      "uri": "https://github.com/test",
+    },
+  },
+}
+`;
+
 exports[`should return author resolver 1`] = `
 Object {
   "data": Object {
