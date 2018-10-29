@@ -9,14 +9,6 @@ export type Organizations = Array<{
   uid: number;
 }>;
 
-export type Author = {
-  id: number;
-  name: string;
-  avatar_url: string;
-  html_url: string;
-  blog: string;
-};
-
 export const organizations: Organizations = [
   {
     name: 'nodejs',
@@ -40,6 +32,14 @@ export const organizations: Organizations = [
   }
 ];
 
+export type Author = {
+  id: number;
+  name: string;
+  avatar_url: string;
+  html_url: string;
+  blog: string;
+};
+
 export const typeDefs = `
   type Organization {
     name: String!,
@@ -60,6 +60,10 @@ export const typeDefs = `
     organization(name: String!): Organization
     author: Author
   }
+
+  type Mutation {
+    addOrganization(name: String!): Organization
+  }
 `;
 
 export const resolvers: IResolvers = {
@@ -67,6 +71,21 @@ export const resolvers: IResolvers = {
     organizations: () => organizations,
     organization: (obj, { name }) => organizations.find((o) => o.name === name),
     author: () => octokit.users.getForUser({ username: 'hiroppy' }).then(({ data }) => data)
+  },
+  Mutation: {
+    addOrganization: (obj, { name }) => {
+      if (organizations.some((o) => o.name === name)) throw new Error('already exist');
+
+      const org = {
+        name,
+        uid: organizations.length + 1,
+        uri: `https://github.com/${name}`
+      };
+
+      organizations.push(org);
+
+      return org;
+    }
   }
 };
 
