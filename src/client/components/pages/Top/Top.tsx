@@ -1,46 +1,24 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Query } from 'react-apollo';
 import { gql } from 'apollo-boost';
 import { Head } from '../../Head';
+import { OrganizationsBox } from '../../OrganizationsBox';
 import { ErrorProps, PageComponentWithError } from '../../../hocs/PageComponentWithError';
-import { Organizations, Author } from '../../../../graphql/schema';
+import { Author } from '../../../../graphql/schema';
 
 export interface Props extends ErrorProps {
   load: () => void;
 }
 
-const GET_ORGS = gql`
-  {
-    organizations {
-      name
-      uid
-    }
-  }
-`;
-
 const GET_AUTHOR = gql`
-  {
+  query {
     author {
       name
       blog
       avatar_url
     }
   }
-`;
-
-const Ul = styled.ul`
-  box-shadow: 0px 0px 5px silver;
-  margin: auto;
-  max-width: 600px;
-  padding: 0.5em 0.5em 0.5em 2em;
-  width: 90%;
-`;
-
-const Li = styled.li`
-  line-height: 1.5;
-  padding: 0.5em 0;
 `;
 
 const Icon = styled.img`
@@ -60,31 +38,7 @@ class TopComponent extends React.Component<Props> {
     return (
       <React.Fragment>
         <Head title="top" />
-        <Query query={GET_ORGS}>
-          {({ loading, error, data }) => {
-            if (loading) return 'Loading...';
-            if (error) return `Error! ${error.message}`;
-
-            return (
-              <Ul>
-                {(data.organizations as Organizations).map(({ name, uid }) => (
-                  <Li key={uid}>
-                    <Link to={`/orgs/${name}`}>{name}</Link>
-                  </Li>
-                ))}
-              </Ul>
-            );
-          }}
-        </Query>
-        <div>
-          <p>DOTENV_TYPE: {process.env.DOTENV_TYPE}</p>
-          <p>
-            Repository:
-            <a href="https://github.com/hiroppy/ssr-sample" target="_blank">
-              https://github.com/hiroppy/ssr-sample
-            </a>
-          </p>
-        </div>
+        <OrganizationsBox />
         <Query query={GET_AUTHOR}>
           {({ loading, error, data }) => {
             if (loading) return 'Loading...';
@@ -104,6 +58,7 @@ class TopComponent extends React.Component<Props> {
             );
           }}
         </Query>
+        <p>DOTENV_TYPE: {process.env.DOTENV_TYPE}</p>
       </React.Fragment>
     );
   }
