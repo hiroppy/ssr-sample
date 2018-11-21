@@ -3,7 +3,7 @@
 exports[`should create a failure action to fetch repositories 1`] = `
 Object {
   "payload": Object {
-    "code": 404,
+    "error": [Error],
   },
   "type": "FETCH_REPOS_FAILURE",
 }

@@ -14,7 +14,7 @@ test('should create a successful action to fetch repositories', () => {
 });
 
 test('should create a failure action to fetch repositories', () => {
-  expect(actions.fetchReposFailure(404)).toMatchSnapshot();
+  expect(actions.fetchReposFailure(new Error())).toMatchSnapshot();
 });
 
 test('should create an action to reset state', () => {

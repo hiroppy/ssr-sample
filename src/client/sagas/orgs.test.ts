@@ -1,42 +1,38 @@
 import { expectSaga } from 'redux-saga-test-plan';
 import { orgsProcess } from './orgs';
-import * as nock from 'nock';
-
-const initialState = {
-  name: 'name',
-  repos: []
-};
+import { fetchRepos, fetchReposSuccess, fetchReposFailure } from '../actions/orgs';
 
 test('should take on the FETCH_REPOS action', () => {
-  nock('https://api.github.com')
-    .get('/orgs/test/repos')
-    .reply(200, [
-      {
-        forks_count: 100,
-        name: 'foo',
-        html_url: 'url',
-        language: 'lang',
-        open_issues_count: 200,
-        stargazers_count: 300,
-        watchers_count: 400
-      },
-      {
-        forks_count: 100,
-        name: 'bar',
-        html_url: 'url',
-        language: 'lang',
-        open_issues_count: 200,
-        stargazers_count: 300,
-        watchers_count: 400
-      }
-    ]);
+  const res = [
+    {
+      forks_count: 100,
+      name: 'foo',
+      html_url: 'url',
+      language: 'lang',
+      open_issues_count: 200,
+      stargazers_count: 300,
+      watchers_count: 400
+    },
+    {
+      forks_count: 100,
+      name: 'bar',
+      html_url: 'url',
+      language: 'lang',
+      open_issues_count: 200,
+      stargazers_count: 300,
+      watchers_count: 400
+    }
+  ];
 
   return expectSaga(orgsProcess)
-    .withState(initialState)
-    .put({
-      type: 'FETCH_REPOS_SUCCESS',
-      payload: {
-        name: 'test',
+    .provide({
+      call: () => ({
+        data: res
+      })
+    })
+    .put(
+      fetchReposSuccess({
+        name: 'foo',
         repos: [
           {
             forksCount: 100,
@@ -57,37 +53,20 @@ test('should take on the FETCH_REPOS action', () => {
             watchersCount: 400
           }
         ]
-      }
-    })
-    .dispatch({
-      type: 'FETCH_REPOS',
-      payload: {
-        org: 'test'
-      }
-    })
+      })
+    )
+    .dispatch(fetchRepos('foo'))
     .run();
 });
 
 test('should take on the ERROR action when FETCH_REPOS fails', () => {
-  nock('https://api.github.com')
-    .get('/orgs/test/repos')
-    .reply(404, {
-      message: 'not found'
-    });
-
   return expectSaga(orgsProcess)
-    .withState(initialState)
-    .put({
-      type: 'FETCH_REPOS_FAILURE',
-      payload: {
-        code: 404
+    .provide({
+      call: () => {
+        throw new Error();
       }
     })
-    .dispatch({
-      type: 'FETCH_REPOS',
-      payload: {
-        org: 'test'
-      }
-    })
+    .put(fetchReposFailure(new Error()))
+    .dispatch(fetchRepos('foo'))
     .run();
 });

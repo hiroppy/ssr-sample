@@ -36,16 +36,14 @@ export const fetchReposSuccess = ({
 
 export interface FetchReposFailure extends Action<'FETCH_REPOS_FAILURE'> {
   payload: {
-    code: number;
+    error: Error;
   };
 }
 
-export const fetchReposFailure = (
-  code: FetchReposFailure['payload']['code']
-): FetchReposFailure => ({
+export const fetchReposFailure = (error: Error): FetchReposFailure => ({
   type: 'FETCH_REPOS_FAILURE',
   payload: {
-    code
+    error
   }
 });
 

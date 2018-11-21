@@ -24,7 +24,7 @@ function* fetchRepos(action: FetchRepos) {
 
     yield put(fetchReposSuccess({ name: org, repos }));
   } catch (e) {
-    yield put(fetchReposFailure(e.code));
+    yield put(fetchReposFailure(e));
   }
 }
 

@@ -13,6 +13,7 @@ function formatErrorCode(err: Error): number {
   return Number(err.message);
 }
 
+// TODO: Errorオブジェクトへ変更したので確認
 export const PageComponentWithError = <Props extends ErrorProps>() =>
   compose<Props, Props>(
     withProps((props: Props) => ({
