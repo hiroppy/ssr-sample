@@ -16,7 +16,9 @@ export const LoadableTop = loadable(
 
 export const LoadableNotFound = loadable(
   () =>
-    import(/* webpackChunkName: "404" */ '../containers/NotFound').then(({ NotFound }) => NotFound),
+    import(/* webpackChunkName: "404", webpackPrefetch: true */ '../containers/NotFound').then(
+      ({ NotFound }) => NotFound
+    ),
   {
     modules: ['../containers/NotFound']
   }

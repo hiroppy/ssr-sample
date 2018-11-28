@@ -14,7 +14,7 @@ const config = {
     chunkFilename: '[name].[contenthash].[id].bundle.js'
   },
   plugins: [
-    // new webpack.optimize.AggressiveMergingPlugin(),
+    new webpack.optimize.AggressiveMergingPlugin(),
     new ManifestPlugin(),
     new GenerateSW(),
     new BundleAnalyzerPlugin({ analyzerMode: 'static' })
@@ -29,11 +29,13 @@ const config = {
       })
     ],
     splitChunks: {
+      minSize: 100000,
+      maxSize: 1500000,
       cacheGroups: {
         vendor: {
           test: /node_modules/,
           name: 'vendor',
-          chunks: 'initial',
+          chunks: 'all',
           enforce: true
         }
       }
