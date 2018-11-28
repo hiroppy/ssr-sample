@@ -1,4 +1,3 @@
-import * as sinon from 'sinon';
 import styleSheet from 'styled-components/lib/models/StyleSheet';
 import { get } from '.';
 
@@ -12,7 +11,7 @@ test.skip('should return the get of renderer response', () => {
     url: '/'
   };
   const res: any = {
-    send: sinon.spy(),
+    send: jest.fn(),
     status: {
       send: () => {}
     }
@@ -20,6 +19,5 @@ test.skip('should return the get of renderer response', () => {
 
   get(req, res);
 
-  expect(res.json.calledOnce).toBeTruthy();
-  // expect(res.json.getCall(0).args[0]).toMatchSnapshot();
+  expect(res.send).toHaveBeenCalled();
 });

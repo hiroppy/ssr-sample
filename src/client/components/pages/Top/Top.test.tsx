@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import * as sinon from 'sinon';
 import { MemoryRouter } from 'react-router-dom';
 import { gql } from 'apollo-boost';
 import { MockedProvider } from 'react-apollo/test-utils';
@@ -55,7 +54,7 @@ test('should render self and sub-components', () => {
 });
 
 test('should call load', () => {
-  const load = sinon.spy();
+  const load = jest.fn();
 
   mount(
     <MockedProvider>
@@ -65,5 +64,5 @@ test('should call load', () => {
     </MockedProvider>
   );
 
-  expect(load.calledOnce).toBeTruthy();
+  expect(load).toHaveBeenCalled();
 });

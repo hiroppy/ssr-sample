@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { mount, shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import * as sinon from 'sinon';
 import { Orgs } from '.';
 
 const match = {
@@ -77,7 +76,7 @@ test('should show loader', () => {
 
 test('should call load', () => {
   const mock: any = jest.fn();
-  const load = sinon.spy();
+  const load = jest.fn();
 
   mount(
     <Orgs
@@ -92,5 +91,5 @@ test('should call load', () => {
     />
   );
 
-  expect(load.calledOnce).toBeTruthy();
+  expect(load).toHaveBeenCalled();
 });

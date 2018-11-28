@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import * as sinon from 'sinon';
 import { App } from '.';
 
 test('should render self and sub-components', () => {
@@ -15,7 +14,7 @@ test('should render self and sub-components', () => {
 });
 
 test('should call setUserName if name is empty', () => {
-  const setUserName = sinon.spy();
+  const setUserName = jest.fn();
 
   shallow(
     <App name="" setUserName={setUserName}>
@@ -23,5 +22,5 @@ test('should call setUserName if name is empty', () => {
     </App>
   );
 
-  expect(setUserName.calledOnce).toBeTruthy();
+  expect(setUserName).toHaveBeenCalled();
 });

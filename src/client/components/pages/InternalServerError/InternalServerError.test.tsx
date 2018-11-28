@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { mount, shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import * as sinon from 'sinon';
 import { MemoryRouter } from 'react-router-dom';
 import { InternalServerError } from '.';
 
@@ -16,9 +15,9 @@ test('should render self and sub-components', () => {
 });
 
 test('should call stopSaga', () => {
-  const stop = sinon.spy();
+  const stop = jest.fn();
 
   shallow(<InternalServerError stopSaga={stop} />);
 
-  expect(stop.calledOnce).toBeTruthy();
+  expect(stop).toHaveBeenCalled();
 });
