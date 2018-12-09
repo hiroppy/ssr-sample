@@ -8,7 +8,7 @@ export function createClient() {
     ssrMode: !process.env.IS_BROWSER,
     link: process.env.IS_BROWSER ? new HttpLink({ uri: endpoint }) : new SchemaLink({ schema }),
     cache: process.env.IS_BROWSER
-      ? new InMemoryCache().restore((window as any).__APOLLO_STATE__)
+      ? new InMemoryCache().restore(window.__APOLLO_STATE__)
       : new InMemoryCache()
   });
 }

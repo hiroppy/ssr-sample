@@ -13,7 +13,7 @@
     "build:client": "cross-env NODE_ENV=production webpack",
     "build:storybook": "build-storybook",
     "deploy:storybook": "npm run build:storybook && storybook-to-ghpages",
-    "benchmark": "autocannon http://localhost:3000 -c100 -l",
+    "benchmark": "autocannon http://localhost:3000 -c100",
     "benckmark:docker": "clinic docker -- npm run start:prod",
     "benchmark:bubbleprof": "clinic bubbleprof -- npm run start:prod",
     "rm:dist": "rimraf dist",
