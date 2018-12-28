@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { connect } from 'react-redux';
 import { State } from '../../reducers';
 import { Props, Header as HeaderComponent } from '../../components/Header';
