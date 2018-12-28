@@ -40,27 +40,27 @@ This repository shows you how to write SSR and SPA code using TypeScript.
 
 ## Libraries
 
-| Purpose        | Name                | CSR | SSR |
-| -------------- | ------------------- | --- | --- |
-| view           | react               | yes | yes |
-| architecure    | redux               | yes | yes |
-| head tag       | react-helmet        | yes | yes |
-| HOC            | recompose           | yes | yes |
-| side effects   | redux-saga          | yes | yes |
-| css            | styled-components   | yes | yes |
-| dynamic import | loadable-components | yes | yes |
-| GraphQL        | apollo-boost        | yes | yes |
-| web server     | express             | N/A | yes |
+| Name                | Purpose               | CSR | SSR |
+| ------------------- | --------------------- | --- | --- |
+| react               | view                  | yes | yes |
+| redux               | architecure           | yes | yes |
+| react-helmet        | head tag              | yes | yes |
+| recompose           | HOC                   | yes | yes |
+| redux-saga          | side effects          | yes | yes |
+| styled-components   | CSS in JS             | yes | yes |
+| loadable-components | dynamic import        | yes | yes |
+| apollo-boost        | GraphQL               | yes | yes |
+| express             | server side framework | N/A | yes |
 
-| Purpose               | Name                |
-| --------------------- | ------------------- |
-| language              | typescript, ts-node |
-| bundler               | webpack             |
-| preview               | storybook           |
-| test runner           | jest                |
-| service worker        | workbox             |
-| benchmarking tool     | autocannon          |
-| performance profiling | clinic              |
+| Name                | Purpose               |
+| ------------------- | --------------------- |
+| typescript, ts-node | language              |
+| webpack             | bundler               |
+| storybook           | preview               |
+| jest                | test runner           |
+| workbox             | service worker        |
+| autocannon          | benchmarking tool     |
+| clinic              | performance profiling |
 
 ## Setup
 
