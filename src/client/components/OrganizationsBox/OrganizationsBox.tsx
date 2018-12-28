@@ -51,6 +51,8 @@ const InputBox = styled(Li)`
   justify-content: flex-end;
 `;
 
+class GetOrgsQuery extends Query<{ organizations: Organizations }> {}
+
 export class OrganizationsBox extends React.PureComponent<unknown, State> {
   state = { currentValue: '' };
 
@@ -65,12 +67,13 @@ export class OrganizationsBox extends React.PureComponent<unknown, State> {
 
   render() {
     return (
-      <Query query={GET_ORGS}>
+      <GetOrgsQuery query={GET_ORGS}>
         {({ loading, error, data }) => (
           <Ul>
             {error || loading ? <p>{error ? `Error! ${error.message}` : 'loading...'}</p> : null}
-            {data.organizations &&
-              (data.organizations as Organizations).map(({ name, uid }) => (
+            {data &&
+              data.organizations &&
+              data.organizations.map(({ name, uid }) => (
                 <Li key={uid}>
                   <A to={`/orgs/${name}`}>{name}</A>
                 </Li>
@@ -79,7 +82,7 @@ export class OrganizationsBox extends React.PureComponent<unknown, State> {
             <Mutation mutation={ADD_ORG} refetchQueries={[{ query: GET_ORGS }]}>
               {(addOrganization, { error }) => (
                 <React.Fragment>
-                  {error ? <p>{`Error! ${error.message}`}</p> : null}
+                  {error && <p>{`Error! ${error.message}`}</p>}
                   <InputBox>
                     <input onChange={this.onChange} value={this.state.currentValue} />
                     <button onClick={() => this.onSubmit(addOrganization)}>Add</button>
@@ -89,7 +92,7 @@ export class OrganizationsBox extends React.PureComponent<unknown, State> {
             </Mutation>
           </Ul>
         )}
-      </Query>
+      </GetOrgsQuery>
     );
   }
 }

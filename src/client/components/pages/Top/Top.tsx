@@ -27,6 +27,8 @@ const Icon = styled.img`
   width: 120px;
 `;
 
+class GetAuthorQuery extends Query<{ author: Author }> {}
+
 class TopComponent extends React.Component<Props> {
   constructor(props: Props) {
     super(props);
@@ -39,25 +41,24 @@ class TopComponent extends React.Component<Props> {
       <React.Fragment>
         <Head title="top" />
         <OrganizationsBox />
-        <Query query={GET_AUTHOR}>
-          {({ loading, error, data }) => {
-            if (loading) return 'Loading...';
-            if (error) return `Error! ${error.message}`;
-
-            const { author }: { author: Author } = data;
-
-            return (
-              <div>
-                <h3>Author</h3>
-                <p>{author.name}</p>
-                <a href={author.blog} target="_blank" rel="noopener noreferrer">
-                  {author.blog}
-                </a>
-                <Icon src={author.avatar_url} />
-              </div>
-            );
-          }}
-        </Query>
+        <GetAuthorQuery query={GET_AUTHOR}>
+          {({ loading, error, data }) => (
+            <React.Fragment>
+              {error || loading ? <p>{error ? `Error! ${error.message}` : 'loading...'}</p> : null}
+              {data &&
+                data.author && (
+                  <div>
+                    <h3>Author</h3>
+                    <p>{data.author.name}</p>
+                    <a href={data.author.blog} target="_blank" rel="noopener noreferrer">
+                      {data.author.blog}
+                    </a>
+                    <Icon src={data.author.avatar_url} />
+                  </div>
+                )}
+            </React.Fragment>
+          )}
+        </GetAuthorQuery>
         <p>DOTENV_TYPE: {process.env.DOTENV_TYPE}</p>
       </React.Fragment>
     );
