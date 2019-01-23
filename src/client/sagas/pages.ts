@@ -1,5 +1,5 @@
 import { END } from 'redux-saga';
-import { put, take, select, takeLatest } from 'redux-saga/effects';
+import { put, call, take, select, takeLatest } from 'redux-saga/effects';
 import {
   loadTopPageSuccess,
   loadTopPageFailure,
@@ -8,7 +8,7 @@ import {
   loadOrgsPageFailure,
   resetPageStatus
 } from '../actions/pages';
-import { fetchRepos, resetOrgs } from '../actions/orgs';
+import { fetchRepos, FetchReposSuccess, FetchReposFailure, resetOrgs } from '../actions/orgs';
 import { getOrgs } from './selectors';
 import { State } from '../reducers';
 
@@ -18,7 +18,7 @@ function* loadTopPage() {
   } catch (err) {
     yield put(loadTopPageFailure(err));
   } finally {
-    if (!process.env.IS_BROWSER) yield put(END);
+    if (!process.env.IS_BROWSER) yield call(stopSaga);
   }
 }
 
@@ -30,16 +30,19 @@ function* loadOrgsPage(action: LoadOrgsPage) {
     if (org !== orgs.name) {
       yield put(resetOrgs());
       yield put(fetchRepos(org));
-      const res = yield take(['FETCH_REPOS_SUCCESS', 'FETCH_REPOS_FAILURE']);
+      const res: FetchReposSuccess | FetchReposFailure = yield take([
+        'FETCH_REPOS_SUCCESS',
+        'FETCH_REPOS_FAILURE'
+      ]);
 
-      if (res.type === 'FETCH_REPOS_FAILURE') throw new Error(res.payload.code);
+      if (res.type === 'FETCH_REPOS_FAILURE') throw res.payload;
     }
 
     yield put(loadOrgsPageSuccess());
   } catch (err) {
     yield put(loadOrgsPageFailure(err));
   } finally {
-    if (!process.env.IS_BROWSER) yield put(END);
+    if (!process.env.IS_BROWSER) yield call(stopSaga);
   }
 }
 
