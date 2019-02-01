@@ -17,8 +17,7 @@ import { createClient } from '../../../graphql/client';
 
 import { renderFullPage } from '../../renderFullPage';
 import { Router } from '../../../client/Router';
-import { rootSaga } from '../../../client/sagas';
-import { configureStore } from '../../../client/store/configureStore';
+import { configureStore, runSaga } from '../../../client/store/configureStore';
 
 const fileName = 'main';
 const main = new RegExp(`^${fileName}~.*\.js$`);
@@ -66,7 +65,7 @@ export async function get(req: Request, res: Response) {
   try {
     const [loadableState] = await Promise.all([
       getLoadableState(App), // kick redux-saga and styled-components
-      store.runSaga(rootSaga).done,
+      runSaga(),
       getDataFromTree(App)
     ]);
 
