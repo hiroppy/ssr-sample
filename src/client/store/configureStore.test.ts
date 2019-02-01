@@ -10,5 +10,4 @@ test('should set the root reducer, runSaga, and close', () => {
   const store = configureStore(rootReducer());
 
   expect(rootReducer).toHaveBeenCalled();
-  expect(store).toHaveProperty('runSaga');
 });
