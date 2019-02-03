@@ -42,8 +42,8 @@ export type Author = {
 
 export const typeDefs = `
   type Organization {
-    name: String!,
-    uri: String!,
+    name: String!
+    uri: String!
     uid: Int!
   }
 
