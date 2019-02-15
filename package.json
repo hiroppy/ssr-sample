@@ -17,7 +17,8 @@
     "benckmark:docker": "clinic docker -- npm run start:prod",
     "benchmark:bubbleprof": "clinic bubbleprof -- npm run start:prod",
     "rm:dist": "rimraf dist",
-    "rm:benchmark": "clinic clean"
+    "rm:benchmark": "clinic clean",
+    "lint-staged": "lint-staged"
   },
   "repository": {
     "type": "git",
