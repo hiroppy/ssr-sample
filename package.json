@@ -59,7 +59,7 @@
     "@types/webpack-env": "1.13.6",
     "autocannon": "2.4.1",
     "awesome-typescript-loader": "5.2.0",
-    "case-sensitive-paths-webpack-plugin": "^2.2.0",
+    "case-sensitive-paths-webpack-plugin": "2.2.0",
     "chance": "1.0.16",
     "clinic": "1.0.2",
     "enzyme": "3.8.0",
