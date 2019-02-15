@@ -49,7 +49,7 @@
     "@types/react": "16.8.3",
     "@types/react-dom": "16.0.11",
     "@types/react-helmet": "5.0.8",
-    "@types/react-loadable": "5.4.0",
+    "@types/react-loadable": "5.4.3",
     "@types/react-redux": "6.0.5",
     "@types/react-router-dom": "4.3.1",
     "@types/recompose": "0.27.0",
