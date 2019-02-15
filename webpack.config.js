@@ -6,6 +6,7 @@ const { join, resolve } = require('path');
 const webpack = require('webpack');
 const { smart } = require('webpack-merge');
 const Dotenv = require('dotenv-webpack');
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
 const config = isProd ? require('./webpack.prod.config') : require('./webpack.dev.config');
@@ -40,6 +41,7 @@ const common = {
     ]
   },
   plugins: [
+    new CaseSensitivePathsPlugin(),
     new Dotenv({
       path: isProd ? '.env.prod' : '.env.dev',
       safe: false
