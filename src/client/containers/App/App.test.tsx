@@ -14,7 +14,7 @@ beforeEach(() => {
     }
   });
   store.dispatch = jest.fn();
-  wrapper = shallow(<App store={store}>bar</App>);
+  wrapper = shallow(<App>bar</App>, { context: { store } });
 });
 
 test('should map state and dispatch to props', () => {

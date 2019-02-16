@@ -10,7 +10,7 @@ let wrapper: any;
 beforeEach(() => {
   store = mockStore({});
   store.dispatch = jest.fn();
-  wrapper = shallow(<NotFound store={store}>bar</NotFound>);
+  wrapper = shallow(<NotFound>bar</NotFound>, { context: { store } });
 });
 
 test('should map load to dispatch STOP_SAGA action', () => {
