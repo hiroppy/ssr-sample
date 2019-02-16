@@ -88,8 +88,8 @@
   },
   "dependencies": {
     "@octokit/rest": "15.9.6",
-    "apollo-boost": "0.1.16",
-    "apollo-link-schema": "1.1.1",
+    "apollo-boost": "0.1.28",
+    "apollo-link-schema": "1.1.6",
     "apollo-server-express": "2.1.0",
     "body-parser": "1.18.3",
     "connected-react-router": "4.4.1",
