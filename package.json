@@ -113,7 +113,6 @@
     "recompose": "0.30.0",
     "redux": "4.0.1",
     "redux-saga": "0.16.2",
-    "styled-components": "3.3.3",
     "styled-components": "3.4.10",
     "why-did-you-update": "0.2.0"
   },
