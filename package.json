@@ -32,8 +32,8 @@
   "devDependencies": {
     "@storybook/addon-knobs": "3.4.11",
     "@storybook/addon-viewport": "3.4.11",
-    "@storybook/cli": "3.4.7",
-    "@storybook/react": "4.0.0-alpha.9",
+    "@storybook/cli": "3.4.11",
+    "@storybook/react": "4.0.12",
     "@storybook/storybook-deployer": "2.3.0",
     "@types/body-parser": "1.17.0",
     "@types/chance": "1.0.1",
