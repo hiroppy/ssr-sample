@@ -103,7 +103,7 @@
     "loadable-components": "2.2.3",
     "react": "16.8.2",
     "react-apollo": "2.2.4",
-    "react-dom": "16.4.1",
+    "react-dom": "16.4.2",
     "react-helmet": "5.2.0",
     "react-loadable": "5.4.0",
     "react-loading": "2.0.3",
