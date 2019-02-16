@@ -5,6 +5,7 @@
   "scripts": {
     "test": "jest --config jest.config.json",
     "test:ci": "npm run test && codecov",
+    "type-check": "tsc --noEmit",
     "start": "cross-env TS_NODE_FILES=true ts-node ./src/server/index.ts",
     "start:prod": "cross-env NODE_ENV=production npm run start",
     "start:storybook": "start-storybook -p 6006",
