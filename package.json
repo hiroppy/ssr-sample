@@ -74,7 +74,7 @@
     "redux-saga-test-plan": "3.7.0",
     "rimraf": "2.6.3",
     "ts-jest": "23.0.1",
-    "ts-node": "7.0.0",
+    "ts-node": "7.0.1",
     "typescript": "3.0.1",
     "uglifyjs-webpack-plugin": "1.2.7",
     "webpack": "4.16.3",
