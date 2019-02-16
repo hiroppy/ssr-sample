@@ -87,7 +87,7 @@
     "workbox-webpack-plugin": "3.4.1"
   },
   "dependencies": {
-    "@octokit/rest": "15.9.4",
+    "@octokit/rest": "15.9.6",
     "apollo-boost": "0.1.16",
     "apollo-link-schema": "1.1.1",
     "apollo-server-express": "2.1.0",
