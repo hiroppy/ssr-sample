@@ -14,13 +14,17 @@ exports[`should render self and sub-components 1`] = `
           "addTypename": false,
           "dataIdFromObject": [Function],
           "fragmentMatcher": HeuristicFragmentMatcher {},
+          "resultCaching": true,
         },
         "data": DepTrackingCache {
           "data": Object {},
           "depend": [Function],
         },
         "maybeBroadcastWatch": [Function],
-        "optimistic": Array [],
+        "optimisticData": DepTrackingCache {
+          "data": Object {},
+          "depend": [Function],
+        },
         "silenceBroadcast": false,
         "storeReader": StoreReader {
           "cacheKeyRoot": CacheKeyNode {
@@ -29,18 +33,13 @@ exports[`should render self and sub-components 1`] = `
           },
           "executeSelectionSet": [Function],
           "executeStoreQuery": [Function],
-          "keyMaker": QueryKeyMaker {
-            "cacheKeyRoot": CacheKeyNode {
-              "children": null,
-              "key": null,
-            },
-            "perQueryKeyMakers": Map {},
-          },
         },
         "storeWriter": StoreWriter {},
         "typenameDocumentCache": Map {},
         "watches": Set {},
       },
+      "clearStoreCallbacks": Array [],
+      "clientAwareness": Object {},
       "defaultOptions": Object {},
       "disableNetworkFetches": false,
       "link": ApolloLink {
@@ -64,13 +63,17 @@ exports[`should render self and sub-components 1`] = `
             "addTypename": false,
             "dataIdFromObject": [Function],
             "fragmentMatcher": HeuristicFragmentMatcher {},
+            "resultCaching": true,
           },
           "data": DepTrackingCache {
             "data": Object {},
             "depend": [Function],
           },
           "maybeBroadcastWatch": [Function],
-          "optimistic": Array [],
+          "optimisticData": DepTrackingCache {
+            "data": Object {},
+            "depend": [Function],
+          },
           "silenceBroadcast": false,
           "storeReader": StoreReader {
             "cacheKeyRoot": CacheKeyNode {
@@ -79,20 +82,13 @@ exports[`should render self and sub-components 1`] = `
             },
             "executeSelectionSet": [Function],
             "executeStoreQuery": [Function],
-            "keyMaker": QueryKeyMaker {
-              "cacheKeyRoot": CacheKeyNode {
-                "children": null,
-                "key": null,
-              },
-              "perQueryKeyMakers": Map {},
-            },
           },
           "storeWriter": StoreWriter {},
           "typenameDocumentCache": Map {},
           "watches": Set {},
         },
       },
-      "version": "2.4.2",
+      "version": "2.4.13",
       "watchQuery": [Function],
     }
   }
