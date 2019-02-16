@@ -14,7 +14,7 @@ beforeEach(() => {
     }
   });
   store.dispatch = jest.fn();
-  wrapper = shallow(<Top store={store}>bar</Top>);
+  wrapper = shallow(<Top>bar</Top>, { context: { store } });
 });
 
 test('should map load to dispatch LOAD_TOP_PAGE action', () => {

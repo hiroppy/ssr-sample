@@ -1,6 +1,6 @@
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
-import { Props, NotFound as NotFoundComponent } from '../../components/pages/NotFound';
+import { NotFound as NotFoundComponent } from '../../components/pages/NotFound';
 import { stopSaga } from '../../actions/pages';
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
@@ -12,4 +12,4 @@ const mapDispatchToProps = (dispatch: Dispatch) => ({
 export const NotFound = connect(
   null,
   mapDispatchToProps
-)<Props & { store?: unknown }>(NotFoundComponent);
+)(NotFoundComponent);

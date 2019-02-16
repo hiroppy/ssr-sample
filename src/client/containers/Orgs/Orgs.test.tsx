@@ -23,9 +23,10 @@ beforeEach(() => {
   });
   store.dispatch = jest.fn();
   wrapper = shallow(
-    <Orgs store={store} history={history} location={location} match={match}>
+    <Orgs history={history} location={location} match={match}>
       bar
-    </Orgs>
+    </Orgs>,
+    { context: { store } }
   );
 });
 
