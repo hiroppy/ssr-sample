@@ -86,7 +86,7 @@ test('should take on the LOAD_ORGS_PAGE action when getting 404 with CSR', () =>
     .put(resetOrgs())
     .put(fetchRepos('bar'))
     .dispatch(loadOrgsPage('bar'))
-    .dispatch(fetchReposFailure(404))
+    .dispatch(fetchReposFailure(new Error('404')))
     .run();
 });
 
@@ -98,7 +98,7 @@ test('should take on the LOAD_ORGS_PAGE action when getting 403 with CSR', () =>
     .put(resetOrgs())
     .put(fetchRepos('bar'))
     .dispatch(loadOrgsPage('bar'))
-    .dispatch(fetchReposFailure(403))
+    .dispatch(fetchReposFailure(new Error('403')))
     .run();
 });
 

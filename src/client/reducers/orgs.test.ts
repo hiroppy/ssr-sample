@@ -17,7 +17,7 @@ const customState = {
 };
 
 test('should return the initial state', () => {
-  expect(reducer(undefined, { type: undefined })).toMatchSnapshot();
+  expect(reducer(undefined, { type: undefined } as any)).toMatchSnapshot();
 });
 
 test('should handle FETCH_REPOS', () => {

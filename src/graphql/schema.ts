@@ -70,7 +70,7 @@ export const resolvers: IResolvers = {
   Query: {
     organizations: () => organizations,
     organization: (obj, { name }) => organizations.find((o) => o.name === name),
-    author: () => octokit.users.getForUser({ username: 'hiroppy' }).then(({ data }) => data)
+    author: () => octokit.users.getByUsername({ username: 'hiroppy' }).then(({ data }) => data)
   },
   Mutation: {
     addOrganization: (obj, { name }) => {

@@ -6,7 +6,7 @@ test('should register url paths', () => {
 
   router(app);
 
-  const res = app._router.stack.map((r) => {
+  const res = app._router.stack.map((r: { name: string; regexp: RegExp }) => {
     return {
       name: r.name,
       path: r.regexp
