@@ -37,7 +37,7 @@
     "@storybook/storybook-deployer": "2.3.0",
     "@types/body-parser": "1.17.0",
     "@types/chance": "1.0.1",
-    "@types/dotenv": "4.0.3",
+    "@types/dotenv": "6.1.0",
     "@types/enzyme": "3.1.18",
     "@types/enzyme-adapter-react-16": "1.0.4",
     "@types/express": "4.16.1",
