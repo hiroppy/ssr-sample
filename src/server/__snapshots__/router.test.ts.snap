@@ -12,6 +12,10 @@ Array [
   },
   Object {
     "name": "<anonymous>",
+    "path": /\\^\\\\/graphql\\\\/\\?\\(\\?=\\\\/\\|\\$\\)/i,
+  },
+  Object {
+    "name": "<anonymous>",
     "path": /\\^\\\\/\\\\\\.well-known\\\\/apollo\\\\/server-health\\\\/\\?\\(\\?=\\\\/\\|\\$\\)/i,
   },
   Object {

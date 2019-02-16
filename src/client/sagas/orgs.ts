@@ -1,7 +1,7 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
+import * as octokit from '@octokit/rest';
 import { FetchRepos, fetchReposSuccess, fetchReposFailure } from '../actions/orgs';
 import { State } from '../reducers/orgs';
-import * as octokit from '@octokit/rest';
 
 const github = new octokit();
 
@@ -9,7 +9,7 @@ function* fetchRepos(action: FetchRepos) {
   try {
     const { org } = action.payload;
 
-    const res = yield call(github.repos.getForOrg, { org });
+    const res = yield call(github.repos.listForOrg, { org });
 
     // octokit does not have response type
     const repos: State['repos'] = res.data.map((r: any) => ({

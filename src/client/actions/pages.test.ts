@@ -13,7 +13,7 @@ test('should create a success action to load Top page', () => {
 });
 
 test('should create a failure action to load Top page', () => {
-  expect(actions.loadTopPageFailure()).toMatchSnapshot();
+  expect(actions.loadTopPageFailure(new Error())).toMatchSnapshot();
 });
 
 test('should create an action to load Orgs page', () => {
@@ -25,7 +25,7 @@ test('should create a success action to load Orgs page', () => {
 });
 
 test('should create a failure action to load Orgs page', () => {
-  expect(actions.loadOrgsPageFailure()).toMatchSnapshot();
+  expect(actions.loadOrgsPageFailure(new Error())).toMatchSnapshot();
 });
 
 test('should create an action to stop saga', () => {

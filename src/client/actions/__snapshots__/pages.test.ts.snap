@@ -3,7 +3,7 @@
 exports[`should create a failure action to load Orgs page 1`] = `
 Object {
   "payload": Object {
-    "err": undefined,
+    "err": [Error],
   },
   "type": "LOAD_ORGS_PAGE_FAILURE",
 }
@@ -12,7 +12,7 @@ Object {
 exports[`should create a failure action to load Top page 1`] = `
 Object {
   "payload": Object {
-    "err": undefined,
+    "err": [Error],
   },
   "type": "LOAD_TOP_PAGE_FAILURE",
 }
