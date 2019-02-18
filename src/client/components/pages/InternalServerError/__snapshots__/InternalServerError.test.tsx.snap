@@ -125,24 +125,59 @@ exports[`should render self and sub-components 1`] = `
       </Component>
       <Component>
         <styled.div>
-          <div
-            className="c0"
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bdVaJa",
+                  "isStatic": true,
+                  "lastClassName": "c0",
+                  "rules": Array [
+                    "
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 30px;
+
+  & > *:not(:first-child) {
+    margin-top: 24px;
+  }
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bdVaJa",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
           >
-            <p>
-              Internal Server Error
-            </p>
-            <Link
-              replace={false}
-              to="/"
+            <div
+              className="c0"
             >
-              <a
-                href="/"
-                onClick={[Function]}
+              <p>
+                Internal Server Error
+              </p>
+              <Link
+                replace={false}
+                to="/"
               >
-                Go Back to Top Page
-              </a>
-            </Link>
-          </div>
+                <a
+                  href="/"
+                  onClick={[Function]}
+                >
+                  Go Back to Top Page
+                </a>
+              </Link>
+            </div>
+          </StyledComponent>
         </styled.div>
       </Component>
     </InternalServerError>

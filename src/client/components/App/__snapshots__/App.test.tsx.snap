@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render self and sub-components 1`] = `
-<Component>
-  <p>
-    hello
-  </p>
-</Component>
+<GlobalStyleComponent>
+  <Component>
+    <p>
+      hello
+    </p>
+  </Component>
+</GlobalStyleComponent>
 `;
