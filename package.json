@@ -81,7 +81,7 @@
     "webpack": "4.29.5",
     "webpack-bundle-analyzer": "3.0.4",
     "webpack-cli": "3.2.3",
-    "webpack-dev-middleware": "3.5.2",
+    "webpack-dev-middleware": "3.6.0",
     "webpack-hot-middleware": "2.24.3",
     "webpack-manifest-plugin": "2.0.4",
     "webpack-merge": "4.2.1",
