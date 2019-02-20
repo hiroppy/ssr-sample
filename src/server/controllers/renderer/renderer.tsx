@@ -20,14 +20,27 @@ import { Router } from '../../../client/Router';
 import { rootSaga } from '../../../client/sagas';
 import { configureStore } from '../../../client/store/configureStore';
 
+const fileName = 'main';
+const main = new RegExp(`^${fileName}~.*\.js$`);
+const vendor = new RegExp(`^vendor~${fileName}~.*\.js$`);
+
 // You need to reboot this server if you change client javascript files.
 // You need to read the manifest in `get` method if you do not want to restart.
 const assets = (process.env.NODE_ENV === 'production'
   ? (() => {
-      const manifest = require('../../../../dist/manifest');
-      return [manifest['vendor.js'], manifest['main.js']];
+      const manifest: {
+        [key: string]: string;
+      } = require('../../../../dist/manifest');
+
+      const entryPoints = [manifest['manifest.js']];
+
+      for (const [key, value] of Object.entries(manifest)) {
+        if (main.test(key) || vendor.test(key)) entryPoints.push(value);
+      }
+
+      return entryPoints;
     })()
-  : ['/public/main.bundle.js']
+  : [`/public/${fileName}.bundle.js`]
 )
   .map((f) => `<script src="${f}"></script>`)
   .join('\n');

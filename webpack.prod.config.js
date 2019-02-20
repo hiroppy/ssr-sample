@@ -2,12 +2,12 @@
 
 const { resolve } = require('path');
 const webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const { GenerateSW } = require('workbox-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const config = {
+  mode: 'production',
   entry: resolve('src', 'client', 'index.tsx'),
   output: {
     filename: '[name].[contenthash].bundle.js',
@@ -20,21 +20,16 @@ const config = {
     new BundleAnalyzerPlugin({ analyzerMode: 'static' })
   ],
   optimization: {
-    // runtimeChunk: {
-    //   name: "manifest",
-    // },
-    minimizer: [
-      new UglifyJsPlugin({
-        parallel: true
-      })
-    ],
+    runtimeChunk: {
+      name: 'manifest'
+    },
+    minimize: true,
     splitChunks: {
       minSize: 100000,
       maxSize: 1500000,
       cacheGroups: {
         vendor: {
           test: /node_modules/,
-          name: 'vendor',
           chunks: 'all',
           enforce: true
         }
