@@ -12,7 +12,6 @@ const isProd = process.env.NODE_ENV === 'production';
 const config = isProd ? require('./webpack.prod.config') : require('./webpack.dev.config');
 
 const common = {
-  mode: isProd ? 'production' : 'development',
   output: {
     filename: '[name].bundle.js',
     path: resolve('dist'),
