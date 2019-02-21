@@ -34,7 +34,7 @@
     "@storybook/addon-knobs": "3.4.11",
     "@storybook/addon-viewport": "3.4.11",
     "@storybook/cli": "3.4.11",
-    "@storybook/react": "4.1.12",
+    "@storybook/react": "4.1.13",
     "@storybook/storybook-deployer": "2.8.1",
     "@types/body-parser": "1.17.0",
     "@types/chance": "1.0.1",
