@@ -90,7 +90,7 @@
     "@octokit/rest": "15.18.1",
     "apollo-boost": "0.1.28",
     "apollo-link-schema": "1.1.6",
-    "apollo-server-express": "2.4.4",
+    "apollo-server-express": "2.4.5",
     "body-parser": "1.18.3",
     "connected-react-router": "4.5.0",
     "cross-env": "5.2.0",
