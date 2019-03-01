@@ -57,7 +57,7 @@
     "@types/redux-mock-store": "1.0.0",
     "@types/storybook__react": "3.0.9",
     "@types/webpack": "4.4.25",
-    "@types/webpack-env": "1.13.7",
+    "@types/webpack-env": "1.13.8",
     "autocannon": "2.4.1",
     "awesome-typescript-loader": "5.2.1",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
