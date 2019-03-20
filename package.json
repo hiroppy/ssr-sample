@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "jest --config jest.config.json",
+    "test": "jest",
     "test:ci": "npm run test && codecov",
     "type-check": "tsc --noEmit",
     "start": "cross-env TS_NODE_FILES=true ts-node ./src/server/index.ts",
