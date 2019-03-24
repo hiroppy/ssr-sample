@@ -45,17 +45,16 @@ class TopComponent extends React.Component<Props> {
           {({ loading, error, data }) => (
             <React.Fragment>
               {error || loading ? <p>{error ? `Error! ${error.message}` : 'loading...'}</p> : null}
-              {data &&
-                data.author && (
-                  <div>
-                    <h3>Author</h3>
-                    <p>{data.author.name}</p>
-                    <a href={data.author.blog} target="_blank" rel="noopener noreferrer">
-                      {data.author.blog}
-                    </a>
-                    <Icon src={data.author.avatar_url} />
-                  </div>
-                )}
+              {data && data.author && (
+                <div>
+                  <h3>Author</h3>
+                  <p>{data.author.name}</p>
+                  <a href={data.author.blog} target="_blank" rel="noopener noreferrer">
+                    {data.author.blog}
+                  </a>
+                  <Icon src={data.author.avatar_url} />
+                </div>
+              )}
             </React.Fragment>
           )}
         </GetAuthorQuery>
