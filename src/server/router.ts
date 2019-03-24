@@ -6,6 +6,7 @@ import { resolvers, schema } from '../graphql/schema';
 import { endpoint } from '../graphql/constants';
 
 const apollo = new ApolloServer({
+  debug: process.env.NODE_ENV !== 'production',
   schema,
   resolvers,
   playground:
@@ -13,7 +14,17 @@ const apollo = new ApolloServer({
       ? {
           endpoint
         }
-      : false
+      : false,
+  // logging
+  // wait for https://github.com/apollographql/apollo-server/pull/1748
+  formatError: (err) => {
+    console.log(JSON.stringify(err, null, 2));
+    return err;
+  },
+  formatResponse: (res: { data: any }) => {
+    console.log(JSON.stringify(res.data, null, 2));
+    return res;
+  }
 });
 
 export function router(app: express.Application) {
