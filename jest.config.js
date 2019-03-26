@@ -9,15 +9,16 @@ module.exports = {
     '!src/server/index.ts',
     '!src/server/server.ts'
   ],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
+  moduleFileExtensions: ['js', 'json', 'ts', 'tsx'],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest'
   },
   globals: {
     'ts-jest': {
-      tsConfigFile: 'tsconfig.json'
+      tsConfig: 'tsconfig.json'
     }
   },
   testMatch: ['**/src/**/*.test.(ts|tsx)?(x)'],
-  setupFilesAfterEnv: ['<rootDir>/setupTest.ts']
+  setupFilesAfterEnv: ['<rootDir>/setupTest.ts'],
+  preset: 'ts-jest'
 };
