@@ -7,6 +7,7 @@ const webpack = require('webpack');
 const { smart } = require('webpack-merge');
 const Dotenv = require('dotenv-webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
 const config = isProd ? require('./webpack.prod.config') : require('./webpack.dev.config');
@@ -31,9 +32,10 @@ const common = {
       {
         test: /\.ts|.tsx$/,
         use: {
-          loader: 'awesome-typescript-loader',
+          loader: 'ts-loader',
           options: {
-            configFileName: 'tsconfig.client.json'
+            transpileOnly: true,
+            configFile: 'tsconfig.client.json'
           }
         }
       }
@@ -48,7 +50,8 @@ const common = {
     new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin({
       'process.env.IS_BROWSER': JSON.stringify(true)
-    })
+    }),
+    new ForkTsCheckerWebpackPlugin()
   ]
 };
 
