@@ -19,5 +19,5 @@ module.exports = {
     }
   },
   testMatch: ['**/src/**/*.test.(ts|tsx)?(x)'],
-  setupTestFrameworkScriptFile: '<rootDir>/setupTest.ts'
+  setupFilesAfterEnv: ['<rootDir>/setupTest.ts']
 };
