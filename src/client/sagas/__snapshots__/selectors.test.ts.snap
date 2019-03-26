@@ -7,3 +7,9 @@ Object {
   "repos": Array [],
 }
 `;
+
+exports[`should get users state 1`] = `
+Object {
+  "name": "",
+}
+`;
