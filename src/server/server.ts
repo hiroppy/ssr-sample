@@ -16,7 +16,7 @@ export function runServer() {
     const webpack = require('webpack');
     const webpackHotMiddleware = require('webpack-hot-middleware');
     const webpackDevMiddleware = require('webpack-dev-middleware');
-    const config = require('../../webpack.config');
+    const config = require('../../webpack.client.config');
     const compiler = webpack(config);
 
     app.use(webpackHotMiddleware(compiler));

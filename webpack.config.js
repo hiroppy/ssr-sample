@@ -1,21 +1,16 @@
-// Configuration file for client
-
 'use strict';
 
 const { join, resolve } = require('path');
 const webpack = require('webpack');
-const { smart } = require('webpack-merge');
 const Dotenv = require('dotenv-webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
-const config = isProd ? require('./webpack.prod.config') : require('./webpack.dev.config');
 
 const common = {
   output: {
     filename: '[name].bundle.js',
-    path: resolve('dist'),
     publicPath: '/public/'
   },
   resolve: {
@@ -55,4 +50,4 @@ const common = {
   ]
 };
 
-module.exports = smart(common, config);
+module.exports = common;
