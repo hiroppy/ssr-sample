@@ -7,7 +7,11 @@ import { runServer } from './server';
 const isProd = process.env.NODE_ENV === 'production';
 
 // If you compile server code with webpack, this is unnecessary.
-config({ path: join(__dirname, '..', '..', `.env.${isProd ? 'prod' : 'dev'}`) });
+config({
+  path: isProd
+    ? join(__dirname, '..', '..', '..', '.env.prod')
+    : join(__dirname, '..', '..', '.env.dev')
+});
 
 if (isProd) {
   const numCPUs = cpus().length;

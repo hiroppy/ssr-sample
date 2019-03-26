@@ -29,7 +29,7 @@ const assets = (process.env.NODE_ENV === 'production'
   ? (() => {
       const manifest: {
         [key: string]: string;
-      } = require('../../../../dist/manifest');
+      } = require('../../../../client/manifest');
 
       const entryPoints = [manifest['manifest.js']];
 

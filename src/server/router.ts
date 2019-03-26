@@ -31,7 +31,7 @@ export function router(app: express.Application) {
   apollo.applyMiddleware({ app, path: endpoint });
 
   app.use('/favicon.ico', (req, res) => res.status(200).send());
-  app.use('/public', express.static('dist'));
+  app.use('/public', express.static('dist/client'));
   app.get('/api/health', health.get);
   app.get('*', renderer.get);
 }
