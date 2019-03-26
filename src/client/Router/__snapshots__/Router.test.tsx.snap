@@ -2,38 +2,11 @@
 
 exports[`should render 404 page 1`] = `
 Array [
-  .c1 {
-  color: #fff;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #333;
-  color: #f5f5f5;
-  font-size: 1.3rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit,200px);
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 15px 30px;
-}
-
-.c0 > * {
-  text-align: center;
-}
-
-<header
-    class="c0"
+  <header
+    class="sc-bwzfXH jsidzM"
   >
     <a
-      class="c1"
+      class="sc-bdVaJa kuRBwa"
       href="/"
     >
       &lt;
@@ -41,50 +14,19 @@ Array [
     <span />
     <span />
   </header>,
-  .c0 {
-  margin: 15px 30px;
-}
-
-<div
-    class="c0"
+  <div
+    class="sc-htpNat gYfjpC"
   />,
 ]
 `;
 
 exports[`should render Orgs page 1`] = `
 Array [
-  .c1 {
-  color: #fff;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #333;
-  color: #f5f5f5;
-  font-size: 1.3rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit,200px);
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 15px 30px;
-}
-
-.c0 > * {
-  text-align: center;
-}
-
-<header
-    class="c0"
+  <header
+    class="sc-bwzfXH jsidzM"
   >
     <a
-      class="c1"
+      class="sc-bdVaJa kuRBwa"
       href="/"
     >
       &lt;
@@ -92,50 +34,19 @@ Array [
     <span />
     <span />
   </header>,
-  .c0 {
-  margin: 15px 30px;
-}
-
-<div
-    class="c0"
+  <div
+    class="sc-htpNat gYfjpC"
   />,
 ]
 `;
 
 exports[`should render Top page 1`] = `
 Array [
-  .c1 {
-  color: #fff;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #333;
-  color: #f5f5f5;
-  font-size: 1.3rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit,200px);
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 15px 30px;
-}
-
-.c0 > * {
-  text-align: center;
-}
-
-<header
-    class="c0"
+  <header
+    class="sc-bwzfXH jsidzM"
   >
     <a
-      class="c1"
+      class="sc-bdVaJa kuRBwa"
       href="/"
     >
       &lt;
@@ -143,12 +54,8 @@ Array [
     <span />
     <span />
   </header>,
-  .c0 {
-  margin: 15px 30px;
-}
-
-<div
-    class="c0"
+  <div
+    class="sc-htpNat gYfjpC"
   />,
 ]
 `;

@@ -1,25 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render self and sub-components 1`] = `
-.c0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  margin: 15px 30px;
-}
-
-.c0 > *:not(:first-child) {
-  margin-top: 24px;
-}
-
 <MemoryRouter
   initialEntries={
     Array [
@@ -125,24 +106,59 @@ exports[`should render self and sub-components 1`] = `
       </Component>
       <Component>
         <styled.div>
-          <div
-            className="c0"
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bdVaJa",
+                  "isStatic": true,
+                  "lastClassName": "cEKWjh",
+                  "rules": Array [
+                    "
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 30px;
+
+  & > *:not(:first-child) {
+    margin-top: 24px;
+  }
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bdVaJa",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
           >
-            <p>
-              Page not found
-            </p>
-            <Link
-              replace={false}
-              to="/"
+            <div
+              className="sc-bdVaJa cEKWjh"
             >
-              <a
-                href="/"
-                onClick={[Function]}
+              <p>
+                Page not found
+              </p>
+              <Link
+                replace={false}
+                to="/"
               >
-                Go Back to Top Page
-              </a>
-            </Link>
-          </div>
+                <a
+                  href="/"
+                  onClick={[Function]}
+                >
+                  Go Back to Top Page
+                </a>
+              </Link>
+            </div>
+          </StyledComponent>
         </styled.div>
       </Component>
     </NotFound>

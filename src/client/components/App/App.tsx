@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { Main } from '../templates/Main';
 
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Muli', sans-serif;
     margin: 0;
@@ -24,6 +24,11 @@ export class App extends React.PureComponent<Props> {
   }
 
   render() {
-    return <Main>{this.props.children}</Main>;
+    return (
+      <Main>
+        <GlobalStyle />
+        {this.props.children}
+      </Main>
+    );
   }
 }

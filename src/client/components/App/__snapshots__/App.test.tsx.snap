@@ -2,6 +2,7 @@
 
 exports[`should render self and sub-components 1`] = `
 <Component>
+  <GlobalStyleComponent />
   <p>
     hello
   </p>

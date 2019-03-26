@@ -1,33 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render self and sub-components 1`] = `
-.c1 {
-  color: #fff;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: #333;
-  color: #f5f5f5;
-  font-size: 1.3rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit,200px);
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 15px 30px;
-}
-
-.c0 > * {
-  text-align: center;
-}
-
 <MemoryRouter
   initialEntries={
     Array [
@@ -75,33 +48,102 @@ exports[`should render self and sub-components 1`] = `
       userName="foo"
     >
       <styled.header>
-        <header
-          className="c0"
+        <StyledComponent
+          forwardedComponent={
+            Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bwzfXH",
+                "isStatic": true,
+                "lastClassName": "jsidzM",
+                "rules": Array [
+                  "
+  align-items: center;
+  background: #333;
+  color: #f5f5f5;
+  font-size: 1.3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  justify-content: space-between;
+  padding: 15px 30px;
+
+  & > * {
+    text-align: center;
+  }
+",
+                ],
+              },
+              "displayName": "styled.header",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bwzfXH",
+              "target": "header",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            }
+          }
+          forwardedRef={null}
         >
-          <Styled(Link)
-            to="/"
+          <header
+            className="sc-bwzfXH jsidzM"
           >
-            <Link
-              className="c1"
-              replace={false}
+            <Styled(Link)
               to="/"
             >
-              <a
-                className="c1"
-                href="/"
-                onClick={[Function]}
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bdVaJa",
+                      "isStatic": true,
+                      "lastClassName": "kuRBwa",
+                      "rules": Array [
+                        "
+  color: #fff;
+  text-decoration: none;
+",
+                      ],
+                    },
+                    "displayName": "Styled(Link)",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bdVaJa",
+                    "target": [Function],
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                to="/"
               >
-                &lt;
-              </a>
-            </Link>
-          </Styled(Link)>
-          <span>
-            org!
-          </span>
-          <span>
-            foo
-          </span>
-        </header>
+                <Link
+                  className="sc-bdVaJa kuRBwa"
+                  replace={false}
+                  to="/"
+                >
+                  <a
+                    className="sc-bdVaJa kuRBwa"
+                    href="/"
+                    onClick={[Function]}
+                  >
+                    &lt;
+                  </a>
+                </Link>
+              </StyledComponent>
+            </Styled(Link)>
+            <span>
+              org!
+            </span>
+            <span>
+              foo
+            </span>
+          </header>
+        </StyledComponent>
       </styled.header>
     </Component>
   </Router>
