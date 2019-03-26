@@ -2,14 +2,18 @@ import { END } from 'redux-saga';
 import { expectSaga } from 'redux-saga-test-plan';
 import { pagesProcess } from './pages';
 import {
+  loadAppProcess,
+  loadAppProcessSuccess,
   loadOrgsPage,
   loadOrgsPageSuccess,
   loadOrgsPageFailure,
   loadTopPage,
   loadTopPageSuccess,
   stopSaga,
-  resetPageStatus
+  resetPageStatus,
+  loadAppProcessFailure
 } from '../actions/pages';
+import { setUserName } from '../actions/users';
 import { resetOrgs, fetchRepos, fetchReposSuccess, fetchReposFailure } from '../actions/orgs';
 
 afterEach(() => {
@@ -20,8 +24,20 @@ const initialState = {
   isLoadingCompletion: false,
   orgs: {
     name: 'foo'
+  },
+  users: {
+    name: ''
   }
 };
+
+test('should take on the LOAD_APP_PROCESS action', () => {
+  return expectSaga(pagesProcess)
+    .withState(initialState)
+    .put(setUserName('hiroppy'))
+    .put(loadAppProcessSuccess())
+    .dispatch(loadAppProcess())
+    .silentRun();
+});
 
 test('should take on the LOAD_TOP_PAGE action when SSR', () => {
   return expectSaga(pagesProcess)
@@ -29,7 +45,7 @@ test('should take on the LOAD_TOP_PAGE action when SSR', () => {
     .put(loadTopPageSuccess())
     .put(END)
     .dispatch(loadTopPage())
-    .run();
+    .silentRun();
 });
 
 test('should take on the LOAD_TOP_PAGE action when CSR', () => {
@@ -39,7 +55,7 @@ test('should take on the LOAD_TOP_PAGE action when CSR', () => {
     .withState(initialState)
     .put(loadTopPageSuccess())
     .dispatch(loadTopPage())
-    .run();
+    .silentRun();
 });
 
 test('should take on the LOAD_TOP_PAGE action when SSR', () => {
@@ -48,7 +64,7 @@ test('should take on the LOAD_TOP_PAGE action when SSR', () => {
     .put(END)
     .put(loadTopPageSuccess())
     .dispatch(loadTopPage())
-    .run();
+    .silentRun();
 });
 
 test('should take on the LOAD_ORGS_PAGE action when SSR', () => {
@@ -57,7 +73,7 @@ test('should take on the LOAD_ORGS_PAGE action when SSR', () => {
     .put(loadOrgsPageSuccess())
     .put(END)
     .dispatch(loadOrgsPage('foo')) // make it the same name as initialState
-    .run();
+    .silentRun();
 });
 
 test('should take on the LOAD_ORGS_PAGE action when CSR', () => {
@@ -75,7 +91,7 @@ test('should take on the LOAD_ORGS_PAGE action when CSR', () => {
         repos: []
       })
     )
-    .run();
+    .silentRun();
 });
 
 test('should take on the LOAD_ORGS_PAGE action when getting 404 with CSR', () => {
@@ -87,7 +103,7 @@ test('should take on the LOAD_ORGS_PAGE action when getting 404 with CSR', () =>
     .put(fetchRepos('bar'))
     .dispatch(loadOrgsPage('bar'))
     .dispatch(fetchReposFailure(new Error('404')))
-    .run();
+    .silentRun();
 });
 
 test('should take on the LOAD_ORGS_PAGE action when getting 403 with CSR', () => {
@@ -99,19 +115,19 @@ test('should take on the LOAD_ORGS_PAGE action when getting 403 with CSR', () =>
     .put(fetchRepos('bar'))
     .dispatch(loadOrgsPage('bar'))
     .dispatch(fetchReposFailure(new Error('403')))
-    .run();
+    .silentRun();
 });
 
 test('should take the STOP_SAGA action', () => {
   return expectSaga(pagesProcess)
     .put(END)
     .dispatch(stopSaga())
-    .run();
+    .silentRun();
 });
 
 test('should take the @@router/LOCATION_CHANGE action', () => {
   return expectSaga(pagesProcess)
     .put(resetPageStatus())
     .dispatch({ type: '@@router/LOCATION_CHANGE' })
-    .run();
+    .silentRun();
 });
