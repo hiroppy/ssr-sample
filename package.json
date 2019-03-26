@@ -100,7 +100,7 @@
     "dotenv": "6.2.0",
     "dotenv-webpack": "1.7.0",
     "express": "4.16.4",
-    "graphql": "14.1.1",
+    "graphql": "14.2.0",
     "graphql-tools": "4.0.4",
     "history": "4.9.0",
     "loadable-components": "2.2.3",
