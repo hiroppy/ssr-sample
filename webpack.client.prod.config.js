@@ -17,7 +17,10 @@ const config = {
     new webpack.optimize.AggressiveMergingPlugin(),
     new ManifestPlugin(),
     new GenerateSW(),
-    new BundleAnalyzerPlugin({ analyzerMode: 'static' })
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: false
+    })
   ],
   optimization: {
     runtimeChunk: {
