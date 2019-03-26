@@ -56,7 +56,7 @@
     "@types/react-router-dom": "4.3.1",
     "@types/recompose": "0.30.5",
     "@types/redux-mock-store": "1.0.0",
-    "@types/storybook__react": "3.0.9",
+    "@types/storybook__react": "4.0.1",
     "@types/webpack": "4.4.26",
     "@types/webpack-env": "1.13.9",
     "autocannon": "3.2.1",
