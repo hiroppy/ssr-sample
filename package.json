@@ -57,7 +57,7 @@
     "@types/recompose": "0.30.5",
     "@types/redux-mock-store": "1.0.0",
     "@types/storybook__react": "4.0.1",
-    "@types/styled-components": "^4.1.12",
+    "@types/styled-components": "4.1.12",
     "@types/webpack": "4.4.26",
     "@types/webpack-env": "1.13.9",
     "autocannon": "3.2.1",
@@ -76,7 +76,7 @@
     "redux-mock-store": "1.5.3",
     "redux-saga-test-plan": "3.7.0",
     "rimraf": "2.6.3",
-    "ts-jest": "^24.0.0",
+    "ts-jest": "24.0.0",
     "ts-loader": "5.3.3",
     "ts-node": "7.0.1",
     "typescript": "3.3.4000",
@@ -115,7 +115,7 @@
     "recompose": "0.30.0",
     "redux": "4.0.1",
     "redux-saga": "0.16.2",
-    "styled-components": "^4.2.0",
+    "styled-components": "4.2.0",
     "why-did-you-update": "0.2.0"
   },
   "husky": {
