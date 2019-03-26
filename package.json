@@ -59,7 +59,7 @@
     "@types/storybook__react": "3.0.9",
     "@types/webpack": "4.4.26",
     "@types/webpack-env": "1.13.9",
-    "autocannon": "2.4.1",
+    "autocannon": "3.2.1",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
     "chance": "1.0.18",
     "clinic": "1.4.0",
