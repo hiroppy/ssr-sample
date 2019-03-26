@@ -2,6 +2,9 @@ import { Action } from 'redux';
 
 export type Actions =
   | ResetPagesStatus
+  | LoadAppProcess
+  | LoadAppProcessSuccess
+  | LoadAppProcessFailure
   | LoadTopPage
   | LoadTopPageSuccess
   | LoadTopPageFailure
@@ -11,6 +14,27 @@ export type Actions =
   | StopSaga;
 
 export interface ResetPagesStatus extends Action<'RESET_PAGES_STATUS'> {}
+
+export interface LoadAppProcess extends Action<'LOAD_APP_PROCESS'> {}
+
+export const loadAppProcess = (): LoadAppProcess => ({
+  type: 'LOAD_APP_PROCESS'
+});
+
+export interface LoadAppProcessSuccess extends Action<'LOAD_APP_PROCESS_SUCCESS'> {}
+
+export const loadAppProcessSuccess = (): LoadAppProcessSuccess => ({
+  type: 'LOAD_APP_PROCESS_SUCCESS'
+});
+
+export interface LoadAppProcessFailure extends Action<'LOAD_APP_PROCESS_FAILURE'> {
+  err: Error;
+}
+
+export const loadAppProcessFailure = (err: Error): LoadAppProcessFailure => ({
+  type: 'LOAD_APP_PROCESS_FAILURE',
+  err
+});
 
 export const resetPageStatus = (): ResetPagesStatus => ({
   type: 'RESET_PAGES_STATUS'
