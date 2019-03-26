@@ -45,6 +45,43 @@ exports[`should render self and sub-components 1`] = `
       "link": ApolloLink {
         "request": [Function],
       },
+      "localState": LocalState {
+        "cache": InMemoryCache {
+          "addTypename": false,
+          "cacheKeyRoot": CacheKeyNode {
+            "children": null,
+            "key": null,
+          },
+          "config": Object {
+            "addTypename": false,
+            "dataIdFromObject": [Function],
+            "fragmentMatcher": HeuristicFragmentMatcher {},
+            "resultCaching": true,
+          },
+          "data": DepTrackingCache {
+            "data": Object {},
+            "depend": [Function],
+          },
+          "maybeBroadcastWatch": [Function],
+          "optimisticData": DepTrackingCache {
+            "data": Object {},
+            "depend": [Function],
+          },
+          "silenceBroadcast": false,
+          "storeReader": StoreReader {
+            "cacheKeyRoot": CacheKeyNode {
+              "children": null,
+              "key": null,
+            },
+            "executeSelectionSet": [Function],
+            "executeStoreQuery": [Function],
+          },
+          "storeWriter": StoreWriter {},
+          "typenameDocumentCache": Map {},
+          "watches": Set {},
+        },
+        "client": [Circular],
+      },
       "mutate": [Function],
       "query": [Function],
       "queryDeduplication": true,
@@ -88,7 +125,8 @@ exports[`should render self and sub-components 1`] = `
           "watches": Set {},
         },
       },
-      "version": "2.4.13",
+      "typeDefs": undefined,
+      "version": "2.5.1",
       "watchQuery": [Function],
     }
   }
