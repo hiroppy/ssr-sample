@@ -3,9 +3,11 @@ import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { App } from '.';
 
+const noop = () => {};
+
 test('should render self and sub-components', () => {
   const tree = shallow(
-    <App name="foo" setUserName={() => {}}>
+    <App load={noop}>
       <p>hello</p>
     </App>
   );
@@ -13,14 +15,14 @@ test('should render self and sub-components', () => {
   expect(toJson(tree)).toMatchSnapshot();
 });
 
-test('should call setUserName if name is empty', () => {
-  const setUserName = jest.fn();
+test('should call load if name is empty', () => {
+  const load = jest.fn();
 
   shallow(
-    <App name="" setUserName={setUserName}>
+    <App load={load}>
       <p>hello</p>
     </App>
   );
 
-  expect(setUserName).toHaveBeenCalled();
+  expect(load).toHaveBeenCalled();
 });

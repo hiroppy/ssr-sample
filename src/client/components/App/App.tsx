@@ -10,8 +10,7 @@ injectGlobal`
 `;
 
 export interface Props {
-  name: string;
-  setUserName: (name: string) => void;
+  load: () => void;
 }
 
 // like App-Shell of PWA
@@ -19,8 +18,7 @@ export class App extends React.PureComponent<Props> {
   constructor(props: Props) {
     super(props);
 
-    // common processing only at initialization
-    if (this.props.name === '') this.props.setUserName('Hiroppy');
+    props.load();
   }
 
   render() {

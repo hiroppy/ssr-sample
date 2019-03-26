@@ -1,20 +1,15 @@
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
-import { State } from '../../reducers';
 import { App as AppComponent } from '../../components/App';
-import { setUserName } from '../../actions/users';
-
-const mapStateToProps = (state: State) => ({
-  name: state.users.name
-});
+import { loadAppProcess } from '../../actions/pages';
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-  setUserName: (name: string) => {
-    dispatch(setUserName(name));
+  load: () => {
+    dispatch(loadAppProcess());
   }
 });
 
 export const App = connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(AppComponent);
