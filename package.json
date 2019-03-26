@@ -62,7 +62,7 @@
     "autocannon": "3.2.1",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
     "chance": "1.0.18",
-    "clinic": "1.4.0",
+    "clinic": "4.0.1",
     "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "1.11.2",
     "enzyme-to-json": "3.3.5",
