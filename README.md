@@ -138,6 +138,7 @@ These pages fork saga processes.
 
 ```sh
 $ git clone git@github.com:hiroppy/ssr-sample.git
+$ cd ssr-sample
 $ npm i
 $ npm start
 ```
@@ -145,9 +146,9 @@ $ npm start
 ## Development
 
 ```sh
-$ npm start # use 3000
+$ npm start                  # use 3000
 $ open http://localhost:3000
-$ npm run start:storybook # use 6006
+$ npm run start:storybook    # use 6006
 $ open http://localhost:6006
 ```
 
@@ -167,8 +168,8 @@ $ npm test
 ## Production
 
 ```sh
-$ npm run build # for client codes
-$ npm run start:prod # run server and use 3000
+$ npm run build             # npm run build:client + npm run build:server
+$ npm run start:prod        # run server and use 3000
 $ open http://localhost8080
 ```
 

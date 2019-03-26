@@ -9,7 +9,7 @@
     "start": "cross-env TS_NODE_FILES=true ts-node ./src/server/index.ts",
     "start:prod": "cross-env NODE_ENV=production node ./dist/server/server/index.js",
     "start:storybook": "start-storybook -p 6006",
-    "build": "npm run rm:dist && npm run build:client",
+    "build": "npm run rm:dist && run-p build:client build:server",
     "build:server": "tsc -p tsconfig.server.json",
     "build:client": "cross-env NODE_ENV=production webpack --config webpack.client.config.js",
     "build:storybook": "build-storybook",
