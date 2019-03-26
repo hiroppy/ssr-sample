@@ -1,9 +1,6 @@
 {
   "extends": ["config:base"],
   "labels": ["renovate"],
-  "major": {
-    "groupName": "all major dependencies"
-  },
   "minor": {
     "groupName": "all minor dependencies"
   },
