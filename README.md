@@ -62,6 +62,78 @@ This repository shows you how to write SSR and SPA code using TypeScript.
 | autocannon          | benchmarking tool     |
 | clinic              | performance profiling |
 
+## Pages
+
+src: [src/client/components/pages/](src/client/components/pages/).
+
+This application has 2 pages.
+
+### Global Variables
+
+src: [src/server/controllers/renderer/renderer.tsx](src/server/controllers/renderer/renderer.tsx).
+
+Use the following variables to pass data acquired by a server to the client side.
+
+#### `window.__LOADABLE_STATE__`
+
+an article: https://blog.hiroppy.me/entry/loadable-components
+
+This variable is used by [loadable-component](https://github.com/smooth-code/loadable-components).  
+It has a JS asset's path of a page used at the page's entry point.
+
+#### `window.__APOLLO_STATE__`
+
+This variable has GraphQL data which are fetched at the server.
+
+#### `data-json`
+
+This script tag has data which are fetched via redux-saga, etc at the server.
+
+### Sagas
+
+design concept: [gist](https://gist.github.com/hiroppy/9b5daf8da5cd639a62a917d536f5dfc5)  
+src: [src/client/sagas/pages.ts](src/client/sagas/pages.ts)
+
+These pages fork saga processes.
+
+- `appProcess`
+  - a common processing to execute on all pages(e.g. confirming login)
+- pages
+  - `loadTopPage`
+    - just stop saga when it ran at a server
+  - `loadOrgsPage`
+    - fetching data and then stopping if it ran at a server
+
+`appProcess` and `pages` run in parallel, also there run the same code in a server and client.
+
+### Top
+
+This page runs just graphql application.(excluding `header` and `base`)
+
+src: [src/client/components/pages/Top](src/client/components/pages/Top)
+
+- GraphQL using Apollo
+  - Query: `organizations`, `author`
+  - Mutation: `addOrganization`
+    - [src/client/components/OrganizationsBox/OrganizationsBox.tsx](src/client/components/OrganizationsBox/OrganizationsBox.tsx)
+
+#### SSR
+
+Check `window.__APOLLO_STATE__` in HTML.
+
+### Orgs
+
+This page runs just redux-saga application.
+
+page src: [src/client/components/pages/Orgs](src/client/components/pages/Orgs)  
+saga src: [src/client/sagas/orgs.ts](src/client/sagas/orgs.ts)
+
+- fetching using redux-saga
+
+#### SSR
+
+Check HTML and `<script id="initial-data" type="text/plain" data-json=...></script>`.
+
 ## Setup
 
 ```sh
