@@ -118,7 +118,7 @@
     "redux": "4.0.1",
     "redux-saga": "0.16.2",
     "styled-components": "4.2.0",
-    "why-did-you-update": "0.2.0"
+    "why-did-you-update": "1.0.6"
   },
   "husky": {
     "hooks": {
