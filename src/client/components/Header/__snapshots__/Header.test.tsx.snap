@@ -123,6 +123,7 @@ exports[`should render self and sub-components 1`] = `
               >
                 <Link
                   className="sc-bdVaJa kuRBwa"
+                  replace={false}
                   to="/"
                 >
                   <a

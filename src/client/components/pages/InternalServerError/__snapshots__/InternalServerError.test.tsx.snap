@@ -147,6 +147,7 @@ exports[`should render self and sub-components 1`] = `
                 Internal Server Error
               </p>
               <Link
+                replace={false}
                 to="/"
               >
                 <a

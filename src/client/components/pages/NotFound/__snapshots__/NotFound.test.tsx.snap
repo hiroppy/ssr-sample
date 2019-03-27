@@ -147,6 +147,7 @@ exports[`should render self and sub-components 1`] = `
                 Page not found
               </p>
               <Link
+                replace={false}
                 to="/"
               >
                 <a
