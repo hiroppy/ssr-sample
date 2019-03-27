@@ -11,11 +11,11 @@ import { createClient } from '../graphql/client';
 import { configureStore, history } from './store/configureStore';
 import { Router } from './Router'; // this needs to be at the top level because it's used by loadable-components
 
-if (process.env.NODE_ENV !== 'production' && process.env.IS_BROWSER) {
-  const { whyDidYouUpdate } = require('why-did-you-update');
+// if (process.env.NODE_ENV !== 'production' && process.env.IS_BROWSER) {
+//   const { whyDidYouUpdate } = require('why-did-you-update');
 
-  whyDidYouUpdate(React);
-}
+//   whyDidYouUpdate(React);
+// }
 
 if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
   window.addEventListener('load', () => {
