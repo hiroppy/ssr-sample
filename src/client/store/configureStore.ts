@@ -16,7 +16,7 @@ const createEnhancer = () => {
 };
 
 export const runSaga = async () => {
-  return sagaMiddleware.run(rootSaga).done;
+  return sagaMiddleware.run(rootSaga).toPromise();
 };
 
 export const configureStore = (preloadedState: Object = {}) => {
