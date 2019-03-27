@@ -89,7 +89,7 @@
     "webpack-hot-middleware": "2.24.3",
     "webpack-manifest-plugin": "2.0.4",
     "webpack-merge": "4.2.1",
-    "workbox-webpack-plugin": "3.6.3"
+    "workbox-webpack-plugin": "4.1.1"
   },
   "dependencies": {
     "@octokit/rest": "16.21.0",
