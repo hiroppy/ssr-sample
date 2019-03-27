@@ -132,7 +132,7 @@ These pages fork saga processes.
   - `loadOrgsPage`
     - fetching data and then stopping if it ran at a server
 
-`appProcess` and `pages` run in parallel, also there run the same code in a server and client.
+`appProcess` and `pages` run in parallel, also they run the same code in a server and client.
 
 ## Setup
 
