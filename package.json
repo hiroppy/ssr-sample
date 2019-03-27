@@ -112,7 +112,7 @@
     "react-loadable": "5.5.0",
     "react-loading": "2.0.3",
     "react-redux": "5.1.1",
-    "react-router-dom": "4.3.1",
+    "react-router-dom": "5.0.0",
     "recompose": "0.30.0",
     "redux": "4.0.1",
     "redux-saga": "0.16.2",
