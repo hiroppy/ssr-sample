@@ -56,7 +56,7 @@ test('should take on the FETCH_REPOS action', () => {
       })
     )
     .dispatch(fetchRepos('foo'))
-    .run();
+    .silentRun();
 });
 
 test('should take on the ERROR action when FETCH_REPOS fails', () => {
@@ -68,5 +68,5 @@ test('should take on the ERROR action when FETCH_REPOS fails', () => {
     })
     .put(fetchReposFailure(new Error()))
     .dispatch(fetchRepos('foo'))
-    .run();
+    .silentRun();
 });
