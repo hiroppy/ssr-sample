@@ -78,7 +78,7 @@
     "redux-mock-store": "1.5.3",
     "redux-saga-test-plan": "3.7.0",
     "rimraf": "2.6.3",
-    "ts-jest": "24.0.1",
+    "ts-jest": "24.0.2",
     "ts-loader": "5.3.3",
     "ts-node": "8.0.3",
     "typescript": "3.3.4000",
