@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig",
   "compilerOptions": {
-    "outDir": "./dist/server"
+    "outDir": "./dist/server",
+    "target": "es2017"
   }
 }
