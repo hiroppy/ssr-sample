@@ -4,15 +4,17 @@ exports[`should create safe html 1`] = `
 "<!DOCTYPE html>
     <html>
       <head>
+        <meta property=\\"csp-nonce\\" content=\\"nonce\\">
+        <script nonce=\\"nonce\\">window.__webpack_nonce__='nonce';</script>
         <meta>meta</meta>
         <style>style</style>
       </head>
       <body>
         <body>body</body>
-        <script id=\\"initial-data\\" type=\\"text/plain\\" data-json=\\"{&quot;arr&quot;:[&quot;foo&quot;,&quot;bar&quot;],&quot;obj&quot;:{&quot;foo&quot;:1,&quot;bar&quot;:1},&quot;str&quot;:&quot;テスト&quot;}\\"></script>
-        <script>window.__APOLLO_STATE__=graphql</script>
+        <script nonce=\\"nonce\\" id=\\"initial-data\\" type=\\"text/plain\\" data-json=\\"{&quot;arr&quot;:[&quot;foo&quot;,&quot;bar&quot;],&quot;obj&quot;:{&quot;foo&quot;:1,&quot;bar&quot;:1},&quot;str&quot;:&quot;テスト&quot;}\\"></script>
+        <script nonce=\\"nonce\\">window.__APOLLO_STATE__=graphql</script>
         <script>window</script>
-        <script>script</script>
+        <script nonce=\\"nonce\\" src=script></script>
       </body>
     </html>"
 `;

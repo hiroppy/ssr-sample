@@ -1,5 +1,5 @@
 import { makeExecutableSchema, IResolvers } from 'graphql-tools';
-import * as Octokit from '@octokit/rest';
+import Octokit from '@octokit/rest';
 
 const octokit = new Octokit();
 

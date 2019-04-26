@@ -1,5 +1,5 @@
 import { join } from 'path';
-import * as cluster from 'cluster';
+import cluster from 'cluster';
 import { cpus } from 'os';
 import { config } from 'dotenv';
 import { runServer } from './server';

@@ -18,11 +18,11 @@ const apollo = new ApolloServer({
   // logging
   // wait for https://github.com/apollographql/apollo-server/pull/1748
   formatError: (err) => {
-    console.log(JSON.stringify(err, null, 2));
+    // console.log(JSON.stringify(err, null, 2));
     return err;
   },
   formatResponse: (res: { data: any }) => {
-    console.log(JSON.stringify(res.data, null, 2));
+    // console.log(JSON.stringify(res.data, null, 2));
     return res;
   }
 });
