@@ -1,11 +1,12 @@
 interface Params {
   meta: string;
-  assets: string;
+  assets: Array<string>;
   body: string;
   style: string;
   preloadedState: string;
   scripts: string;
   graphql: string;
+  nonce: string;
 }
 
 const escape = (str: string) => {
@@ -24,20 +25,24 @@ export const renderFullPage = ({
   style,
   preloadedState,
   scripts,
-  graphql
+  graphql,
+  nonce
 }: Params) => {
   return `<!DOCTYPE html>
     <html>
       <head>
+        <meta property="csp-nonce" content="${nonce}">
         ${meta}
         ${style}
       </head>
       <body>
         ${body}
-        <script id="initial-data" type="text/plain" data-json="${escape(preloadedState)}"></script>
-        <script>window.__APOLLO_STATE__=${graphql}</script>
+        <script nonce="${nonce}" id="initial-data" type="text/plain" data-json="${escape(
+    preloadedState
+  )}"></script>
+        <script nonce="${nonce}">window.__APOLLO_STATE__=${graphql}</script>
         ${scripts}
-        ${assets}
+        ${assets.map((asset) => `<script nonce="${nonce}" src=${asset}></script>`).join('\n')}
       </body>
     </html>
   `.trim();
