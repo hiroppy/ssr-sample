@@ -1,7 +1,8 @@
 import { createServer } from 'http';
-import * as express from 'express';
+import express from 'express';
 import * as bodyParser from 'body-parser';
 import * as Loadable from 'react-loadable';
+import { generateNonceId, csp } from './csp';
 import { router } from './router';
 
 export function runServer() {
@@ -10,6 +11,10 @@ export function runServer() {
 
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(bodyParser.json());
+
+  // CSP
+  app.use(generateNonceId);
+  app.use(csp);
 
   // HMR
   if (process.env.NODE_ENV !== 'production') {

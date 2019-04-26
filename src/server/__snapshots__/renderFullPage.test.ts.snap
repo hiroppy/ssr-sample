@@ -5,7 +5,6 @@ exports[`should create safe html 1`] = `
     <html>
       <head>
         <meta property=\\"csp-nonce\\" content=\\"nonce\\">
-        <script nonce=\\"nonce\\">window.__webpack_nonce__='nonce';</script>
         <meta>meta</meta>
         <style>style</style>
       </head>
