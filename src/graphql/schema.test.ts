@@ -1,5 +1,5 @@
 import { graphql } from 'graphql';
-import * as nock from 'nock';
+import nock from 'nock';
 import { organizations, schema } from './schema';
 
 test('should return organizations resolver', async () => {

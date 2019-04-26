@@ -1,5 +1,5 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-import * as octokit from '@octokit/rest';
+import octokit from '@octokit/rest';
 import { FetchRepos, fetchReposSuccess, fetchReposFailure } from '../actions/orgs';
 import { State } from '../reducers/orgs';
 
