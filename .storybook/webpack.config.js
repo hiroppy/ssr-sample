@@ -1,6 +1,11 @@
 'use strict';
 
-const merge = require('webpack-merge');
-const base = require('../webpack.config');
+const { smart } = require('webpack-merge');
+const base = require('../webpack.client.config');
 
-module.exports = (baseConfig, env, config) => merge.smart(base, config);
+module.exports = async ({ config, mode }) => {
+  // delete files of an entry point
+  base.entry = [];
+
+  return smart(base, config);
+};

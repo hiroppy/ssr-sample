@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { configure } from '@storybook/react';
 
 const req = require.context('../src/client', true, /.stories.tsx$/);
