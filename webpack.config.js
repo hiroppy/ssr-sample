@@ -6,8 +6,6 @@ const Dotenv = require('dotenv-webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
-const isProd = process.env.NODE_ENV === 'production';
-
 const common = {
   output: {
     filename: '[name].bundle.js',
@@ -39,13 +37,10 @@ const common = {
   plugins: [
     new CaseSensitivePathsPlugin(),
     new Dotenv({
-      path: isProd ? '.env.prod' : '.env.dev',
+      path: process.env.NODE_ENV === 'production' ? '.env.prod' : '.env.dev',
       safe: false
     }),
     new webpack.NamedModulesPlugin(),
-    new webpack.DefinePlugin({
-      'process.env.IS_BROWSER': JSON.stringify(true)
-    }),
     new ForkTsCheckerWebpackPlugin()
   ]
 };
