@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
-import { loadComponents } from 'loadable-components';
+import { loadableReady } from '@loadable/component';
 
 // graphql
 import { ApolloProvider } from 'react-apollo';
@@ -41,7 +41,7 @@ const render = (RouterComponent: typeof Router) => {
   );
 };
 
-loadComponents().then(() => {
+loadableReady(() => {
   render(Router);
 });
 

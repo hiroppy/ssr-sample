@@ -1,6 +1,7 @@
 // renderToNodeStream
 // https://gist.github.com/hiroppy/1c89d73a12073bad0c187aaab4ca92c2
 
+import { resolve } from 'path';
 import { Request, Response } from 'express';
 import * as React from 'react';
 import { Provider } from 'react-redux';
@@ -8,8 +9,7 @@ import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import { ServerStyleSheet } from 'styled-components';
-//@ts-ignore
-import { getLoadableState } from 'loadable-components/server';
+import { ChunkExtractor } from '@loadable/server';
 
 // graphql
 import { ApolloProvider, getDataFromTree } from 'react-apollo';
@@ -42,6 +42,8 @@ const assets =
       })()
     : [`/public/${fileName}.bundle.js`];
 
+const webStats = resolve(__dirname, '../../../../dist/client/loadable-stats.json');
+
 export async function get(req: Request, res: Response) {
   const { nonce }: { nonce: string } = res.locals;
   const store = configureStore();
@@ -61,9 +63,23 @@ export async function get(req: Request, res: Response) {
     </ApolloProvider>
   );
 
+  const webExtractor = new ChunkExtractor({ statsFile: webStats });
+
+  console.log(webExtractor);
+
+  {
+    const jsx = webExtractor.collectChunks(App);
+
+    console.log(jsx);
+
+    const body = renderToString(jsx);
+
+    console.log(body);
+  }
+
   try {
     const [loadableState] = await Promise.all([
-      getLoadableState(App), // kick redux-saga and styled-components
+      // getLoadableState(App), // kick redux-saga and styled-components
       runSaga(),
       getDataFromTree(App)
     ]);

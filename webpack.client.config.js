@@ -3,6 +3,7 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
 const { smart } = require('webpack-merge');
+const LoadablePlugin = require('@loadable/webpack-plugin');
 const common = require('./webpack.config');
 
 const config =
@@ -17,7 +18,8 @@ const base = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.IS_BROWSER': JSON.stringify(true)
-    })
+    }),
+    new LoadablePlugin()
   ]
 };
 

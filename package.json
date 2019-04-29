@@ -39,6 +39,7 @@
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
+    "@loadable/webpack-plugin": "^5.7.1",
     "@storybook/addon-knobs": "5.0.11",
     "@storybook/addon-storyshots": "^5.0.11",
     "@storybook/addon-viewport": "5.0.11",
@@ -54,6 +55,8 @@
     "@types/graphql": "14.0.7",
     "@types/helmet": "0.0.43",
     "@types/jest": "24.0.11",
+    "@types/loadable__component": "^5.6.0",
+    "@types/loadable__server": "^5.8.0",
     "@types/nanoid": "1.2.1",
     "@types/nock": "9.3.1",
     "@types/node": "10.14.4",
@@ -107,6 +110,8 @@
     "workbox-webpack-plugin": "4.1.1"
   },
   "dependencies": {
+    "@loadable/component": "^5.9.0",
+    "@loadable/server": "^5.9.0",
     "@octokit/rest": "16.21.1",
     "apollo-boost": "0.3.1",
     "apollo-link-schema": "1.2.2",
@@ -122,7 +127,6 @@
     "graphql-tools": "4.0.4",
     "helmet": "3.16.0",
     "history": "4.9.0",
-    "loadable-components": "2.2.3",
     "nanoid": "2.0.1",
     "react": "16.8.6",
     "react-apollo": "2.5.4",
