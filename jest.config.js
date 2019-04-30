@@ -11,7 +11,7 @@ module.exports = {
   ],
   moduleFileExtensions: ['js', 'json', 'ts', 'tsx'],
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest'
+    '^.+\\.(js|jsx)?$': 'babel-jest'
   },
   globals: {
     'ts-jest': {
@@ -20,5 +20,6 @@ module.exports = {
   },
   testMatch: ['**/src/**/*.test.(ts|tsx)?(x)'],
   setupFilesAfterEnv: ['<rootDir>/setupTest.ts'],
+  snapshotSerializers: ['enzyme-to-json/serializer'],
   preset: 'ts-jest'
 };
