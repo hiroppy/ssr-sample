@@ -33,25 +33,6 @@ const repos = [
   }
 ];
 
-// https://github.com/airbnb/enzyme/issues/1213
-test.skip('should render self and sub-components', () => {
-  const mock: any = jest.fn();
-  const tree = mount(
-    <Orgs
-      error={null}
-      name="foo"
-      repos={repos}
-      match={match}
-      location={mock}
-      load={() => {}}
-      history={mock}
-      isFetchingRepos
-    />
-  );
-
-  expect(toJson(tree)).toMatchSnapshot();
-});
-
 test('should show loader', () => {
   process.env.IS_BROWSER = 'true';
 
