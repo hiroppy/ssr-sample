@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots components/pages/InternalServerError default 1`] = `
+<div
+  style={
+    Object {
+      "background": "#f5f5f5",
+      "margin": "50px auto",
+      "width": "80%",
+    }
+  }
+>
+  <MemoryRouter
+    initialEntries={
+      Array [
+        "/",
+      ]
+    }
+    keyLength={0}
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <InternalServerError>
+        <Component
+          title="500"
+        >
+          <HelmetWrapper
+            defer={true}
+            encodeSpecialCharacters={true}
+          >
+            <SideEffect(NullComponent)
+              defer={true}
+              encodeSpecialCharacters={true}
+              link={
+                Array [
+                  Object {
+                    "href": "https://fonts.googleapis.com/css?family=Muli",
+                    "rel": "stylesheet",
+                  },
+                ]
+              }
+              meta={
+                Array [
+                  Object {
+                    "charset": "UTF-8",
+                  },
+                  Object {
+                    "content": "width=device-width, initial-scale=1.0",
+                    "name": "viewport",
+                  },
+                ]
+              }
+              title="500"
+              titleAttributes={Object {}}
+            >
+              <NullComponent
+                defer={true}
+                encodeSpecialCharacters={true}
+                link={
+                  Array [
+                    Object {
+                      "href": "https://fonts.googleapis.com/css?family=Muli",
+                      "rel": "stylesheet",
+                    },
+                  ]
+                }
+                meta={
+                  Array [
+                    Object {
+                      "charset": "UTF-8",
+                    },
+                    Object {
+                      "content": "width=device-width, initial-scale=1.0",
+                      "name": "viewport",
+                    },
+                  ]
+                }
+                title="500"
+                titleAttributes={Object {}}
+              />
+            </SideEffect(NullComponent)>
+          </HelmetWrapper>
+        </Component>
+        <Component>
+          <styled.div>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-gzVnrw",
+                    "isStatic": true,
+                    "lastClassName": "jwZQKn",
+                    "rules": Array [
+                      "
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 30px;
+
+  & > *:not(:first-child) {
+    margin-top: 24px;
+  }
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-gzVnrw",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <div
+                className="sc-gzVnrw jwZQKn"
+              >
+                <p>
+                  Internal Server Error
+                </p>
+                <Link
+                  replace={false}
+                  to="/"
+                >
+                  <a
+                    href="/"
+                    onClick={[Function]}
+                  >
+                    Go Back to Top Page
+                  </a>
+                </Link>
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </Component>
+      </InternalServerError>
+    </Router>
+  </MemoryRouter>
+</div>
+`;

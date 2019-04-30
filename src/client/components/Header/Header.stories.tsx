@@ -6,7 +6,7 @@ import { Header } from '.';
 const stories = storiesOf('components/Header', module);
 
 stories.add('default', () => (
-  <MemoryRouter initialEntries={['/']}>
+  <MemoryRouter initialEntries={['/']} keyLength={0}>
     <Header userName="user" orgName="org" />
   </MemoryRouter>
 ));

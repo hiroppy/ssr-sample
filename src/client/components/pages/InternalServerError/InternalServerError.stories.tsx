@@ -13,7 +13,7 @@ stories.add('default', () => (
       background: '#f5f5f5'
     }}
   >
-    <MemoryRouter initialEntries={['/']}>
+    <MemoryRouter initialEntries={['/']} keyLength={0}>
       <InternalServerError />
     </MemoryRouter>
   </div>
