@@ -59,6 +59,7 @@ This repository shows you how to write SSR and SPA code using TypeScript.
 | typescript, ts-node | language              |
 | webpack             | bundler               |
 | storybook           | preview               |
+| storyshots          | snapshot tests        |
 | jest                | test runner           |
 | workbox             | service worker        |
 | autocannon          | benchmarking tool     |
