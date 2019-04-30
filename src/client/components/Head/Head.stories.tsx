@@ -15,9 +15,8 @@ class Component extends React.Component<{}, { title: string }> {
 
   componentDidMount() {
     // TODO: fix
-    const title = document.querySelector('title')!.text;
-
-    this.setState({ title });
+    // const title = document.querySelector('title')!.text;
+    // this.setState({ title });
   }
 
   render() {

@@ -73,7 +73,7 @@ stories.add('default', () => (
     }}
   >
     <MockedProvider mocks={mocks} addTypename={false}>
-      <MemoryRouter initialEntries={['/']}>
+      <MemoryRouter initialEntries={['/']} keyLength={0}>
         <OrganizationsBox />
       </MemoryRouter>
     </MockedProvider>

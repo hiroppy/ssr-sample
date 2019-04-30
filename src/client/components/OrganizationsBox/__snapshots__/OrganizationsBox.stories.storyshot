@@ -1,0 +1,3000 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots components/OrganizationsBox default 1`] = `
+<div
+  style={
+    Object {
+      "background": "#fff",
+      "margin": "50px auto",
+      "width": "80%",
+    }
+  }
+>
+  <MockedProvider
+    addTypename={false}
+    mocks={
+      Array [
+        Object {
+          "request": Object {
+            "query": Object {
+              "definitions": Array [
+                Object {
+                  "directives": Array [],
+                  "kind": "OperationDefinition",
+                  "name": undefined,
+                  "operation": "query",
+                  "selectionSet": Object {
+                    "kind": "SelectionSet",
+                    "selections": Array [
+                      Object {
+                        "alias": undefined,
+                        "arguments": Array [],
+                        "directives": Array [],
+                        "kind": "Field",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "organizations",
+                        },
+                        "selectionSet": Object {
+                          "kind": "SelectionSet",
+                          "selections": Array [
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "name",
+                              },
+                              "selectionSet": undefined,
+                            },
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "uid",
+                              },
+                              "selectionSet": undefined,
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                  "variableDefinitions": Array [],
+                },
+              ],
+              "kind": "Document",
+              "loc": Object {
+                "end": 62,
+                "start": 0,
+              },
+            },
+          },
+          "result": Object {
+            "data": Object {
+              "organizations": Array [
+                Object {
+                  "name": "name",
+                  "uid": 1,
+                  "uri": "uri",
+                },
+                Object {
+                  "name": "name2",
+                  "uid": 2,
+                  "uri": "uri",
+                },
+                Object {
+                  "name": "name3",
+                  "uid": 3,
+                  "uri": "uri",
+                },
+                Object {
+                  "name": "name4",
+                  "uid": 4,
+                  "uri": "uri",
+                },
+              ],
+            },
+          },
+        },
+        Object {
+          "request": Object {
+            "query": Object {
+              "definitions": Array [
+                Object {
+                  "directives": Array [],
+                  "kind": "OperationDefinition",
+                  "name": Object {
+                    "kind": "Name",
+                    "value": "addOrganization",
+                  },
+                  "operation": "mutation",
+                  "selectionSet": Object {
+                    "kind": "SelectionSet",
+                    "selections": Array [
+                      Object {
+                        "alias": undefined,
+                        "arguments": Array [
+                          Object {
+                            "kind": "Argument",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "name",
+                            },
+                            "value": Object {
+                              "kind": "Variable",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "name",
+                              },
+                            },
+                          },
+                        ],
+                        "directives": Array [],
+                        "kind": "Field",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "addOrganization",
+                        },
+                        "selectionSet": Object {
+                          "kind": "SelectionSet",
+                          "selections": Array [
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "name",
+                              },
+                              "selectionSet": undefined,
+                            },
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "uri",
+                              },
+                              "selectionSet": undefined,
+                            },
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "uid",
+                              },
+                              "selectionSet": undefined,
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                  "variableDefinitions": Array [
+                    Object {
+                      "defaultValue": undefined,
+                      "directives": Array [],
+                      "kind": "VariableDefinition",
+                      "type": Object {
+                        "kind": "NonNullType",
+                        "type": Object {
+                          "kind": "NamedType",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "String",
+                          },
+                        },
+                      },
+                      "variable": Object {
+                        "kind": "Variable",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "name",
+                        },
+                      },
+                    },
+                  ],
+                },
+              ],
+              "kind": "Document",
+              "loc": Object {
+                "end": 122,
+                "start": 0,
+              },
+            },
+          },
+          "result": Object {
+            "data": Object {
+              "addOrganization": Object {
+                "name": "aaaa",
+                "uid": 100,
+                "uri": "uri",
+              },
+            },
+          },
+        },
+      ]
+    }
+  >
+    <ApolloProvider
+      client={
+        ApolloClient {
+          "__operations_cache__": Map {
+            "data" => Object {
+              "query": Object {
+                "definitions": Array [
+                  Object {
+                    "directives": Array [],
+                    "kind": "OperationDefinition",
+                    "name": undefined,
+                    "operation": "query",
+                    "selectionSet": Object {
+                      "kind": "SelectionSet",
+                      "selections": Array [
+                        Object {
+                          "alias": undefined,
+                          "arguments": Array [],
+                          "directives": Array [],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "organizations",
+                          },
+                          "selectionSet": Object {
+                            "kind": "SelectionSet",
+                            "selections": Array [
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "name",
+                                },
+                                "selectionSet": undefined,
+                              },
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "uid",
+                                },
+                                "selectionSet": undefined,
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    },
+                    "variableDefinitions": Array [],
+                  },
+                ],
+                "kind": "Document",
+                "loc": Object {
+                  "end": 62,
+                  "start": 0,
+                },
+              },
+              "variables": undefined,
+            },
+          },
+          "cache": InMemoryCache {
+            "addTypename": false,
+            "cacheKeyRoot": CacheKeyNode {
+              "children": Map {
+                Object {
+                  "definitions": Array [
+                    Object {
+                      "directives": Array [],
+                      "kind": "OperationDefinition",
+                      "name": undefined,
+                      "operation": "query",
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [],
+                            "directives": Array [],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "organizations",
+                            },
+                            "selectionSet": Object {
+                              "kind": "SelectionSet",
+                              "selections": Array [
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "name",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "uid",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                              ],
+                            },
+                          },
+                        ],
+                      },
+                      "variableDefinitions": Array [],
+                    },
+                  ],
+                  "kind": "Document",
+                  "loc": Object {
+                    "end": 62,
+                    "start": 0,
+                  },
+                } => CacheKeyNode {
+                  "children": Map {
+                    DepTrackingCache {
+                      "data": Object {},
+                      "depend": [Function],
+                    } => CacheKeyNode {
+                      "children": Map {
+                        [Function] => CacheKeyNode {
+                          "children": Map {
+                            "{}" => CacheKeyNode {
+                              "children": Map {
+                                "ROOT_QUERY" => CacheKeyNode {
+                                  "children": null,
+                                  "key": Object {},
+                                },
+                              },
+                              "key": null,
+                            },
+                          },
+                          "key": null,
+                        },
+                      },
+                      "key": null,
+                    },
+                  },
+                  "key": null,
+                },
+                Object {
+                  "kind": "SelectionSet",
+                  "selections": Array [
+                    Object {
+                      "alias": undefined,
+                      "arguments": Array [],
+                      "directives": Array [],
+                      "kind": "Field",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "organizations",
+                      },
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [],
+                            "directives": Array [],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "name",
+                            },
+                            "selectionSet": undefined,
+                          },
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [],
+                            "directives": Array [],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "uid",
+                            },
+                            "selectionSet": undefined,
+                          },
+                        ],
+                      },
+                    },
+                  ],
+                } => CacheKeyNode {
+                  "children": Map {
+                    DepTrackingCache {
+                      "data": Object {},
+                      "depend": [Function],
+                    } => CacheKeyNode {
+                      "children": Map {
+                        [Function] => CacheKeyNode {
+                          "children": Map {
+                            "{}" => CacheKeyNode {
+                              "children": Map {
+                                "ROOT_QUERY" => CacheKeyNode {
+                                  "children": null,
+                                  "key": Object {},
+                                },
+                              },
+                              "key": null,
+                            },
+                          },
+                          "key": null,
+                        },
+                      },
+                      "key": null,
+                    },
+                  },
+                  "key": null,
+                },
+              },
+              "key": null,
+            },
+            "config": Object {
+              "addTypename": false,
+              "dataIdFromObject": [Function],
+              "fragmentMatcher": HeuristicFragmentMatcher {},
+              "resultCaching": true,
+            },
+            "data": DepTrackingCache {
+              "data": Object {},
+              "depend": [Function],
+            },
+            "maybeBroadcastWatch": [Function],
+            "optimisticData": DepTrackingCache {
+              "data": Object {},
+              "depend": [Function],
+            },
+            "silenceBroadcast": false,
+            "storeReader": StoreReader {
+              "cacheKeyRoot": CacheKeyNode {
+                "children": Map {
+                  Object {
+                    "definitions": Array [
+                      Object {
+                        "directives": Array [],
+                        "kind": "OperationDefinition",
+                        "name": undefined,
+                        "operation": "query",
+                        "selectionSet": Object {
+                          "kind": "SelectionSet",
+                          "selections": Array [
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "organizations",
+                              },
+                              "selectionSet": Object {
+                                "kind": "SelectionSet",
+                                "selections": Array [
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "name",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "uid",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                        "variableDefinitions": Array [],
+                      },
+                    ],
+                    "kind": "Document",
+                    "loc": Object {
+                      "end": 62,
+                      "start": 0,
+                    },
+                  } => CacheKeyNode {
+                    "children": Map {
+                      DepTrackingCache {
+                        "data": Object {},
+                        "depend": [Function],
+                      } => CacheKeyNode {
+                        "children": Map {
+                          [Function] => CacheKeyNode {
+                            "children": Map {
+                              "{}" => CacheKeyNode {
+                                "children": Map {
+                                  "ROOT_QUERY" => CacheKeyNode {
+                                    "children": null,
+                                    "key": Object {},
+                                  },
+                                },
+                                "key": null,
+                              },
+                            },
+                            "key": null,
+                          },
+                        },
+                        "key": null,
+                      },
+                    },
+                    "key": null,
+                  },
+                  Object {
+                    "kind": "SelectionSet",
+                    "selections": Array [
+                      Object {
+                        "alias": undefined,
+                        "arguments": Array [],
+                        "directives": Array [],
+                        "kind": "Field",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "organizations",
+                        },
+                        "selectionSet": Object {
+                          "kind": "SelectionSet",
+                          "selections": Array [
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "name",
+                              },
+                              "selectionSet": undefined,
+                            },
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "uid",
+                              },
+                              "selectionSet": undefined,
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  } => CacheKeyNode {
+                    "children": Map {
+                      DepTrackingCache {
+                        "data": Object {},
+                        "depend": [Function],
+                      } => CacheKeyNode {
+                        "children": Map {
+                          [Function] => CacheKeyNode {
+                            "children": Map {
+                              "{}" => CacheKeyNode {
+                                "children": Map {
+                                  "ROOT_QUERY" => CacheKeyNode {
+                                    "children": null,
+                                    "key": Object {},
+                                  },
+                                },
+                                "key": null,
+                              },
+                            },
+                            "key": null,
+                          },
+                        },
+                        "key": null,
+                      },
+                    },
+                    "key": null,
+                  },
+                },
+                "key": null,
+              },
+              "executeSelectionSet": [Function],
+              "executeStoreQuery": [Function],
+            },
+            "storeWriter": StoreWriter {},
+            "typenameDocumentCache": Map {},
+            "watches": Set {
+              Object {
+                "callback": [Function],
+                "optimistic": true,
+                "previousResult": [Function],
+                "query": Object {
+                  "definitions": Array [
+                    Object {
+                      "directives": Array [],
+                      "kind": "OperationDefinition",
+                      "name": undefined,
+                      "operation": "query",
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [],
+                            "directives": Array [],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "organizations",
+                            },
+                            "selectionSet": Object {
+                              "kind": "SelectionSet",
+                              "selections": Array [
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "name",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "uid",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                              ],
+                            },
+                          },
+                        ],
+                      },
+                      "variableDefinitions": Array [],
+                    },
+                  ],
+                  "kind": "Document",
+                  "loc": Object {
+                    "end": 62,
+                    "start": 0,
+                  },
+                },
+                "variables": Object {},
+              },
+            },
+          },
+          "clearStoreCallbacks": Array [],
+          "clientAwareness": Object {},
+          "defaultOptions": Object {},
+          "disableNetworkFetches": false,
+          "link": ApolloLink {
+            "request": [Function],
+          },
+          "localState": LocalState {
+            "cache": InMemoryCache {
+              "addTypename": false,
+              "cacheKeyRoot": CacheKeyNode {
+                "children": Map {
+                  Object {
+                    "definitions": Array [
+                      Object {
+                        "directives": Array [],
+                        "kind": "OperationDefinition",
+                        "name": undefined,
+                        "operation": "query",
+                        "selectionSet": Object {
+                          "kind": "SelectionSet",
+                          "selections": Array [
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "organizations",
+                              },
+                              "selectionSet": Object {
+                                "kind": "SelectionSet",
+                                "selections": Array [
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "name",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "uid",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                        "variableDefinitions": Array [],
+                      },
+                    ],
+                    "kind": "Document",
+                    "loc": Object {
+                      "end": 62,
+                      "start": 0,
+                    },
+                  } => CacheKeyNode {
+                    "children": Map {
+                      DepTrackingCache {
+                        "data": Object {},
+                        "depend": [Function],
+                      } => CacheKeyNode {
+                        "children": Map {
+                          [Function] => CacheKeyNode {
+                            "children": Map {
+                              "{}" => CacheKeyNode {
+                                "children": Map {
+                                  "ROOT_QUERY" => CacheKeyNode {
+                                    "children": null,
+                                    "key": Object {},
+                                  },
+                                },
+                                "key": null,
+                              },
+                            },
+                            "key": null,
+                          },
+                        },
+                        "key": null,
+                      },
+                    },
+                    "key": null,
+                  },
+                  Object {
+                    "kind": "SelectionSet",
+                    "selections": Array [
+                      Object {
+                        "alias": undefined,
+                        "arguments": Array [],
+                        "directives": Array [],
+                        "kind": "Field",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "organizations",
+                        },
+                        "selectionSet": Object {
+                          "kind": "SelectionSet",
+                          "selections": Array [
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "name",
+                              },
+                              "selectionSet": undefined,
+                            },
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "uid",
+                              },
+                              "selectionSet": undefined,
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  } => CacheKeyNode {
+                    "children": Map {
+                      DepTrackingCache {
+                        "data": Object {},
+                        "depend": [Function],
+                      } => CacheKeyNode {
+                        "children": Map {
+                          [Function] => CacheKeyNode {
+                            "children": Map {
+                              "{}" => CacheKeyNode {
+                                "children": Map {
+                                  "ROOT_QUERY" => CacheKeyNode {
+                                    "children": null,
+                                    "key": Object {},
+                                  },
+                                },
+                                "key": null,
+                              },
+                            },
+                            "key": null,
+                          },
+                        },
+                        "key": null,
+                      },
+                    },
+                    "key": null,
+                  },
+                },
+                "key": null,
+              },
+              "config": Object {
+                "addTypename": false,
+                "dataIdFromObject": [Function],
+                "fragmentMatcher": HeuristicFragmentMatcher {},
+                "resultCaching": true,
+              },
+              "data": DepTrackingCache {
+                "data": Object {},
+                "depend": [Function],
+              },
+              "maybeBroadcastWatch": [Function],
+              "optimisticData": DepTrackingCache {
+                "data": Object {},
+                "depend": [Function],
+              },
+              "silenceBroadcast": false,
+              "storeReader": StoreReader {
+                "cacheKeyRoot": CacheKeyNode {
+                  "children": Map {
+                    Object {
+                      "definitions": Array [
+                        Object {
+                          "directives": Array [],
+                          "kind": "OperationDefinition",
+                          "name": undefined,
+                          "operation": "query",
+                          "selectionSet": Object {
+                            "kind": "SelectionSet",
+                            "selections": Array [
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "organizations",
+                                },
+                                "selectionSet": Object {
+                                  "kind": "SelectionSet",
+                                  "selections": Array [
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "name",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "uid",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                          "variableDefinitions": Array [],
+                        },
+                      ],
+                      "kind": "Document",
+                      "loc": Object {
+                        "end": 62,
+                        "start": 0,
+                      },
+                    } => CacheKeyNode {
+                      "children": Map {
+                        DepTrackingCache {
+                          "data": Object {},
+                          "depend": [Function],
+                        } => CacheKeyNode {
+                          "children": Map {
+                            [Function] => CacheKeyNode {
+                              "children": Map {
+                                "{}" => CacheKeyNode {
+                                  "children": Map {
+                                    "ROOT_QUERY" => CacheKeyNode {
+                                      "children": null,
+                                      "key": Object {},
+                                    },
+                                  },
+                                  "key": null,
+                                },
+                              },
+                              "key": null,
+                            },
+                          },
+                          "key": null,
+                        },
+                      },
+                      "key": null,
+                    },
+                    Object {
+                      "kind": "SelectionSet",
+                      "selections": Array [
+                        Object {
+                          "alias": undefined,
+                          "arguments": Array [],
+                          "directives": Array [],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "organizations",
+                          },
+                          "selectionSet": Object {
+                            "kind": "SelectionSet",
+                            "selections": Array [
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "name",
+                                },
+                                "selectionSet": undefined,
+                              },
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "uid",
+                                },
+                                "selectionSet": undefined,
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    } => CacheKeyNode {
+                      "children": Map {
+                        DepTrackingCache {
+                          "data": Object {},
+                          "depend": [Function],
+                        } => CacheKeyNode {
+                          "children": Map {
+                            [Function] => CacheKeyNode {
+                              "children": Map {
+                                "{}" => CacheKeyNode {
+                                  "children": Map {
+                                    "ROOT_QUERY" => CacheKeyNode {
+                                      "children": null,
+                                      "key": Object {},
+                                    },
+                                  },
+                                  "key": null,
+                                },
+                              },
+                              "key": null,
+                            },
+                          },
+                          "key": null,
+                        },
+                      },
+                      "key": null,
+                    },
+                  },
+                  "key": null,
+                },
+                "executeSelectionSet": [Function],
+                "executeStoreQuery": [Function],
+              },
+              "storeWriter": StoreWriter {},
+              "typenameDocumentCache": Map {},
+              "watches": Set {
+                Object {
+                  "callback": [Function],
+                  "optimistic": true,
+                  "previousResult": [Function],
+                  "query": Object {
+                    "definitions": Array [
+                      Object {
+                        "directives": Array [],
+                        "kind": "OperationDefinition",
+                        "name": undefined,
+                        "operation": "query",
+                        "selectionSet": Object {
+                          "kind": "SelectionSet",
+                          "selections": Array [
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "organizations",
+                              },
+                              "selectionSet": Object {
+                                "kind": "SelectionSet",
+                                "selections": Array [
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "name",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "uid",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                        "variableDefinitions": Array [],
+                      },
+                    ],
+                    "kind": "Document",
+                    "loc": Object {
+                      "end": 62,
+                      "start": 0,
+                    },
+                  },
+                  "variables": Object {},
+                },
+              },
+            },
+            "client": [Circular],
+          },
+          "mutate": [Function],
+          "query": [Function],
+          "queryDeduplication": true,
+          "queryManager": QueryManager {
+            "clientAwareness": Object {},
+            "dataStore": DataStore {
+              "cache": InMemoryCache {
+                "addTypename": false,
+                "cacheKeyRoot": CacheKeyNode {
+                  "children": Map {
+                    Object {
+                      "definitions": Array [
+                        Object {
+                          "directives": Array [],
+                          "kind": "OperationDefinition",
+                          "name": undefined,
+                          "operation": "query",
+                          "selectionSet": Object {
+                            "kind": "SelectionSet",
+                            "selections": Array [
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "organizations",
+                                },
+                                "selectionSet": Object {
+                                  "kind": "SelectionSet",
+                                  "selections": Array [
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "name",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "uid",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                          "variableDefinitions": Array [],
+                        },
+                      ],
+                      "kind": "Document",
+                      "loc": Object {
+                        "end": 62,
+                        "start": 0,
+                      },
+                    } => CacheKeyNode {
+                      "children": Map {
+                        DepTrackingCache {
+                          "data": Object {},
+                          "depend": [Function],
+                        } => CacheKeyNode {
+                          "children": Map {
+                            [Function] => CacheKeyNode {
+                              "children": Map {
+                                "{}" => CacheKeyNode {
+                                  "children": Map {
+                                    "ROOT_QUERY" => CacheKeyNode {
+                                      "children": null,
+                                      "key": Object {},
+                                    },
+                                  },
+                                  "key": null,
+                                },
+                              },
+                              "key": null,
+                            },
+                          },
+                          "key": null,
+                        },
+                      },
+                      "key": null,
+                    },
+                    Object {
+                      "kind": "SelectionSet",
+                      "selections": Array [
+                        Object {
+                          "alias": undefined,
+                          "arguments": Array [],
+                          "directives": Array [],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "organizations",
+                          },
+                          "selectionSet": Object {
+                            "kind": "SelectionSet",
+                            "selections": Array [
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "name",
+                                },
+                                "selectionSet": undefined,
+                              },
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "uid",
+                                },
+                                "selectionSet": undefined,
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    } => CacheKeyNode {
+                      "children": Map {
+                        DepTrackingCache {
+                          "data": Object {},
+                          "depend": [Function],
+                        } => CacheKeyNode {
+                          "children": Map {
+                            [Function] => CacheKeyNode {
+                              "children": Map {
+                                "{}" => CacheKeyNode {
+                                  "children": Map {
+                                    "ROOT_QUERY" => CacheKeyNode {
+                                      "children": null,
+                                      "key": Object {},
+                                    },
+                                  },
+                                  "key": null,
+                                },
+                              },
+                              "key": null,
+                            },
+                          },
+                          "key": null,
+                        },
+                      },
+                      "key": null,
+                    },
+                  },
+                  "key": null,
+                },
+                "config": Object {
+                  "addTypename": false,
+                  "dataIdFromObject": [Function],
+                  "fragmentMatcher": HeuristicFragmentMatcher {},
+                  "resultCaching": true,
+                },
+                "data": DepTrackingCache {
+                  "data": Object {},
+                  "depend": [Function],
+                },
+                "maybeBroadcastWatch": [Function],
+                "optimisticData": DepTrackingCache {
+                  "data": Object {},
+                  "depend": [Function],
+                },
+                "silenceBroadcast": false,
+                "storeReader": StoreReader {
+                  "cacheKeyRoot": CacheKeyNode {
+                    "children": Map {
+                      Object {
+                        "definitions": Array [
+                          Object {
+                            "directives": Array [],
+                            "kind": "OperationDefinition",
+                            "name": undefined,
+                            "operation": "query",
+                            "selectionSet": Object {
+                              "kind": "SelectionSet",
+                              "selections": Array [
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "organizations",
+                                  },
+                                  "selectionSet": Object {
+                                    "kind": "SelectionSet",
+                                    "selections": Array [
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "name",
+                                        },
+                                        "selectionSet": undefined,
+                                      },
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "uid",
+                                        },
+                                        "selectionSet": undefined,
+                                      },
+                                    ],
+                                  },
+                                },
+                              ],
+                            },
+                            "variableDefinitions": Array [],
+                          },
+                        ],
+                        "kind": "Document",
+                        "loc": Object {
+                          "end": 62,
+                          "start": 0,
+                        },
+                      } => CacheKeyNode {
+                        "children": Map {
+                          DepTrackingCache {
+                            "data": Object {},
+                            "depend": [Function],
+                          } => CacheKeyNode {
+                            "children": Map {
+                              [Function] => CacheKeyNode {
+                                "children": Map {
+                                  "{}" => CacheKeyNode {
+                                    "children": Map {
+                                      "ROOT_QUERY" => CacheKeyNode {
+                                        "children": null,
+                                        "key": Object {},
+                                      },
+                                    },
+                                    "key": null,
+                                  },
+                                },
+                                "key": null,
+                              },
+                            },
+                            "key": null,
+                          },
+                        },
+                        "key": null,
+                      },
+                      Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [],
+                            "directives": Array [],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "organizations",
+                            },
+                            "selectionSet": Object {
+                              "kind": "SelectionSet",
+                              "selections": Array [
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "name",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "uid",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                              ],
+                            },
+                          },
+                        ],
+                      } => CacheKeyNode {
+                        "children": Map {
+                          DepTrackingCache {
+                            "data": Object {},
+                            "depend": [Function],
+                          } => CacheKeyNode {
+                            "children": Map {
+                              [Function] => CacheKeyNode {
+                                "children": Map {
+                                  "{}" => CacheKeyNode {
+                                    "children": Map {
+                                      "ROOT_QUERY" => CacheKeyNode {
+                                        "children": null,
+                                        "key": Object {},
+                                      },
+                                    },
+                                    "key": null,
+                                  },
+                                },
+                                "key": null,
+                              },
+                            },
+                            "key": null,
+                          },
+                        },
+                        "key": null,
+                      },
+                    },
+                    "key": null,
+                  },
+                  "executeSelectionSet": [Function],
+                  "executeStoreQuery": [Function],
+                },
+                "storeWriter": StoreWriter {},
+                "typenameDocumentCache": Map {},
+                "watches": Set {
+                  Object {
+                    "callback": [Function],
+                    "optimistic": true,
+                    "previousResult": [Function],
+                    "query": Object {
+                      "definitions": Array [
+                        Object {
+                          "directives": Array [],
+                          "kind": "OperationDefinition",
+                          "name": undefined,
+                          "operation": "query",
+                          "selectionSet": Object {
+                            "kind": "SelectionSet",
+                            "selections": Array [
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "organizations",
+                                },
+                                "selectionSet": Object {
+                                  "kind": "SelectionSet",
+                                  "selections": Array [
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "name",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "uid",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                          "variableDefinitions": Array [],
+                        },
+                      ],
+                      "kind": "Document",
+                      "loc": Object {
+                        "end": 62,
+                        "start": 0,
+                      },
+                    },
+                    "variables": Object {},
+                  },
+                },
+              },
+            },
+            "deduplicator": ApolloLink {
+              "request": [Function],
+            },
+            "fetchQueryRejectFns": Map {
+              "fetchRequest:1" => [Function],
+            },
+            "idCounter": 3,
+            "link": ApolloLink {
+              "request": [Function],
+            },
+            "localState": LocalState {
+              "cache": InMemoryCache {
+                "addTypename": false,
+                "cacheKeyRoot": CacheKeyNode {
+                  "children": Map {
+                    Object {
+                      "definitions": Array [
+                        Object {
+                          "directives": Array [],
+                          "kind": "OperationDefinition",
+                          "name": undefined,
+                          "operation": "query",
+                          "selectionSet": Object {
+                            "kind": "SelectionSet",
+                            "selections": Array [
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "organizations",
+                                },
+                                "selectionSet": Object {
+                                  "kind": "SelectionSet",
+                                  "selections": Array [
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "name",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "uid",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                          "variableDefinitions": Array [],
+                        },
+                      ],
+                      "kind": "Document",
+                      "loc": Object {
+                        "end": 62,
+                        "start": 0,
+                      },
+                    } => CacheKeyNode {
+                      "children": Map {
+                        DepTrackingCache {
+                          "data": Object {},
+                          "depend": [Function],
+                        } => CacheKeyNode {
+                          "children": Map {
+                            [Function] => CacheKeyNode {
+                              "children": Map {
+                                "{}" => CacheKeyNode {
+                                  "children": Map {
+                                    "ROOT_QUERY" => CacheKeyNode {
+                                      "children": null,
+                                      "key": Object {},
+                                    },
+                                  },
+                                  "key": null,
+                                },
+                              },
+                              "key": null,
+                            },
+                          },
+                          "key": null,
+                        },
+                      },
+                      "key": null,
+                    },
+                    Object {
+                      "kind": "SelectionSet",
+                      "selections": Array [
+                        Object {
+                          "alias": undefined,
+                          "arguments": Array [],
+                          "directives": Array [],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "organizations",
+                          },
+                          "selectionSet": Object {
+                            "kind": "SelectionSet",
+                            "selections": Array [
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "name",
+                                },
+                                "selectionSet": undefined,
+                              },
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "uid",
+                                },
+                                "selectionSet": undefined,
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    } => CacheKeyNode {
+                      "children": Map {
+                        DepTrackingCache {
+                          "data": Object {},
+                          "depend": [Function],
+                        } => CacheKeyNode {
+                          "children": Map {
+                            [Function] => CacheKeyNode {
+                              "children": Map {
+                                "{}" => CacheKeyNode {
+                                  "children": Map {
+                                    "ROOT_QUERY" => CacheKeyNode {
+                                      "children": null,
+                                      "key": Object {},
+                                    },
+                                  },
+                                  "key": null,
+                                },
+                              },
+                              "key": null,
+                            },
+                          },
+                          "key": null,
+                        },
+                      },
+                      "key": null,
+                    },
+                  },
+                  "key": null,
+                },
+                "config": Object {
+                  "addTypename": false,
+                  "dataIdFromObject": [Function],
+                  "fragmentMatcher": HeuristicFragmentMatcher {},
+                  "resultCaching": true,
+                },
+                "data": DepTrackingCache {
+                  "data": Object {},
+                  "depend": [Function],
+                },
+                "maybeBroadcastWatch": [Function],
+                "optimisticData": DepTrackingCache {
+                  "data": Object {},
+                  "depend": [Function],
+                },
+                "silenceBroadcast": false,
+                "storeReader": StoreReader {
+                  "cacheKeyRoot": CacheKeyNode {
+                    "children": Map {
+                      Object {
+                        "definitions": Array [
+                          Object {
+                            "directives": Array [],
+                            "kind": "OperationDefinition",
+                            "name": undefined,
+                            "operation": "query",
+                            "selectionSet": Object {
+                              "kind": "SelectionSet",
+                              "selections": Array [
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "organizations",
+                                  },
+                                  "selectionSet": Object {
+                                    "kind": "SelectionSet",
+                                    "selections": Array [
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "name",
+                                        },
+                                        "selectionSet": undefined,
+                                      },
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "uid",
+                                        },
+                                        "selectionSet": undefined,
+                                      },
+                                    ],
+                                  },
+                                },
+                              ],
+                            },
+                            "variableDefinitions": Array [],
+                          },
+                        ],
+                        "kind": "Document",
+                        "loc": Object {
+                          "end": 62,
+                          "start": 0,
+                        },
+                      } => CacheKeyNode {
+                        "children": Map {
+                          DepTrackingCache {
+                            "data": Object {},
+                            "depend": [Function],
+                          } => CacheKeyNode {
+                            "children": Map {
+                              [Function] => CacheKeyNode {
+                                "children": Map {
+                                  "{}" => CacheKeyNode {
+                                    "children": Map {
+                                      "ROOT_QUERY" => CacheKeyNode {
+                                        "children": null,
+                                        "key": Object {},
+                                      },
+                                    },
+                                    "key": null,
+                                  },
+                                },
+                                "key": null,
+                              },
+                            },
+                            "key": null,
+                          },
+                        },
+                        "key": null,
+                      },
+                      Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [],
+                            "directives": Array [],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "organizations",
+                            },
+                            "selectionSet": Object {
+                              "kind": "SelectionSet",
+                              "selections": Array [
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "name",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "uid",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                              ],
+                            },
+                          },
+                        ],
+                      } => CacheKeyNode {
+                        "children": Map {
+                          DepTrackingCache {
+                            "data": Object {},
+                            "depend": [Function],
+                          } => CacheKeyNode {
+                            "children": Map {
+                              [Function] => CacheKeyNode {
+                                "children": Map {
+                                  "{}" => CacheKeyNode {
+                                    "children": Map {
+                                      "ROOT_QUERY" => CacheKeyNode {
+                                        "children": null,
+                                        "key": Object {},
+                                      },
+                                    },
+                                    "key": null,
+                                  },
+                                },
+                                "key": null,
+                              },
+                            },
+                            "key": null,
+                          },
+                        },
+                        "key": null,
+                      },
+                    },
+                    "key": null,
+                  },
+                  "executeSelectionSet": [Function],
+                  "executeStoreQuery": [Function],
+                },
+                "storeWriter": StoreWriter {},
+                "typenameDocumentCache": Map {},
+                "watches": Set {
+                  Object {
+                    "callback": [Function],
+                    "optimistic": true,
+                    "previousResult": [Function],
+                    "query": Object {
+                      "definitions": Array [
+                        Object {
+                          "directives": Array [],
+                          "kind": "OperationDefinition",
+                          "name": undefined,
+                          "operation": "query",
+                          "selectionSet": Object {
+                            "kind": "SelectionSet",
+                            "selections": Array [
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "organizations",
+                                },
+                                "selectionSet": Object {
+                                  "kind": "SelectionSet",
+                                  "selections": Array [
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "name",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "uid",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                          "variableDefinitions": Array [],
+                        },
+                      ],
+                      "kind": "Document",
+                      "loc": Object {
+                        "end": 62,
+                        "start": 0,
+                      },
+                    },
+                    "variables": Object {},
+                  },
+                },
+              },
+              "client": [Circular],
+            },
+            "mutationStore": MutationStore {
+              "store": Object {},
+            },
+            "nextPoll": null,
+            "onBroadcast": [Function],
+            "pollingInfoByQueryId": Map {},
+            "queries": Map {
+              "1" => Object {
+                "cancel": [Function],
+                "document": Object {
+                  "definitions": Array [
+                    Object {
+                      "directives": Array [],
+                      "kind": "OperationDefinition",
+                      "name": undefined,
+                      "operation": "query",
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [],
+                            "directives": Array [],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "organizations",
+                            },
+                            "selectionSet": Object {
+                              "kind": "SelectionSet",
+                              "selections": Array [
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "name",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "uid",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                              ],
+                            },
+                          },
+                        ],
+                      },
+                      "variableDefinitions": Array [],
+                    },
+                  ],
+                  "kind": "Document",
+                  "loc": Object {
+                    "end": 62,
+                    "start": 0,
+                  },
+                },
+                "invalidated": false,
+                "lastRequestId": 2,
+                "listeners": Array [
+                  [Function],
+                ],
+                "newData": null,
+                "observableQuery": ObservableQuery {
+                  "_subscriber": [Function],
+                  "isTornDown": false,
+                  "observers": Array [
+                    SubscriptionObserver {
+                      "_subscription": Subscription {
+                        "_cleanup": [Function],
+                        "_observer": Object {
+                          "error": [Function],
+                          "next": [Function],
+                        },
+                        "_queue": undefined,
+                        "_state": "ready",
+                      },
+                    },
+                  ],
+                  "options": Object {
+                    "children": [Function],
+                    "context": Object {},
+                    "displayName": "Query",
+                    "metadata": Object {
+                      "reactComponent": Object {
+                        "displayName": "Query",
+                      },
+                    },
+                    "notifyOnNetworkStatusChange": false,
+                    "query": Object {
+                      "definitions": Array [
+                        Object {
+                          "directives": Array [],
+                          "kind": "OperationDefinition",
+                          "name": undefined,
+                          "operation": "query",
+                          "selectionSet": Object {
+                            "kind": "SelectionSet",
+                            "selections": Array [
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "organizations",
+                                },
+                                "selectionSet": Object {
+                                  "kind": "SelectionSet",
+                                  "selections": Array [
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "name",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "uid",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                          "variableDefinitions": Array [],
+                        },
+                      ],
+                      "kind": "Document",
+                      "loc": Object {
+                        "end": 62,
+                        "start": 0,
+                      },
+                    },
+                  },
+                  "queryId": "1",
+                  "queryManager": [Circular],
+                  "shouldSubscribe": true,
+                  "subscriptionHandles": Array [],
+                  "variables": Object {},
+                },
+                "subscriptions": Array [
+                  Subscription {
+                    "_cleanup": [Function],
+                    "_observer": Object {
+                      "complete": [Function],
+                      "error": [Function],
+                      "next": [Function],
+                    },
+                    "_queue": undefined,
+                    "_state": "ready",
+                  },
+                ],
+              },
+            },
+            "queryDeduplication": true,
+            "queryIdsByName": Object {},
+            "queryStore": QueryStore {
+              "store": Object {
+                "1": Object {
+                  "document": Object {
+                    "definitions": Array [
+                      Object {
+                        "directives": Array [],
+                        "kind": "OperationDefinition",
+                        "name": undefined,
+                        "operation": "query",
+                        "selectionSet": Object {
+                          "kind": "SelectionSet",
+                          "selections": Array [
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "organizations",
+                              },
+                              "selectionSet": Object {
+                                "kind": "SelectionSet",
+                                "selections": Array [
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "name",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "uid",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                        "variableDefinitions": Array [],
+                      },
+                    ],
+                    "kind": "Document",
+                    "loc": Object {
+                      "end": 62,
+                      "start": 0,
+                    },
+                  },
+                  "graphQLErrors": Array [],
+                  "metadata": Object {
+                    "reactComponent": Object {
+                      "displayName": "Query",
+                    },
+                  },
+                  "networkError": null,
+                  "networkStatus": 1,
+                  "previousVariables": null,
+                  "variables": Object {},
+                },
+              },
+            },
+            "ssrMode": false,
+          },
+          "reFetchObservableQueries": [Function],
+          "resetStore": [Function],
+          "resetStoreCallbacks": Array [],
+          "ssrMode": false,
+          "store": DataStore {
+            "cache": InMemoryCache {
+              "addTypename": false,
+              "cacheKeyRoot": CacheKeyNode {
+                "children": Map {
+                  Object {
+                    "definitions": Array [
+                      Object {
+                        "directives": Array [],
+                        "kind": "OperationDefinition",
+                        "name": undefined,
+                        "operation": "query",
+                        "selectionSet": Object {
+                          "kind": "SelectionSet",
+                          "selections": Array [
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "organizations",
+                              },
+                              "selectionSet": Object {
+                                "kind": "SelectionSet",
+                                "selections": Array [
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "name",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "uid",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                        "variableDefinitions": Array [],
+                      },
+                    ],
+                    "kind": "Document",
+                    "loc": Object {
+                      "end": 62,
+                      "start": 0,
+                    },
+                  } => CacheKeyNode {
+                    "children": Map {
+                      DepTrackingCache {
+                        "data": Object {},
+                        "depend": [Function],
+                      } => CacheKeyNode {
+                        "children": Map {
+                          [Function] => CacheKeyNode {
+                            "children": Map {
+                              "{}" => CacheKeyNode {
+                                "children": Map {
+                                  "ROOT_QUERY" => CacheKeyNode {
+                                    "children": null,
+                                    "key": Object {},
+                                  },
+                                },
+                                "key": null,
+                              },
+                            },
+                            "key": null,
+                          },
+                        },
+                        "key": null,
+                      },
+                    },
+                    "key": null,
+                  },
+                  Object {
+                    "kind": "SelectionSet",
+                    "selections": Array [
+                      Object {
+                        "alias": undefined,
+                        "arguments": Array [],
+                        "directives": Array [],
+                        "kind": "Field",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "organizations",
+                        },
+                        "selectionSet": Object {
+                          "kind": "SelectionSet",
+                          "selections": Array [
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "name",
+                              },
+                              "selectionSet": undefined,
+                            },
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "uid",
+                              },
+                              "selectionSet": undefined,
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  } => CacheKeyNode {
+                    "children": Map {
+                      DepTrackingCache {
+                        "data": Object {},
+                        "depend": [Function],
+                      } => CacheKeyNode {
+                        "children": Map {
+                          [Function] => CacheKeyNode {
+                            "children": Map {
+                              "{}" => CacheKeyNode {
+                                "children": Map {
+                                  "ROOT_QUERY" => CacheKeyNode {
+                                    "children": null,
+                                    "key": Object {},
+                                  },
+                                },
+                                "key": null,
+                              },
+                            },
+                            "key": null,
+                          },
+                        },
+                        "key": null,
+                      },
+                    },
+                    "key": null,
+                  },
+                },
+                "key": null,
+              },
+              "config": Object {
+                "addTypename": false,
+                "dataIdFromObject": [Function],
+                "fragmentMatcher": HeuristicFragmentMatcher {},
+                "resultCaching": true,
+              },
+              "data": DepTrackingCache {
+                "data": Object {},
+                "depend": [Function],
+              },
+              "maybeBroadcastWatch": [Function],
+              "optimisticData": DepTrackingCache {
+                "data": Object {},
+                "depend": [Function],
+              },
+              "silenceBroadcast": false,
+              "storeReader": StoreReader {
+                "cacheKeyRoot": CacheKeyNode {
+                  "children": Map {
+                    Object {
+                      "definitions": Array [
+                        Object {
+                          "directives": Array [],
+                          "kind": "OperationDefinition",
+                          "name": undefined,
+                          "operation": "query",
+                          "selectionSet": Object {
+                            "kind": "SelectionSet",
+                            "selections": Array [
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "organizations",
+                                },
+                                "selectionSet": Object {
+                                  "kind": "SelectionSet",
+                                  "selections": Array [
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "name",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "uid",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                          "variableDefinitions": Array [],
+                        },
+                      ],
+                      "kind": "Document",
+                      "loc": Object {
+                        "end": 62,
+                        "start": 0,
+                      },
+                    } => CacheKeyNode {
+                      "children": Map {
+                        DepTrackingCache {
+                          "data": Object {},
+                          "depend": [Function],
+                        } => CacheKeyNode {
+                          "children": Map {
+                            [Function] => CacheKeyNode {
+                              "children": Map {
+                                "{}" => CacheKeyNode {
+                                  "children": Map {
+                                    "ROOT_QUERY" => CacheKeyNode {
+                                      "children": null,
+                                      "key": Object {},
+                                    },
+                                  },
+                                  "key": null,
+                                },
+                              },
+                              "key": null,
+                            },
+                          },
+                          "key": null,
+                        },
+                      },
+                      "key": null,
+                    },
+                    Object {
+                      "kind": "SelectionSet",
+                      "selections": Array [
+                        Object {
+                          "alias": undefined,
+                          "arguments": Array [],
+                          "directives": Array [],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "organizations",
+                          },
+                          "selectionSet": Object {
+                            "kind": "SelectionSet",
+                            "selections": Array [
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "name",
+                                },
+                                "selectionSet": undefined,
+                              },
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "uid",
+                                },
+                                "selectionSet": undefined,
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    } => CacheKeyNode {
+                      "children": Map {
+                        DepTrackingCache {
+                          "data": Object {},
+                          "depend": [Function],
+                        } => CacheKeyNode {
+                          "children": Map {
+                            [Function] => CacheKeyNode {
+                              "children": Map {
+                                "{}" => CacheKeyNode {
+                                  "children": Map {
+                                    "ROOT_QUERY" => CacheKeyNode {
+                                      "children": null,
+                                      "key": Object {},
+                                    },
+                                  },
+                                  "key": null,
+                                },
+                              },
+                              "key": null,
+                            },
+                          },
+                          "key": null,
+                        },
+                      },
+                      "key": null,
+                    },
+                  },
+                  "key": null,
+                },
+                "executeSelectionSet": [Function],
+                "executeStoreQuery": [Function],
+              },
+              "storeWriter": StoreWriter {},
+              "typenameDocumentCache": Map {},
+              "watches": Set {
+                Object {
+                  "callback": [Function],
+                  "optimistic": true,
+                  "previousResult": [Function],
+                  "query": Object {
+                    "definitions": Array [
+                      Object {
+                        "directives": Array [],
+                        "kind": "OperationDefinition",
+                        "name": undefined,
+                        "operation": "query",
+                        "selectionSet": Object {
+                          "kind": "SelectionSet",
+                          "selections": Array [
+                            Object {
+                              "alias": undefined,
+                              "arguments": Array [],
+                              "directives": Array [],
+                              "kind": "Field",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "organizations",
+                              },
+                              "selectionSet": Object {
+                                "kind": "SelectionSet",
+                                "selections": Array [
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "name",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "uid",
+                                    },
+                                    "selectionSet": undefined,
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
+                        "variableDefinitions": Array [],
+                      },
+                    ],
+                    "kind": "Document",
+                    "loc": Object {
+                      "end": 62,
+                      "start": 0,
+                    },
+                  },
+                  "variables": Object {},
+                },
+              },
+            },
+          },
+          "typeDefs": undefined,
+          "version": "2.5.1",
+          "watchQuery": [Function],
+        }
+      }
+    >
+      <MemoryRouter
+        initialEntries={
+          Array [
+            "/",
+          ]
+        }
+        keyLength={0}
+      >
+        <Router
+          history={
+            Object {
+              "action": "POP",
+              "block": [Function],
+              "canGo": [Function],
+              "createHref": [Function],
+              "entries": Array [
+                Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+              ],
+              "go": [Function],
+              "goBack": [Function],
+              "goForward": [Function],
+              "index": 0,
+              "length": 1,
+              "listen": [Function],
+              "location": Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              },
+              "push": [Function],
+              "replace": [Function],
+            }
+          }
+        >
+          <OrganizationsBox>
+            <GetOrgsQuery
+              query={
+                Object {
+                  "definitions": Array [
+                    Object {
+                      "directives": Array [],
+                      "kind": "OperationDefinition",
+                      "name": undefined,
+                      "operation": "query",
+                      "selectionSet": Object {
+                        "kind": "SelectionSet",
+                        "selections": Array [
+                          Object {
+                            "alias": undefined,
+                            "arguments": Array [],
+                            "directives": Array [],
+                            "kind": "Field",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "organizations",
+                            },
+                            "selectionSet": Object {
+                              "kind": "SelectionSet",
+                              "selections": Array [
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "name",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                                Object {
+                                  "alias": undefined,
+                                  "arguments": Array [],
+                                  "directives": Array [],
+                                  "kind": "Field",
+                                  "name": Object {
+                                    "kind": "Name",
+                                    "value": "uid",
+                                  },
+                                  "selectionSet": undefined,
+                                },
+                              ],
+                            },
+                          },
+                        ],
+                      },
+                      "variableDefinitions": Array [],
+                    },
+                  ],
+                  "kind": "Document",
+                  "loc": Object {
+                    "end": 62,
+                    "start": 0,
+                  },
+                }
+              }
+            >
+              <styled.ul>
+                <StyledComponent
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bxivhb",
+                        "isStatic": true,
+                        "lastClassName": "fvwMxD",
+                        "rules": Array [
+                          "
+  box-shadow: 0px 0px 5px silver;
+  margin: auto;
+  max-width: 600px;
+  padding: 0.5em 0.5em 0.5em 2em;
+  width: 90%;
+",
+                        ],
+                      },
+                      "displayName": "styled.ul",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-bxivhb",
+                      "target": "ul",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                >
+                  <ul
+                    className="sc-bxivhb fvwMxD"
+                  >
+                    <p>
+                      loading...
+                    </p>
+                    <Mutation
+                      mutation={
+                        Object {
+                          "definitions": Array [
+                            Object {
+                              "directives": Array [],
+                              "kind": "OperationDefinition",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "addOrganization",
+                              },
+                              "operation": "mutation",
+                              "selectionSet": Object {
+                                "kind": "SelectionSet",
+                                "selections": Array [
+                                  Object {
+                                    "alias": undefined,
+                                    "arguments": Array [
+                                      Object {
+                                        "kind": "Argument",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "name",
+                                        },
+                                        "value": Object {
+                                          "kind": "Variable",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "name",
+                                          },
+                                        },
+                                      },
+                                    ],
+                                    "directives": Array [],
+                                    "kind": "Field",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "addOrganization",
+                                    },
+                                    "selectionSet": Object {
+                                      "kind": "SelectionSet",
+                                      "selections": Array [
+                                        Object {
+                                          "alias": undefined,
+                                          "arguments": Array [],
+                                          "directives": Array [],
+                                          "kind": "Field",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "name",
+                                          },
+                                          "selectionSet": undefined,
+                                        },
+                                        Object {
+                                          "alias": undefined,
+                                          "arguments": Array [],
+                                          "directives": Array [],
+                                          "kind": "Field",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "uri",
+                                          },
+                                          "selectionSet": undefined,
+                                        },
+                                        Object {
+                                          "alias": undefined,
+                                          "arguments": Array [],
+                                          "directives": Array [],
+                                          "kind": "Field",
+                                          "name": Object {
+                                            "kind": "Name",
+                                            "value": "uid",
+                                          },
+                                          "selectionSet": undefined,
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                              "variableDefinitions": Array [
+                                Object {
+                                  "defaultValue": undefined,
+                                  "directives": Array [],
+                                  "kind": "VariableDefinition",
+                                  "type": Object {
+                                    "kind": "NonNullType",
+                                    "type": Object {
+                                      "kind": "NamedType",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "String",
+                                      },
+                                    },
+                                  },
+                                  "variable": Object {
+                                    "kind": "Variable",
+                                    "name": Object {
+                                      "kind": "Name",
+                                      "value": "name",
+                                    },
+                                  },
+                                },
+                              ],
+                            },
+                          ],
+                          "kind": "Document",
+                          "loc": Object {
+                            "end": 122,
+                            "start": 0,
+                          },
+                        }
+                      }
+                      refetchQueries={
+                        Array [
+                          Object {
+                            "query": Object {
+                              "definitions": Array [
+                                Object {
+                                  "directives": Array [],
+                                  "kind": "OperationDefinition",
+                                  "name": undefined,
+                                  "operation": "query",
+                                  "selectionSet": Object {
+                                    "kind": "SelectionSet",
+                                    "selections": Array [
+                                      Object {
+                                        "alias": undefined,
+                                        "arguments": Array [],
+                                        "directives": Array [],
+                                        "kind": "Field",
+                                        "name": Object {
+                                          "kind": "Name",
+                                          "value": "organizations",
+                                        },
+                                        "selectionSet": Object {
+                                          "kind": "SelectionSet",
+                                          "selections": Array [
+                                            Object {
+                                              "alias": undefined,
+                                              "arguments": Array [],
+                                              "directives": Array [],
+                                              "kind": "Field",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "name",
+                                              },
+                                              "selectionSet": undefined,
+                                            },
+                                            Object {
+                                              "alias": undefined,
+                                              "arguments": Array [],
+                                              "directives": Array [],
+                                              "kind": "Field",
+                                              "name": Object {
+                                                "kind": "Name",
+                                                "value": "uid",
+                                              },
+                                              "selectionSet": undefined,
+                                            },
+                                          ],
+                                        },
+                                      },
+                                    ],
+                                  },
+                                  "variableDefinitions": Array [],
+                                },
+                              ],
+                              "kind": "Document",
+                              "loc": Object {
+                                "end": 62,
+                                "start": 0,
+                              },
+                            },
+                          },
+                        ]
+                      }
+                    >
+                      <Styled(styled.li)>
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bZQynM",
+                                "isStatic": true,
+                                "lastClassName": "cvJGwh",
+                                "rules": Array [
+                                  "
+  line-height: 1.5;
+  padding: 0.5em 0;
+",
+                                  "
+  display: flex;
+  justify-content: flex-end;
+",
+                                ],
+                              },
+                              "displayName": "Styled(styled.li)",
+                              "foldedComponentIds": Array [
+                                "sc-ifAKCX",
+                              ],
+                              "render": [Function],
+                              "styledComponentId": "sc-bZQynM",
+                              "target": "li",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <li
+                            className="sc-ifAKCX sc-bZQynM cvJGwh"
+                          >
+                            <input
+                              onChange={[Function]}
+                              value=""
+                            />
+                            <button
+                              onClick={[Function]}
+                            >
+                              Add
+                            </button>
+                          </li>
+                        </StyledComponent>
+                      </Styled(styled.li)>
+                    </Mutation>
+                  </ul>
+                </StyledComponent>
+              </styled.ul>
+            </GetOrgsQuery>
+          </OrganizationsBox>
+        </Router>
+      </MemoryRouter>
+    </ApolloProvider>
+  </MockedProvider>
+</div>
+`;
