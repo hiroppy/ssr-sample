@@ -23,13 +23,9 @@ const common = {
         type: 'javascript/auto'
       },
       {
-        test: /\.ts|.tsx$/,
+        test: /\.tsx?$/,
         use: {
-          loader: 'ts-loader',
-          options: {
-            transpileOnly: true,
-            configFile: 'tsconfig.client.json'
-          }
+          loader: 'babel-loader'
         }
       }
     ]
