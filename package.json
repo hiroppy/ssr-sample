@@ -55,7 +55,7 @@
     "@types/helmet": "0.0.43",
     "@types/jest": "24.0.11",
     "@types/nanoid": "1.2.1",
-    "@types/nock": "9.3.1",
+    "@types/nock": "10.0.3",
     "@types/node": "10.14.4",
     "@types/prop-types": "15.7.0",
     "@types/react": "16.8.12",
