@@ -3,9 +3,9 @@ node_modules
 dist
 storybook-static
 coverage
-*.clinic-doctor*
 node_trace*
 .awcache/
+.clinic
 
 # .env.dev
 # .env.prod

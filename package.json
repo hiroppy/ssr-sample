@@ -17,6 +17,7 @@
     "benchmark": "autocannon http://localhost:3000 -c100",
     "benckmark:docker": "clinic docker -- npm run start:prod",
     "benchmark:bubbleprof": "clinic bubbleprof -- npm run start:prod",
+    "benchmark:flame": "NODE_ENV=production clinic flame -- node ./dist/server/server/index.js",
     "rm:dist": "rimraf dist",
     "rm:benchmark": "clinic clean",
     "fmt": "prettier --loglevel warn --write \"**/*.{js,ts,tsx,md,json,css}\""
