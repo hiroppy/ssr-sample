@@ -27,7 +27,10 @@ export function runServer() {
     app.use(webpackHotMiddleware(compiler));
     app.use(
       webpackDevMiddleware(compiler, {
-        publicPath: config.output.publicPath
+        publicPath: config.output.publicPath,
+        writeToDisk(filePath: string) {
+          return /dist\/server\//.test(filePath) || /loadable-stats/.test(filePath);
+        }
       })
     );
   }

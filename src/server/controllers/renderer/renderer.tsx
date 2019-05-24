@@ -65,7 +65,7 @@ export async function get(req: Request, res: Response) {
 
   const webExtractor = new ChunkExtractor({ statsFile: webStats });
 
-  console.log(webExtractor);
+  // console.log(webExtractor);
 
   {
     const jsx = webExtractor.collectChunks(App);
