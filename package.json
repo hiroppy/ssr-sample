@@ -73,7 +73,7 @@
     "@types/ua-parser-js": "0.7.33",
     "@types/webpack": "4.4.27",
     "@types/webpack-env": "1.13.9",
-    "autocannon": "3.2.1",
+    "autocannon": "4.0.0",
     "babel-jest": "24.7.1",
     "babel-loader": "8.0.5",
     "babel-plugin-macros": "2.5.1",
