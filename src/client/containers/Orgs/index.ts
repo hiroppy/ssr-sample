@@ -1,1 +1,3 @@
-export * from './Orgs';
+import { Orgs } from './Orgs';
+
+export default Orgs;

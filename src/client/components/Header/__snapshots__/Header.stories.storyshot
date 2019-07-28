@@ -114,7 +114,6 @@ exports[`Storyshots components/Header default 1`] = `
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
                     "withComponent": [Function],
-                    Symbol(Symbol.hasInstance): [Function],
                   }
                 }
                 forwardedRef={null}

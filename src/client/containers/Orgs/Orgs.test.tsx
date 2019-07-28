@@ -1,7 +1,7 @@
 import * as React from 'react';
 import configureStore from 'redux-mock-store';
 import { shallow } from 'enzyme';
-import { Orgs } from '.';
+import Orgs from '.';
 
 const mockStore = configureStore();
 const match: any = jest.fn();

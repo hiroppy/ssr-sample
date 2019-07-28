@@ -1,7 +1,7 @@
 import * as React from 'react';
 import configureStore from 'redux-mock-store';
 import { shallow } from 'enzyme';
-import { NotFound } from '.';
+import NotFound from '.';
 
 const mockStore = configureStore();
 let store: any;

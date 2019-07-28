@@ -266,341 +266,15 @@ exports[`Storyshots components/pages/Top default 1`] = `
           },
           "cache": InMemoryCache {
             "addTypename": false,
-            "cacheKeyRoot": CacheKeyNode {
-              "children": Map {
-                Object {
-                  "definitions": Array [
-                    Object {
-                      "directives": Array [],
-                      "kind": "OperationDefinition",
-                      "name": undefined,
-                      "operation": "query",
-                      "selectionSet": Object {
-                        "kind": "SelectionSet",
-                        "selections": Array [
-                          Object {
-                            "alias": undefined,
-                            "arguments": Array [],
-                            "directives": Array [],
-                            "kind": "Field",
-                            "name": Object {
-                              "kind": "Name",
-                              "value": "organizations",
-                            },
-                            "selectionSet": Object {
-                              "kind": "SelectionSet",
-                              "selections": Array [
-                                Object {
-                                  "alias": undefined,
-                                  "arguments": Array [],
-                                  "directives": Array [],
-                                  "kind": "Field",
-                                  "name": Object {
-                                    "kind": "Name",
-                                    "value": "name",
-                                  },
-                                  "selectionSet": undefined,
-                                },
-                                Object {
-                                  "alias": undefined,
-                                  "arguments": Array [],
-                                  "directives": Array [],
-                                  "kind": "Field",
-                                  "name": Object {
-                                    "kind": "Name",
-                                    "value": "uid",
-                                  },
-                                  "selectionSet": undefined,
-                                },
-                              ],
-                            },
-                          },
-                        ],
-                      },
-                      "variableDefinitions": Array [],
-                    },
-                  ],
-                  "kind": "Document",
-                  "loc": Object {
-                    "end": 62,
-                    "start": 0,
-                  },
-                } => CacheKeyNode {
-                  "children": Map {
-                    DepTrackingCache {
-                      "data": Object {},
-                      "depend": [Function],
-                    } => CacheKeyNode {
-                      "children": Map {
-                        [Function] => CacheKeyNode {
-                          "children": Map {
-                            "{}" => CacheKeyNode {
-                              "children": Map {
-                                "ROOT_QUERY" => CacheKeyNode {
-                                  "children": null,
-                                  "key": Object {},
-                                },
-                              },
-                              "key": null,
-                            },
-                          },
-                          "key": null,
-                        },
-                      },
-                      "key": null,
-                    },
-                  },
-                  "key": null,
-                },
-                Object {
-                  "kind": "SelectionSet",
-                  "selections": Array [
-                    Object {
-                      "alias": undefined,
-                      "arguments": Array [],
-                      "directives": Array [],
-                      "kind": "Field",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "organizations",
-                      },
-                      "selectionSet": Object {
-                        "kind": "SelectionSet",
-                        "selections": Array [
-                          Object {
-                            "alias": undefined,
-                            "arguments": Array [],
-                            "directives": Array [],
-                            "kind": "Field",
-                            "name": Object {
-                              "kind": "Name",
-                              "value": "name",
-                            },
-                            "selectionSet": undefined,
-                          },
-                          Object {
-                            "alias": undefined,
-                            "arguments": Array [],
-                            "directives": Array [],
-                            "kind": "Field",
-                            "name": Object {
-                              "kind": "Name",
-                              "value": "uid",
-                            },
-                            "selectionSet": undefined,
-                          },
-                        ],
-                      },
-                    },
-                  ],
-                } => CacheKeyNode {
-                  "children": Map {
-                    DepTrackingCache {
-                      "data": Object {},
-                      "depend": [Function],
-                    } => CacheKeyNode {
-                      "children": Map {
-                        [Function] => CacheKeyNode {
-                          "children": Map {
-                            "{}" => CacheKeyNode {
-                              "children": Map {
-                                "ROOT_QUERY" => CacheKeyNode {
-                                  "children": null,
-                                  "key": Object {},
-                                },
-                              },
-                              "key": null,
-                            },
-                          },
-                          "key": null,
-                        },
-                      },
-                      "key": null,
-                    },
-                  },
-                  "key": null,
-                },
-                Object {
-                  "definitions": Array [
-                    Object {
-                      "directives": Array [],
-                      "kind": "OperationDefinition",
-                      "name": undefined,
-                      "operation": "query",
-                      "selectionSet": Object {
-                        "kind": "SelectionSet",
-                        "selections": Array [
-                          Object {
-                            "alias": undefined,
-                            "arguments": Array [],
-                            "directives": Array [],
-                            "kind": "Field",
-                            "name": Object {
-                              "kind": "Name",
-                              "value": "author",
-                            },
-                            "selectionSet": Object {
-                              "kind": "SelectionSet",
-                              "selections": Array [
-                                Object {
-                                  "alias": undefined,
-                                  "arguments": Array [],
-                                  "directives": Array [],
-                                  "kind": "Field",
-                                  "name": Object {
-                                    "kind": "Name",
-                                    "value": "name",
-                                  },
-                                  "selectionSet": undefined,
-                                },
-                                Object {
-                                  "alias": undefined,
-                                  "arguments": Array [],
-                                  "directives": Array [],
-                                  "kind": "Field",
-                                  "name": Object {
-                                    "kind": "Name",
-                                    "value": "blog",
-                                  },
-                                  "selectionSet": undefined,
-                                },
-                                Object {
-                                  "alias": undefined,
-                                  "arguments": Array [],
-                                  "directives": Array [],
-                                  "kind": "Field",
-                                  "name": Object {
-                                    "kind": "Name",
-                                    "value": "avatar_url",
-                                  },
-                                  "selectionSet": undefined,
-                                },
-                              ],
-                            },
-                          },
-                        ],
-                      },
-                      "variableDefinitions": Array [],
-                    },
-                  ],
-                  "kind": "Document",
-                  "loc": Object {
-                    "end": 73,
-                    "start": 0,
-                  },
-                } => CacheKeyNode {
-                  "children": Map {
-                    DepTrackingCache {
-                      "data": Object {},
-                      "depend": [Function],
-                    } => CacheKeyNode {
-                      "children": Map {
-                        [Function] => CacheKeyNode {
-                          "children": Map {
-                            "{}" => CacheKeyNode {
-                              "children": Map {
-                                "ROOT_QUERY" => CacheKeyNode {
-                                  "children": null,
-                                  "key": Object {},
-                                },
-                              },
-                              "key": null,
-                            },
-                          },
-                          "key": null,
-                        },
-                      },
-                      "key": null,
-                    },
-                  },
-                  "key": null,
-                },
-                Object {
-                  "kind": "SelectionSet",
-                  "selections": Array [
-                    Object {
-                      "alias": undefined,
-                      "arguments": Array [],
-                      "directives": Array [],
-                      "kind": "Field",
-                      "name": Object {
-                        "kind": "Name",
-                        "value": "author",
-                      },
-                      "selectionSet": Object {
-                        "kind": "SelectionSet",
-                        "selections": Array [
-                          Object {
-                            "alias": undefined,
-                            "arguments": Array [],
-                            "directives": Array [],
-                            "kind": "Field",
-                            "name": Object {
-                              "kind": "Name",
-                              "value": "name",
-                            },
-                            "selectionSet": undefined,
-                          },
-                          Object {
-                            "alias": undefined,
-                            "arguments": Array [],
-                            "directives": Array [],
-                            "kind": "Field",
-                            "name": Object {
-                              "kind": "Name",
-                              "value": "blog",
-                            },
-                            "selectionSet": undefined,
-                          },
-                          Object {
-                            "alias": undefined,
-                            "arguments": Array [],
-                            "directives": Array [],
-                            "kind": "Field",
-                            "name": Object {
-                              "kind": "Name",
-                              "value": "avatar_url",
-                            },
-                            "selectionSet": undefined,
-                          },
-                        ],
-                      },
-                    },
-                  ],
-                } => CacheKeyNode {
-                  "children": Map {
-                    DepTrackingCache {
-                      "data": Object {},
-                      "depend": [Function],
-                    } => CacheKeyNode {
-                      "children": Map {
-                        [Function] => CacheKeyNode {
-                          "children": Map {
-                            "{}" => CacheKeyNode {
-                              "children": Map {
-                                "ROOT_QUERY" => CacheKeyNode {
-                                  "children": null,
-                                  "key": Object {},
-                                },
-                              },
-                              "key": null,
-                            },
-                          },
-                          "key": null,
-                        },
-                      },
-                      "key": null,
-                    },
-                  },
-                  "key": null,
-                },
-              },
-              "key": null,
+            "cacheKeyRoot": KeyTrie {
+              "weak": WeakMap {},
+              "weakness": true,
             },
             "config": Object {
               "addTypename": false,
               "dataIdFromObject": [Function],
               "fragmentMatcher": HeuristicFragmentMatcher {},
+              "freezeResults": false,
               "resultCaching": true,
             },
             "data": DepTrackingCache {
@@ -614,339 +288,10 @@ exports[`Storyshots components/pages/Top default 1`] = `
             },
             "silenceBroadcast": false,
             "storeReader": StoreReader {
-              "cacheKeyRoot": CacheKeyNode {
-                "children": Map {
-                  Object {
-                    "definitions": Array [
-                      Object {
-                        "directives": Array [],
-                        "kind": "OperationDefinition",
-                        "name": undefined,
-                        "operation": "query",
-                        "selectionSet": Object {
-                          "kind": "SelectionSet",
-                          "selections": Array [
-                            Object {
-                              "alias": undefined,
-                              "arguments": Array [],
-                              "directives": Array [],
-                              "kind": "Field",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "organizations",
-                              },
-                              "selectionSet": Object {
-                                "kind": "SelectionSet",
-                                "selections": Array [
-                                  Object {
-                                    "alias": undefined,
-                                    "arguments": Array [],
-                                    "directives": Array [],
-                                    "kind": "Field",
-                                    "name": Object {
-                                      "kind": "Name",
-                                      "value": "name",
-                                    },
-                                    "selectionSet": undefined,
-                                  },
-                                  Object {
-                                    "alias": undefined,
-                                    "arguments": Array [],
-                                    "directives": Array [],
-                                    "kind": "Field",
-                                    "name": Object {
-                                      "kind": "Name",
-                                      "value": "uid",
-                                    },
-                                    "selectionSet": undefined,
-                                  },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                        "variableDefinitions": Array [],
-                      },
-                    ],
-                    "kind": "Document",
-                    "loc": Object {
-                      "end": 62,
-                      "start": 0,
-                    },
-                  } => CacheKeyNode {
-                    "children": Map {
-                      DepTrackingCache {
-                        "data": Object {},
-                        "depend": [Function],
-                      } => CacheKeyNode {
-                        "children": Map {
-                          [Function] => CacheKeyNode {
-                            "children": Map {
-                              "{}" => CacheKeyNode {
-                                "children": Map {
-                                  "ROOT_QUERY" => CacheKeyNode {
-                                    "children": null,
-                                    "key": Object {},
-                                  },
-                                },
-                                "key": null,
-                              },
-                            },
-                            "key": null,
-                          },
-                        },
-                        "key": null,
-                      },
-                    },
-                    "key": null,
-                  },
-                  Object {
-                    "kind": "SelectionSet",
-                    "selections": Array [
-                      Object {
-                        "alias": undefined,
-                        "arguments": Array [],
-                        "directives": Array [],
-                        "kind": "Field",
-                        "name": Object {
-                          "kind": "Name",
-                          "value": "organizations",
-                        },
-                        "selectionSet": Object {
-                          "kind": "SelectionSet",
-                          "selections": Array [
-                            Object {
-                              "alias": undefined,
-                              "arguments": Array [],
-                              "directives": Array [],
-                              "kind": "Field",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "name",
-                              },
-                              "selectionSet": undefined,
-                            },
-                            Object {
-                              "alias": undefined,
-                              "arguments": Array [],
-                              "directives": Array [],
-                              "kind": "Field",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "uid",
-                              },
-                              "selectionSet": undefined,
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  } => CacheKeyNode {
-                    "children": Map {
-                      DepTrackingCache {
-                        "data": Object {},
-                        "depend": [Function],
-                      } => CacheKeyNode {
-                        "children": Map {
-                          [Function] => CacheKeyNode {
-                            "children": Map {
-                              "{}" => CacheKeyNode {
-                                "children": Map {
-                                  "ROOT_QUERY" => CacheKeyNode {
-                                    "children": null,
-                                    "key": Object {},
-                                  },
-                                },
-                                "key": null,
-                              },
-                            },
-                            "key": null,
-                          },
-                        },
-                        "key": null,
-                      },
-                    },
-                    "key": null,
-                  },
-                  Object {
-                    "definitions": Array [
-                      Object {
-                        "directives": Array [],
-                        "kind": "OperationDefinition",
-                        "name": undefined,
-                        "operation": "query",
-                        "selectionSet": Object {
-                          "kind": "SelectionSet",
-                          "selections": Array [
-                            Object {
-                              "alias": undefined,
-                              "arguments": Array [],
-                              "directives": Array [],
-                              "kind": "Field",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "author",
-                              },
-                              "selectionSet": Object {
-                                "kind": "SelectionSet",
-                                "selections": Array [
-                                  Object {
-                                    "alias": undefined,
-                                    "arguments": Array [],
-                                    "directives": Array [],
-                                    "kind": "Field",
-                                    "name": Object {
-                                      "kind": "Name",
-                                      "value": "name",
-                                    },
-                                    "selectionSet": undefined,
-                                  },
-                                  Object {
-                                    "alias": undefined,
-                                    "arguments": Array [],
-                                    "directives": Array [],
-                                    "kind": "Field",
-                                    "name": Object {
-                                      "kind": "Name",
-                                      "value": "blog",
-                                    },
-                                    "selectionSet": undefined,
-                                  },
-                                  Object {
-                                    "alias": undefined,
-                                    "arguments": Array [],
-                                    "directives": Array [],
-                                    "kind": "Field",
-                                    "name": Object {
-                                      "kind": "Name",
-                                      "value": "avatar_url",
-                                    },
-                                    "selectionSet": undefined,
-                                  },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                        "variableDefinitions": Array [],
-                      },
-                    ],
-                    "kind": "Document",
-                    "loc": Object {
-                      "end": 73,
-                      "start": 0,
-                    },
-                  } => CacheKeyNode {
-                    "children": Map {
-                      DepTrackingCache {
-                        "data": Object {},
-                        "depend": [Function],
-                      } => CacheKeyNode {
-                        "children": Map {
-                          [Function] => CacheKeyNode {
-                            "children": Map {
-                              "{}" => CacheKeyNode {
-                                "children": Map {
-                                  "ROOT_QUERY" => CacheKeyNode {
-                                    "children": null,
-                                    "key": Object {},
-                                  },
-                                },
-                                "key": null,
-                              },
-                            },
-                            "key": null,
-                          },
-                        },
-                        "key": null,
-                      },
-                    },
-                    "key": null,
-                  },
-                  Object {
-                    "kind": "SelectionSet",
-                    "selections": Array [
-                      Object {
-                        "alias": undefined,
-                        "arguments": Array [],
-                        "directives": Array [],
-                        "kind": "Field",
-                        "name": Object {
-                          "kind": "Name",
-                          "value": "author",
-                        },
-                        "selectionSet": Object {
-                          "kind": "SelectionSet",
-                          "selections": Array [
-                            Object {
-                              "alias": undefined,
-                              "arguments": Array [],
-                              "directives": Array [],
-                              "kind": "Field",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "name",
-                              },
-                              "selectionSet": undefined,
-                            },
-                            Object {
-                              "alias": undefined,
-                              "arguments": Array [],
-                              "directives": Array [],
-                              "kind": "Field",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "blog",
-                              },
-                              "selectionSet": undefined,
-                            },
-                            Object {
-                              "alias": undefined,
-                              "arguments": Array [],
-                              "directives": Array [],
-                              "kind": "Field",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "avatar_url",
-                              },
-                              "selectionSet": undefined,
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  } => CacheKeyNode {
-                    "children": Map {
-                      DepTrackingCache {
-                        "data": Object {},
-                        "depend": [Function],
-                      } => CacheKeyNode {
-                        "children": Map {
-                          [Function] => CacheKeyNode {
-                            "children": Map {
-                              "{}" => CacheKeyNode {
-                                "children": Map {
-                                  "ROOT_QUERY" => CacheKeyNode {
-                                    "children": null,
-                                    "key": Object {},
-                                  },
-                                },
-                                "key": null,
-                              },
-                            },
-                            "key": null,
-                          },
-                        },
-                        "key": null,
-                      },
-                    },
-                    "key": null,
-                  },
-                },
-                "key": null,
-              },
               "executeSelectionSet": [Function],
               "executeStoreQuery": [Function],
+              "executeSubSelectedArray": [Function],
+              "freezeResults": false,
             },
             "storeWriter": StoreWriter {},
             "typenameDocumentCache": Map {},
@@ -1093,350 +438,27 @@ exports[`Storyshots components/pages/Top default 1`] = `
             },
           },
           "clearStoreCallbacks": Array [],
-          "clientAwareness": Object {},
           "defaultOptions": Object {},
           "disableNetworkFetches": false,
-          "link": ApolloLink {
-            "request": [Function],
+          "link": MockLink {
+            "addTypename": false,
+            "mockedResponsesByKey": Object {
+              "{\\"query\\":\\"{\\\\n  author {\\\\n    name\\\\n    blog\\\\n    avatar_url\\\\n  }\\\\n}\\\\n\\"}": Array [],
+              "{\\"query\\":\\"{\\\\n  organizations {\\\\n    name\\\\n    uid\\\\n  }\\\\n}\\\\n\\"}": Array [],
+            },
           },
           "localState": LocalState {
             "cache": InMemoryCache {
               "addTypename": false,
-              "cacheKeyRoot": CacheKeyNode {
-                "children": Map {
-                  Object {
-                    "definitions": Array [
-                      Object {
-                        "directives": Array [],
-                        "kind": "OperationDefinition",
-                        "name": undefined,
-                        "operation": "query",
-                        "selectionSet": Object {
-                          "kind": "SelectionSet",
-                          "selections": Array [
-                            Object {
-                              "alias": undefined,
-                              "arguments": Array [],
-                              "directives": Array [],
-                              "kind": "Field",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "organizations",
-                              },
-                              "selectionSet": Object {
-                                "kind": "SelectionSet",
-                                "selections": Array [
-                                  Object {
-                                    "alias": undefined,
-                                    "arguments": Array [],
-                                    "directives": Array [],
-                                    "kind": "Field",
-                                    "name": Object {
-                                      "kind": "Name",
-                                      "value": "name",
-                                    },
-                                    "selectionSet": undefined,
-                                  },
-                                  Object {
-                                    "alias": undefined,
-                                    "arguments": Array [],
-                                    "directives": Array [],
-                                    "kind": "Field",
-                                    "name": Object {
-                                      "kind": "Name",
-                                      "value": "uid",
-                                    },
-                                    "selectionSet": undefined,
-                                  },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                        "variableDefinitions": Array [],
-                      },
-                    ],
-                    "kind": "Document",
-                    "loc": Object {
-                      "end": 62,
-                      "start": 0,
-                    },
-                  } => CacheKeyNode {
-                    "children": Map {
-                      DepTrackingCache {
-                        "data": Object {},
-                        "depend": [Function],
-                      } => CacheKeyNode {
-                        "children": Map {
-                          [Function] => CacheKeyNode {
-                            "children": Map {
-                              "{}" => CacheKeyNode {
-                                "children": Map {
-                                  "ROOT_QUERY" => CacheKeyNode {
-                                    "children": null,
-                                    "key": Object {},
-                                  },
-                                },
-                                "key": null,
-                              },
-                            },
-                            "key": null,
-                          },
-                        },
-                        "key": null,
-                      },
-                    },
-                    "key": null,
-                  },
-                  Object {
-                    "kind": "SelectionSet",
-                    "selections": Array [
-                      Object {
-                        "alias": undefined,
-                        "arguments": Array [],
-                        "directives": Array [],
-                        "kind": "Field",
-                        "name": Object {
-                          "kind": "Name",
-                          "value": "organizations",
-                        },
-                        "selectionSet": Object {
-                          "kind": "SelectionSet",
-                          "selections": Array [
-                            Object {
-                              "alias": undefined,
-                              "arguments": Array [],
-                              "directives": Array [],
-                              "kind": "Field",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "name",
-                              },
-                              "selectionSet": undefined,
-                            },
-                            Object {
-                              "alias": undefined,
-                              "arguments": Array [],
-                              "directives": Array [],
-                              "kind": "Field",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "uid",
-                              },
-                              "selectionSet": undefined,
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  } => CacheKeyNode {
-                    "children": Map {
-                      DepTrackingCache {
-                        "data": Object {},
-                        "depend": [Function],
-                      } => CacheKeyNode {
-                        "children": Map {
-                          [Function] => CacheKeyNode {
-                            "children": Map {
-                              "{}" => CacheKeyNode {
-                                "children": Map {
-                                  "ROOT_QUERY" => CacheKeyNode {
-                                    "children": null,
-                                    "key": Object {},
-                                  },
-                                },
-                                "key": null,
-                              },
-                            },
-                            "key": null,
-                          },
-                        },
-                        "key": null,
-                      },
-                    },
-                    "key": null,
-                  },
-                  Object {
-                    "definitions": Array [
-                      Object {
-                        "directives": Array [],
-                        "kind": "OperationDefinition",
-                        "name": undefined,
-                        "operation": "query",
-                        "selectionSet": Object {
-                          "kind": "SelectionSet",
-                          "selections": Array [
-                            Object {
-                              "alias": undefined,
-                              "arguments": Array [],
-                              "directives": Array [],
-                              "kind": "Field",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "author",
-                              },
-                              "selectionSet": Object {
-                                "kind": "SelectionSet",
-                                "selections": Array [
-                                  Object {
-                                    "alias": undefined,
-                                    "arguments": Array [],
-                                    "directives": Array [],
-                                    "kind": "Field",
-                                    "name": Object {
-                                      "kind": "Name",
-                                      "value": "name",
-                                    },
-                                    "selectionSet": undefined,
-                                  },
-                                  Object {
-                                    "alias": undefined,
-                                    "arguments": Array [],
-                                    "directives": Array [],
-                                    "kind": "Field",
-                                    "name": Object {
-                                      "kind": "Name",
-                                      "value": "blog",
-                                    },
-                                    "selectionSet": undefined,
-                                  },
-                                  Object {
-                                    "alias": undefined,
-                                    "arguments": Array [],
-                                    "directives": Array [],
-                                    "kind": "Field",
-                                    "name": Object {
-                                      "kind": "Name",
-                                      "value": "avatar_url",
-                                    },
-                                    "selectionSet": undefined,
-                                  },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                        "variableDefinitions": Array [],
-                      },
-                    ],
-                    "kind": "Document",
-                    "loc": Object {
-                      "end": 73,
-                      "start": 0,
-                    },
-                  } => CacheKeyNode {
-                    "children": Map {
-                      DepTrackingCache {
-                        "data": Object {},
-                        "depend": [Function],
-                      } => CacheKeyNode {
-                        "children": Map {
-                          [Function] => CacheKeyNode {
-                            "children": Map {
-                              "{}" => CacheKeyNode {
-                                "children": Map {
-                                  "ROOT_QUERY" => CacheKeyNode {
-                                    "children": null,
-                                    "key": Object {},
-                                  },
-                                },
-                                "key": null,
-                              },
-                            },
-                            "key": null,
-                          },
-                        },
-                        "key": null,
-                      },
-                    },
-                    "key": null,
-                  },
-                  Object {
-                    "kind": "SelectionSet",
-                    "selections": Array [
-                      Object {
-                        "alias": undefined,
-                        "arguments": Array [],
-                        "directives": Array [],
-                        "kind": "Field",
-                        "name": Object {
-                          "kind": "Name",
-                          "value": "author",
-                        },
-                        "selectionSet": Object {
-                          "kind": "SelectionSet",
-                          "selections": Array [
-                            Object {
-                              "alias": undefined,
-                              "arguments": Array [],
-                              "directives": Array [],
-                              "kind": "Field",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "name",
-                              },
-                              "selectionSet": undefined,
-                            },
-                            Object {
-                              "alias": undefined,
-                              "arguments": Array [],
-                              "directives": Array [],
-                              "kind": "Field",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "blog",
-                              },
-                              "selectionSet": undefined,
-                            },
-                            Object {
-                              "alias": undefined,
-                              "arguments": Array [],
-                              "directives": Array [],
-                              "kind": "Field",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "avatar_url",
-                              },
-                              "selectionSet": undefined,
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  } => CacheKeyNode {
-                    "children": Map {
-                      DepTrackingCache {
-                        "data": Object {},
-                        "depend": [Function],
-                      } => CacheKeyNode {
-                        "children": Map {
-                          [Function] => CacheKeyNode {
-                            "children": Map {
-                              "{}" => CacheKeyNode {
-                                "children": Map {
-                                  "ROOT_QUERY" => CacheKeyNode {
-                                    "children": null,
-                                    "key": Object {},
-                                  },
-                                },
-                                "key": null,
-                              },
-                            },
-                            "key": null,
-                          },
-                        },
-                        "key": null,
-                      },
-                    },
-                    "key": null,
-                  },
-                },
-                "key": null,
+              "cacheKeyRoot": KeyTrie {
+                "weak": WeakMap {},
+                "weakness": true,
               },
               "config": Object {
                 "addTypename": false,
                 "dataIdFromObject": [Function],
                 "fragmentMatcher": HeuristicFragmentMatcher {},
+                "freezeResults": false,
                 "resultCaching": true,
               },
               "data": DepTrackingCache {
@@ -1450,339 +472,10 @@ exports[`Storyshots components/pages/Top default 1`] = `
               },
               "silenceBroadcast": false,
               "storeReader": StoreReader {
-                "cacheKeyRoot": CacheKeyNode {
-                  "children": Map {
-                    Object {
-                      "definitions": Array [
-                        Object {
-                          "directives": Array [],
-                          "kind": "OperationDefinition",
-                          "name": undefined,
-                          "operation": "query",
-                          "selectionSet": Object {
-                            "kind": "SelectionSet",
-                            "selections": Array [
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "organizations",
-                                },
-                                "selectionSet": Object {
-                                  "kind": "SelectionSet",
-                                  "selections": Array [
-                                    Object {
-                                      "alias": undefined,
-                                      "arguments": Array [],
-                                      "directives": Array [],
-                                      "kind": "Field",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "name",
-                                      },
-                                      "selectionSet": undefined,
-                                    },
-                                    Object {
-                                      "alias": undefined,
-                                      "arguments": Array [],
-                                      "directives": Array [],
-                                      "kind": "Field",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "uid",
-                                      },
-                                      "selectionSet": undefined,
-                                    },
-                                  ],
-                                },
-                              },
-                            ],
-                          },
-                          "variableDefinitions": Array [],
-                        },
-                      ],
-                      "kind": "Document",
-                      "loc": Object {
-                        "end": 62,
-                        "start": 0,
-                      },
-                    } => CacheKeyNode {
-                      "children": Map {
-                        DepTrackingCache {
-                          "data": Object {},
-                          "depend": [Function],
-                        } => CacheKeyNode {
-                          "children": Map {
-                            [Function] => CacheKeyNode {
-                              "children": Map {
-                                "{}" => CacheKeyNode {
-                                  "children": Map {
-                                    "ROOT_QUERY" => CacheKeyNode {
-                                      "children": null,
-                                      "key": Object {},
-                                    },
-                                  },
-                                  "key": null,
-                                },
-                              },
-                              "key": null,
-                            },
-                          },
-                          "key": null,
-                        },
-                      },
-                      "key": null,
-                    },
-                    Object {
-                      "kind": "SelectionSet",
-                      "selections": Array [
-                        Object {
-                          "alias": undefined,
-                          "arguments": Array [],
-                          "directives": Array [],
-                          "kind": "Field",
-                          "name": Object {
-                            "kind": "Name",
-                            "value": "organizations",
-                          },
-                          "selectionSet": Object {
-                            "kind": "SelectionSet",
-                            "selections": Array [
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "name",
-                                },
-                                "selectionSet": undefined,
-                              },
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "uid",
-                                },
-                                "selectionSet": undefined,
-                              },
-                            ],
-                          },
-                        },
-                      ],
-                    } => CacheKeyNode {
-                      "children": Map {
-                        DepTrackingCache {
-                          "data": Object {},
-                          "depend": [Function],
-                        } => CacheKeyNode {
-                          "children": Map {
-                            [Function] => CacheKeyNode {
-                              "children": Map {
-                                "{}" => CacheKeyNode {
-                                  "children": Map {
-                                    "ROOT_QUERY" => CacheKeyNode {
-                                      "children": null,
-                                      "key": Object {},
-                                    },
-                                  },
-                                  "key": null,
-                                },
-                              },
-                              "key": null,
-                            },
-                          },
-                          "key": null,
-                        },
-                      },
-                      "key": null,
-                    },
-                    Object {
-                      "definitions": Array [
-                        Object {
-                          "directives": Array [],
-                          "kind": "OperationDefinition",
-                          "name": undefined,
-                          "operation": "query",
-                          "selectionSet": Object {
-                            "kind": "SelectionSet",
-                            "selections": Array [
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "author",
-                                },
-                                "selectionSet": Object {
-                                  "kind": "SelectionSet",
-                                  "selections": Array [
-                                    Object {
-                                      "alias": undefined,
-                                      "arguments": Array [],
-                                      "directives": Array [],
-                                      "kind": "Field",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "name",
-                                      },
-                                      "selectionSet": undefined,
-                                    },
-                                    Object {
-                                      "alias": undefined,
-                                      "arguments": Array [],
-                                      "directives": Array [],
-                                      "kind": "Field",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "blog",
-                                      },
-                                      "selectionSet": undefined,
-                                    },
-                                    Object {
-                                      "alias": undefined,
-                                      "arguments": Array [],
-                                      "directives": Array [],
-                                      "kind": "Field",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "avatar_url",
-                                      },
-                                      "selectionSet": undefined,
-                                    },
-                                  ],
-                                },
-                              },
-                            ],
-                          },
-                          "variableDefinitions": Array [],
-                        },
-                      ],
-                      "kind": "Document",
-                      "loc": Object {
-                        "end": 73,
-                        "start": 0,
-                      },
-                    } => CacheKeyNode {
-                      "children": Map {
-                        DepTrackingCache {
-                          "data": Object {},
-                          "depend": [Function],
-                        } => CacheKeyNode {
-                          "children": Map {
-                            [Function] => CacheKeyNode {
-                              "children": Map {
-                                "{}" => CacheKeyNode {
-                                  "children": Map {
-                                    "ROOT_QUERY" => CacheKeyNode {
-                                      "children": null,
-                                      "key": Object {},
-                                    },
-                                  },
-                                  "key": null,
-                                },
-                              },
-                              "key": null,
-                            },
-                          },
-                          "key": null,
-                        },
-                      },
-                      "key": null,
-                    },
-                    Object {
-                      "kind": "SelectionSet",
-                      "selections": Array [
-                        Object {
-                          "alias": undefined,
-                          "arguments": Array [],
-                          "directives": Array [],
-                          "kind": "Field",
-                          "name": Object {
-                            "kind": "Name",
-                            "value": "author",
-                          },
-                          "selectionSet": Object {
-                            "kind": "SelectionSet",
-                            "selections": Array [
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "name",
-                                },
-                                "selectionSet": undefined,
-                              },
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "blog",
-                                },
-                                "selectionSet": undefined,
-                              },
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "avatar_url",
-                                },
-                                "selectionSet": undefined,
-                              },
-                            ],
-                          },
-                        },
-                      ],
-                    } => CacheKeyNode {
-                      "children": Map {
-                        DepTrackingCache {
-                          "data": Object {},
-                          "depend": [Function],
-                        } => CacheKeyNode {
-                          "children": Map {
-                            [Function] => CacheKeyNode {
-                              "children": Map {
-                                "{}" => CacheKeyNode {
-                                  "children": Map {
-                                    "ROOT_QUERY" => CacheKeyNode {
-                                      "children": null,
-                                      "key": Object {},
-                                    },
-                                  },
-                                  "key": null,
-                                },
-                              },
-                              "key": null,
-                            },
-                          },
-                          "key": null,
-                        },
-                      },
-                      "key": null,
-                    },
-                  },
-                  "key": null,
-                },
                 "executeSelectionSet": [Function],
                 "executeStoreQuery": [Function],
+                "executeSubSelectedArray": [Function],
+                "freezeResults": false,
               },
               "storeWriter": StoreWriter {},
               "typenameDocumentCache": Map {},
@@ -1934,345 +627,23 @@ exports[`Storyshots components/pages/Top default 1`] = `
           "query": [Function],
           "queryDeduplication": true,
           "queryManager": QueryManager {
-            "clientAwareness": Object {},
+            "assumeImmutableResults": false,
+            "clientAwareness": Object {
+              "name": undefined,
+              "version": undefined,
+            },
             "dataStore": DataStore {
               "cache": InMemoryCache {
                 "addTypename": false,
-                "cacheKeyRoot": CacheKeyNode {
-                  "children": Map {
-                    Object {
-                      "definitions": Array [
-                        Object {
-                          "directives": Array [],
-                          "kind": "OperationDefinition",
-                          "name": undefined,
-                          "operation": "query",
-                          "selectionSet": Object {
-                            "kind": "SelectionSet",
-                            "selections": Array [
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "organizations",
-                                },
-                                "selectionSet": Object {
-                                  "kind": "SelectionSet",
-                                  "selections": Array [
-                                    Object {
-                                      "alias": undefined,
-                                      "arguments": Array [],
-                                      "directives": Array [],
-                                      "kind": "Field",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "name",
-                                      },
-                                      "selectionSet": undefined,
-                                    },
-                                    Object {
-                                      "alias": undefined,
-                                      "arguments": Array [],
-                                      "directives": Array [],
-                                      "kind": "Field",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "uid",
-                                      },
-                                      "selectionSet": undefined,
-                                    },
-                                  ],
-                                },
-                              },
-                            ],
-                          },
-                          "variableDefinitions": Array [],
-                        },
-                      ],
-                      "kind": "Document",
-                      "loc": Object {
-                        "end": 62,
-                        "start": 0,
-                      },
-                    } => CacheKeyNode {
-                      "children": Map {
-                        DepTrackingCache {
-                          "data": Object {},
-                          "depend": [Function],
-                        } => CacheKeyNode {
-                          "children": Map {
-                            [Function] => CacheKeyNode {
-                              "children": Map {
-                                "{}" => CacheKeyNode {
-                                  "children": Map {
-                                    "ROOT_QUERY" => CacheKeyNode {
-                                      "children": null,
-                                      "key": Object {},
-                                    },
-                                  },
-                                  "key": null,
-                                },
-                              },
-                              "key": null,
-                            },
-                          },
-                          "key": null,
-                        },
-                      },
-                      "key": null,
-                    },
-                    Object {
-                      "kind": "SelectionSet",
-                      "selections": Array [
-                        Object {
-                          "alias": undefined,
-                          "arguments": Array [],
-                          "directives": Array [],
-                          "kind": "Field",
-                          "name": Object {
-                            "kind": "Name",
-                            "value": "organizations",
-                          },
-                          "selectionSet": Object {
-                            "kind": "SelectionSet",
-                            "selections": Array [
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "name",
-                                },
-                                "selectionSet": undefined,
-                              },
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "uid",
-                                },
-                                "selectionSet": undefined,
-                              },
-                            ],
-                          },
-                        },
-                      ],
-                    } => CacheKeyNode {
-                      "children": Map {
-                        DepTrackingCache {
-                          "data": Object {},
-                          "depend": [Function],
-                        } => CacheKeyNode {
-                          "children": Map {
-                            [Function] => CacheKeyNode {
-                              "children": Map {
-                                "{}" => CacheKeyNode {
-                                  "children": Map {
-                                    "ROOT_QUERY" => CacheKeyNode {
-                                      "children": null,
-                                      "key": Object {},
-                                    },
-                                  },
-                                  "key": null,
-                                },
-                              },
-                              "key": null,
-                            },
-                          },
-                          "key": null,
-                        },
-                      },
-                      "key": null,
-                    },
-                    Object {
-                      "definitions": Array [
-                        Object {
-                          "directives": Array [],
-                          "kind": "OperationDefinition",
-                          "name": undefined,
-                          "operation": "query",
-                          "selectionSet": Object {
-                            "kind": "SelectionSet",
-                            "selections": Array [
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "author",
-                                },
-                                "selectionSet": Object {
-                                  "kind": "SelectionSet",
-                                  "selections": Array [
-                                    Object {
-                                      "alias": undefined,
-                                      "arguments": Array [],
-                                      "directives": Array [],
-                                      "kind": "Field",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "name",
-                                      },
-                                      "selectionSet": undefined,
-                                    },
-                                    Object {
-                                      "alias": undefined,
-                                      "arguments": Array [],
-                                      "directives": Array [],
-                                      "kind": "Field",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "blog",
-                                      },
-                                      "selectionSet": undefined,
-                                    },
-                                    Object {
-                                      "alias": undefined,
-                                      "arguments": Array [],
-                                      "directives": Array [],
-                                      "kind": "Field",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "avatar_url",
-                                      },
-                                      "selectionSet": undefined,
-                                    },
-                                  ],
-                                },
-                              },
-                            ],
-                          },
-                          "variableDefinitions": Array [],
-                        },
-                      ],
-                      "kind": "Document",
-                      "loc": Object {
-                        "end": 73,
-                        "start": 0,
-                      },
-                    } => CacheKeyNode {
-                      "children": Map {
-                        DepTrackingCache {
-                          "data": Object {},
-                          "depend": [Function],
-                        } => CacheKeyNode {
-                          "children": Map {
-                            [Function] => CacheKeyNode {
-                              "children": Map {
-                                "{}" => CacheKeyNode {
-                                  "children": Map {
-                                    "ROOT_QUERY" => CacheKeyNode {
-                                      "children": null,
-                                      "key": Object {},
-                                    },
-                                  },
-                                  "key": null,
-                                },
-                              },
-                              "key": null,
-                            },
-                          },
-                          "key": null,
-                        },
-                      },
-                      "key": null,
-                    },
-                    Object {
-                      "kind": "SelectionSet",
-                      "selections": Array [
-                        Object {
-                          "alias": undefined,
-                          "arguments": Array [],
-                          "directives": Array [],
-                          "kind": "Field",
-                          "name": Object {
-                            "kind": "Name",
-                            "value": "author",
-                          },
-                          "selectionSet": Object {
-                            "kind": "SelectionSet",
-                            "selections": Array [
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "name",
-                                },
-                                "selectionSet": undefined,
-                              },
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "blog",
-                                },
-                                "selectionSet": undefined,
-                              },
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "avatar_url",
-                                },
-                                "selectionSet": undefined,
-                              },
-                            ],
-                          },
-                        },
-                      ],
-                    } => CacheKeyNode {
-                      "children": Map {
-                        DepTrackingCache {
-                          "data": Object {},
-                          "depend": [Function],
-                        } => CacheKeyNode {
-                          "children": Map {
-                            [Function] => CacheKeyNode {
-                              "children": Map {
-                                "{}" => CacheKeyNode {
-                                  "children": Map {
-                                    "ROOT_QUERY" => CacheKeyNode {
-                                      "children": null,
-                                      "key": Object {},
-                                    },
-                                  },
-                                  "key": null,
-                                },
-                              },
-                              "key": null,
-                            },
-                          },
-                          "key": null,
-                        },
-                      },
-                      "key": null,
-                    },
-                  },
-                  "key": null,
+                "cacheKeyRoot": KeyTrie {
+                  "weak": WeakMap {},
+                  "weakness": true,
                 },
                 "config": Object {
                   "addTypename": false,
                   "dataIdFromObject": [Function],
                   "fragmentMatcher": HeuristicFragmentMatcher {},
+                  "freezeResults": false,
                   "resultCaching": true,
                 },
                 "data": DepTrackingCache {
@@ -2286,339 +657,10 @@ exports[`Storyshots components/pages/Top default 1`] = `
                 },
                 "silenceBroadcast": false,
                 "storeReader": StoreReader {
-                  "cacheKeyRoot": CacheKeyNode {
-                    "children": Map {
-                      Object {
-                        "definitions": Array [
-                          Object {
-                            "directives": Array [],
-                            "kind": "OperationDefinition",
-                            "name": undefined,
-                            "operation": "query",
-                            "selectionSet": Object {
-                              "kind": "SelectionSet",
-                              "selections": Array [
-                                Object {
-                                  "alias": undefined,
-                                  "arguments": Array [],
-                                  "directives": Array [],
-                                  "kind": "Field",
-                                  "name": Object {
-                                    "kind": "Name",
-                                    "value": "organizations",
-                                  },
-                                  "selectionSet": Object {
-                                    "kind": "SelectionSet",
-                                    "selections": Array [
-                                      Object {
-                                        "alias": undefined,
-                                        "arguments": Array [],
-                                        "directives": Array [],
-                                        "kind": "Field",
-                                        "name": Object {
-                                          "kind": "Name",
-                                          "value": "name",
-                                        },
-                                        "selectionSet": undefined,
-                                      },
-                                      Object {
-                                        "alias": undefined,
-                                        "arguments": Array [],
-                                        "directives": Array [],
-                                        "kind": "Field",
-                                        "name": Object {
-                                          "kind": "Name",
-                                          "value": "uid",
-                                        },
-                                        "selectionSet": undefined,
-                                      },
-                                    ],
-                                  },
-                                },
-                              ],
-                            },
-                            "variableDefinitions": Array [],
-                          },
-                        ],
-                        "kind": "Document",
-                        "loc": Object {
-                          "end": 62,
-                          "start": 0,
-                        },
-                      } => CacheKeyNode {
-                        "children": Map {
-                          DepTrackingCache {
-                            "data": Object {},
-                            "depend": [Function],
-                          } => CacheKeyNode {
-                            "children": Map {
-                              [Function] => CacheKeyNode {
-                                "children": Map {
-                                  "{}" => CacheKeyNode {
-                                    "children": Map {
-                                      "ROOT_QUERY" => CacheKeyNode {
-                                        "children": null,
-                                        "key": Object {},
-                                      },
-                                    },
-                                    "key": null,
-                                  },
-                                },
-                                "key": null,
-                              },
-                            },
-                            "key": null,
-                          },
-                        },
-                        "key": null,
-                      },
-                      Object {
-                        "kind": "SelectionSet",
-                        "selections": Array [
-                          Object {
-                            "alias": undefined,
-                            "arguments": Array [],
-                            "directives": Array [],
-                            "kind": "Field",
-                            "name": Object {
-                              "kind": "Name",
-                              "value": "organizations",
-                            },
-                            "selectionSet": Object {
-                              "kind": "SelectionSet",
-                              "selections": Array [
-                                Object {
-                                  "alias": undefined,
-                                  "arguments": Array [],
-                                  "directives": Array [],
-                                  "kind": "Field",
-                                  "name": Object {
-                                    "kind": "Name",
-                                    "value": "name",
-                                  },
-                                  "selectionSet": undefined,
-                                },
-                                Object {
-                                  "alias": undefined,
-                                  "arguments": Array [],
-                                  "directives": Array [],
-                                  "kind": "Field",
-                                  "name": Object {
-                                    "kind": "Name",
-                                    "value": "uid",
-                                  },
-                                  "selectionSet": undefined,
-                                },
-                              ],
-                            },
-                          },
-                        ],
-                      } => CacheKeyNode {
-                        "children": Map {
-                          DepTrackingCache {
-                            "data": Object {},
-                            "depend": [Function],
-                          } => CacheKeyNode {
-                            "children": Map {
-                              [Function] => CacheKeyNode {
-                                "children": Map {
-                                  "{}" => CacheKeyNode {
-                                    "children": Map {
-                                      "ROOT_QUERY" => CacheKeyNode {
-                                        "children": null,
-                                        "key": Object {},
-                                      },
-                                    },
-                                    "key": null,
-                                  },
-                                },
-                                "key": null,
-                              },
-                            },
-                            "key": null,
-                          },
-                        },
-                        "key": null,
-                      },
-                      Object {
-                        "definitions": Array [
-                          Object {
-                            "directives": Array [],
-                            "kind": "OperationDefinition",
-                            "name": undefined,
-                            "operation": "query",
-                            "selectionSet": Object {
-                              "kind": "SelectionSet",
-                              "selections": Array [
-                                Object {
-                                  "alias": undefined,
-                                  "arguments": Array [],
-                                  "directives": Array [],
-                                  "kind": "Field",
-                                  "name": Object {
-                                    "kind": "Name",
-                                    "value": "author",
-                                  },
-                                  "selectionSet": Object {
-                                    "kind": "SelectionSet",
-                                    "selections": Array [
-                                      Object {
-                                        "alias": undefined,
-                                        "arguments": Array [],
-                                        "directives": Array [],
-                                        "kind": "Field",
-                                        "name": Object {
-                                          "kind": "Name",
-                                          "value": "name",
-                                        },
-                                        "selectionSet": undefined,
-                                      },
-                                      Object {
-                                        "alias": undefined,
-                                        "arguments": Array [],
-                                        "directives": Array [],
-                                        "kind": "Field",
-                                        "name": Object {
-                                          "kind": "Name",
-                                          "value": "blog",
-                                        },
-                                        "selectionSet": undefined,
-                                      },
-                                      Object {
-                                        "alias": undefined,
-                                        "arguments": Array [],
-                                        "directives": Array [],
-                                        "kind": "Field",
-                                        "name": Object {
-                                          "kind": "Name",
-                                          "value": "avatar_url",
-                                        },
-                                        "selectionSet": undefined,
-                                      },
-                                    ],
-                                  },
-                                },
-                              ],
-                            },
-                            "variableDefinitions": Array [],
-                          },
-                        ],
-                        "kind": "Document",
-                        "loc": Object {
-                          "end": 73,
-                          "start": 0,
-                        },
-                      } => CacheKeyNode {
-                        "children": Map {
-                          DepTrackingCache {
-                            "data": Object {},
-                            "depend": [Function],
-                          } => CacheKeyNode {
-                            "children": Map {
-                              [Function] => CacheKeyNode {
-                                "children": Map {
-                                  "{}" => CacheKeyNode {
-                                    "children": Map {
-                                      "ROOT_QUERY" => CacheKeyNode {
-                                        "children": null,
-                                        "key": Object {},
-                                      },
-                                    },
-                                    "key": null,
-                                  },
-                                },
-                                "key": null,
-                              },
-                            },
-                            "key": null,
-                          },
-                        },
-                        "key": null,
-                      },
-                      Object {
-                        "kind": "SelectionSet",
-                        "selections": Array [
-                          Object {
-                            "alias": undefined,
-                            "arguments": Array [],
-                            "directives": Array [],
-                            "kind": "Field",
-                            "name": Object {
-                              "kind": "Name",
-                              "value": "author",
-                            },
-                            "selectionSet": Object {
-                              "kind": "SelectionSet",
-                              "selections": Array [
-                                Object {
-                                  "alias": undefined,
-                                  "arguments": Array [],
-                                  "directives": Array [],
-                                  "kind": "Field",
-                                  "name": Object {
-                                    "kind": "Name",
-                                    "value": "name",
-                                  },
-                                  "selectionSet": undefined,
-                                },
-                                Object {
-                                  "alias": undefined,
-                                  "arguments": Array [],
-                                  "directives": Array [],
-                                  "kind": "Field",
-                                  "name": Object {
-                                    "kind": "Name",
-                                    "value": "blog",
-                                  },
-                                  "selectionSet": undefined,
-                                },
-                                Object {
-                                  "alias": undefined,
-                                  "arguments": Array [],
-                                  "directives": Array [],
-                                  "kind": "Field",
-                                  "name": Object {
-                                    "kind": "Name",
-                                    "value": "avatar_url",
-                                  },
-                                  "selectionSet": undefined,
-                                },
-                              ],
-                            },
-                          },
-                        ],
-                      } => CacheKeyNode {
-                        "children": Map {
-                          DepTrackingCache {
-                            "data": Object {},
-                            "depend": [Function],
-                          } => CacheKeyNode {
-                            "children": Map {
-                              [Function] => CacheKeyNode {
-                                "children": Map {
-                                  "{}" => CacheKeyNode {
-                                    "children": Map {
-                                      "ROOT_QUERY" => CacheKeyNode {
-                                        "children": null,
-                                        "key": Object {},
-                                      },
-                                    },
-                                    "key": null,
-                                  },
-                                },
-                                "key": null,
-                              },
-                            },
-                            "key": null,
-                          },
-                        },
-                        "key": null,
-                      },
-                    },
-                    "key": null,
-                  },
                   "executeSelectionSet": [Function],
                   "executeStoreQuery": [Function],
+                  "executeSubSelectedArray": [Function],
+                  "freezeResults": false,
                 },
                 "storeWriter": StoreWriter {},
                 "typenameDocumentCache": Map {},
@@ -2765,107 +807,20 @@ exports[`Storyshots components/pages/Top default 1`] = `
                 },
               },
             },
-            "deduplicator": ApolloLink {
-              "request": [Function],
-            },
             "fetchQueryRejectFns": Map {
               "fetchRequest:1" => [Function],
               "fetchRequest:2" => [Function],
             },
             "idCounter": 5,
-            "link": ApolloLink {
-              "request": [Function],
-            },
-            "localState": LocalState {
-              "cache": InMemoryCache {
-                "addTypename": false,
-                "cacheKeyRoot": CacheKeyNode {
-                  "children": Map {
-                    Object {
-                      "definitions": Array [
-                        Object {
-                          "directives": Array [],
-                          "kind": "OperationDefinition",
-                          "name": undefined,
-                          "operation": "query",
-                          "selectionSet": Object {
-                            "kind": "SelectionSet",
-                            "selections": Array [
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "organizations",
-                                },
-                                "selectionSet": Object {
-                                  "kind": "SelectionSet",
-                                  "selections": Array [
-                                    Object {
-                                      "alias": undefined,
-                                      "arguments": Array [],
-                                      "directives": Array [],
-                                      "kind": "Field",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "name",
-                                      },
-                                      "selectionSet": undefined,
-                                    },
-                                    Object {
-                                      "alias": undefined,
-                                      "arguments": Array [],
-                                      "directives": Array [],
-                                      "kind": "Field",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "uid",
-                                      },
-                                      "selectionSet": undefined,
-                                    },
-                                  ],
-                                },
-                              },
-                            ],
-                          },
-                          "variableDefinitions": Array [],
-                        },
-                      ],
-                      "kind": "Document",
-                      "loc": Object {
-                        "end": 62,
-                        "start": 0,
-                      },
-                    } => CacheKeyNode {
-                      "children": Map {
-                        DepTrackingCache {
-                          "data": Object {},
-                          "depend": [Function],
-                        } => CacheKeyNode {
-                          "children": Map {
-                            [Function] => CacheKeyNode {
-                              "children": Map {
-                                "{}" => CacheKeyNode {
-                                  "children": Map {
-                                    "ROOT_QUERY" => CacheKeyNode {
-                                      "children": null,
-                                      "key": Object {},
-                                    },
-                                  },
-                                  "key": null,
-                                },
-                              },
-                              "key": null,
-                            },
-                          },
-                          "key": null,
-                        },
-                      },
-                      "key": null,
-                    },
-                    Object {
+            "inFlightLinkObservables": Map {
+              Object {
+                "definitions": Array [
+                  Object {
+                    "directives": Array [],
+                    "kind": "OperationDefinition",
+                    "name": undefined,
+                    "operation": "query",
+                    "selectionSet": Object {
                       "kind": "SelectionSet",
                       "selections": Array [
                         Object {
@@ -2906,129 +861,28 @@ exports[`Storyshots components/pages/Top default 1`] = `
                           },
                         },
                       ],
-                    } => CacheKeyNode {
-                      "children": Map {
-                        DepTrackingCache {
-                          "data": Object {},
-                          "depend": [Function],
-                        } => CacheKeyNode {
-                          "children": Map {
-                            [Function] => CacheKeyNode {
-                              "children": Map {
-                                "{}" => CacheKeyNode {
-                                  "children": Map {
-                                    "ROOT_QUERY" => CacheKeyNode {
-                                      "children": null,
-                                      "key": Object {},
-                                    },
-                                  },
-                                  "key": null,
-                                },
-                              },
-                              "key": null,
-                            },
-                          },
-                          "key": null,
-                        },
-                      },
-                      "key": null,
                     },
-                    Object {
-                      "definitions": Array [
-                        Object {
-                          "directives": Array [],
-                          "kind": "OperationDefinition",
-                          "name": undefined,
-                          "operation": "query",
-                          "selectionSet": Object {
-                            "kind": "SelectionSet",
-                            "selections": Array [
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "author",
-                                },
-                                "selectionSet": Object {
-                                  "kind": "SelectionSet",
-                                  "selections": Array [
-                                    Object {
-                                      "alias": undefined,
-                                      "arguments": Array [],
-                                      "directives": Array [],
-                                      "kind": "Field",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "name",
-                                      },
-                                      "selectionSet": undefined,
-                                    },
-                                    Object {
-                                      "alias": undefined,
-                                      "arguments": Array [],
-                                      "directives": Array [],
-                                      "kind": "Field",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "blog",
-                                      },
-                                      "selectionSet": undefined,
-                                    },
-                                    Object {
-                                      "alias": undefined,
-                                      "arguments": Array [],
-                                      "directives": Array [],
-                                      "kind": "Field",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "avatar_url",
-                                      },
-                                      "selectionSet": undefined,
-                                    },
-                                  ],
-                                },
-                              },
-                            ],
-                          },
-                          "variableDefinitions": Array [],
-                        },
-                      ],
-                      "kind": "Document",
-                      "loc": Object {
-                        "end": 73,
-                        "start": 0,
-                      },
-                    } => CacheKeyNode {
-                      "children": Map {
-                        DepTrackingCache {
-                          "data": Object {},
-                          "depend": [Function],
-                        } => CacheKeyNode {
-                          "children": Map {
-                            [Function] => CacheKeyNode {
-                              "children": Map {
-                                "{}" => CacheKeyNode {
-                                  "children": Map {
-                                    "ROOT_QUERY" => CacheKeyNode {
-                                      "children": null,
-                                      "key": Object {},
-                                    },
-                                  },
-                                  "key": null,
-                                },
-                              },
-                              "key": null,
-                            },
-                          },
-                          "key": null,
-                        },
-                      },
-                      "key": null,
-                    },
-                    Object {
+                    "variableDefinitions": Array [],
+                  },
+                ],
+                "kind": "Document",
+                "loc": Object {
+                  "end": 62,
+                  "start": 0,
+                },
+              } => Map {
+                "{}" => Observable {
+                  "_subscriber": [Function],
+                },
+              },
+              Object {
+                "definitions": Array [
+                  Object {
+                    "directives": Array [],
+                    "kind": "OperationDefinition",
+                    "name": undefined,
+                    "operation": "query",
+                    "selectionSet": Object {
                       "kind": "SelectionSet",
                       "selections": Array [
                         Object {
@@ -3080,40 +934,40 @@ exports[`Storyshots components/pages/Top default 1`] = `
                           },
                         },
                       ],
-                    } => CacheKeyNode {
-                      "children": Map {
-                        DepTrackingCache {
-                          "data": Object {},
-                          "depend": [Function],
-                        } => CacheKeyNode {
-                          "children": Map {
-                            [Function] => CacheKeyNode {
-                              "children": Map {
-                                "{}" => CacheKeyNode {
-                                  "children": Map {
-                                    "ROOT_QUERY" => CacheKeyNode {
-                                      "children": null,
-                                      "key": Object {},
-                                    },
-                                  },
-                                  "key": null,
-                                },
-                              },
-                              "key": null,
-                            },
-                          },
-                          "key": null,
-                        },
-                      },
-                      "key": null,
                     },
+                    "variableDefinitions": Array [],
                   },
-                  "key": null,
+                ],
+                "kind": "Document",
+                "loc": Object {
+                  "end": 73,
+                  "start": 0,
+                },
+              } => Map {
+                "{}" => Observable {
+                  "_subscriber": [Function],
+                },
+              },
+            },
+            "link": MockLink {
+              "addTypename": false,
+              "mockedResponsesByKey": Object {
+                "{\\"query\\":\\"{\\\\n  author {\\\\n    name\\\\n    blog\\\\n    avatar_url\\\\n  }\\\\n}\\\\n\\"}": Array [],
+                "{\\"query\\":\\"{\\\\n  organizations {\\\\n    name\\\\n    uid\\\\n  }\\\\n}\\\\n\\"}": Array [],
+              },
+            },
+            "localState": LocalState {
+              "cache": InMemoryCache {
+                "addTypename": false,
+                "cacheKeyRoot": KeyTrie {
+                  "weak": WeakMap {},
+                  "weakness": true,
                 },
                 "config": Object {
                   "addTypename": false,
                   "dataIdFromObject": [Function],
                   "fragmentMatcher": HeuristicFragmentMatcher {},
+                  "freezeResults": false,
                   "resultCaching": true,
                 },
                 "data": DepTrackingCache {
@@ -3127,339 +981,10 @@ exports[`Storyshots components/pages/Top default 1`] = `
                 },
                 "silenceBroadcast": false,
                 "storeReader": StoreReader {
-                  "cacheKeyRoot": CacheKeyNode {
-                    "children": Map {
-                      Object {
-                        "definitions": Array [
-                          Object {
-                            "directives": Array [],
-                            "kind": "OperationDefinition",
-                            "name": undefined,
-                            "operation": "query",
-                            "selectionSet": Object {
-                              "kind": "SelectionSet",
-                              "selections": Array [
-                                Object {
-                                  "alias": undefined,
-                                  "arguments": Array [],
-                                  "directives": Array [],
-                                  "kind": "Field",
-                                  "name": Object {
-                                    "kind": "Name",
-                                    "value": "organizations",
-                                  },
-                                  "selectionSet": Object {
-                                    "kind": "SelectionSet",
-                                    "selections": Array [
-                                      Object {
-                                        "alias": undefined,
-                                        "arguments": Array [],
-                                        "directives": Array [],
-                                        "kind": "Field",
-                                        "name": Object {
-                                          "kind": "Name",
-                                          "value": "name",
-                                        },
-                                        "selectionSet": undefined,
-                                      },
-                                      Object {
-                                        "alias": undefined,
-                                        "arguments": Array [],
-                                        "directives": Array [],
-                                        "kind": "Field",
-                                        "name": Object {
-                                          "kind": "Name",
-                                          "value": "uid",
-                                        },
-                                        "selectionSet": undefined,
-                                      },
-                                    ],
-                                  },
-                                },
-                              ],
-                            },
-                            "variableDefinitions": Array [],
-                          },
-                        ],
-                        "kind": "Document",
-                        "loc": Object {
-                          "end": 62,
-                          "start": 0,
-                        },
-                      } => CacheKeyNode {
-                        "children": Map {
-                          DepTrackingCache {
-                            "data": Object {},
-                            "depend": [Function],
-                          } => CacheKeyNode {
-                            "children": Map {
-                              [Function] => CacheKeyNode {
-                                "children": Map {
-                                  "{}" => CacheKeyNode {
-                                    "children": Map {
-                                      "ROOT_QUERY" => CacheKeyNode {
-                                        "children": null,
-                                        "key": Object {},
-                                      },
-                                    },
-                                    "key": null,
-                                  },
-                                },
-                                "key": null,
-                              },
-                            },
-                            "key": null,
-                          },
-                        },
-                        "key": null,
-                      },
-                      Object {
-                        "kind": "SelectionSet",
-                        "selections": Array [
-                          Object {
-                            "alias": undefined,
-                            "arguments": Array [],
-                            "directives": Array [],
-                            "kind": "Field",
-                            "name": Object {
-                              "kind": "Name",
-                              "value": "organizations",
-                            },
-                            "selectionSet": Object {
-                              "kind": "SelectionSet",
-                              "selections": Array [
-                                Object {
-                                  "alias": undefined,
-                                  "arguments": Array [],
-                                  "directives": Array [],
-                                  "kind": "Field",
-                                  "name": Object {
-                                    "kind": "Name",
-                                    "value": "name",
-                                  },
-                                  "selectionSet": undefined,
-                                },
-                                Object {
-                                  "alias": undefined,
-                                  "arguments": Array [],
-                                  "directives": Array [],
-                                  "kind": "Field",
-                                  "name": Object {
-                                    "kind": "Name",
-                                    "value": "uid",
-                                  },
-                                  "selectionSet": undefined,
-                                },
-                              ],
-                            },
-                          },
-                        ],
-                      } => CacheKeyNode {
-                        "children": Map {
-                          DepTrackingCache {
-                            "data": Object {},
-                            "depend": [Function],
-                          } => CacheKeyNode {
-                            "children": Map {
-                              [Function] => CacheKeyNode {
-                                "children": Map {
-                                  "{}" => CacheKeyNode {
-                                    "children": Map {
-                                      "ROOT_QUERY" => CacheKeyNode {
-                                        "children": null,
-                                        "key": Object {},
-                                      },
-                                    },
-                                    "key": null,
-                                  },
-                                },
-                                "key": null,
-                              },
-                            },
-                            "key": null,
-                          },
-                        },
-                        "key": null,
-                      },
-                      Object {
-                        "definitions": Array [
-                          Object {
-                            "directives": Array [],
-                            "kind": "OperationDefinition",
-                            "name": undefined,
-                            "operation": "query",
-                            "selectionSet": Object {
-                              "kind": "SelectionSet",
-                              "selections": Array [
-                                Object {
-                                  "alias": undefined,
-                                  "arguments": Array [],
-                                  "directives": Array [],
-                                  "kind": "Field",
-                                  "name": Object {
-                                    "kind": "Name",
-                                    "value": "author",
-                                  },
-                                  "selectionSet": Object {
-                                    "kind": "SelectionSet",
-                                    "selections": Array [
-                                      Object {
-                                        "alias": undefined,
-                                        "arguments": Array [],
-                                        "directives": Array [],
-                                        "kind": "Field",
-                                        "name": Object {
-                                          "kind": "Name",
-                                          "value": "name",
-                                        },
-                                        "selectionSet": undefined,
-                                      },
-                                      Object {
-                                        "alias": undefined,
-                                        "arguments": Array [],
-                                        "directives": Array [],
-                                        "kind": "Field",
-                                        "name": Object {
-                                          "kind": "Name",
-                                          "value": "blog",
-                                        },
-                                        "selectionSet": undefined,
-                                      },
-                                      Object {
-                                        "alias": undefined,
-                                        "arguments": Array [],
-                                        "directives": Array [],
-                                        "kind": "Field",
-                                        "name": Object {
-                                          "kind": "Name",
-                                          "value": "avatar_url",
-                                        },
-                                        "selectionSet": undefined,
-                                      },
-                                    ],
-                                  },
-                                },
-                              ],
-                            },
-                            "variableDefinitions": Array [],
-                          },
-                        ],
-                        "kind": "Document",
-                        "loc": Object {
-                          "end": 73,
-                          "start": 0,
-                        },
-                      } => CacheKeyNode {
-                        "children": Map {
-                          DepTrackingCache {
-                            "data": Object {},
-                            "depend": [Function],
-                          } => CacheKeyNode {
-                            "children": Map {
-                              [Function] => CacheKeyNode {
-                                "children": Map {
-                                  "{}" => CacheKeyNode {
-                                    "children": Map {
-                                      "ROOT_QUERY" => CacheKeyNode {
-                                        "children": null,
-                                        "key": Object {},
-                                      },
-                                    },
-                                    "key": null,
-                                  },
-                                },
-                                "key": null,
-                              },
-                            },
-                            "key": null,
-                          },
-                        },
-                        "key": null,
-                      },
-                      Object {
-                        "kind": "SelectionSet",
-                        "selections": Array [
-                          Object {
-                            "alias": undefined,
-                            "arguments": Array [],
-                            "directives": Array [],
-                            "kind": "Field",
-                            "name": Object {
-                              "kind": "Name",
-                              "value": "author",
-                            },
-                            "selectionSet": Object {
-                              "kind": "SelectionSet",
-                              "selections": Array [
-                                Object {
-                                  "alias": undefined,
-                                  "arguments": Array [],
-                                  "directives": Array [],
-                                  "kind": "Field",
-                                  "name": Object {
-                                    "kind": "Name",
-                                    "value": "name",
-                                  },
-                                  "selectionSet": undefined,
-                                },
-                                Object {
-                                  "alias": undefined,
-                                  "arguments": Array [],
-                                  "directives": Array [],
-                                  "kind": "Field",
-                                  "name": Object {
-                                    "kind": "Name",
-                                    "value": "blog",
-                                  },
-                                  "selectionSet": undefined,
-                                },
-                                Object {
-                                  "alias": undefined,
-                                  "arguments": Array [],
-                                  "directives": Array [],
-                                  "kind": "Field",
-                                  "name": Object {
-                                    "kind": "Name",
-                                    "value": "avatar_url",
-                                  },
-                                  "selectionSet": undefined,
-                                },
-                              ],
-                            },
-                          },
-                        ],
-                      } => CacheKeyNode {
-                        "children": Map {
-                          DepTrackingCache {
-                            "data": Object {},
-                            "depend": [Function],
-                          } => CacheKeyNode {
-                            "children": Map {
-                              [Function] => CacheKeyNode {
-                                "children": Map {
-                                  "{}" => CacheKeyNode {
-                                    "children": Map {
-                                      "ROOT_QUERY" => CacheKeyNode {
-                                        "children": null,
-                                        "key": Object {},
-                                      },
-                                    },
-                                    "key": null,
-                                  },
-                                },
-                                "key": null,
-                              },
-                            },
-                            "key": null,
-                          },
-                        },
-                        "key": null,
-                      },
-                    },
-                    "key": null,
-                  },
                   "executeSelectionSet": [Function],
                   "executeStoreQuery": [Function],
+                  "executeSubSelectedArray": [Function],
+                  "freezeResults": false,
                 },
                 "storeWriter": StoreWriter {},
                 "typenameDocumentCache": Map {},
@@ -3610,7 +1135,6 @@ exports[`Storyshots components/pages/Top default 1`] = `
             "mutationStore": MutationStore {
               "store": Object {},
             },
-            "nextPoll": null,
             "onBroadcast": [Function],
             "pollingInfoByQueryId": Map {},
             "queries": Map {
@@ -3676,14 +1200,14 @@ exports[`Storyshots components/pages/Top default 1`] = `
                 },
                 "invalidated": false,
                 "lastRequestId": 3,
-                "listeners": Array [
+                "listeners": Set {
                   [Function],
-                ],
+                },
                 "newData": null,
                 "observableQuery": ObservableQuery {
                   "_subscriber": [Function],
                   "isTornDown": false,
-                  "observers": Array [
+                  "observers": Set {
                     SubscriptionObserver {
                       "_subscription": Subscription {
                         "_cleanup": [Function],
@@ -3695,7 +1219,7 @@ exports[`Storyshots components/pages/Top default 1`] = `
                         "_state": "ready",
                       },
                     },
-                  ],
+                  },
                   "options": Object {
                     "children": [Function],
                     "context": Object {},
@@ -3764,25 +1288,35 @@ exports[`Storyshots components/pages/Top default 1`] = `
                         "start": 0,
                       },
                     },
+                    "variables": Object {},
                   },
                   "queryId": "1",
                   "queryManager": [Circular],
+                  "queryName": undefined,
                   "shouldSubscribe": true,
-                  "subscriptionHandles": Array [],
+                  "subscriptions": Set {},
                   "variables": Object {},
                 },
-                "subscriptions": Array [
+                "subscriptions": Set {
                   Subscription {
-                    "_cleanup": [Function],
+                    "_cleanup": Subscription {
+                      "_cleanup": [Function],
+                      "_observer": Object {
+                        "complete": [Function],
+                        "error": [Function],
+                        "next": [Function],
+                      },
+                      "_queue": undefined,
+                      "_state": "ready",
+                    },
                     "_observer": Object {
                       "complete": [Function],
                       "error": [Function],
-                      "next": [Function],
                     },
                     "_queue": undefined,
                     "_state": "ready",
                   },
-                ],
+                },
               },
               "2" => Object {
                 "cancel": [Function],
@@ -3857,14 +1391,14 @@ exports[`Storyshots components/pages/Top default 1`] = `
                 },
                 "invalidated": false,
                 "lastRequestId": 4,
-                "listeners": Array [
+                "listeners": Set {
                   [Function],
-                ],
+                },
                 "newData": null,
                 "observableQuery": ObservableQuery {
                   "_subscriber": [Function],
                   "isTornDown": false,
-                  "observers": Array [
+                  "observers": Set {
                     SubscriptionObserver {
                       "_subscription": Subscription {
                         "_cleanup": [Function],
@@ -3876,7 +1410,7 @@ exports[`Storyshots components/pages/Top default 1`] = `
                         "_state": "ready",
                       },
                     },
-                  ],
+                  },
                   "options": Object {
                     "children": [Function],
                     "context": Object {},
@@ -3956,29 +1490,38 @@ exports[`Storyshots components/pages/Top default 1`] = `
                         "start": 0,
                       },
                     },
+                    "variables": Object {},
                   },
                   "queryId": "2",
                   "queryManager": [Circular],
+                  "queryName": undefined,
                   "shouldSubscribe": true,
-                  "subscriptionHandles": Array [],
+                  "subscriptions": Set {},
                   "variables": Object {},
                 },
-                "subscriptions": Array [
+                "subscriptions": Set {
                   Subscription {
-                    "_cleanup": [Function],
+                    "_cleanup": Subscription {
+                      "_cleanup": [Function],
+                      "_observer": Object {
+                        "complete": [Function],
+                        "error": [Function],
+                        "next": [Function],
+                      },
+                      "_queue": undefined,
+                      "_state": "ready",
+                    },
                     "_observer": Object {
                       "complete": [Function],
                       "error": [Function],
-                      "next": [Function],
                     },
                     "_queue": undefined,
                     "_state": "ready",
                   },
-                ],
+                },
               },
             },
             "queryDeduplication": true,
-            "queryIdsByName": Object {},
             "queryStore": QueryStore {
               "store": Object {
                 "1": Object {
@@ -4135,349 +1678,23 @@ exports[`Storyshots components/pages/Top default 1`] = `
               },
             },
             "ssrMode": false,
+            "transformCache": WeakMap {},
           },
           "reFetchObservableQueries": [Function],
           "resetStore": [Function],
           "resetStoreCallbacks": Array [],
-          "ssrMode": false,
           "store": DataStore {
             "cache": InMemoryCache {
               "addTypename": false,
-              "cacheKeyRoot": CacheKeyNode {
-                "children": Map {
-                  Object {
-                    "definitions": Array [
-                      Object {
-                        "directives": Array [],
-                        "kind": "OperationDefinition",
-                        "name": undefined,
-                        "operation": "query",
-                        "selectionSet": Object {
-                          "kind": "SelectionSet",
-                          "selections": Array [
-                            Object {
-                              "alias": undefined,
-                              "arguments": Array [],
-                              "directives": Array [],
-                              "kind": "Field",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "organizations",
-                              },
-                              "selectionSet": Object {
-                                "kind": "SelectionSet",
-                                "selections": Array [
-                                  Object {
-                                    "alias": undefined,
-                                    "arguments": Array [],
-                                    "directives": Array [],
-                                    "kind": "Field",
-                                    "name": Object {
-                                      "kind": "Name",
-                                      "value": "name",
-                                    },
-                                    "selectionSet": undefined,
-                                  },
-                                  Object {
-                                    "alias": undefined,
-                                    "arguments": Array [],
-                                    "directives": Array [],
-                                    "kind": "Field",
-                                    "name": Object {
-                                      "kind": "Name",
-                                      "value": "uid",
-                                    },
-                                    "selectionSet": undefined,
-                                  },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                        "variableDefinitions": Array [],
-                      },
-                    ],
-                    "kind": "Document",
-                    "loc": Object {
-                      "end": 62,
-                      "start": 0,
-                    },
-                  } => CacheKeyNode {
-                    "children": Map {
-                      DepTrackingCache {
-                        "data": Object {},
-                        "depend": [Function],
-                      } => CacheKeyNode {
-                        "children": Map {
-                          [Function] => CacheKeyNode {
-                            "children": Map {
-                              "{}" => CacheKeyNode {
-                                "children": Map {
-                                  "ROOT_QUERY" => CacheKeyNode {
-                                    "children": null,
-                                    "key": Object {},
-                                  },
-                                },
-                                "key": null,
-                              },
-                            },
-                            "key": null,
-                          },
-                        },
-                        "key": null,
-                      },
-                    },
-                    "key": null,
-                  },
-                  Object {
-                    "kind": "SelectionSet",
-                    "selections": Array [
-                      Object {
-                        "alias": undefined,
-                        "arguments": Array [],
-                        "directives": Array [],
-                        "kind": "Field",
-                        "name": Object {
-                          "kind": "Name",
-                          "value": "organizations",
-                        },
-                        "selectionSet": Object {
-                          "kind": "SelectionSet",
-                          "selections": Array [
-                            Object {
-                              "alias": undefined,
-                              "arguments": Array [],
-                              "directives": Array [],
-                              "kind": "Field",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "name",
-                              },
-                              "selectionSet": undefined,
-                            },
-                            Object {
-                              "alias": undefined,
-                              "arguments": Array [],
-                              "directives": Array [],
-                              "kind": "Field",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "uid",
-                              },
-                              "selectionSet": undefined,
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  } => CacheKeyNode {
-                    "children": Map {
-                      DepTrackingCache {
-                        "data": Object {},
-                        "depend": [Function],
-                      } => CacheKeyNode {
-                        "children": Map {
-                          [Function] => CacheKeyNode {
-                            "children": Map {
-                              "{}" => CacheKeyNode {
-                                "children": Map {
-                                  "ROOT_QUERY" => CacheKeyNode {
-                                    "children": null,
-                                    "key": Object {},
-                                  },
-                                },
-                                "key": null,
-                              },
-                            },
-                            "key": null,
-                          },
-                        },
-                        "key": null,
-                      },
-                    },
-                    "key": null,
-                  },
-                  Object {
-                    "definitions": Array [
-                      Object {
-                        "directives": Array [],
-                        "kind": "OperationDefinition",
-                        "name": undefined,
-                        "operation": "query",
-                        "selectionSet": Object {
-                          "kind": "SelectionSet",
-                          "selections": Array [
-                            Object {
-                              "alias": undefined,
-                              "arguments": Array [],
-                              "directives": Array [],
-                              "kind": "Field",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "author",
-                              },
-                              "selectionSet": Object {
-                                "kind": "SelectionSet",
-                                "selections": Array [
-                                  Object {
-                                    "alias": undefined,
-                                    "arguments": Array [],
-                                    "directives": Array [],
-                                    "kind": "Field",
-                                    "name": Object {
-                                      "kind": "Name",
-                                      "value": "name",
-                                    },
-                                    "selectionSet": undefined,
-                                  },
-                                  Object {
-                                    "alias": undefined,
-                                    "arguments": Array [],
-                                    "directives": Array [],
-                                    "kind": "Field",
-                                    "name": Object {
-                                      "kind": "Name",
-                                      "value": "blog",
-                                    },
-                                    "selectionSet": undefined,
-                                  },
-                                  Object {
-                                    "alias": undefined,
-                                    "arguments": Array [],
-                                    "directives": Array [],
-                                    "kind": "Field",
-                                    "name": Object {
-                                      "kind": "Name",
-                                      "value": "avatar_url",
-                                    },
-                                    "selectionSet": undefined,
-                                  },
-                                ],
-                              },
-                            },
-                          ],
-                        },
-                        "variableDefinitions": Array [],
-                      },
-                    ],
-                    "kind": "Document",
-                    "loc": Object {
-                      "end": 73,
-                      "start": 0,
-                    },
-                  } => CacheKeyNode {
-                    "children": Map {
-                      DepTrackingCache {
-                        "data": Object {},
-                        "depend": [Function],
-                      } => CacheKeyNode {
-                        "children": Map {
-                          [Function] => CacheKeyNode {
-                            "children": Map {
-                              "{}" => CacheKeyNode {
-                                "children": Map {
-                                  "ROOT_QUERY" => CacheKeyNode {
-                                    "children": null,
-                                    "key": Object {},
-                                  },
-                                },
-                                "key": null,
-                              },
-                            },
-                            "key": null,
-                          },
-                        },
-                        "key": null,
-                      },
-                    },
-                    "key": null,
-                  },
-                  Object {
-                    "kind": "SelectionSet",
-                    "selections": Array [
-                      Object {
-                        "alias": undefined,
-                        "arguments": Array [],
-                        "directives": Array [],
-                        "kind": "Field",
-                        "name": Object {
-                          "kind": "Name",
-                          "value": "author",
-                        },
-                        "selectionSet": Object {
-                          "kind": "SelectionSet",
-                          "selections": Array [
-                            Object {
-                              "alias": undefined,
-                              "arguments": Array [],
-                              "directives": Array [],
-                              "kind": "Field",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "name",
-                              },
-                              "selectionSet": undefined,
-                            },
-                            Object {
-                              "alias": undefined,
-                              "arguments": Array [],
-                              "directives": Array [],
-                              "kind": "Field",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "blog",
-                              },
-                              "selectionSet": undefined,
-                            },
-                            Object {
-                              "alias": undefined,
-                              "arguments": Array [],
-                              "directives": Array [],
-                              "kind": "Field",
-                              "name": Object {
-                                "kind": "Name",
-                                "value": "avatar_url",
-                              },
-                              "selectionSet": undefined,
-                            },
-                          ],
-                        },
-                      },
-                    ],
-                  } => CacheKeyNode {
-                    "children": Map {
-                      DepTrackingCache {
-                        "data": Object {},
-                        "depend": [Function],
-                      } => CacheKeyNode {
-                        "children": Map {
-                          [Function] => CacheKeyNode {
-                            "children": Map {
-                              "{}" => CacheKeyNode {
-                                "children": Map {
-                                  "ROOT_QUERY" => CacheKeyNode {
-                                    "children": null,
-                                    "key": Object {},
-                                  },
-                                },
-                                "key": null,
-                              },
-                            },
-                            "key": null,
-                          },
-                        },
-                        "key": null,
-                      },
-                    },
-                    "key": null,
-                  },
-                },
-                "key": null,
+              "cacheKeyRoot": KeyTrie {
+                "weak": WeakMap {},
+                "weakness": true,
               },
               "config": Object {
                 "addTypename": false,
                 "dataIdFromObject": [Function],
                 "fragmentMatcher": HeuristicFragmentMatcher {},
+                "freezeResults": false,
                 "resultCaching": true,
               },
               "data": DepTrackingCache {
@@ -4491,339 +1708,10 @@ exports[`Storyshots components/pages/Top default 1`] = `
               },
               "silenceBroadcast": false,
               "storeReader": StoreReader {
-                "cacheKeyRoot": CacheKeyNode {
-                  "children": Map {
-                    Object {
-                      "definitions": Array [
-                        Object {
-                          "directives": Array [],
-                          "kind": "OperationDefinition",
-                          "name": undefined,
-                          "operation": "query",
-                          "selectionSet": Object {
-                            "kind": "SelectionSet",
-                            "selections": Array [
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "organizations",
-                                },
-                                "selectionSet": Object {
-                                  "kind": "SelectionSet",
-                                  "selections": Array [
-                                    Object {
-                                      "alias": undefined,
-                                      "arguments": Array [],
-                                      "directives": Array [],
-                                      "kind": "Field",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "name",
-                                      },
-                                      "selectionSet": undefined,
-                                    },
-                                    Object {
-                                      "alias": undefined,
-                                      "arguments": Array [],
-                                      "directives": Array [],
-                                      "kind": "Field",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "uid",
-                                      },
-                                      "selectionSet": undefined,
-                                    },
-                                  ],
-                                },
-                              },
-                            ],
-                          },
-                          "variableDefinitions": Array [],
-                        },
-                      ],
-                      "kind": "Document",
-                      "loc": Object {
-                        "end": 62,
-                        "start": 0,
-                      },
-                    } => CacheKeyNode {
-                      "children": Map {
-                        DepTrackingCache {
-                          "data": Object {},
-                          "depend": [Function],
-                        } => CacheKeyNode {
-                          "children": Map {
-                            [Function] => CacheKeyNode {
-                              "children": Map {
-                                "{}" => CacheKeyNode {
-                                  "children": Map {
-                                    "ROOT_QUERY" => CacheKeyNode {
-                                      "children": null,
-                                      "key": Object {},
-                                    },
-                                  },
-                                  "key": null,
-                                },
-                              },
-                              "key": null,
-                            },
-                          },
-                          "key": null,
-                        },
-                      },
-                      "key": null,
-                    },
-                    Object {
-                      "kind": "SelectionSet",
-                      "selections": Array [
-                        Object {
-                          "alias": undefined,
-                          "arguments": Array [],
-                          "directives": Array [],
-                          "kind": "Field",
-                          "name": Object {
-                            "kind": "Name",
-                            "value": "organizations",
-                          },
-                          "selectionSet": Object {
-                            "kind": "SelectionSet",
-                            "selections": Array [
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "name",
-                                },
-                                "selectionSet": undefined,
-                              },
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "uid",
-                                },
-                                "selectionSet": undefined,
-                              },
-                            ],
-                          },
-                        },
-                      ],
-                    } => CacheKeyNode {
-                      "children": Map {
-                        DepTrackingCache {
-                          "data": Object {},
-                          "depend": [Function],
-                        } => CacheKeyNode {
-                          "children": Map {
-                            [Function] => CacheKeyNode {
-                              "children": Map {
-                                "{}" => CacheKeyNode {
-                                  "children": Map {
-                                    "ROOT_QUERY" => CacheKeyNode {
-                                      "children": null,
-                                      "key": Object {},
-                                    },
-                                  },
-                                  "key": null,
-                                },
-                              },
-                              "key": null,
-                            },
-                          },
-                          "key": null,
-                        },
-                      },
-                      "key": null,
-                    },
-                    Object {
-                      "definitions": Array [
-                        Object {
-                          "directives": Array [],
-                          "kind": "OperationDefinition",
-                          "name": undefined,
-                          "operation": "query",
-                          "selectionSet": Object {
-                            "kind": "SelectionSet",
-                            "selections": Array [
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "author",
-                                },
-                                "selectionSet": Object {
-                                  "kind": "SelectionSet",
-                                  "selections": Array [
-                                    Object {
-                                      "alias": undefined,
-                                      "arguments": Array [],
-                                      "directives": Array [],
-                                      "kind": "Field",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "name",
-                                      },
-                                      "selectionSet": undefined,
-                                    },
-                                    Object {
-                                      "alias": undefined,
-                                      "arguments": Array [],
-                                      "directives": Array [],
-                                      "kind": "Field",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "blog",
-                                      },
-                                      "selectionSet": undefined,
-                                    },
-                                    Object {
-                                      "alias": undefined,
-                                      "arguments": Array [],
-                                      "directives": Array [],
-                                      "kind": "Field",
-                                      "name": Object {
-                                        "kind": "Name",
-                                        "value": "avatar_url",
-                                      },
-                                      "selectionSet": undefined,
-                                    },
-                                  ],
-                                },
-                              },
-                            ],
-                          },
-                          "variableDefinitions": Array [],
-                        },
-                      ],
-                      "kind": "Document",
-                      "loc": Object {
-                        "end": 73,
-                        "start": 0,
-                      },
-                    } => CacheKeyNode {
-                      "children": Map {
-                        DepTrackingCache {
-                          "data": Object {},
-                          "depend": [Function],
-                        } => CacheKeyNode {
-                          "children": Map {
-                            [Function] => CacheKeyNode {
-                              "children": Map {
-                                "{}" => CacheKeyNode {
-                                  "children": Map {
-                                    "ROOT_QUERY" => CacheKeyNode {
-                                      "children": null,
-                                      "key": Object {},
-                                    },
-                                  },
-                                  "key": null,
-                                },
-                              },
-                              "key": null,
-                            },
-                          },
-                          "key": null,
-                        },
-                      },
-                      "key": null,
-                    },
-                    Object {
-                      "kind": "SelectionSet",
-                      "selections": Array [
-                        Object {
-                          "alias": undefined,
-                          "arguments": Array [],
-                          "directives": Array [],
-                          "kind": "Field",
-                          "name": Object {
-                            "kind": "Name",
-                            "value": "author",
-                          },
-                          "selectionSet": Object {
-                            "kind": "SelectionSet",
-                            "selections": Array [
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "name",
-                                },
-                                "selectionSet": undefined,
-                              },
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "blog",
-                                },
-                                "selectionSet": undefined,
-                              },
-                              Object {
-                                "alias": undefined,
-                                "arguments": Array [],
-                                "directives": Array [],
-                                "kind": "Field",
-                                "name": Object {
-                                  "kind": "Name",
-                                  "value": "avatar_url",
-                                },
-                                "selectionSet": undefined,
-                              },
-                            ],
-                          },
-                        },
-                      ],
-                    } => CacheKeyNode {
-                      "children": Map {
-                        DepTrackingCache {
-                          "data": Object {},
-                          "depend": [Function],
-                        } => CacheKeyNode {
-                          "children": Map {
-                            [Function] => CacheKeyNode {
-                              "children": Map {
-                                "{}" => CacheKeyNode {
-                                  "children": Map {
-                                    "ROOT_QUERY" => CacheKeyNode {
-                                      "children": null,
-                                      "key": Object {},
-                                    },
-                                  },
-                                  "key": null,
-                                },
-                              },
-                              "key": null,
-                            },
-                          },
-                          "key": null,
-                        },
-                      },
-                      "key": null,
-                    },
-                  },
-                  "key": null,
-                },
                 "executeSelectionSet": [Function],
                 "executeStoreQuery": [Function],
+                "executeSubSelectedArray": [Function],
+                "freezeResults": false,
               },
               "storeWriter": StoreWriter {},
               "typenameDocumentCache": Map {},
@@ -4971,7 +1859,7 @@ exports[`Storyshots components/pages/Top default 1`] = `
             },
           },
           "typeDefs": undefined,
-          "version": "2.5.1",
+          "version": "2.6.3",
           "watchQuery": [Function],
         }
       }
