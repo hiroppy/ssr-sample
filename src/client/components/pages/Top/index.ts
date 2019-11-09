@@ -1,1 +1,3 @@
-export * from './Top';
+import { Top } from './Top';
+
+export default Top;

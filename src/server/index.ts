@@ -8,9 +8,7 @@ const isProd = process.env.NODE_ENV === 'production';
 
 // If you compile server code with webpack, this is unnecessary.
 config({
-  path: isProd
-    ? join(__dirname, '..', '..', '..', '.env.prod')
-    : join(__dirname, '..', '..', '.env.dev')
+  path: isProd ? join(__dirname, '../../../.env.prod') : join(__dirname, '../../.env.dev')
 });
 
 if (isProd) {

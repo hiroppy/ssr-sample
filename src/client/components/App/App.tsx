@@ -1,32 +1,46 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import styled from 'styled-components';
+import { useLocation } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
-import { Main } from '../templates/Main';
+import { Header } from '../Header';
+import { loadAppProcess } from '../../actions/pages';
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Muli', sans-serif;
+    font-size:62.5%;
     margin: 0;
   }
 `;
 
-export interface Props {
-  load: () => void;
-}
+const Container = styled.div`
+  margin: 15px 30px;
+  font-size: 1rem;
+`;
 
 // like App-Shell of PWA
-export class App extends React.PureComponent<Props> {
-  constructor(props: Props) {
-    super(props);
+export const App: React.FC = ({ children }) => {
+  const location = useLocation();
+  const dispatch = useDispatch();
 
-    props.load();
+  if (!process.env.IS_BROWSER) {
+    dispatch(loadAppProcess());
+  } else {
+    useEffect(() => {
+      dispatch(loadAppProcess());
+    }, []);
   }
 
-  render() {
-    return (
-      <Main>
-        <GlobalStyle />
-        {this.props.children}
-      </Main>
-    );
-  }
-}
+  // change location
+  // e.g. send to Google Analytics...
+  useEffect(() => {}, [location]);
+
+  return (
+    <>
+      <Header />
+      <GlobalStyle />
+      <Container>{children}</Container>
+    </>
+  );
+};

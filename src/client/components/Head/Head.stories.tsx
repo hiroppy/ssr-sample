@@ -1,32 +1,23 @@
-import * as React from 'react';
-import { storiesOf } from '@storybook/react';
+import React, { useEffect, useState } from 'react';
 import { Head } from '.';
 
-const stories = storiesOf('components/Head', module);
+export default {
+  component: Head,
+  title: 'Head'
+};
 
-class Component extends React.Component<{}, { title: string }> {
-  constructor(props: {}) {
-    super(props);
+export const Base = () => {
+  // const [title, updateTitle] = useState('');
 
-    this.state = {
-      title: ''
-    };
-  }
+  // https://github.com/WordPress/gutenberg/pull/18031
+  // useEffect(() => {
+  // updateTitle(document.title);
+  // }, []);
 
-  componentDidMount() {
-    // TODO: fix
-    // const title = document.querySelector('title')!.text;
-    // this.setState({ title });
-  }
-
-  render() {
-    return (
-      <>
-        <Head title="Storybook" />
-        <p>title: {this.state.title}</p>
-      </>
-    );
-  }
-}
-
-stories.add('default', () => <Component />);
+  return (
+    <>
+      <Head title="storybook" />
+      {/* <p>title: {title}</p> */}
+    </>
+  );
+};

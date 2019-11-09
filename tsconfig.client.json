@@ -2,6 +2,6 @@
   "extends": "./tsconfig",
   "compilerOptions": {
     "module": "esnext", // for splitting chunks
-    "target": "es5" // TODO: error: class constructor
+    "target": "es2015"
   }
 }

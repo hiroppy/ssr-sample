@@ -1,24 +1,26 @@
-import * as React from 'react';
+import React from 'react';
+import styled from 'styled-components';
+import { useDispatch } from 'react-redux';
+import { loadTopPage } from '../../../actions/pages';
 import { Head } from '../../Head';
-import { Error as Template } from '../../templates/Error';
 
-export interface Props {
-  stopSaga?: () => void;
-}
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  font-size: 2rem;
+`;
 
-export class NotFound extends React.PureComponent<Props> {
-  constructor(props: Props) {
-    super(props);
+export const NotFound: React.FC = () => {
+  const dispatch = useDispatch();
 
-    if (props.stopSaga && !process.env.IS_BROWSER) props.stopSaga();
-  }
+  // TODO: fix
+  dispatch(loadTopPage());
 
-  render() {
-    return (
-      <React.Fragment>
-        <Head title="404" />
-        <Template>Page not found</Template>
-      </React.Fragment>
-    );
-  }
-}
+  return (
+    <>
+      <Head title="404-page" />
+      <Container>[404] Not Found</Container>
+    </>
+  );
+};

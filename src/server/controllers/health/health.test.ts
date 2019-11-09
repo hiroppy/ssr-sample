@@ -1,13 +1,10 @@
+import httpMocks, { MockResponse } from 'node-mocks-http';
 import { get } from '.';
 
-test('should return the get of health api response', () => {
-  const req: any = {};
-  const res: any = {
-    json: jest.fn()
-  };
+test('should return the get of api response', () => {
+  const req = httpMocks.createRequest();
+  const res = httpMocks.createResponse();
+  const data = get(req, res) as MockResponse<ReturnType<typeof get>>;
 
-  get(req, res);
-
-  expect(res.json).toHaveBeenCalled();
-  expect(res.json.mock.calls[0][0]).toMatchSnapshot();
+  expect(data._getJSONData()).toMatchSnapshot();
 });

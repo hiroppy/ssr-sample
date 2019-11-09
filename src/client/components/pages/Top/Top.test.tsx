@@ -1,19 +1,20 @@
-import * as React from 'react';
-import { mount } from 'enzyme';
-import { MemoryRouter } from 'react-router-dom';
-import { MockedProvider } from 'react-apollo/test-utils';
-import { Top } from '.';
+import React from 'react';
+import { render } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import configureStore from 'redux-mock-store';
+import Top from '.';
+import { initialState } from '../../../reducers';
+import * as actions from '../../../actions/pages';
 
-test('should call load', () => {
-  const load = jest.fn();
+test('should call loadTopPage via useDispatch', () => {
+  const loadTopPage = jest.spyOn(actions, 'loadTopPage');
+  const mockStore = configureStore()(initialState);
 
-  mount(
-    <MockedProvider>
-      <MemoryRouter initialEntries={[{ pathname: '/', key: 'testKey' }]}>
-        <Top error={null} load={load} />
-      </MemoryRouter>
-    </MockedProvider>
+  render(
+    <Provider store={mockStore}>
+      <Top />
+    </Provider>
   );
 
-  expect(load).toHaveBeenCalled();
+  expect(loadTopPage).toBeCalled();
 });

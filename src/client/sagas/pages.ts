@@ -1,67 +1,96 @@
 import { END } from 'redux-saga';
 import { put, call, take, select, takeLatest } from 'redux-saga/effects';
 import {
+  setEnv,
+  resetPageStatus,
+  loadAppProcess as LoadAppProcess,
   loadAppProcessSuccess,
   loadAppProcessFailure,
+  loadTopPage as LoadTopPage,
   loadTopPageSuccess,
   loadTopPageFailure,
-  LoadOrgsPage,
-  loadOrgsPageSuccess,
-  loadOrgsPageFailure,
-  resetPageStatus
+  loadSagaPage as LoadSagaPage,
+  loadSagaPageSuccess,
+  loadSagaPageFailure,
+  loadApolloPage as LoadApolloPage,
+  loadApolloPageSuccess,
+  loadApolloPageFailure,
+  LOAD_APP_PROCESS,
+  LOAD_TOP_PAGE,
+  LOAD_SAGA_PAGE,
+  LOAD_APOLLO_PAGE
 } from '../actions/pages';
-import { setUserName } from '../actions/users';
-import { fetchRepos, FetchReposSuccess, FetchReposFailure, resetOrgs } from '../actions/orgs';
-import { getOrgs, getUsers } from './selectors';
-import { State } from '../reducers';
+import {
+  fetchSagaCode,
+  fetchSagaCodeSuccess,
+  fetchSagaCodeFailure,
+  FETCH_SAGA_CODE_SUCCESS,
+  FETCH_SAGA_CODE_FAILURE
+} from '../actions/fetchSaga';
 
+// e.g. write common processing to be performed on all pages
 // don't call `stopSaga`
-function* appProcess() {
-  try {
-    // e.g. write common processing to be performed on all pages
-    const users: State['users'] = yield select<State>(getUsers);
+function* appProcess(actions: ReturnType<typeof LoadAppProcess>) {
+  yield put(setEnv(process.env.NODE_ENV || 'development'));
+  yield put(loadAppProcessSuccess());
+}
 
-    if (users.name === '') {
-      yield put(setUserName('hiroppy'));
-    }
-    yield put(loadAppProcessSuccess());
-  } catch (err) {
-    yield put(loadAppProcessFailure(err));
-    if (!process.env.IS_BROWSER) yield call(stopSaga);
+// if you run async process, you have to change the code like below
+// function* appProcess(actions: ReturnType<typeof LoadAppProcess>) {
+//   try {
+//     // async
+
+//     yield put(loadAppProcessSuccess());
+//   } catch (err) {
+//     yield put(loadAppProcessFailure(err));
+//   } finally {
+//     if (!process.env.IS_BROWSER) {
+//       yield call(stopSaga);
+//     }
+//   }
+// }
+
+function* loadTopPage(actions: ReturnType<typeof LoadTopPage>) {
+  yield changePage();
+  yield put(loadTopPageSuccess());
+
+  if (!process.env.IS_BROWSER) {
+    yield call(stopSaga);
   }
 }
 
-function* loadTopPage() {
+function* loadSagaPage(actions: ReturnType<typeof LoadSagaPage>) {
   try {
-    yield put(loadTopPageSuccess());
+    yield changePage();
+    yield put(fetchSagaCode(actions.payload.maxLength));
+
+    const res:
+      | ReturnType<typeof fetchSagaCodeSuccess>
+      | ReturnType<typeof fetchSagaCodeFailure> = yield take([
+      FETCH_SAGA_CODE_SUCCESS,
+      FETCH_SAGA_CODE_FAILURE
+    ]);
+
+    if (res.type === FETCH_SAGA_CODE_FAILURE) {
+      throw res.payload.err;
+    }
+
+    yield put(loadSagaPageSuccess());
   } catch (err) {
-    yield put(loadTopPageFailure(err));
+    yield put(loadSagaPageFailure(err));
   } finally {
-    if (!process.env.IS_BROWSER) yield call(stopSaga);
+    if (!process.env.IS_BROWSER) {
+      yield call(stopSaga);
+    }
   }
 }
 
-function* loadOrgsPage(action: LoadOrgsPage) {
-  try {
-    const { org } = action.payload;
-    const orgs: State['orgs'] = yield select(getOrgs);
+function* loadApolloPage(actions: ReturnType<typeof LoadApolloPage>) {
+  yield changePage();
+  yield put(loadApolloPageSuccess());
 
-    if (org !== orgs.name) {
-      yield put(resetOrgs());
-      yield put(fetchRepos(org));
-      const res: FetchReposSuccess | FetchReposFailure = yield take([
-        'FETCH_REPOS_SUCCESS',
-        'FETCH_REPOS_FAILURE'
-      ]);
-
-      if (res.type === 'FETCH_REPOS_FAILURE') throw res.payload;
-    }
-
-    yield put(loadOrgsPageSuccess());
-  } catch (err) {
-    yield put(loadOrgsPageFailure(err));
-  } finally {
-    if (!process.env.IS_BROWSER) yield call(stopSaga);
+  if (!process.env.IS_BROWSER) {
+    yield call(stopSaga);
   }
 }
 
@@ -69,14 +98,17 @@ function* stopSaga() {
   yield put(END);
 }
 
-function* changeLocation() {
-  yield put(resetPageStatus());
+function* changePage() {
+  // don't need to call resetPageStatus because baseUrl is required by fetch on Node.js environment,
+  // also state has already been initialized at this time
+  if (process.env.IS_BROWSER) {
+    yield put(resetPageStatus());
+  }
 }
 
 export function* pagesProcess() {
-  yield takeLatest('LOAD_APP_PROCESS', appProcess);
-  yield takeLatest('LOAD_TOP_PAGE', loadTopPage);
-  yield takeLatest('LOAD_ORGS_PAGE', loadOrgsPage);
-  yield takeLatest('STOP_SAGA', stopSaga);
-  yield takeLatest('@@router/LOCATION_CHANGE', changeLocation);
+  yield takeLatest(LOAD_APP_PROCESS, appProcess);
+  yield takeLatest(LOAD_TOP_PAGE, loadTopPage);
+  yield takeLatest(LOAD_SAGA_PAGE, loadSagaPage);
+  yield takeLatest(LOAD_APOLLO_PAGE, loadApolloPage);
 }

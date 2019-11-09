@@ -1,93 +1,73 @@
 import { graphql } from 'graphql';
-import nock from 'nock';
-import { organizations, schema } from './schema';
+import { schema } from './schema';
+import { apolloSamples } from '../server/responseSchema';
 
-test('should return organizations resolver', async () => {
-  const GET_ORGS = `
-    query {
-      organizations {
-        name
-        uid
-      }
-    }
-  `;
-
-  const res = await graphql(schema, GET_ORGS, null, {
-    organizations
-  });
-
-  expect(res).toMatchSnapshot();
-});
-
-test('should return organization resolver', async () => {
-  const GET_ORG = `
-    query {
-      organization(name: "nodejs") {
-        name
-        uid
-        uri
-      }
-    }
-  `;
-
-  const res = await graphql(schema, GET_ORG, null, {
-    organizations
-  });
-
-  expect(res).toMatchSnapshot();
-});
-
-test('should return author resolver', async () => {
-  nock('https://api.github.com')
-    .get('/users/hiroppy')
-    .reply(200, {
-      id: 1,
-      name: 'hiroppy',
-      blog: 'blog',
-      avatar_url: 'avatar',
-      html_url: 'html',
-      dummy: 'dummy'
-    });
-
-  const GET_AUTHOR = `
-    query {
-      author {
+test('should return result from samples resolver', async () => {
+  const GET_SAMPLES = `
+    query getSamples($maxLength: Int) {
+      samples(maxLength: $maxLength) {
         id
         name
-        blog
-        avatar_url
-        html_url
-      }
-    }
-  `;
-
-  const res = await graphql(schema, GET_AUTHOR, null);
-
-  expect(res).toMatchSnapshot();
-});
-
-test('should return addOrganization resolver', async () => {
-  const ADD_ORGANIZATION = `
-    mutation addOrganization($name: String!) {
-      addOrganization(name: $name) {
-        name
-        uri
-        uid
+        code
+        likeCount
+        description
       }
     }
   `;
 
   const res = await graphql(
     schema,
-    ADD_ORGANIZATION,
+    GET_SAMPLES,
     null,
     {
-      organizations
+      samples: apolloSamples
     },
     {
-      name: 'test'
+      maxLength: 1
     }
   );
 
   expect(res).toMatchSnapshot();
+});
+
+test('should return result from addLike resolver', async () => {
+  const ADD_LIKE = `
+    mutation addLike($id: Int) {
+      addLike(id: $id) {
+        id
+      }
+    }
+  `;
+
+  {
+    const res = await graphql(
+      schema,
+      ADD_LIKE,
+      null,
+      {
+        samples: apolloSamples
+      },
+      {
+        id: 1
+      }
+    );
+
+    expect(res).toMatchSnapshot();
+  }
+
+  {
+    const res = await graphql(
+      schema,
+      ADD_LIKE,
+      null,
+      {
+        samples: apolloSamples
+      },
+      {
+        id: 1000
+      }
+    );
+
+    expect(res).toMatchSnapshot();
+  }
 });

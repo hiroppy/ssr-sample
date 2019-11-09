@@ -1,15 +1,48 @@
-import * as React from 'react';
-import { shallow } from 'enzyme';
+import React from 'react';
+import { render } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import configureStore from 'redux-mock-store';
+import { MemoryRouter } from 'react-router-dom';
 import { App } from '.';
+import { initialState } from '../../reducers';
+import * as actions from '../../actions/pages';
 
-test('should call load if name is empty', () => {
-  const load = jest.fn();
+test('should call loadAppProcess via useDispatch', () => {
+  const mockStore = configureStore()(initialState);
 
-  shallow(
-    <App load={load}>
-      <p>hello</p>
-    </App>
-  );
+  // browser
+  {
+    process.env.IS_BROWSER = 'true';
 
-  expect(load).toHaveBeenCalled();
+    const loadAppProcess = jest.spyOn(actions, 'loadAppProcess');
+
+    render(
+      <Provider store={mockStore}>
+        <MemoryRouter initialEntries={['/']} keyLength={0}>
+          <App />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    expect(loadAppProcess).toBeCalled();
+
+    delete process.env.IS_BROWSER;
+    loadAppProcess.mockClear();
+  }
+
+  // server
+  {
+    const loadAppProcess = jest.spyOn(actions, 'loadAppProcess');
+
+    render(
+      <Provider store={mockStore}>
+        <MemoryRouter initialEntries={['/']} keyLength={0}>
+          <App />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    expect(loadAppProcess).toBeCalled();
+    loadAppProcess.mockClear();
+  }
 });

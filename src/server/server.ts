@@ -1,8 +1,11 @@
+/* eslint @typescript-eslint/no-var-requires: 0 */
+
 import { createServer } from 'http';
 import express from 'express';
 import * as bodyParser from 'body-parser';
-import * as Loadable from 'react-loadable';
+import compression from 'compression';
 import { generateNonceId, csp } from './csp';
+import { apollo } from './apollo';
 import { router } from './router';
 
 export function runServer() {
@@ -16,8 +19,11 @@ export function runServer() {
   app.use(generateNonceId);
   app.use(csp);
 
+  // compression
+  app.use(compression({ level: 5 }));
+
   // HMR
-  if (process.env.NODE_ENV !== 'production') {
+  if (process.env.NODE_ENV === 'development') {
     const webpack = require('webpack');
     const webpackHotMiddleware = require('webpack-hot-middleware');
     const webpackDevMiddleware = require('webpack-dev-middleware');
@@ -27,41 +33,48 @@ export function runServer() {
     app.use(webpackHotMiddleware(compiler));
     app.use(
       webpackDevMiddleware(compiler, {
-        publicPath: config.output.publicPath
+        publicPath: config.output.publicPath,
+        writeToDisk(filePath: string) {
+          return /loadable-stats/.test(filePath);
+        }
       })
     );
   }
 
+  // setup apollo
+  apollo(app);
+
   // register routes
   router(app);
 
-  const server = createServer(app);
+  /* istanbul ignore next */
+  if (process.env.NODE_ENV !== 'test') {
+    const server = createServer(app);
 
-  Loadable.preloadAll().then(() => {
-    server.listen(port);
-  });
+    server.listen(port, () => {
+      console.log(`Listening on ${port}`);
+    });
 
-  server.on('listening', () => {
-    const addr = server.address();
-    const bind = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`;
+    // https://stackoverflow.com/a/48710483/7014700
+    server.on('error', (err: NodeJS.ErrnoException) => {
+      if (err.syscall !== 'listen') throw err;
 
-    console.log(`Listening on ${bind}`);
-  });
+      const bind = typeof port === 'string' ? `Pipe ${port}` : `Port ${port}`;
 
-  server.on('error', (err: any) => {
-    if (err.syscall !== 'listen') throw err;
+      switch (err.code) {
+        case 'EACCES':
+          console.error(`${bind} requires elevated privileges`);
+          process.exit(1);
+          break;
+        case 'EADDRINUSE':
+          console.error(`${bind} is already in use`);
+          process.exit(1);
+          break;
+        default:
+          throw err;
+      }
+    });
+  }
 
-    const bind = typeof port === 'string' ? `Pipe ${port}` : `Port ${port}`;
-
-    switch (err.code) {
-      case 'EACCES':
-        console.error(`${bind} requires elevated privileges`);
-        process.exit(1);
-      case 'EADDRINUSE':
-        console.error(`${bind} is already in use`);
-        process.exit(1);
-      default:
-        throw err;
-    }
-  });
+  return app;
 }

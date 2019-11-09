@@ -1,62 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should return addOrganization resolver 1`] = `
+exports[`should return result from addLike resolver 1`] = `
 Object {
   "data": Object {
-    "addOrganization": Object {
-      "name": "test",
-      "uid": 5,
-      "uri": "https://github.com/test",
-    },
-  },
-}
-`;
-
-exports[`should return author resolver 1`] = `
-Object {
-  "data": Object {
-    "author": Object {
-      "avatar_url": "avatar",
-      "blog": "blog",
-      "html_url": "html",
+    "addLike": Object {
       "id": 1,
-      "name": "hiroppy",
     },
   },
 }
 `;
 
-exports[`should return organization resolver 1`] = `
+exports[`should return result from addLike resolver 2`] = `
 Object {
   "data": Object {
-    "organization": Object {
-      "name": "nodejs",
-      "uid": 1,
-      "uri": "https://github.com/nodejs",
-    },
+    "addLike": null,
   },
+  "errors": Array [
+    [GraphQLError: Could not find],
+  ],
 }
 `;
 
-exports[`should return organizations resolver 1`] = `
+exports[`should return result from samples resolver 1`] = `
 Object {
   "data": Object {
-    "organizations": Array [
+    "samples": Array [
       Object {
-        "name": "nodejs",
-        "uid": 1,
-      },
-      Object {
-        "name": "facebook",
-        "uid": 2,
-      },
-      Object {
-        "name": "google",
-        "uid": 3,
-      },
-      Object {
-        "name": "microsoft",
-        "uid": 4,
+        "code": "test-code",
+        "description": "aaaa",
+        "id": 1,
+        "likeCount": 0,
+        "name": "apollo.tsx",
       },
     ],
   },

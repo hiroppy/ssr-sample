@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return base-url 1`] = `""`;
+
+exports[`should return saga code 1`] = `Array []`;

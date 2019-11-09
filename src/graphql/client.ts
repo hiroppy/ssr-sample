@@ -1,14 +1,12 @@
-import { ApolloClient, InMemoryCache, HttpLink } from 'apollo-boost';
-import { SchemaLink } from 'apollo-link-schema';
-import { schema } from './schema';
-import { endpoint } from './constants';
+import { ApolloClient, InMemoryCache, ApolloLink } from 'apollo-boost';
 
-export function createClient() {
+// link is an argument because schema.ts used by SchemaLink uses `fs` module
+export function createClient({ link }: { link: ApolloLink }) {
   return new ApolloClient({
     ssrMode: !process.env.IS_BROWSER,
-    link: process.env.IS_BROWSER ? new HttpLink({ uri: endpoint }) : new SchemaLink({ schema }),
+    link,
     cache: process.env.IS_BROWSER
-      ? new InMemoryCache().restore(window.__APOLLO_STATE__)
+      ? new InMemoryCache().restore((window as any).__APOLLO_STATE__)
       : new InMemoryCache()
   });
 }

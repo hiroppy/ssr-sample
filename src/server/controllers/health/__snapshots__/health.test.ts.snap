@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should return the get of health api response 1`] = `
+exports[`should return the get of api response 1`] = `
 Object {
   "heath": "ok",
 }
