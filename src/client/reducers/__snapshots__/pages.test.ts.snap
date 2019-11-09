@@ -1,21 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should handle LOAD_ORGS_PAGE 1`] = `
+exports[`should handle LOAD_APOLLO_PAGE 1`] = `
 Object {
+  "baseUrl": "",
+  "env": "development",
   "error": null,
   "isLoadingCompletion": false,
 }
 `;
 
-exports[`should handle LOAD_ORGS_PAGE_FAILURE 1`] = `
+exports[`should handle LOAD_APOLLO_PAGE_FAILURE 1`] = `
 Object {
+  "baseUrl": "",
+  "env": "development",
   "error": [Error: 404],
   "isLoadingCompletion": true,
 }
 `;
 
-exports[`should handle LOAD_ORGS_PAGE_SUCCESS 1`] = `
+exports[`should handle LOAD_APOLLO_PAGE_SUCCESS 1`] = `
 Object {
+  "baseUrl": "",
+  "env": "development",
+  "error": null,
+  "isLoadingCompletion": true,
+}
+`;
+
+exports[`should handle LOAD_SAGA_PAGE 1`] = `
+Object {
+  "baseUrl": "",
+  "env": "development",
+  "error": null,
+  "isLoadingCompletion": false,
+}
+`;
+
+exports[`should handle LOAD_SAGA_PAGE_FAILURE 1`] = `
+Object {
+  "baseUrl": "",
+  "env": "development",
+  "error": [Error: 404],
+  "isLoadingCompletion": true,
+}
+`;
+
+exports[`should handle LOAD_SAGA_PAGE_SUCCESS 1`] = `
+Object {
+  "baseUrl": "",
+  "env": "development",
   "error": null,
   "isLoadingCompletion": true,
 }
@@ -23,6 +56,8 @@ Object {
 
 exports[`should handle LOAD_TOP_PAGE 1`] = `
 Object {
+  "baseUrl": "",
+  "env": "development",
   "error": null,
   "isLoadingCompletion": false,
 }
@@ -30,6 +65,8 @@ Object {
 
 exports[`should handle LOAD_TOP_PAGE_FAILURE 1`] = `
 Object {
+  "baseUrl": "",
+  "env": "development",
   "error": [Error: 404],
   "isLoadingCompletion": true,
 }
@@ -37,6 +74,8 @@ Object {
 
 exports[`should handle LOAD_TOP_PAGE_SUCCESS 1`] = `
 Object {
+  "baseUrl": "",
+  "env": "development",
   "error": null,
   "isLoadingCompletion": true,
 }
@@ -44,13 +83,26 @@ Object {
 
 exports[`should handle RESET_PAGES_STATUS 1`] = `
 Object {
+  "baseUrl": "",
+  "env": "development",
   "error": null,
   "isLoadingCompletion": false,
 }
 `;
 
-exports[`should return the initial state 1`] = `
+exports[`should handle SET_BASE_URL 1`] = `
 Object {
+  "baseUrl": "base-url",
+  "env": "development",
+  "error": null,
+  "isLoadingCompletion": false,
+}
+`;
+
+exports[`should handle SET_ENV 1`] = `
+Object {
+  "baseUrl": "",
+  "env": "test",
   "error": null,
   "isLoadingCompletion": false,
 }

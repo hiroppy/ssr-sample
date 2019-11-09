@@ -11,6 +11,7 @@ const config =
     : require('./webpack.client.dev.config');
 
 const base = {
+  entry: resolve('src', 'client', 'index.tsx'),
   output: {
     path: resolve('dist', 'client')
   },

@@ -3,9 +3,8 @@
     "outDir": "./dist",
     "declaration": false,
     "jsx": "react",
-    "lib": ["es2017", "dom", "esnext.asynciterable"], // asynciterable is used by graphql
-    // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/33311
-    "types": ["react", "jest"], // for styled-components
+    "lib": ["es2018", "dom"],
+    "types": ["react", "jest", "webpack-env"], // for styled-components
     "module": "commonjs",
     "moduleResolution": "node", // for module:esnext
     "allowJs": false,
@@ -20,6 +19,11 @@
     "strict": true,
     "esModuleInterop": true
   },
-  "exclude": ["node_modules", "src/**/*.test.ts", "src/client/**/*.stories.ts"],
+  "exclude": [
+    "node_modules",
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx",
+    "src/client/**/*.stories.ts"
+  ],
   "include": ["src/**/*"]
 }

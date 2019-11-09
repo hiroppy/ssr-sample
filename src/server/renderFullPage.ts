@@ -1,13 +1,12 @@
-interface Params {
+type Params = {
   meta: string;
-  assets: Array<string>;
   body: string;
   style: string;
   preloadedState: string;
-  scripts: string;
   graphql: string;
   nonce: string;
-}
+  scripts: string;
+};
 
 const escape = (str: string) => {
   return str
@@ -20,19 +19,23 @@ const escape = (str: string) => {
 
 export const renderFullPage = ({
   meta,
-  assets,
   body,
   style,
-  preloadedState,
   scripts,
+  preloadedState,
   graphql,
   nonce
 }: Params) => {
   return `<!DOCTYPE html>
-    <html>
+    <html lang="en">
       <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="Description" content="introducing SPA and SSR">
         <meta property="csp-nonce" content="${nonce}">
         ${meta}
+        <link rel="manifest" href="/manifest.webmanifest">
+        <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet"></link>
         ${style}
       </head>
       <body>
@@ -42,7 +45,6 @@ export const renderFullPage = ({
   )}"></script>
         <script nonce="${nonce}">window.__APOLLO_STATE__=${graphql}</script>
         ${scripts}
-        ${assets.map((asset) => `<script nonce="${nonce}" src=${asset}></script>`).join('\n')}
       </body>
     </html>
   `.trim();

@@ -1,10 +1,13 @@
-const { configure } = require('@storybook/react');
-const requireContext = require('require-context.macro');
+import React from 'react';
+import requireContext from 'require-context.macro';
+import { configure, addDecorator } from '@storybook/react';
+import { GlobalStyle } from '../src/client/components/App';
 
-const req = requireContext('../src/client', true, /.stories.tsx$/);
+configure(requireContext('../src/client/components', true, /\.stories\.tsx?$/), module);
 
-function loadStories() {
-  req.keys().forEach((filename) => req(filename));
-}
-
-configure(loadStories, module);
+addDecorator((tree) => (
+  <>
+    <GlobalStyle />
+    <div style={{ margin: '12px', fontSize: '1rem' }}>{tree()}</div>
+  </>
+));

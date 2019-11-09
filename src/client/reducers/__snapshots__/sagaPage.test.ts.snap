@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should handle FETCH_SAGA_CODE 1`] = `
+Object {
+  "samples": Array [],
+}
+`;
+
+exports[`should handle FETCH_SAGA_CODE_FAILURE 1`] = `
+Object {
+  "samples": Array [],
+}
+`;
+
+exports[`should handle FETCH_SAGA_CODE_SUCCESS 1`] = `
+Object {
+  "samples": Array [
+    Object {
+      "code": "test-code",
+      "description": "aaaa",
+      "id": 1,
+      "likeCount": 0,
+      "name": "pages.tsx",
+    },
+    Object {
+      "code": "test-code",
+      "description": "aaaa",
+      "id": 2,
+      "likeCount": 0,
+      "name": "pages.tsx",
+    },
+    Object {
+      "code": "test-code",
+      "description": "aaaa",
+      "id": 3,
+      "likeCount": 0,
+      "name": "pages.tsx",
+    },
+    Object {
+      "code": "test-code",
+      "description": "aaaa",
+      "id": 4,
+      "likeCount": 0,
+      "name": "pages.tsx",
+    },
+  ],
+}
+`;

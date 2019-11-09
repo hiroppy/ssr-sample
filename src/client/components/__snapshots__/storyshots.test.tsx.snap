@@ -1,0 +1,300 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots CodeSamplesBox Base 1`] = `
+<div
+  style={
+    Object {
+      "fontSize": "1rem",
+      "margin": "12px",
+    }
+  }
+>
+  <div
+    className="sc-bxivhb fXoCBv"
+  >
+    <div
+      className="sc-ifAKCX blWfOW"
+    >
+      <h2>
+        Foo
+      </h2>
+      0
+      <a
+        className="sc-EHOje Qeqti"
+        data-testid="like-button"
+        onClick={[Function]}
+      >
+        likes
+      </a>
+      <p>
+        this is foo
+      </p>
+      <a
+        className="sc-bZQynM bOrPFB"
+        data-testid="collapse-button"
+        onClick={[Function]}
+      >
+        open
+      </a>
+      <pre>
+        code
+code
+
+      </pre>
+    </div>
+    <div
+      className="sc-ifAKCX blWfOW"
+    >
+      <h2>
+        Bar
+      </h2>
+      0
+      <a
+        className="sc-EHOje Qeqti"
+        data-testid="like-button"
+        onClick={[Function]}
+      >
+        likes
+      </a>
+      <p>
+        this is bar
+      </p>
+      <a
+        className="sc-bZQynM bOrPFB"
+        data-testid="collapse-button"
+        onClick={[Function]}
+      >
+        open
+      </a>
+      <pre>
+        code
+code
+
+      </pre>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Head Base 1`] = `
+<div
+  style={
+    Object {
+      "fontSize": "1rem",
+      "margin": "12px",
+    }
+  }
+/>
+`;
+
+exports[`Storyshots Header Base 1`] = `
+<div
+  style={
+    Object {
+      "fontSize": "1rem",
+      "margin": "12px",
+    }
+  }
+>
+  <header
+    className="sc-bwzfXH eODEeo"
+  >
+    <a
+      className="sc-bdVaJa kuRBwa"
+      href="/"
+      onClick={[Function]}
+    >
+      &lt;
+    </a>
+    <a
+      className="sc-bdVaJa kuRBwa"
+      href="/saga"
+      onClick={[Function]}
+    >
+      saga
+    </a>
+    <a
+      className="sc-bdVaJa kuRBwa"
+      href="/apollo"
+      onClick={[Function]}
+    >
+      apollo
+    </a>
+    <span>
+      development
+    </span>
+  </header>
+</div>
+`;
+
+exports[`Storyshots NotFound Base 1`] = `
+<div
+  style={
+    Object {
+      "fontSize": "1rem",
+      "margin": "12px",
+    }
+  }
+>
+  <div
+    className="sc-gzVnrw rVarD"
+  >
+    [404] Not Found
+  </div>
+</div>
+`;
+
+exports[`Storyshots Saga Base 1`] = `
+<div
+  style={
+    Object {
+      "fontSize": "1rem",
+      "margin": "12px",
+    }
+  }
+>
+  <p>
+    get: get all samples
+  </p>
+  <p>
+    post: add a like count
+  </p>
+  <div
+    className="sc-bxivhb fXoCBv"
+  >
+    <div
+      className="sc-ifAKCX blWfOW"
+    >
+      <h2>
+        pages.tsx
+      </h2>
+      0
+      <a
+        className="sc-EHOje Qeqti"
+        data-testid="like-button"
+        onClick={[Function]}
+      >
+        likes
+      </a>
+      <p>
+        aaaa
+      </p>
+      <a
+        className="sc-bZQynM bOrPFB"
+        data-testid="collapse-button"
+        onClick={[Function]}
+      >
+        open
+      </a>
+      <pre>
+        test-code
+      </pre>
+    </div>
+    <div
+      className="sc-ifAKCX blWfOW"
+    >
+      <h2>
+        pages.tsx
+      </h2>
+      0
+      <a
+        className="sc-EHOje Qeqti"
+        data-testid="like-button"
+        onClick={[Function]}
+      >
+        likes
+      </a>
+      <p>
+        aaaa
+      </p>
+      <a
+        className="sc-bZQynM bOrPFB"
+        data-testid="collapse-button"
+        onClick={[Function]}
+      >
+        open
+      </a>
+      <pre>
+        test-code
+      </pre>
+    </div>
+    <div
+      className="sc-ifAKCX blWfOW"
+    >
+      <h2>
+        pages.tsx
+      </h2>
+      0
+      <a
+        className="sc-EHOje Qeqti"
+        data-testid="like-button"
+        onClick={[Function]}
+      >
+        likes
+      </a>
+      <p>
+        aaaa
+      </p>
+      <a
+        className="sc-bZQynM bOrPFB"
+        data-testid="collapse-button"
+        onClick={[Function]}
+      >
+        open
+      </a>
+      <pre>
+        test-code
+      </pre>
+    </div>
+    <div
+      className="sc-ifAKCX blWfOW"
+    >
+      <h2>
+        pages.tsx
+      </h2>
+      0
+      <a
+        className="sc-EHOje Qeqti"
+        data-testid="like-button"
+        onClick={[Function]}
+      >
+        likes
+      </a>
+      <p>
+        aaaa
+      </p>
+      <a
+        className="sc-bZQynM bOrPFB"
+        data-testid="collapse-button"
+        onClick={[Function]}
+      >
+        open
+      </a>
+      <pre>
+        test-code
+      </pre>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Top Base 1`] = `
+<div
+  style={
+    Object {
+      "fontSize": "1rem",
+      "margin": "12px",
+    }
+  }
+>
+  <section>
+    <div
+      className="sc-htoDjs himyPB"
+    >
+      <p>
+        test-code
+      </p>
+    </div>
+  </section>
+</div>
+`;

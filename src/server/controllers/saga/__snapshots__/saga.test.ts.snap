@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return the getAll of api response 1`] = `
+Object {
+  "body": Array [
+    Object {
+      "code": "test-code",
+      "description": "aaaa",
+      "id": 1,
+      "likeCount": 0,
+      "name": "pages.tsx",
+    },
+  ],
+}
+`;
+
+exports[`should return the post of api response 1`] = `
+Object {
+  "body": Object {
+    "code": "test-code",
+    "description": "aaaa",
+    "id": 1,
+    "likeCount": 1,
+    "name": "pages.tsx",
+  },
+}
+`;
+
+exports[`should return the post of api response 2`] = `
+Object {
+  "body": Object {
+    "code": "test-code",
+    "description": "aaaa",
+    "id": 1,
+    "likeCount": 1,
+    "name": "pages.tsx",
+  },
+}
+`;

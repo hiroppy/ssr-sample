@@ -1,11 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should create a failure action to load Orgs page 1`] = `
+exports[`should create a failure action to load Apollo page 1`] = `
 Object {
   "payload": Object {
     "err": [Error],
   },
-  "type": "LOAD_ORGS_PAGE_FAILURE",
+  "type": "LOAD_APOLLO_PAGE_FAILURE",
+}
+`;
+
+exports[`should create a failure action to load Saga page 1`] = `
+Object {
+  "payload": Object {
+    "err": [Error],
+  },
+  "type": "LOAD_SAGA_PAGE_FAILURE",
 }
 `;
 
@@ -20,14 +29,22 @@ Object {
 
 exports[`should create a failure action to load app process 1`] = `
 Object {
-  "err": [Error],
+  "payload": Object {
+    "err": [Error],
+  },
   "type": "LOAD_APP_PROCESS_FAILURE",
 }
 `;
 
-exports[`should create a success action to load Orgs page 1`] = `
+exports[`should create a success action to load Apollo page 1`] = `
 Object {
-  "type": "LOAD_ORGS_PAGE_SUCCESS",
+  "type": "LOAD_APOLLO_PAGE_SUCCESS",
+}
+`;
+
+exports[`should create a success action to load Saga page 1`] = `
+Object {
+  "type": "LOAD_SAGA_PAGE_SUCCESS",
 }
 `;
 
@@ -43,12 +60,18 @@ Object {
 }
 `;
 
-exports[`should create an action to load Orgs page 1`] = `
+exports[`should create an action to load Apollo page 1`] = `
+Object {
+  "type": "LOAD_APOLLO_PAGE",
+}
+`;
+
+exports[`should create an action to load Saga page 1`] = `
 Object {
   "payload": Object {
-    "org": "foo",
+    "maxLength": "2",
   },
-  "type": "LOAD_ORGS_PAGE",
+  "type": "LOAD_SAGA_PAGE",
 }
 `;
 
@@ -70,8 +93,11 @@ Object {
 }
 `;
 
-exports[`should create an action to stop saga 1`] = `
+exports[`should create an action to set a base-url 1`] = `
 Object {
-  "type": "STOP_SAGA",
+  "payload": Object {
+    "baseUrl": "url",
+  },
+  "type": "SET_BASE_URL",
 }
 `;

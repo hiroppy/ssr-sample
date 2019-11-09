@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should create a failure action to add like count 1`] = `
+Object {
+  "payload": Object {
+    "err": [Error],
+  },
+  "type": "ADD_LIKE_FAILURE",
+}
+`;
+
+exports[`should create a failure action to fetch saga's code 1`] = `
+Object {
+  "payload": Object {
+    "err": [Error],
+  },
+  "type": "FETCH_SAGA_CODE_FAILURE",
+}
+`;
+
+exports[`should create a success action to add like count 1`] = `
+Object {
+  "payload": Object {
+    "res": Object {
+      "code": "test-code",
+      "description": "aaaa",
+      "id": 1,
+      "likeCount": 0,
+      "name": "pages.tsx",
+    },
+  },
+  "type": "ADD_LIKE_SUCCESS",
+}
+`;
+
+exports[`should create a success action to fetch saga's code 1`] = `
+Object {
+  "payload": Object {
+    "samples": Array [
+      Object {
+        "code": "test-code",
+        "description": "aaaa",
+        "id": 1,
+        "likeCount": 0,
+        "name": "pages.tsx",
+      },
+      Object {
+        "code": "test-code",
+        "description": "aaaa",
+        "id": 2,
+        "likeCount": 0,
+        "name": "pages.tsx",
+      },
+      Object {
+        "code": "test-code",
+        "description": "aaaa",
+        "id": 3,
+        "likeCount": 0,
+        "name": "pages.tsx",
+      },
+      Object {
+        "code": "test-code",
+        "description": "aaaa",
+        "id": 4,
+        "likeCount": 0,
+        "name": "pages.tsx",
+      },
+    ],
+  },
+  "type": "FETCH_SAGA_CODE_SUCCESS",
+}
+`;
+
+exports[`should create an action to add like count 1`] = `
+Object {
+  "payload": Object {
+    "id": 1,
+  },
+  "type": "ADD_LIKE",
+}
+`;
+
+exports[`should create an action to fetch saga's code 1`] = `
+Object {
+  "payload": Object {
+    "maxLength": "2",
+  },
+  "type": "FETCH_SAGA_CODE",
+}
+`;

@@ -2,10 +2,15 @@
 
 exports[`should create safe html 1`] = `
 "<!DOCTYPE html>
-    <html>
+    <html lang=\\"en\\">
       <head>
+        <meta charSet=\\"UTF-8\\" />
+        <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1.0\\" />
+        <meta name=\\"Description\\" content=\\"introducing SPA and SSR\\">
         <meta property=\\"csp-nonce\\" content=\\"nonce\\">
         <meta>meta</meta>
+        <link rel=\\"manifest\\" href=\\"/manifest.webmanifest\\">
+        <link href=\\"https://fonts.googleapis.com/css?family=Muli&display=swap\\" rel=\\"stylesheet\\"></link>
         <style>style</style>
       </head>
       <body>
@@ -13,7 +18,6 @@ exports[`should create safe html 1`] = `
         <script nonce=\\"nonce\\" id=\\"initial-data\\" type=\\"text/plain\\" data-json=\\"{&quot;arr&quot;:[&quot;foo&quot;,&quot;bar&quot;],&quot;obj&quot;:{&quot;foo&quot;:1,&quot;bar&quot;:1},&quot;str&quot;:&quot;テスト&quot;}\\"></script>
         <script nonce=\\"nonce\\">window.__APOLLO_STATE__=graphql</script>
         <script>window</script>
-        <script nonce=\\"nonce\\" src=script></script>
       </body>
     </html>"
 `;

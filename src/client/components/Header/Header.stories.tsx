@@ -1,12 +1,23 @@
-import * as React from 'react';
-import { storiesOf } from '@storybook/react';
+import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import configureStore from 'redux-mock-store';
 import { Header } from '.';
+import { initialState } from '../../reducers/pages';
 
-const stories = storiesOf('components/Header', module);
+export default {
+  component: Header,
+  title: 'Header'
+};
 
-stories.add('default', () => (
-  <MemoryRouter initialEntries={['/']} keyLength={0}>
-    <Header userName="user" orgName="org" />
-  </MemoryRouter>
-));
+const store = configureStore()({
+  pages: initialState
+});
+
+export const Base = () => (
+  <Provider store={store}>
+    <MemoryRouter initialEntries={['/']} keyLength={0}>
+      <Header />
+    </MemoryRouter>
+  </Provider>
+);

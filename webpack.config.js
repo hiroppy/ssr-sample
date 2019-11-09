@@ -1,10 +1,10 @@
 'use strict';
 
-const { join, resolve } = require('path');
 const webpack = require('webpack');
 const Dotenv = require('dotenv-webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const LoadablePlugin = require('@loadable/webpack-plugin');
 
 const common = {
   output: {
@@ -12,16 +12,11 @@ const common = {
     publicPath: '/public/'
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.mjs']
+    modules: ['node_modules'],
+    extensions: ['.ts', '.tsx', '.js']
   },
   module: {
     rules: [
-      {
-        // for graphql
-        test: /\.mjs$/,
-        include: /node_modules/,
-        type: 'javascript/auto'
-      },
       {
         test: /\.tsx?$/,
         use: {
@@ -37,7 +32,8 @@ const common = {
       safe: false
     }),
     new webpack.NamedModulesPlugin(),
-    new ForkTsCheckerWebpackPlugin()
+    new ForkTsCheckerWebpackPlugin(),
+    new LoadablePlugin()
   ]
 };
 

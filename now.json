@@ -1,0 +1,9 @@
+{
+  "name": "ssr-sample",
+  "version": 2,
+  "builds": [
+    { "src": "package.json", "use": "@now/static-build" },
+    { "src": "public/server/server/index.js", "use": "@now/node" }
+  ],
+  "routes": [{ "src": "/(.*)", "dest": "public/server/server/index.js" }]
+}

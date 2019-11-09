@@ -8,12 +8,14 @@ export function generateNonceId(req: Request, res: Response, next: NextFunction)
   next();
 }
 
+// google font: https://stackoverflow.com/a/34576000/7014700
 const baseDirectives: helmet.IHelmetContentSecurityPolicyDirectives = {
   defaultSrc: ["'self'"],
-  styleSrc: ["'unsafe-inline'", 'https://fonts.googleapis.com'],
-  fontSrc: ["'self'", 'https://fonts.gstatic.com'],
-  imgSrc: ["'self'", 'https://avatars1.githubusercontent.com'],
-  connectSrc: ["'self'", 'https://api.github.com']
+  styleSrc: ["'unsafe-inline'", 'fonts.googleapis.com'], // for styled-components
+  fontSrc: ["'self'", 'data: fonts.gstatic.com'],
+  imgSrc: ["'self'", 'img.shields.io'], // for README
+  connectSrc: ["'self'", 'img.shields.io', 'fonts.googleapis.com', 'fonts.gstatic.com'], // for service-worker
+  workerSrc: ["'self'"]
 };
 
 // chrome, firefox
@@ -35,8 +37,10 @@ const lv2Directives: helmet.IHelmetContentSecurityPolicyDirectives = {
 };
 
 export function csp(req: Request, res: Response, next: NextFunction) {
-  // @ts-ignore
-  const directives = ['Chrome', 'Firefox'].includes(ua(req.headers['user-agent']).browser.name)
+  const directives = ['Chrome', 'Firefox'].includes(
+    // TODO: fix
+    (ua as any)(req.headers['user-agent']).browser.name
+  )
     ? lv3Directives
     : lv2Directives;
 

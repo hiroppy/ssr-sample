@@ -1,54 +1,48 @@
+/* eslint @typescript-eslint/no-non-null-assertion: 0 */
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { ConnectedRouter } from 'connected-react-router';
-import { loadComponents } from 'loadable-components';
-
-// graphql
+import { BrowserRouter } from 'react-router-dom';
+import { loadableReady } from '@loadable/component';
 import { ApolloProvider } from 'react-apollo';
+import { HttpLink } from 'apollo-boost';
 import { createClient } from '../graphql/client';
-
-import { configureStore, history } from './store/configureStore';
-import { Router } from './Router'; // this needs to be at the top level because it's used by loadable-components
-
-if (process.env.NODE_ENV !== 'production' && process.env.IS_BROWSER) {
-  const { whyDidYouUpdate } = require('why-did-you-update');
-
-  whyDidYouUpdate(React);
-}
+import { endpoint } from '../graphql/constants';
+import { configureStore } from './store/configureStore';
 
 if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/public/service-worker.js');
+    navigator.serviceWorker.register('/service-worker.js');
   });
 }
 
 const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate;
 const initialData = JSON.parse(document.getElementById('initial-data')!.getAttribute('data-json')!);
-const store = configureStore(initialData);
-const client = createClient();
+const { store } = configureStore(initialData);
+const client = createClient({ link: new HttpLink({ uri: endpoint }) });
 
-const render = (RouterComponent: typeof Router) => {
+const render = async () => {
+  const { Router } = await import(/* webpackMode: "eager" */ './router');
+
   renderMethod(
     <ApolloProvider client={client}>
       <Provider store={store}>
-        <ConnectedRouter history={history}>
-          <RouterComponent />
-        </ConnectedRouter>
+        <BrowserRouter>
+          <Router />
+        </BrowserRouter>
       </Provider>
     </ApolloProvider>,
     document.getElementById('root')
   );
 };
 
-loadComponents().then(() => {
-  render(Router);
+loadableReady(() => {
+  render();
 });
 
 if (module.hot) {
-  module.hot.accept('./Router', () => {
-    const { Router: RouterComponent }: { Router: typeof Router } = require('./Router');
-
-    render(RouterComponent);
+  module.hot.accept('./router', () => {
+    render();
   });
 }
