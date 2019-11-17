@@ -113,7 +113,7 @@
     "apollo-link-schema": "1.2.2",
     "apollo-server-express": "2.6.9",
     "body-parser": "1.19.0",
-    "connected-react-router": "4.5.0",
+    "connected-react-router": "6.6.0",
     "core-js": "2.6.5",
     "cross-env": "6.0.3",
     "dotenv": "8.0.0",
