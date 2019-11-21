@@ -114,7 +114,7 @@
     "apollo-server-express": "2.6.9",
     "body-parser": "1.19.0",
     "connected-react-router": "4.5.0",
-    "core-js": "2.6.5",
+    "core-js": "3.4.2",
     "cross-env": "6.0.3",
     "dotenv": "8.0.0",
     "dotenv-webpack": "1.7.0",
