@@ -29,7 +29,7 @@ module.exports = {
         'plugin:@typescript-eslint/eslint-recommended',
         'plugin:react/recommended'
       ],
-      plugins: ['@typescript-eslint', 'react'],
+      plugins: ['@typescript-eslint', 'react', 'react-hooks'],
       parser: '@typescript-eslint/parser',
       rules: {
         '@typescript-eslint/no-use-before-define': 0, // bug?
