@@ -1,4 +1,4 @@
-# A minimum sample of Server-Side-Rendering, Single-Page-Application and Progressive Web App
+# A minimum sample of Server-Side-Rendering, Single-Page-Application, and Progressive Web App
 
 ## What's this project?
 
@@ -8,7 +8,7 @@ This project introduces how to implement SSR, SPA, and PWA.
 
 only Japanese
 
-- [N/A]()
+- [SPA + SSR + PWA の作り方とセキュリティについて](https://blog.hiroppy.me/entry/ssr-sample_2)
 - [業務で使える簡単な SSR + SPA のテンプレートを公開した](http://blog.hiroppy.me/entry/ssr-sample)
 
 ## Feature
