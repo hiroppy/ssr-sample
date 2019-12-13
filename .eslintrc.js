@@ -32,6 +32,7 @@ module.exports = {
       plugins: ['@typescript-eslint', 'react', 'react-hooks'],
       parser: '@typescript-eslint/parser',
       rules: {
+        '@typescript-eslint/no-empty-function': 0,
         '@typescript-eslint/no-use-before-define': 0, // bug?
         '@typescript-eslint/explicit-function-return-type': 0,
         '@typescript-eslint/no-explicit-any': 0, // for tests
