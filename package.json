@@ -124,7 +124,7 @@
   "dependencies": {
     "@loadable/component": "5.11.0",
     "@loadable/server": "5.11.0",
-    "apollo-boost": "0.4.4",
+    "apollo-boost": "0.4.7",
     "apollo-link-schema": "1.2.4",
     "apollo-server-express": "2.9.13",
     "body-parser": "1.19.0",
