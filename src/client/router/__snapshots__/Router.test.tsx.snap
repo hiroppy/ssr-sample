@@ -3,22 +3,22 @@
 exports[`should render 404 page 1`] = `
 <DocumentFragment>
   <header
-    class="sc-bwzfXH eODEeo"
+    class="sc-AykKD buFqre"
   >
     <a
-      class="sc-bdVaJa kuRBwa"
+      class="sc-AykKC fSVTkQ"
       href="/"
     >
       &lt;
     </a>
     <a
-      class="sc-bdVaJa kuRBwa"
+      class="sc-AykKC fSVTkQ"
       href="/saga"
     >
       saga
     </a>
     <a
-      class="sc-bdVaJa kuRBwa"
+      class="sc-AykKC fSVTkQ"
       href="/apollo"
     >
       apollo
@@ -28,7 +28,7 @@ exports[`should render 404 page 1`] = `
     </span>
   </header>
   <div
-    class="sc-htpNat cPKslE"
+    class="sc-AykKE ffQxyb"
   >
     <p>
       404
@@ -40,22 +40,22 @@ exports[`should render 404 page 1`] = `
 exports[`should render Apollo page 1`] = `
 <DocumentFragment>
   <header
-    class="sc-bwzfXH eODEeo"
+    class="sc-AykKD buFqre"
   >
     <a
-      class="sc-bdVaJa kuRBwa"
+      class="sc-AykKC fSVTkQ"
       href="/"
     >
       &lt;
     </a>
     <a
-      class="sc-bdVaJa kuRBwa"
+      class="sc-AykKC fSVTkQ"
       href="/saga"
     >
       saga
     </a>
     <a
-      class="sc-bdVaJa kuRBwa"
+      class="sc-AykKC fSVTkQ"
       href="/apollo"
     >
       apollo
@@ -65,7 +65,7 @@ exports[`should render Apollo page 1`] = `
     </span>
   </header>
   <div
-    class="sc-htpNat cPKslE"
+    class="sc-AykKE ffQxyb"
   >
     <p>
       apollo
@@ -77,22 +77,22 @@ exports[`should render Apollo page 1`] = `
 exports[`should render Saga page 1`] = `
 <DocumentFragment>
   <header
-    class="sc-bwzfXH eODEeo"
+    class="sc-AykKD buFqre"
   >
     <a
-      class="sc-bdVaJa kuRBwa"
+      class="sc-AykKC fSVTkQ"
       href="/"
     >
       &lt;
     </a>
     <a
-      class="sc-bdVaJa kuRBwa"
+      class="sc-AykKC fSVTkQ"
       href="/saga"
     >
       saga
     </a>
     <a
-      class="sc-bdVaJa kuRBwa"
+      class="sc-AykKC fSVTkQ"
       href="/apollo"
     >
       apollo
@@ -102,7 +102,7 @@ exports[`should render Saga page 1`] = `
     </span>
   </header>
   <div
-    class="sc-htpNat cPKslE"
+    class="sc-AykKE ffQxyb"
   >
     <p>
       saga
@@ -114,22 +114,22 @@ exports[`should render Saga page 1`] = `
 exports[`should render Top page 1`] = `
 <DocumentFragment>
   <header
-    class="sc-bwzfXH eODEeo"
+    class="sc-AykKD buFqre"
   >
     <a
-      class="sc-bdVaJa kuRBwa"
+      class="sc-AykKC fSVTkQ"
       href="/"
     >
       &lt;
     </a>
     <a
-      class="sc-bdVaJa kuRBwa"
+      class="sc-AykKC fSVTkQ"
       href="/saga"
     >
       saga
     </a>
     <a
-      class="sc-bdVaJa kuRBwa"
+      class="sc-AykKC fSVTkQ"
       href="/apollo"
     >
       apollo
@@ -139,7 +139,7 @@ exports[`should render Top page 1`] = `
     </span>
   </header>
   <div
-    class="sc-htpNat cPKslE"
+    class="sc-AykKE ffQxyb"
   >
     <p>
       top
