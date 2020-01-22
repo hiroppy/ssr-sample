@@ -10,17 +10,17 @@ exports[`Storyshots CodeSamplesBox Base 1`] = `
   }
 >
   <div
-    className="sc-bxivhb fXoCBv"
+    className="sc-AykKF gSVlrO"
   >
     <div
-      className="sc-ifAKCX blWfOW"
+      className="sc-AykKG dKGDDl"
     >
       <h2>
         Foo
       </h2>
       0
       <a
-        className="sc-EHOje Qeqti"
+        className="sc-AykKH cIyBuv"
         data-testid="like-button"
         onClick={[Function]}
       >
@@ -30,7 +30,7 @@ exports[`Storyshots CodeSamplesBox Base 1`] = `
         this is foo
       </p>
       <a
-        className="sc-bZQynM bOrPFB"
+        className="sc-AykKI fSiutg"
         data-testid="collapse-button"
         onClick={[Function]}
       >
@@ -43,14 +43,14 @@ code
       </pre>
     </div>
     <div
-      className="sc-ifAKCX blWfOW"
+      className="sc-AykKG dKGDDl"
     >
       <h2>
         Bar
       </h2>
       0
       <a
-        className="sc-EHOje Qeqti"
+        className="sc-AykKH cIyBuv"
         data-testid="like-button"
         onClick={[Function]}
       >
@@ -60,7 +60,7 @@ code
         this is bar
       </p>
       <a
-        className="sc-bZQynM bOrPFB"
+        className="sc-AykKI fSiutg"
         data-testid="collapse-button"
         onClick={[Function]}
       >
@@ -97,24 +97,24 @@ exports[`Storyshots Header Base 1`] = `
   }
 >
   <header
-    className="sc-bwzfXH eODEeo"
+    className="sc-AykKD buFqre"
   >
     <a
-      className="sc-bdVaJa kuRBwa"
+      className="sc-AykKC fSVTkQ"
       href="/"
       onClick={[Function]}
     >
       &lt;
     </a>
     <a
-      className="sc-bdVaJa kuRBwa"
+      className="sc-AykKC fSVTkQ"
       href="/saga"
       onClick={[Function]}
     >
       saga
     </a>
     <a
-      className="sc-bdVaJa kuRBwa"
+      className="sc-AykKC fSVTkQ"
       href="/apollo"
       onClick={[Function]}
     >
@@ -137,7 +137,7 @@ exports[`Storyshots NotFound Base 1`] = `
   }
 >
   <div
-    className="sc-gzVnrw rVarD"
+    className="sc-AykKJ eXWPhS"
   >
     [404] Not Found
   </div>
@@ -160,17 +160,17 @@ exports[`Storyshots Saga Base 1`] = `
     post: add a like count
   </p>
   <div
-    className="sc-bxivhb fXoCBv"
+    className="sc-AykKF gSVlrO"
   >
     <div
-      className="sc-ifAKCX blWfOW"
+      className="sc-AykKG dKGDDl"
     >
       <h2>
         pages.tsx
       </h2>
       0
       <a
-        className="sc-EHOje Qeqti"
+        className="sc-AykKH cIyBuv"
         data-testid="like-button"
         onClick={[Function]}
       >
@@ -180,7 +180,7 @@ exports[`Storyshots Saga Base 1`] = `
         aaaa
       </p>
       <a
-        className="sc-bZQynM bOrPFB"
+        className="sc-AykKI fSiutg"
         data-testid="collapse-button"
         onClick={[Function]}
       >
@@ -191,14 +191,14 @@ exports[`Storyshots Saga Base 1`] = `
       </pre>
     </div>
     <div
-      className="sc-ifAKCX blWfOW"
+      className="sc-AykKG dKGDDl"
     >
       <h2>
         pages.tsx
       </h2>
       0
       <a
-        className="sc-EHOje Qeqti"
+        className="sc-AykKH cIyBuv"
         data-testid="like-button"
         onClick={[Function]}
       >
@@ -208,7 +208,7 @@ exports[`Storyshots Saga Base 1`] = `
         aaaa
       </p>
       <a
-        className="sc-bZQynM bOrPFB"
+        className="sc-AykKI fSiutg"
         data-testid="collapse-button"
         onClick={[Function]}
       >
@@ -219,14 +219,14 @@ exports[`Storyshots Saga Base 1`] = `
       </pre>
     </div>
     <div
-      className="sc-ifAKCX blWfOW"
+      className="sc-AykKG dKGDDl"
     >
       <h2>
         pages.tsx
       </h2>
       0
       <a
-        className="sc-EHOje Qeqti"
+        className="sc-AykKH cIyBuv"
         data-testid="like-button"
         onClick={[Function]}
       >
@@ -236,7 +236,7 @@ exports[`Storyshots Saga Base 1`] = `
         aaaa
       </p>
       <a
-        className="sc-bZQynM bOrPFB"
+        className="sc-AykKI fSiutg"
         data-testid="collapse-button"
         onClick={[Function]}
       >
@@ -247,14 +247,14 @@ exports[`Storyshots Saga Base 1`] = `
       </pre>
     </div>
     <div
-      className="sc-ifAKCX blWfOW"
+      className="sc-AykKG dKGDDl"
     >
       <h2>
         pages.tsx
       </h2>
       0
       <a
-        className="sc-EHOje Qeqti"
+        className="sc-AykKH cIyBuv"
         data-testid="like-button"
         onClick={[Function]}
       >
@@ -264,7 +264,7 @@ exports[`Storyshots Saga Base 1`] = `
         aaaa
       </p>
       <a
-        className="sc-bZQynM bOrPFB"
+        className="sc-AykKI fSiutg"
         data-testid="collapse-button"
         onClick={[Function]}
       >
@@ -289,7 +289,7 @@ exports[`Storyshots Top Base 1`] = `
 >
   <section>
     <div
-      className="sc-htoDjs himyPB"
+      className="sc-AykKK dzfBJD"
     >
       <p>
         test-code
