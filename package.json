@@ -94,7 +94,7 @@
     "eslint-plugin-prettier": "3.1.2",
     "eslint-plugin-react": "7.18.0",
     "eslint-plugin-react-hooks": "2.3.0",
-    "fork-ts-checker-webpack-plugin": "4.0.2",
+    "fork-ts-checker-webpack-plugin": "4.0.3",
     "husky": "4.2.1",
     "jest": "25.1.0",
     "lint-staged": "10.0.2",
