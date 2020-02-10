@@ -54,7 +54,7 @@
     "@storybook/storybook-deployer": "2.8.1",
     "@testing-library/react": "9.4.0",
     "@testing-library/react-hooks": "3.2.1",
-    "@types/body-parser": "1.17.1",
+    "@types/body-parser": "1.19.0",
     "@types/compression": "1.7.0",
     "@types/dotenv": "8.2.0",
     "@types/express": "4.17.2",
@@ -118,7 +118,7 @@
     "webpack-hot-middleware": "2.25.0",
     "webpack-manifest-plugin": "2.2.0",
     "webpack-merge": "4.2.2",
-    "webpack-pwa-manifest": "4.1.1",
+    "webpack-pwa-manifest": "4.2.0",
     "workbox-webpack-plugin": "5.0.0"
   },
   "dependencies": {
