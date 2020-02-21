@@ -51,7 +51,7 @@
     "@storybook/addon-viewport": "5.3.13",
     "@storybook/cli": "5.3.13",
     "@storybook/react": "5.3.13",
-    "@storybook/storybook-deployer": "2.8.1",
+    "@storybook/storybook-deployer": "2.8.2",
     "@testing-library/react": "9.4.0",
     "@testing-library/react-hooks": "3.2.1",
     "@types/body-parser": "1.19.0",
