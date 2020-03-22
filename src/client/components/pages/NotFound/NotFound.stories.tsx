@@ -6,7 +6,7 @@ import { initialState } from '../../../reducers';
 
 export default {
   component: NotFound,
-  title: 'NotFound'
+  title: 'NotFound',
 };
 
 const store = configureStore()(initialState);

@@ -6,7 +6,7 @@ export type State = {
 };
 
 export const initialState: State = {
-  samples: []
+  samples: [],
 };
 
 export const reducer = (state: State = initialState, action: Actions): State => {

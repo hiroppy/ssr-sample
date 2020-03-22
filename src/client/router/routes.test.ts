@@ -2,7 +2,7 @@ import {
   LoadableTopPage,
   LoadableSagaPage,
   LoadableApolloPage,
-  LoadableNotFoundPage
+  LoadableNotFoundPage,
 } from './routes';
 
 test('should resolve required modules', async () => {

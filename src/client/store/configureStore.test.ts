@@ -53,7 +53,7 @@ describe('redux-saga', () => {
     const { runSaga, store } = configureStore();
     const res = await Promise.race([
       runSaga(),
-      new Promise((r) => setTimeout(() => r('quit'), 500))
+      new Promise((r) => setTimeout(() => r('quit'), 500)),
     ]);
 
     expect(res).toEqual('quit');

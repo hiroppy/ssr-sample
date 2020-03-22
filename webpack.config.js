@@ -9,32 +9,32 @@ const LoadablePlugin = require('@loadable/webpack-plugin');
 const common = {
   output: {
     filename: '[name].bundle.js',
-    publicPath: '/public/'
+    publicPath: '/public/',
   },
   resolve: {
     modules: ['node_modules'],
-    extensions: ['.ts', '.tsx', '.js']
+    extensions: ['.ts', '.tsx', '.js'],
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
         use: {
-          loader: 'babel-loader'
-        }
-      }
-    ]
+          loader: 'babel-loader',
+        },
+      },
+    ],
   },
   plugins: [
     new CaseSensitivePathsPlugin(),
     new Dotenv({
       path: process.env.NODE_ENV === 'production' ? '.env.prod' : '.env.dev',
-      safe: false
+      safe: false,
     }),
     new webpack.NamedModulesPlugin(),
     new ForkTsCheckerWebpackPlugin(),
-    new LoadablePlugin()
-  ]
+    new LoadablePlugin(),
+  ],
 };
 
 module.exports = common;

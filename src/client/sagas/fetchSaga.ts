@@ -8,7 +8,7 @@ import {
   ADD_LIKE,
   addLike as AddLike,
   addLikeSuccess,
-  addLikeFailure
+  addLikeFailure,
 } from '../actions/fetchSaga';
 import { State } from '../reducers/sagaPage';
 import { getBaseUrl } from '../selectors';
@@ -16,7 +16,7 @@ import { getBaseUrl } from '../selectors';
 function* fetchMethod({
   path,
   params,
-  options
+  options,
 }: {
   path: string;
   params?: Record<string, any>;
@@ -42,7 +42,7 @@ function* fetchSagaCode(action: ReturnType<typeof FetchSagaCode>) {
     const params = { maxLength: action.payload.maxLength };
     const body = yield fetchMethod({
       path: '/api/saga',
-      params
+      params,
     });
 
     yield put(fetchSagaCodeSuccess(body));
@@ -59,7 +59,7 @@ function* addLike(action: ReturnType<typeof AddLike>) {
     // actually, this method doesn't run on Node.js so it's unnecessary to create a full url
     const body = yield fetchMethod({
       path: `/api/saga/${id}`,
-      options
+      options,
     });
 
     // need to optimize this because it's better to avoid fetching all data

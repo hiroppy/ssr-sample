@@ -8,7 +8,7 @@ import { sagaSamples } from '../../../../server/responseSchema';
 
 export default {
   component: Saga,
-  title: 'Saga'
+  title: 'Saga',
 };
 
 const store = configureStore()({ ...initialState, sagaPage: { samples: sagaSamples } });

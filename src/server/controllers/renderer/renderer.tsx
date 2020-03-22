@@ -55,9 +55,9 @@ export async function get(req: Request, res: Response) {
       // kick apollo, redux-saga, and styled-components
       getMarkupFromTree({
         tree,
-        renderFunction: renderToStaticMarkup
+        renderFunction: renderToStaticMarkup,
       }),
-      runSaga()
+      runSaga(),
     ]);
 
     const body = renderToString(tree);

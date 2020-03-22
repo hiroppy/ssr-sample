@@ -4,7 +4,7 @@ import {
   LoadableTopPage,
   LoadableSagaPage,
   LoadableApolloPage,
-  LoadableNotFoundPage
+  LoadableNotFoundPage,
 } from './routes';
 import { App } from '../components/App';
 

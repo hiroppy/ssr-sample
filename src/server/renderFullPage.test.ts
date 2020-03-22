@@ -8,9 +8,9 @@ test('should create safe html', () => {
     arr: ['foo', 'bar'],
     obj: {
       foo: 1,
-      bar: 1
+      bar: 1,
     },
-    str: 'テスト'
+    str: 'テスト',
   });
   const scripts = '<script>window</script>';
   const graphql = 'graphql';

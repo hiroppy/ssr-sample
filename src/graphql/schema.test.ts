@@ -20,10 +20,10 @@ test('should return result from samples resolver', async () => {
     GET_SAMPLES,
     null,
     {
-      samples: apolloSamples
+      samples: apolloSamples,
     },
     {
-      maxLength: 1
+      maxLength: 1,
     }
   );
 
@@ -45,10 +45,10 @@ test('should return result from addLike resolver', async () => {
       ADD_LIKE,
       null,
       {
-        samples: apolloSamples
+        samples: apolloSamples,
       },
       {
-        id: 1
+        id: 1,
       }
     );
 
@@ -61,10 +61,10 @@ test('should return result from addLike resolver', async () => {
       ADD_LIKE,
       null,
       {
-        samples: apolloSamples
+        samples: apolloSamples,
       },
       {
-        id: 1000
+        id: 1000,
       }
     );
 

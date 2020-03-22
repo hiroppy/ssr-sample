@@ -10,7 +10,7 @@ import { get } from '.';
 
 test.skip('should return the get of renderer response', async () => {
   const req = httpMocks.createRequest({
-    url: '/apollo'
+    url: '/apollo',
   });
   const res = httpMocks.createResponse();
   const data = (await get(req, res)) as MockResponse<Response>;
@@ -24,7 +24,7 @@ test('should return 500 when occur internal errors', async () => {
     return {
       ChunkExtractor: () => {
         return new Error();
-      }
+      },
     };
   });
 

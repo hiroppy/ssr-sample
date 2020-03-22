@@ -23,20 +23,20 @@ const getSamplesMock = {
   request: {
     query: GET_SAMPLES,
     variables: {
-      maxLength: 0
-    }
+      maxLength: 0,
+    },
   },
-  result: { data: { samples: apolloSamples } }
+  result: { data: { samples: apolloSamples } },
 };
 
 const addLikeMock = {
   request: {
     query: ADD_LIKE,
     variables: {
-      id: 1
-    }
+      id: 1,
+    },
   },
-  result: { data: { addLike: { id: 1 } } }
+  result: { data: { addLike: { id: 1 } } },
 };
 
 function run(state = {}, mocks = []) {

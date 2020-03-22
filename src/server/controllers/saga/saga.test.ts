@@ -4,8 +4,8 @@ import { getAll, post } from '.';
 test('should return the getAll of api response', () => {
   const req = httpMocks.createRequest({
     query: {
-      maxLength: 1
-    }
+      maxLength: 1,
+    },
   });
   const res = httpMocks.createResponse();
   const data = getAll(req, res) as MockResponse<ReturnType<typeof getAll>>;
@@ -19,8 +19,8 @@ test('should return the post of api response', () => {
   {
     const req = httpMocks.createRequest({
       params: {
-        id: 1
-      }
+        id: 1,
+      },
     });
     const data = post(req, res) as MockResponse<ReturnType<typeof post>>;
 
@@ -30,8 +30,8 @@ test('should return the post of api response', () => {
   {
     const req = httpMocks.createRequest({
       params: {
-        id: 1000
-      }
+        id: 1000,
+      },
     });
     const data = post(req, res) as MockResponse<ReturnType<typeof post>>;
 

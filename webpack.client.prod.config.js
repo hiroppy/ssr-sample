@@ -12,7 +12,7 @@ const config = {
   mode: 'production',
   output: {
     filename: '[name].[contenthash].bundle.js',
-    chunkFilename: '[name].[contenthash].[id].bundle.js'
+    chunkFilename: '[name].[contenthash].[id].bundle.js',
   },
   plugins: [
     new webpack.optimize.AggressiveMergingPlugin(),
@@ -29,9 +29,9 @@ const config = {
       icons: [
         {
           src: resolve('./assets/avatar.png'),
-          sizes: [96, 128, 192, 256, 384, 512]
-        }
-      ]
+          sizes: [96, 128, 192, 256, 384, 512],
+        },
+      ],
     }),
     new GenerateSW({
       clientsClaim: true,
@@ -40,31 +40,31 @@ const config = {
       runtimeCaching: [
         {
           urlPattern: new RegExp('.'), // for start_url
-          handler: 'StaleWhileRevalidate'
+          handler: 'StaleWhileRevalidate',
         },
         {
           urlPattern: new RegExp('api|graphql'),
-          handler: 'NetworkFirst'
+          handler: 'NetworkFirst',
         },
         {
           urlPattern: new RegExp('https://fonts.googleapis.com|https://fonts.gstatic.com'),
-          handler: 'CacheFirst'
-        }
-      ]
+          handler: 'CacheFirst',
+        },
+      ],
     }),
     new RobotstxtPlugin(),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
-      openAnalyzer: false
-    })
+      openAnalyzer: false,
+    }),
   ],
   performance: {
     maxEntrypointSize: 512000,
-    maxAssetSize: 512000
+    maxAssetSize: 512000,
   },
   optimization: {
     runtimeChunk: {
-      name: 'manifest'
+      name: 'manifest',
     },
     minimize: true,
     splitChunks: {
@@ -74,11 +74,11 @@ const config = {
         vendor: {
           test: /node_modules/,
           chunks: 'all',
-          enforce: true
-        }
-      }
-    }
-  }
+          enforce: true,
+        },
+      },
+    },
+  },
 };
 
 module.exports = config;

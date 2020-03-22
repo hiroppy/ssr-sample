@@ -3,7 +3,7 @@ import { Head } from '.';
 
 export default {
   component: Head,
-  title: 'Head'
+  title: 'Head',
 };
 
 export const Base = () => {

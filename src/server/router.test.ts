@@ -40,9 +40,7 @@ test('should return the api response of get::saga', async () => {
 
 test('should return the api response of post::saga', async () => {
   const app = runServer();
-  const res = await request(app)
-    .post('/api/saga/1')
-    .send({ id: 1 });
+  const res = await request(app).post('/api/saga/1').send({ id: 1 });
 
   expect(res.status).toEqual(200);
   expect(res.text.length).not.toEqual(0);

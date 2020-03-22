@@ -50,7 +50,7 @@ const CodeBox: React.FC<Omit<Props['samples'][0], 'code'> & Pick<Props, 'addLike
   name,
   likeCount,
   description,
-  addLike
+  addLike,
 }) => {
   const [isOpen, changeState] = useState(false);
   const onClick = () => {

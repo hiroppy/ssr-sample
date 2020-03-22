@@ -7,11 +7,11 @@ import { initialState } from '../../reducers/pages';
 
 export default {
   component: Header,
-  title: 'Header'
+  title: 'Header',
 };
 
 const store = configureStore()({
-  pages: initialState
+  pages: initialState,
 });
 
 export const Base = () => (

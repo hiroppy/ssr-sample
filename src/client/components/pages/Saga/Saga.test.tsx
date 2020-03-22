@@ -44,8 +44,8 @@ test('should call addLike when a like button is clicked', () => {
   const addLike = jest.spyOn(sagaActions, 'addLike');
   const { container } = run({
     sagaPage: {
-      samples: sagaSamples
-    }
+      samples: sagaSamples,
+    },
   });
   const [box] = getAllByTestId(container, 'like-button');
 
