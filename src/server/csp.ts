@@ -15,13 +15,13 @@ const baseDirectives: helmet.IHelmetContentSecurityPolicyDirectives = {
   fontSrc: ["'self'", 'data: fonts.gstatic.com'],
   imgSrc: ["'self'", 'img.shields.io'], // for README
   connectSrc: ["'self'", 'img.shields.io', 'fonts.googleapis.com', 'fonts.gstatic.com'], // for service-worker
-  workerSrc: ["'self'"]
+  workerSrc: ["'self'"],
 };
 
 // chrome, firefox
 const lv3Directives: helmet.IHelmetContentSecurityPolicyDirectives = {
   ...baseDirectives,
-  scriptSrc: [(req, res) => `'nonce-${res.locals.nonce}'`, "'strict-dynamic'", "'unsafe-eval'"]
+  scriptSrc: [(req, res) => `'nonce-${res.locals.nonce}'`, "'strict-dynamic'", "'unsafe-eval'"],
 };
 
 // safari
@@ -32,8 +32,8 @@ const lv2Directives: helmet.IHelmetContentSecurityPolicyDirectives = {
     "'self",
     (req, res) => `'nonce-${res.locals.nonce}'`,
     "'unsafe-eval'",
-    "'unsafe-inline'"
-  ]
+    "'unsafe-inline'",
+  ],
 };
 
 export function csp(req: Request, res: Response, next: NextFunction) {

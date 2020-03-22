@@ -18,14 +18,14 @@ import {
   LOAD_APP_PROCESS,
   LOAD_TOP_PAGE,
   LOAD_SAGA_PAGE,
-  LOAD_APOLLO_PAGE
+  LOAD_APOLLO_PAGE,
 } from '../actions/pages';
 import {
   fetchSagaCode,
   fetchSagaCodeSuccess,
   fetchSagaCodeFailure,
   FETCH_SAGA_CODE_SUCCESS,
-  FETCH_SAGA_CODE_FAILURE
+  FETCH_SAGA_CODE_FAILURE,
 } from '../actions/fetchSaga';
 
 // e.g. write common processing to be performed on all pages
@@ -68,7 +68,7 @@ function* loadSagaPage(actions: ReturnType<typeof LoadSagaPage>) {
       | ReturnType<typeof fetchSagaCodeSuccess>
       | ReturnType<typeof fetchSagaCodeFailure> = yield take([
       FETCH_SAGA_CODE_SUCCESS,
-      FETCH_SAGA_CODE_FAILURE
+      FETCH_SAGA_CODE_FAILURE,
     ]);
 
     if (res.type === FETCH_SAGA_CODE_FAILURE) {

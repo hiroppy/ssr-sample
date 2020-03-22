@@ -2,12 +2,12 @@ import { combineReducers } from 'redux';
 import {
   reducer as pagesReducer,
   initialState as pagesInitialState,
-  State as PagesState
+  State as PagesState,
 } from './pages';
 import {
   reducer as sagaPageReducer,
   initialState as sagaPageInitialState,
-  State as SagaPageState
+  State as SagaPageState,
 } from './sagaPage';
 
 export type State = {
@@ -17,10 +17,10 @@ export type State = {
 
 export const initialState = {
   pages: pagesInitialState,
-  sagaPage: sagaPageInitialState
+  sagaPage: sagaPageInitialState,
 };
 
 export const rootReducer = combineReducers({
   pages: pagesReducer,
-  sagaPage: sagaPageReducer
+  sagaPage: sagaPageReducer,
 });

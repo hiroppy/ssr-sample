@@ -37,10 +37,10 @@ export const Apollo = () => {
   }>(GET_SAMPLES, { variables: { maxLength: Number(maxLength) } });
   const [
     addLike,
-    { loading: mutationLoading, error: mutationError, data: mutationData }
+    { loading: mutationLoading, error: mutationError, data: mutationData },
   ] = useMutation(ADD_LIKE, {
     // need to optimize this because it's better to avoid fetching all data
-    refetchQueries: [{ query: GET_SAMPLES, variables: { maxLength: Number(maxLength) } }]
+    refetchQueries: [{ query: GET_SAMPLES, variables: { maxLength: Number(maxLength) } }],
   });
   const like = useCallback((id: number) => {
     addLike({ variables: { id } });

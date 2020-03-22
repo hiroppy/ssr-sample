@@ -13,13 +13,13 @@ const config =
 const base = {
   entry: resolve('src', 'client', 'index.tsx'),
   output: {
-    path: resolve('dist', 'client')
+    path: resolve('dist', 'client'),
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.IS_BROWSER': JSON.stringify(true)
-    })
-  ]
+      'process.env.IS_BROWSER': JSON.stringify(true),
+    }),
+  ],
 };
 
 module.exports = smart(common, base, config);

@@ -18,29 +18,29 @@ export const sagaSamples = [
     code: process.env.NODE_ENV !== 'test' ? raw('../client/sagas/pages.ts') : 'test-code',
     name: 'pages.tsx',
     likeCount: 0,
-    description: 'aaaa'
+    description: 'aaaa',
   },
   {
     id: 2,
     code: process.env.NODE_ENV !== 'test' ? raw('../client/sagas/pages.ts') : 'test-code',
     name: 'pages.tsx',
     likeCount: 0,
-    description: 'aaaa'
+    description: 'aaaa',
   },
   {
     id: 3,
     code: process.env.NODE_ENV !== 'test' ? raw('../client/sagas/pages.ts') : 'test-code',
     name: 'pages.tsx',
     likeCount: 0,
-    description: 'aaaa'
+    description: 'aaaa',
   },
   {
     id: 4,
     code: process.env.NODE_ENV !== 'test' ? raw('../client/sagas/pages.ts') : 'test-code',
     name: 'pages.tsx',
     likeCount: 0,
-    description: 'aaaa'
-  }
+    description: 'aaaa',
+  },
 ];
 
 export const apolloSamples = [
@@ -52,7 +52,7 @@ export const apolloSamples = [
         : 'test-code',
     name: 'apollo.tsx',
     likeCount: 0,
-    description: 'aaaa'
+    description: 'aaaa',
   },
   {
     id: 2,
@@ -62,7 +62,7 @@ export const apolloSamples = [
         : 'test-code',
     name: 'apollo.tsx',
     likeCount: 0,
-    description: 'aaaa'
+    description: 'aaaa',
   },
   {
     id: 3,
@@ -72,7 +72,7 @@ export const apolloSamples = [
         : 'test-code',
     name: 'apollo.tsx',
     likeCount: 0,
-    description: 'aaaa'
+    description: 'aaaa',
   },
   {
     id: 4,
@@ -82,6 +82,6 @@ export const apolloSamples = [
         : 'test-code',
     name: 'apollo.tsx',
     likeCount: 0,
-    description: 'aaaa'
-  }
+    description: 'aaaa',
+  },
 ];

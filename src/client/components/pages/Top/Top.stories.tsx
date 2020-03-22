@@ -6,7 +6,7 @@ import { initialState } from '../../../reducers';
 
 export default {
   component: Top,
-  title: 'Top'
+  title: 'Top',
 };
 
 const store = configureStore()(initialState);

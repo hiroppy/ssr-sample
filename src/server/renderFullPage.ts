@@ -24,7 +24,7 @@ export const renderFullPage = ({
   scripts,
   preloadedState,
   graphql,
-  nonce
+  nonce,
 }: Params) => {
   return `<!DOCTYPE html>
     <html lang="en">

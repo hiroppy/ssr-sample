@@ -15,7 +15,7 @@ jest.mock('./routes.ts', () => {
     LoadableTopPage: () => <p>top</p>,
     LoadableSagaPage: () => <p>saga</p>,
     LoadableApolloPage: () => <p>apollo</p>,
-    LoadableNotFoundPage: () => <p>404</p>
+    LoadableNotFoundPage: () => <p>404</p>,
   };
 });
 

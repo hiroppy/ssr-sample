@@ -36,7 +36,7 @@ export function runServer() {
         publicPath: config.output.publicPath,
         writeToDisk(filePath: string) {
           return /loadable-stats/.test(filePath);
-        }
+        },
       })
     );
   }

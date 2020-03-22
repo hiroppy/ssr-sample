@@ -4,8 +4,8 @@ test('should return random variable', () => {
   const req: any = jest.fn();
   const res: any = {
     locals: {
-      nonce: null
-    }
+      nonce: null,
+    },
   };
   const next: any = jest.fn();
 

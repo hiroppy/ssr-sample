@@ -23,7 +23,7 @@ export const resolvers: IResolvers = {
   Query: {
     samples: (obj, { maxLength }: { maxLength?: number }) => {
       return apolloSamples.slice(0, maxLength || apolloSamples.length);
-    }
+    },
   },
   Mutation: {
     addLike: (obj, { id }: { id: number }) => {
@@ -36,11 +36,11 @@ export const resolvers: IResolvers = {
       } else {
         throw new Error('Could not find');
       }
-    }
-  }
+    },
+  },
 };
 
 export const schema = makeExecutableSchema({
   typeDefs,
-  resolvers
+  resolvers,
 });

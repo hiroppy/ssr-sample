@@ -7,8 +7,8 @@ import { sagaSamples } from '../../server/responseSchema';
 const state = {
   pages: {
     ...initialState,
-    baseUrl: 'http://test.com'
-  }
+    baseUrl: 'http://test.com',
+  },
 };
 
 test('should take on the FETCH_SAGA_CODE_SUCCESS action', () => {
@@ -18,10 +18,10 @@ test('should take on the FETCH_SAGA_CODE_SUCCESS action', () => {
       call: () => ({
         json: () => {
           return Promise.resolve({
-            body: sagaSamples
+            body: sagaSamples,
           });
-        }
-      })
+        },
+      }),
     })
     .put(actions.fetchSagaCodeSuccess(sagaSamples))
     .dispatch(actions.fetchSagaCode('2'))
@@ -34,7 +34,7 @@ test('should take on the FETCH_SAGA_CODE_FAILURE action', () => {
     .provide({
       call: () => {
         throw new Error();
-      }
+      },
     })
     .put(actions.fetchSagaCodeFailure(new Error()))
     .dispatch(actions.fetchSagaCode('2'))
@@ -48,10 +48,10 @@ test('should take on the ADD_LIKE_SUCCESS action', () => {
       call: () => ({
         json: () => {
           return Promise.resolve({
-            body: sagaSamples[0]
+            body: sagaSamples[0],
           });
-        }
-      })
+        },
+      }),
     })
     .put(actions.addLikeSuccess(sagaSamples[0]))
     .dispatch(actions.addLike(1))
@@ -64,7 +64,7 @@ test('should take on the ADD_LIKE_FAILURE action', () => {
     .provide({
       call: () => {
         throw new Error();
-      }
+      },
     })
     .put(actions.addLikeFailure(new Error()))
     .dispatch(actions.addLike(1))

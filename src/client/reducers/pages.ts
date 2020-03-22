@@ -11,7 +11,7 @@ export const initialState: State = {
   isLoadingCompletion: false,
   error: null,
   baseUrl: '',
-  env: 'development'
+  env: 'development',
 };
 
 export const reducer = (state: State = initialState, action: Actions): State => {

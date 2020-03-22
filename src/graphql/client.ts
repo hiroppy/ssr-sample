@@ -7,6 +7,6 @@ export function createClient({ link }: { link: ApolloLink }) {
     link,
     cache: process.env.IS_BROWSER
       ? new InMemoryCache().restore((window as any).__APOLLO_STATE__)
-      : new InMemoryCache()
+      : new InMemoryCache(),
   });
 }

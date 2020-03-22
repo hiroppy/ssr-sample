@@ -13,7 +13,7 @@ export function apollo(app: express.Application) {
     playground:
       process.env.NODE_ENV !== 'production'
         ? {
-            endpoint
+            endpoint,
           }
         : false,
     plugins: [
@@ -26,7 +26,7 @@ export function apollo(app: express.Application) {
                 ? separateOperations(document)[request.operationName]
                 : document,
               variables: request.variables,
-              estimators: [fieldExtensionsEstimator(), simpleEstimator({ defaultComplexity: 1 })]
+              estimators: [fieldExtensionsEstimator(), simpleEstimator({ defaultComplexity: 1 })],
             });
 
             if (complexity >= limitCost) {
@@ -38,10 +38,10 @@ export function apollo(app: express.Application) {
             // e.g. add a logger
             console.error(errors);
             console.error(request);
-          }
-        })
-      }
-    ]
+          },
+        }),
+      },
+    ],
   });
 
   apollo.applyMiddleware({ app, path: endpoint });
