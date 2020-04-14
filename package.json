@@ -135,7 +135,7 @@
     "express": "4.17.1",
     "graphql": "14.6.0",
     "graphql-query-complexity": "0.4.1",
-    "graphql-tools": "4.0.7",
+    "graphql-tools": "5.0.0",
     "helmet": "3.21.3",
     "history": "4.10.1",
     "nanoid": "2.1.11",
