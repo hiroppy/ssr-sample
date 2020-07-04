@@ -81,7 +81,7 @@
     "@types/webpack-env": "1.15.1",
     "@typescript-eslint/eslint-plugin": "2.24.0",
     "@typescript-eslint/parser": "2.24.0",
-    "autocannon": "4.6.0",
+    "autocannon": "5.0.1",
     "babel-jest": "25.1.0",
     "babel-loader": "8.0.6",
     "babel-plugin-macros": "2.8.0",
