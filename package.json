@@ -86,7 +86,7 @@
     "babel-loader": "8.0.6",
     "babel-plugin-macros": "2.8.0",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
-    "clinic": "5.0.1",
+    "clinic": "7.0.0",
     "cross-env": "7.0.2",
     "dotenv-webpack": "1.7.0",
     "eslint": "6.8.0",
