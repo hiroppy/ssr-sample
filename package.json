@@ -84,7 +84,7 @@
     "autocannon": "4.6.0",
     "babel-jest": "25.1.0",
     "babel-loader": "8.0.6",
-    "babel-plugin-macros": "2.8.0",
+    "babel-plugin-macros": "3.1.0",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
     "clinic": "5.0.1",
     "cross-env": "7.0.2",
