@@ -133,7 +133,7 @@
     "cross-fetch": "3.0.4",
     "dotenv": "8.2.0",
     "express": "4.17.1",
-    "graphql": "14.6.0",
+    "graphql": "15.6.1",
     "graphql-query-complexity": "0.4.1",
     "graphql-tools": "4.0.7",
     "helmet": "3.21.3",
