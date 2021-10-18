@@ -95,7 +95,7 @@
     "eslint-plugin-react": "7.18.3",
     "eslint-plugin-react-hooks": "3.0.0",
     "fork-ts-checker-webpack-plugin": "4.0.5",
-    "husky": "4.2.3",
+    "husky": "4.3.7",
     "jest": "25.1.0",
     "lint-staged": "10.0.10",
     "node-mocks-http": "1.8.1",
